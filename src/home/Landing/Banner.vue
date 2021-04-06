@@ -1,7 +1,7 @@
 <template>
   <div class="incre-row">
     <div class="cw-banner bg-primary">
-      <div class="text text-white">
+      <!-- <div class="text text-white">
         <span class="title">
           <h1>We Want You To Succeed!</h1>
         </span>
@@ -13,15 +13,15 @@
           <div class="row">
               <img width="200" class="mt-4 mr-2 app" :src="require('assets/img/playstoreblack.png')" @click="externalLink('https://play.google.com/store/apps/details?id=com.payhiram')"/>
               <img width="200" class="mt-4 mr-2 app" :src="require('assets/img/appstoreblack.png')" @click="externalLink('https://apps.apple.com/us/app/payhiram/id1532365205')"/>
-          </div>
+          </div> -->
           <!-- <span style="width: 100%; float: left;" >
             <button class="btn custom-btn bg-black" @click="externalLink('https://play.google.com/store/apps/details?id=com.payhiram')">
               <i class="fab fa-google-play"></i>
               Get on Play Store Now!
             </button>
           </span> -->
-      </div>
-      <img :src="require('assets/img/banner.png')" class="image">
+      <!-- </div> -->
+      <!-- <img :src="require('assets/img/IncrementBanner.jpg')" class="image"> -->
     </div>
   </div>
 </template>
@@ -38,7 +38,7 @@
 }
 
 .bg-primary{
-  background: $primary !important;
+  background-image: url("../../assets/img/IncrementBanner.jpg");
 }
 
 .bg-black{
