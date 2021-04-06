@@ -8,15 +8,8 @@ export default{
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'http://increment.ltd',
   APP_PHONE_NUMBER: '+639171837855',
-  APP_HEADER_BACKGROUND: [{
-    url: require('assets/img/mezzolobby.jpg')
-  }],
-  APP_HEADER_MOBILE_BACKGROUND: [{
-    url: 'https://mezzohotel.com/img/mainm1.png'
-  }],
   address: 'Cebu City, Philippines',
   api: 'https://mezzohotel.com/img/',
-  certificate: 'https://mezzohotel.com/img/mezzo_iso_light.jpg',
   host: 'https://mezzohotel.com/',
   booking_link: 'https://mezzohotel.com/managebooking.php',
   socialMedia: {
