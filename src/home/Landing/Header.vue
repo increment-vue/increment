@@ -1,206 +1,105 @@
 <template>
-	<div class="header" id="header">
-    <div class="header-section">
-      <span class="logo">
-        <a class="navbar-brand" v-on:click="redirect('/')">
-          <img src="../../assets/img/logo_white.png" style="margin-bottom: 5px;">
-          <label>Increment <b>Technologies</b></label>
-        </a>
-      </span>
-      <span class="menu">
-        <span class="navbar-menu-toggler-md">
-          <i class="fa fa-bars" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="void(0)"></i>
-        </span>
-<!--         <ul class="header-primary-menu">
-          <li class="nav-item" v-on:click="scrollTo('#partner')"><a class="nav-link">Be Our Partner</a></li>
-        </ul> -->
-      </span>
-    </div>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <span>
+      <a class="navbar-brand" @click="redirect('/')">
+        <img :src="require('assets/img/logo.png')" style="margin-bottom: 5px;">
+      </a>
+      INCREMENT TECHNOLOGIES
+    </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<!--       <ul class="navbar-nav ml-auto">
-        <li class="nav-item" v-on:click="scrollTo('#partner')"><a class="nav-link">Be Our Partner</a></li>
-      </ul> -->
+      <form class="form-inline my-2 my-lg-0 ml-auto">
+        <ul class="navbar-nav" v-if="this.$route.path === '/'">
+          <li class="nav-item" v-for="(item, index) in menu" :key="index"><a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" @click="scrollTo(item.redirect)" href="javascript: return false">{{item.title}}
+          <i class="fas fa-caret-down"></i></a></li>
+        </ul>
+      </form>
     </div>
-  </div>
+  </nav>
 </template>
+
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.header{
-  width: 100%;
-  float: left;
-  min-height: 70px;
-  background: $primary;
-  overflow-y: hidden;
+.nav-item{
+  margin-right: 20px;
 }
-.header-section{
-  min-height: 50px;
-  overflow-y: hidden;
-  width: 90%;
-  font-size: 12px;
-  color: #fff;
-  margin: 5px auto 5px auto;
+.navbar{
+  padding-left: 10%;
+  padding-right: 10%;
 }
-.header-section .logo{
-  width: 20%;
-  float: left;
-  height: 100%;
+img{
+  width: auto;
+  height: 44px;
+  margin-top: 4px;
 }
-.header-section .menu{
-  width: 80%;
-  float: left;
-  height: 100%;
-  margin-top: 10px;
-}
-
-.navbar-menu-toggler-md{
-  width: 100%;
-  text-align: right;
-  float: left;
-  display: none;
-}
-
-.menu .header-primary-menu{
-  width: 100%;
-  float: left;
-  min-height: 30px;
-  list-style: none;
-  overflow-y: hidden;
-  padding: 0px;
-  margin-bottom: 0px !important;
-}
-.btn-white{
-  background: #fff;
-  color: #00bff3 !important;
+.fa-bars:hover{
+  cursor: pointer;
 }
 .fa-bars{
   border: solid 1px #fff;
   font-size: 20px !important;
   padding: 10px 8px 10px 8px !important;
-  color: #fff !important;
+  color: $primary !important;
 }
-
-.fa-bars:hover{
+.button:hover{
+  background-color: #9ACD32;
+  text-decoration: none;
+  border: 0px;
+  font-size: 14px;
+  color: #ffffff;
   cursor: pointer;
 }
-
-.menu .header-primary-menu .nav-item{
-  float: right;
-  font-size: 15px;
-  margin-left: 5px;
+.button{
+  float: left;
+  width: 120px;
+  border: solid 1.2px #D3D3D3;
+  border-radius: 30px;
+  text-align: center;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  height: 38px;
 }
-
-.header-primary-menu .nav-item .nav-link{
-  padding: .5rem;
-}
-
-.header-primary-menu .nav-item a{
-  color: #fff;
-  font-family: MuseoRounded700, sans-serif;
-}
-.header-primary-menu .nav-item .nav-link:hover{
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.navbar-toggler{
-  background: inherit !important;
-  border-radius: 0px !important;
-  border: solid 1px #fff;
-  font-size: 20px !important;
-  padding: 10px 8px 10px 8px !important;
-  color: #fff !important;
-}
-.navbar-toggler:hover{
-  color: #00bff3 !important;
-  background: #fff !important;
-}
-
-.navbar-collapse .show{
-  display: none !important;
-}
-
-.header-section .logo a img{
-  width: 50px;
-}
-.header-section .logo a label{
-  font-size: 24px;
-  margin-bottom: 0px;
-}
-
-@media screen and (max-width: 992px){
-  .header-section{
-    width: 90% !important;
-    margin: 0 5% 0 5% !important;
-  }
-  .header-section .logo{
-    width: 80%;
-    margin-top: 10px;
-  }
-  .header-section  .menu{
-    width: 20%;
-    margin-top: 15px;
-  }
-  .menu .top-menu, .menu .header-primary-menu{
-    display: none;
-  }
-
-  .navbar{
-    width: 90% !important;
-    margin: 0 5% 0 5% !important;
-    padding: 0 !important;
-  }
-  .navbar-collapse {
-    width: 100% !important;
-    position: absolute !important;
-    z-index: 100000 !important;
-    float: left;
-    border-bottom: solid 1px #00bff3;
-  }
-  .navbar-nav{
-    background: #fff !important;
-    margin: 0 !important;
-  }
-  .navbar-nav .nav-link{
-    width: 100% !important;
-    padding: 17px 30px 17px 30px !important;
-  }
-
-  .navbar-nav .nav-link:hover{
-    background: #00bff3;
-    color: #fff;
-  }
-
-  .navbar-nav .nav-link{
-    color: #00bff3;
-  }
-  .navbar-menu-toggler-md{
-    width: 100%;
-    text-align: right;
-    float: left;
-    display: block ;
-  }
-}
-
 </style>
 <script>
 import ROUTER from 'src/router'
-import Jquery from 'jquery'
+import COMMON from 'src/common.js'
+import $ from 'jquery'
 export default {
   mounted(){
   },
   data(){
     return {
+      common: COMMON,
+      menu: [{
+        title: 'Who We Are',
+        redirect: '#banner'
+      }, {
+        title: 'Our Services',
+        redirect: '#features'
+      }, {
+        title: 'Case Studies',
+        redirect: '#faqs'
+      }, {
+        title: 'Technologies',
+        redirect: '#about-us'
+      }, {
+        title: 'Send Request',
+        redirect: '#request'
+      }]
     }
   },
   methods: {
     redirect(parameter){
       ROUTER.push(parameter)
     },
-    scrollTo (div) {
-      Jquery('html, body').animate({
-        scrollTop: Jquery(div).offset().top
+    scrollTo (id) {
+      let height = $(window).height()
+      $('html, body').animate({
+        scrollTop: $(id).offset().top - parseInt(height * 0.1)
       }, 500)
-    }
+    },
   }
 }
 </script>
