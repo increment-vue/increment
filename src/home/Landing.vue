@@ -3,11 +3,18 @@
     <LandingHeader></LandingHeader>
 		<LandingBanner></LandingBanner>
 		<LandingBanner1></LandingBanner1>
+    <LandingWhoWeAre />
+    <LandingOurServices />
+    <LandingHowWeWork />
+    <LandingOurProjects />
+    <LandingCaseStudies />
+    <LandingOurValues />
+    <LandingTechnologies />
+    <LandingWhatTheySayAboutUs />
     <span class="return-to-top" @click="scrollTo()">
-       <i class="fas fa-angle-up" style="font-size: 35px;" ></i>
+      <i class="fas fa-angle-up" style="font-size: 35px"></i>
     </span>
-    <LandingFooter></LandingFooter>
-	</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -92,7 +99,7 @@ div.item-holder{
 .body{
   margin: 0px;
 }
-.return-to-top{
+.return-to-top {
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -105,12 +112,12 @@ div.item-holder{
   text-align: center;
 }
 
-.fa-angle-up{
+.fa-angle-up {
   color: $primary !important;
 }
-.return-to-top:hover{
+.return-to-top:hover {
   cursor: pointer;
-  color: $primary
+  color: $primary;
 }
 </style>
 
@@ -121,29 +128,46 @@ import LandingBanner from 'src/home/Landing/Banner.vue'
 import LandingBanner1 from 'src/home/Landing/Banner1.vue'
 import LandingHeader from 'src/home/Landing/Header.vue'
 import LandingFooter from 'src/home/Landing/Footer.vue'
+import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
+import LandingOurServices from "src/home/Landing/Services.vue";
+import LandingHowWeWork from "src/home/Landing/HowWeWork.vue";
+import LandingOurProjects from "src/home/Landing/Projects.vue";
+import LandingCaseStudies from "src/home/Landing/CaseStudies.vue";
+import LandingOurValues from "src/home/Landing/Values.vue";
+import LandingTechnologies from "src/home/Landing/Technologies.vue";
+import LandingWhatTheySayAboutUs from "src/home/Landing/Testimonials.vue";
 export default {
   components: {
     LandingBanner,
     LandingBanner1,
     LandingHeader,
-    LandingFooter
+    LandingFooter,
+    LandingWhoWeAre,
+    LandingOurServices,
+    LandingHowWeWork,
+    LandingOurProjects,
+    LandingCaseStudies,
+    LandingOurValues,
+    LandingTechnologies,
+    LandingWhatTheySayAboutUs,
   },
-  mounted(){
-  },
-  data(){
-    return {
-    }
+  mounted() {},
+  data() {
+    return {};
   },
   methods: {
-    redirect(parameter){
-      ROUTER.push(parameter)
+    redirect(parameter) {
+      ROUTER.push(parameter);
     },
-    scrollTo () {
-      Jquery('html, body').animate({
-        scrollTop: Jquery('#header').offset().top
-      }, 500)
-    }
-  }
-}
+    scrollTo() {
+      Jquery("html, body").animate(
+        {
+          scrollTop: Jquery("#header").offset().top,
+        },
+        500
+      );
+    },
+  },
+};
 </script>
 

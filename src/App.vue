@@ -1,19 +1,21 @@
 <template>
   <div id="app">
     <!-- <Home/> -->
+    <LandingHeader></LandingHeader>
     <transition>
       <router-view></router-view>
     </transition>
+    <LandingFooter></LandingFooter>
   </div>
 </template>
 
 <script>
-// import Home from 'src/components/Home.vue'
-
+import LandingHeader from 'src/home/Landing/Header.vue'
+import LandingFooter from 'src/home/Landing/Footer.vue'
 export default {
-  name: 'App',
   components: {
-    // Home
+    LandingHeader,
+    LandingFooter
   }
 }
 </script>
