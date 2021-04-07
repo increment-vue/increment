@@ -1,32 +1,49 @@
 <template>
   <div class="incre-row">
     <div class="cw-banner bg-primary">
-      <!-- <div class="text text-white">
-        <span class="title">
-          <h1>We Want You To Succeed!</h1>
-        </span>
-        <span class="description">
-          <h4>
-            In Payhiram, we have partners to fulfill your cash needed in any locations you want. Start sending today!
-          </h4>
-        </span>
-          <div class="row">
-              <img width="200" class="mt-4 mr-2 app" :src="require('assets/img/playstoreblack.png')" @click="externalLink('https://play.google.com/store/apps/details?id=com.payhiram')"/>
-              <img width="200" class="mt-4 mr-2 app" :src="require('assets/img/appstoreblack.png')" @click="externalLink('https://apps.apple.com/us/app/payhiram/id1532365205')"/>
-          </div> -->
-          <!-- <span style="width: 100%; float: left;" >
-            <button class="btn custom-btn bg-black" @click="externalLink('https://play.google.com/store/apps/details?id=com.payhiram')">
-              <i class="fab fa-google-play"></i>
-              Get on Play Store Now!
-            </button>
-          </span> -->
-      <!-- </div> -->
-      <!-- <img :src="require('assets/img/IncrementBanner.jpg')" class="image"> -->
+      <div class="item-holder">
+        <h1 class="text-white text-center title">
+          WE WANT YOU TO SUCCEED
+        </h1>
+        <h3>We create beautiful and secured websites, and mobile applications.<br>
+          Just relax and we will give solutions to your needs. Got something<br>
+          awesome for us to work on?
+        </h3>
+        <button>Contact Us</button>
+      </div>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.item-holder{
+  position: absolute;
+  width: 62%;
+  height: 70%;
+  background-color: #3f0050;
+  top: 65%
+}
+h3{
+  font-size: 30px;
+  margin-left: 10%;
+  margin-right: 5%;
+  color: white;
+}
+button{
+  margin-left: 10%;
+  margin-top: 5%;
+  border-radius: 20%;
+  padding: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+}
+//
+.title{
+  height: 100px;
+  line-height: 100px;
+  margin-top: 10%
+}
 .app{
   cursor: pointer;
 }
