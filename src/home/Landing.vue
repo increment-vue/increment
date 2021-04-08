@@ -1,6 +1,5 @@
 <template>
 	<div class="body">
-    <LandingHeader></LandingHeader>
 		<LandingBanner></LandingBanner>
 		<LandingBanner1></LandingBanner1>
     <LandingWhoWeAre />
@@ -126,8 +125,6 @@ import ROUTER from 'src/router'
 import Jquery from 'jquery'
 import LandingBanner from 'src/home/Landing/Banner.vue'
 import LandingBanner1 from 'src/home/Landing/Banner1.vue'
-import LandingHeader from 'src/home/Landing/Header.vue'
-import LandingFooter from 'src/home/Landing/Footer.vue'
 import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
 import LandingOurServices from "src/home/Landing/Services.vue";
 import LandingHowWeWork from "src/home/Landing/HowWeWork.vue";
@@ -140,8 +137,6 @@ export default {
   components: {
     LandingBanner,
     LandingBanner1,
-    LandingHeader,
-    LandingFooter,
     LandingWhoWeAre,
     LandingOurServices,
     LandingHowWeWork,
