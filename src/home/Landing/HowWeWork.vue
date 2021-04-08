@@ -1,6 +1,6 @@
 <template>
     <div class='body'>
-        <h1 style="text-align:center; font-weight:bold;">What We Do</h1>
+        <h1 style="text-align:center; font-weight:bold; margin-top:10%;">What We Do</h1>
        <div v-for="(item, i) in works" :key="i" :index="i">
         <div v-if="i%2==0" style="display:flex;margin-top:3%;">
            <div style="width:80%;">
@@ -76,7 +76,8 @@ data(){
 }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
+@import "~assets/style/colors.scss";
 .img{
     height:150px;
     width:150px;
@@ -100,5 +101,20 @@ h2{
     margin-left:100px;
     margin-right:100px;
     margin-top:5%;
+}
+.text .description{
+  margin-top: 25px;
+  width: 90%;
+  margin-right: 10%;
+  float: left;
+  text-align: justify;
+}
+@media screen and (max-width: 992px){
+    .body{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    }
 }
 </style>

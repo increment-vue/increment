@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <span>
+    <span class="brand" style="color: '#0089bf'">
       <a class="navbar-brand" @click="redirect('/')">
         <img :src="require('assets/img/logo.png')" style="margin-bottom: 5px;">
       </a>
@@ -22,6 +22,11 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.brand{
+  font-family: "Open-sans, sans-serif"; 
+  font-size: 24px;
+  color: '#0089bf';
+}
 .nav-item{
   margin-right: 20px;
 }
