@@ -1,29 +1,32 @@
-import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import {faFacebook, faTwitter, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import Jquery from 'jquery'
 export default{
   APP_NAME: 'Increment Technologies',
   APP_TAGLINE: 'We want you to Succeed!',
   APP_EMAIL: 'support@increment.ltd',
-  APP_COPYRIGHT: 'Increment Technologies ' + new Date().getFullYear(),
+  APP_COPYRIGHT: 'INRCREMENT TECHNOLOGIES. All Rights Reserved. ' + new Date().getFullYear(),
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'http://increment.ltd',
   APP_PHONE_NUMBER: '+639171837855',
-  address: 'Cebu City, Philippines',
+  address: '3rd Floor, Bunzel Bldg., Techhub Area, University of San Carlos - Talamban Campus, Talamban, Cebu City, Philippines',
   api: 'https://mezzohotel.com/img/',
   host: 'https://mezzohotel.com/',
   booking_link: 'https://mezzohotel.com/managebooking.php',
   socialMedia: {
-    facebook: 'https://www.facebook.com/mezzohotelcebu'
+    facebook: 'https://www.facebook.com/incrementtechnologies'
   },
   socialIcons: [{
     icon: faFacebook,
-    url: 'https://www.facebook.com/mezzohotelcebu'
+    url: 'https://www.facebook.com/incrementtechnologies'
   }, {
     icon: faTwitter,
-    url: 'https://twitter.com/hashtag/mezzohotel'
+    url: 'https://twitter.com/hashtag/incrementtechnologies'
   }, {
     icon: faInstagram,
-    url: 'https://www.instagram.com/mezzohotelcebu'
+    url: 'https://www.instagram.com/incrementtechnologies'
+  },{
+    icon: faLinkedin,
+    url: 'https://www.linkedin.com/company/incrementtechnologies'
   }],
   delay: 15000,
   menus: [],

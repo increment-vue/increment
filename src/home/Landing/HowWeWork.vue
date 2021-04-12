@@ -1,6 +1,6 @@
 <template>
-    <div class='body'>
-        <h1 style="text-align:center; font-weight:bold; margin-top:10%;">What We Do</h1>
+    <div class="cw-banner" id="how-we-work">
+    <h1 class="text">What We Do</h1>
        <div v-for="(item, i) in works" :key="i" :index="i">
         <div v-if="i%2==0" style="display:flex;margin-top:3%;">
            <div style="width:80%;">
@@ -78,6 +78,18 @@ data(){
 </script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.cw-banner{
+  width: 100%;
+  float: left;
+  background: white;
+}
+.text{
+  width: 50%;
+  position: relative;
+  z-index: 1000;
+  margin-left: 50%;
+  margin-top: 200px;
+}
 .img{
     height:150px;
     width:150px;
