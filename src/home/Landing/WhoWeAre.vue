@@ -1,8 +1,8 @@
 <template>
   <div class="cw-banner" id="who-we-are">
     <div class="text">
+      <div class="text description">
         <h1 class="entitle"><b>Who We Are</b></h1>
-        <div class="text description">
           <h2><b>INTRODUCTION</b></h2>
           <hr class="hr">
           <p>Founded in 2017, Increment Technologies set itself out to be a leading Website and Mobile Development firm in Cebu. We develop high-quality digital projects, from landing pages to full-blown e-commerce.</p>
@@ -21,7 +21,7 @@
 @import "~assets/style/colors.scss";
 .entitle {
   text-align: center;
-  font-size: 55px;
+  font-size: 55px;  
 }
 h2 {
   margin-top: 4%;
@@ -36,14 +36,16 @@ h2 {
 .cw-banner{
   width: 100%;
   background: white;
+  // margin-top:10%;
 }
 .text{
   position: relative;
   z-index: 1000;
   margin-left: 5%;
+  // margin-top: 50%;
 }
 .text .description{
-  margin-top: 25px;
+  margin-top: 20%;
   margin-right: 10%;
   margin-bottom: 10%;
   float: left;
