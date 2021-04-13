@@ -19,7 +19,7 @@
   position: relative;
   z-index: 1000;
   margin-left: 50%;
-  margin-top: 200px;
+  margin-top: 400px;
 }
 .text .title{
   width: 100%;

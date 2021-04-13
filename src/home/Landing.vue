@@ -1,7 +1,6 @@
 <template>
 	<div class="body">
 		<LandingBanner></LandingBanner>
-		<LandingBanner1></LandingBanner1>
     <LandingWhoWeAre />
     <LandingOurServices />
     <LandingHowWeWork />
@@ -124,7 +123,6 @@ div.item-holder{
 import ROUTER from 'src/router'
 import Jquery from 'jquery'
 import LandingBanner from 'src/home/Landing/Banner.vue'
-import LandingBanner1 from 'src/home/Landing/Banner1.vue'
 import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
 import LandingOurServices from "src/home/Landing/Services.vue";
 import LandingHowWeWork from "src/home/Landing/HowWeWork.vue";
@@ -136,7 +134,6 @@ import LandingWhatTheySayAboutUs from "src/home/Landing/Testimonials.vue";
 export default {
   components: {
     LandingBanner,
-    LandingBanner1,
     LandingWhoWeAre,
     LandingOurServices,
     LandingHowWeWork,

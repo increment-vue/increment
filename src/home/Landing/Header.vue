@@ -73,25 +73,26 @@ import COMMON from 'src/common.js'
 import $ from 'jquery'
 export default {
   mounted(){
+    console.log(this.$route)
   },
   data(){
     return {
       common: COMMON,
       menu: [{
         title: 'Who We Are',
-        redirect: '#banner'
+        redirect: '#who'
       }, {
         title: 'Our Services',
-        redirect: '#features'
+        redirect: '#services'
       }, {
         title: 'Case Studies',
-        redirect: '#faqs'
+        redirect: '#studies'
       }, {
         title: 'Technologies',
-        redirect: '#about-us'
+        redirect: '#technologies'
       }, {
         title: 'Send Request',
-        redirect: '#request'
+        redirect: '#send-request'
       }]
     }
   },
