@@ -1,7 +1,7 @@
 <template>
 	<div class="body">
 		<LandingBanner></LandingBanner>
-    <LandingWhoWeAre />
+    <LandingWhoWeAre></LandingWhoWeAre>
     <LandingOurServices />
     <LandingHowWeWork />
     <LandingOurProjects />
@@ -9,6 +9,9 @@
     <LandingOurValues />
     <LandingTechnologies />
     <LandingWhatTheySayAboutUs />
+    <!-- Calendly inline widget begin -->
+    <!--<div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div>-->
+    <!-- Calendly inline widget end -->
     <span class="return-to-top" @click="scrollTo()">
       <i class="fas fa-angle-up" style="font-size: 35px"></i>
     </span>

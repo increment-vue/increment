@@ -1,47 +1,55 @@
 <template>
   <div class="cw-banner" id="who-we-are">
     <div class="text">
-        <h1>Who We Are</h1>
-  </div>
+        <h1 class="entitle"><b>Who We Are</b></h1>
+        <div class="text description">
+          <h2><b>INTRODUCTION</b></h2>
+          <hr class="hr">
+          <p>Founded in 2017, Increment Technologies set itself out to be a leading Website and Mobile Development firm in Cebu. We develop high-quality digital projects, from landing pages to full-blown e-commerce.</p>
+          <p>In pursuit of quality, we strategically develop every project to set out distinctiveness in every client’s needs. Our clients are mostly from outside the country, but since we saw that there's a huge potential from the domestic market, we are now providing locals with our services and increasing our visibility.</p>
+          <h2><b>OUR VISION</b></h2>
+          <hr class="hr">
+          <p>Increment Technologies visions to help businesses succeed with their goals by providing innovative ideas and best tools that exceeds standards. We strive to create opportunities for businesses to excel in their industries.</p>
+          <h2><b>OUR MISSION</b></h2>
+          <hr class="hr">
+          <p>Our mission is to create high quality and secured websites, website applications, and mobile applications from small to corporate level businesses. Our goal is to develop sustainable strategies aligning to the modern array of services. We take pride in creating solutions to your needs.</p>         
+        </div>     
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.entitle {
+  text-align: center;
+  font-size: 55px;
+}
+h2 {
+  margin-top: 4%;
+}
+.hr {
+  margin-left: 0%;
+  margin-top: -0.9%;
+  height: 1px;
+  width: 7.5vw;
+  background-color: $secondary;
+}
 .cw-banner{
   width: 100%;
-  float: left;
   background: white;
-  height: 100vh;
 }
 .text{
-  width: 50%;
-  float: left;
   position: relative;
   z-index: 1000;
-  margin-left: 50%;
-  margin-top: 400px;
-}
-.text .title{
-  width: 100%;
-  float: left;
-}
-.title h1{
-  font-size: 40px;
+  margin-left: 5%;
 }
 .text .description{
   margin-top: 25px;
-  width: 90%;
   margin-right: 10%;
+  margin-bottom: 10%;
   float: left;
   text-align: justify;
 }
-.image{
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  left: 0;
-  z-index: 0;
-}
+
 @media screen and (max-width: 992px){
   .text{
     width: 90%;

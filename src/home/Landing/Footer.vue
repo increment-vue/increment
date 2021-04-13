@@ -1,18 +1,26 @@
 <template>
   <footer>
-    <div class="footer">
-      <ul class="footer-widget contact-us">
+    <div class="footer row">
+    <!--  <ul class="footer-widget contact-us">
         <li class="title"><b>{{common.APP_NAME}}</b></li>
-        <li class="link"><a v-on:click="redirect('/')">Home</a></li>
+        <li class="link"><a v-on:click="redirect('/')">Home</a></li>-->
        <!--  <li class="link"><a v-on:click="redirect('/')">About Us</a></li>
         <li class="link"><a v-on:click="redirect('/')">Contact Us</a></li> -->
-      </ul>
+      <!--</ul>
       <ul class="footer-widget">
         <li class="title"><b>Privacy and Terms</b></li>
         <li class="link"><a @click="openModal('#termsAndConditionsModal')">Terms & Conditions</a></li>
         <li class="link"><a @click="openModal('#privacyModal')">Privacy Policy</a></li>
-      </ul>
-      <!-- <span class="footer-widget community">
+      </ul>-->
+      <div class="col-6">
+        <p>ABOUT US</p>
+        <div>
+          <p>Increment Technologies is a team of highly motivated technopreneurs. We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
+        </div>
+        <span class="social-icons-holder">
+        <font-awesome-icon :icon="item.icon" class="social-icons" v-for="(item, index) in common.socialIcons" :key="index" @click="openExternal(item.url)"></font-awesome-icon>
+      </span>
+        <!-- <span class="footer-widget community">
         <span class="title"><b>Community</b></span>
         <span class="link">
           <a target="_BLANK" class="text-gray" :href="'https://www.facebook.com/' + common.socialMedia.facebook" ><i class="fab fa-facebook"></i></a>
@@ -27,8 +35,32 @@
           <a target="_BLANK" class="text-gray" :href="'https://www.linkedin.com/' + common.socialMedia.facebook" ><i class="fab fa-linkedin"></i></a>
         </span>
       </span> -->
-      
-      <span class="copyright">
+      </div>
+      <div class="col-6">
+        <p>CONTACT US</p>
+              <ul>
+        <li>
+            <a :href="'tel:' + common.APP_PHONE_NUMBER" style="color: black;">
+              <font-awesome-icon :icon="faPhoneAlt" class="social-icons"></font-awesome-icon>
+              {{common.APP_PHONE_NUMBER}}
+            </a>
+        </li>
+
+        <li>
+              <font-awesome-icon :icon="faMapMarker" class="social-icons"></font-awesome-icon>
+              {{common.address}}
+          <!-- </span> -->
+        </li>
+
+        <li>
+               <a :href="'mailto:' + common.APP_EMAIL + '?Subject=INQUIRE'" target="_top" style="color: black;" @click="contact('Click email')">
+                <font-awesome-icon :icon="faEnvelope" class="social-icons"></font-awesome-icon>
+                {{common.APP_EMAIL}}
+              </a>
+        </li>
+      </ul>
+      </div>
+        <span class="copyright">
         <label>Copyright @ {{common.APP_COPYRIGHT}}.</label>
       </span>
     </div>
@@ -98,7 +130,6 @@ footer-widget .title:hover{
 .community .link i{
   font-size: 24px;
   padding: 0 10px 0 10px;
-  float: left;
   width: 20%;
 }
 .community .link i:hover{
@@ -108,7 +139,6 @@ footer-widget .title:hover{
 .text-gray{
   color: #212529;
 }
-
 .contact-us li i{
   padding-right: 10px;
 }
@@ -146,18 +176,38 @@ footer-widget .title:hover{
   .community i{
     width: 20%;
   }
+  .social-icons-holder{
+  width: 10%;
+  float: left;
+  margin-top: 2vh;
+  margin-right: 10%;
+  }
+  .social-icons{
+  margin: 5px;
+  font-size: 5vh;
+  font-size: 200%;
+  color: #fff;
+  float: right;
+  margin-right: 10%;
+}
 }
 </style>
 <script>
 import ROUTER from 'src/router'
 import Jquery from 'jquery'
 import COMMON from 'src/common.js'
+import { faCopyright, faEnvelope, faMapMarker, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+// import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
 export default {
   mounted(){
   },
   data(){
     return{
-      common: COMMON
+      common: COMMON,
+      faCopyright: faCopyright,
+      faEnvelope: faEnvelope,
+      faMapMarker: faMapMarker,
+      faPhoneAlt: faPhoneAlt,
     }
   },
   methods: {
