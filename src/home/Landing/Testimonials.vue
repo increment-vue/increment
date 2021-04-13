@@ -11,13 +11,13 @@
         <div>
         <br>
           <p>
-            <i>"They are amazing. The help me developed
-              <br>my audio base languages<br>translation website."
-            </i>    
+            <b><i>"They are amazing. The help me developed
+              <br>my audio base languages<br>translation website."</i>
+            </b>    
           </p>
           <br>
           <p style = " color:violet "><b>JEREMY REID</b></p>
-          <p style = " color:white">Owner, Talkfluent<br><b>AUSTRALIA</b></p>  
+          <p style = " font-size:15px">Owner, Talkfluent<br><b>AUSTRALIA</b></p>  
         </div> 
         </div> 
         </div>
@@ -26,13 +26,15 @@
         <div>
         <br>
           <p>
+            <b>
             <i>"Increment has been a great help in optimizing
-              <br>my company's business process. The team is<br>very responsive and dynamic. Kudos!"
-            </i>    
+              <br>my company's business process.. The team is<br>very responsive and dynamic. Kudos!"
+            </i> 
+            </b>   
           </p>
           <br>
           <p style = " color:violet "><b>SHANNEN TAN</b></p>
-          <p style = " color:white">President & CEO, Mezzo Hotel<br><b>PHILIPPINES</b></p>  
+          <p style = " font-size:15px">President & CEO, Mezzo Hotel<br><b>PHILIPPINES</b></p>  
         </div> 
         </div> 
         </div>
@@ -97,7 +99,7 @@
 }
 h1{
     text-align: center;
-    margin-left: -657px;
+    margin-left: -680px;
     margin-top: -125px;
     color: white;
   
@@ -115,8 +117,10 @@ h1{
 }
 .row{
     width: 1208px;
-    margin-left: -522px;
-    column-gap: 50px;
+    margin-left: -531px;
+    -webkit-column-gap: 70px;
+    -moz-column-gap: 70px;
+    column-gap: 70px;
 }
 </style>
 <script>
