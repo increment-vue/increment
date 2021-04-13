@@ -62,9 +62,7 @@
   width: 100%;
   float: left; 
   background: $secondary;
-  // height: 120vh;
   padding-bottom: 10%;
-  // margin-bottom: 10%;
 }
 #paragraph{
   text-align:center;
