@@ -82,6 +82,7 @@ data(){
   width: 100%;
   float: left;
   background: white;
+  margin-bottom:10%;
 }
 .text{
   width: 50%;
