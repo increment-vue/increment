@@ -1,8 +1,54 @@
 <template>
   <div class="cw-banner" id="who-we-are">
-    <div class="text">
+    <div class="text mt-5">
         <h1>Case Studies</h1>
-  </div>
+    </div>
+    <div class="container mt-5">
+      <!-- <center> -->
+        <div class="col-sm-12 d-flex">
+          <div class="col-sm-4">
+            <div class="card">
+              <img class="image" src="../../assets/img/IncrementBanner.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <img class="image" src="../../assets/img/IncrementBanner.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div> 
+          </div>
+          <div class="col-sm-4">
+          <div class="card">
+              <img class="image" src="../../assets/img/IncrementBanner.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 m-0">
+            <div class="card">
+              <img class="image" src="../../assets/img/IncrementBanner.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -15,11 +61,12 @@
 }
 .text{
   width: 50%;
-  float: left;
+  // float: center;
   position: relative;
   z-index: 1000;
   margin-left: 50%;
-  margin-top: 200px;
+  // text-align: center;
+  font-size: 55px;
 }
 .text .title{
   width: 100%;
@@ -38,9 +85,6 @@
 .image{
   max-width: 100%;
   max-height: 100%;
-  position: absolute;
-  left: 0;
-  z-index: 0;
 }
 @media screen and (max-width: 992px){
   .text{

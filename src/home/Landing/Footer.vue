@@ -49,7 +49,7 @@
         <li>
               <font-awesome-icon :icon="faMapMarker" class="social-icons"></font-awesome-icon>
               {{common.address}}
-          </span>
+
         </li>
 
         <li>
@@ -197,7 +197,7 @@ import ROUTER from 'src/router'
 import Jquery from 'jquery'
 import COMMON from 'src/common.js'
 import { faCopyright, faEnvelope, faMapMarker, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
-import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
+// import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
 export default {
   mounted(){
   },
