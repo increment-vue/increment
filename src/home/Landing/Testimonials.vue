@@ -2,7 +2,42 @@
   <div class="cw-banner" id="who-we-are">
     <div class="text">
         <h1>What They Say About Us</h1>
-  </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+        <div  class="col-sm-5">
+        <div class ="testimony">
+        <div>
+        <br>
+          <p>
+            <i>"They are amazing. The help me developed
+              <br>my audio base languages<br>translation website."
+            </i>    
+          </p>
+          <br>
+          <p style = " color:violet "><b>JEREMY REID</b></p>
+          <p style = " color:white">Owner, Talkfluent<br><b>AUSTRALIA</b></p>  
+        </div> 
+        </div> 
+        </div>
+           <div  class="col-sm-5">
+        <div class ="testimony">
+        <div>
+        <br>
+          <p>
+            <i>"Increment has been a great help in optimizing
+              <br>my company's business process. The team is<br>very responsive and dynamic. Kudos!"
+            </i>    
+          </p>
+          <br>
+          <p style = " color:violet "><b>SHANNEN TAN</b></p>
+          <p style = " color:white">President & CEO, Mezzo Hotel<br><b>PHILIPPINES</b></p>  
+        </div> 
+        </div> 
+        </div>
+        </div>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -21,6 +56,7 @@
   margin-left: 50%;
   margin-top: 200px;
 }
+
 .text .title{
   width: 100%;
   float: left;
@@ -59,7 +95,29 @@
     width: inherit;
   }
 }
-
+h1{
+    text-align: center;
+    margin-left: -657px;
+    margin-top: -125px;
+    color: white;
+  
+}
+.testimony{
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  border-color: white;
+  text-align: center;
+  max-width: 600px;
+  height: 300px;
+  color: white;
+  font-size: 20px;
+}
+.row{
+    width: 1208px;
+    margin-left: -522px;
+    column-gap: 50px;
+}
 </style>
 <script>
 import ROUTER from 'src/router'

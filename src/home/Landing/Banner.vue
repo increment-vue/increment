@@ -3,7 +3,7 @@
     <div class="cw-banner bg-primary">
       <div class="item-holder">
         <h1 class="text-white text-center title">
-          WE WANT YOU TO SUCCEED
+          WE WANT YOU TO SUCCEED!
         </h1>
         <h3>We create beautiful and secured websites, and mobile applications.<br>
           Just relax and we will give solutions to your needs. Got something<br>
@@ -24,7 +24,7 @@
   top: 65%
 }
 h3{
-  font-size: 30px;
+  font-size: 20px;
   margin-left: 10%;
   margin-right: 5%;
   color: white;
