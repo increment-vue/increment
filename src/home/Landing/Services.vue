@@ -1,7 +1,7 @@
 <template>
   <div class="cw-banner" id="our-services">
     <div class="text-center mt-5 p-5">
-        <h1 class="title" style="color:white;font-size:40px;"><b>Our Services</b></h1>
+        <h1 class="title" style="color:white;font-size:60px;"><b>Our Services</b></h1>
     </div>
     <div class="container mt-5">
       <div class="col-sm-12 d-flex">
@@ -62,7 +62,9 @@
   width: 100%;
   float: left; 
   background: $secondary;
-  height: 65vh;
+  // height: 120vh;
+  padding-bottom: 10%;
+  // margin-bottom: 10%;
 }
 #paragraph{
   text-align:center;
