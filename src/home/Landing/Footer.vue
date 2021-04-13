@@ -42,26 +42,25 @@
         <li>
             <a :href="'tel:' + common.APP_PHONE_NUMBER" style="color: black;">
               <font-awesome-icon :icon="faPhoneAlt" class="social-icons"></font-awesome-icon>
-              {{common.APP_PHONE_NUMBER}}
+              <span style="padding:20px;">{{common.APP_PHONE_NUMBER}}</span>
             </a>
         </li>
 
         <li>
-              <font-awesome-icon :icon="faMapMarker" class="social-icons"></font-awesome-icon>
-              {{common.address}}
-          </span>
+              <font-awesome-icon :icon="faMapMarker" class="social-icons" style="color: black;"></font-awesome-icon>
+               <span style="padding:20px;">{{common.address}}</span>
         </li>
 
         <li>
                <a :href="'mailto:' + common.APP_EMAIL + '?Subject=INQUIRE'" target="_top" style="color: black;" @click="contact('Click email')">
                 <font-awesome-icon :icon="faEnvelope" class="social-icons"></font-awesome-icon>
-                {{common.APP_EMAIL}}
+                <span style="padding:20px;">{{common.APP_EMAIL}}</span>
               </a>
         </li>
       </ul>
       </div>
         <span class="copyright">
-        <label>Copyright @ {{common.APP_COPYRIGHT}}.</label>
+        <label>Copyright 	&copy; {{common.APP_COPYRIGHT}}.</label>
       </span>
     </div>
   </footer>
@@ -91,7 +90,6 @@ footer {
   padding: 0px;
   margin-bottom: 0px;
 }
-
 
 .footer-widget li{
   list-style: none;
@@ -126,6 +124,9 @@ footer-widget .title:hover{
 .community .links{
   width: 100%;
   float: left;
+}
+li{
+  position: flex;
 }
 .community .link i{
   font-size: 24px;
@@ -178,17 +179,15 @@ footer-widget .title:hover{
   }
   .social-icons-holder{
   width: 10%;
-  float: left;
   margin-top: 2vh;
-  margin-right: 10%;
+  padding: 20px;
   }
   .social-icons{
-  margin: 5px;
-  font-size: 5vh;
+  margin: 15px;
+  font-size: 10vh;
   font-size: 200%;
   color: #fff;
-  float: right;
-  margin-right: 10%;
+  padding: 20px;
 }
 }
 </style>
@@ -197,7 +196,6 @@ import ROUTER from 'src/router'
 import Jquery from 'jquery'
 import COMMON from 'src/common.js'
 import { faCopyright, faEnvelope, faMapMarker, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
-import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
 export default {
   mounted(){
   },
