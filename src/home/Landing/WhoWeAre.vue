@@ -21,7 +21,7 @@
 @import "~assets/style/colors.scss";
 .entitle {
   text-align: center;
-  font-size: 55px;
+  font-size: 55px;  
 }
 h2 {
   margin-top: 4%;
@@ -36,6 +36,7 @@ hr {
 .cw-banner{
   width: 100%;
   background: white;
+  // margin-top:10%;
 }
 .text{
   position: relative;
