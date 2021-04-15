@@ -4,7 +4,7 @@
       <div class="col-6">
         <p>ABOUT US</p>
         <div>
-          <p>Increment Technologies is a team of highly motivated technopreneurs. We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
+          <p>Increment Technologies is a team of highly motivated technopreneurs.  We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
         </div>
         <span v-for="(item, index) in common.socialIcons" :key="index" class="social-icons-holder"  style="padding-right:25px;">
         <font-awesome-icon :icon="item.icon" class="social-icons fa-lg" @click="openWindow(item.url)"></font-awesome-icon>
