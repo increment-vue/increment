@@ -49,7 +49,7 @@
         <li>
               <font-awesome-icon :icon="faMapMarker" class="social-icons"></font-awesome-icon>
               {{common.address}}
-
+          <!-- </span> -->
         </li>
 
         <li>
@@ -82,7 +82,6 @@ footer {
   margin-right: 10%;
   overflow-y: hidden;
 }
-
 .footer-widget{
   width: 25%;
   float: left;
@@ -91,8 +90,6 @@ footer {
   padding: 0px;
   margin-bottom: 0px;
 }
-
-
 .footer-widget li{
   list-style: none;
   padding: 5px 10px 5px 10px;
@@ -100,14 +97,12 @@ footer {
   width: 100%;
   color: #6f6f6f !important;
 }
-
 .footer-widget, .footer-widget li a{
   color: #6f6f6f !important;
 }
 .footer-widget .title{
   color: #4c4c4c;
 }
-
 .footer-widget li a:hover{
   cursor: pointer;
   text-decoration: underline;
@@ -115,7 +110,6 @@ footer {
 footer-widget .title:hover{
   cursor: default;
 }
-
 .community .title{
   width: 100%;
   float: left;
@@ -142,15 +136,12 @@ footer-widget .title:hover{
 .contact-us li i{
   padding-right: 10px;
 }
-
 .contact-us li .fa-phone{
   padding-right: 9px;
 }
-
 .contact-us li .fa-mobile-alt{
   padding-right: 12px;
 }
-
 .copyright{
   width: 100%;
   float: left;
@@ -168,11 +159,9 @@ footer-widget .title:hover{
     margin-right: 0%;
     padding: 0px;
   }
-
   .community .title{
     text-align: center;
   }
-
   .community i{
     width: 20%;
   }

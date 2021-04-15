@@ -1,10 +1,12 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <span class="brand" style="color: '#0089bf'">
+    <span class="brand">
       <a class="navbar-brand" @click="redirect('/')">
         <img :src="require('assets/img/logo.png')" style="margin-bottom: 5px;">
       </a>
+      <b>
       INCREMENT TECHNOLOGIES
+      </b>
     </span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
@@ -12,7 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form class="form-inline my-2 my-lg-0 ml-auto">
         <ul class="navbar-nav" v-if="this.$route.path === '/'">
-          <li class="nav-item" v-for="(item, index) in menu" :key="index"><a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" @click="scrollTo(item.redirect)" href="javascript: return false">{{item.title}}
+          <li class="nav-item" v-for="(item, index) in menu" :key="index"><a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" @click="scrollTo(item.redirect)" href="javascript: return false"><b style="color: '#0089bf'">{{item.title}}</b>
           <i class="fas fa-caret-down"></i></a></li>
         </ul>
       </form>
@@ -23,12 +25,12 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .brand{
-  font-family: "Open-sans, sans-serif"; 
   font-size: 24px;
   color: '#0089bf';
 }
 .nav-item{
   margin-right: 20px;
+  color: '#0089bf'
 }
 .navbar{
   padding-left: 10%;
@@ -73,25 +75,26 @@ import COMMON from 'src/common.js'
 import $ from 'jquery'
 export default {
   mounted(){
+    console.log(this.$route)
   },
   data(){
     return {
       common: COMMON,
       menu: [{
         title: 'Who We Are',
-        redirect: '#banner'
+        redirect: '#who'
       }, {
         title: 'Our Services',
-        redirect: '#features'
+        redirect: '#services'
       }, {
         title: 'Case Studies',
-        redirect: '#faqs'
+        redirect: '#studies'
       }, {
         title: 'Technologies',
-        redirect: '#about-us'
+        redirect: '#technologies'
       }, {
         title: 'Send Request',
-        redirect: '#request'
+        redirect: '#send-request'
       }]
     }
   },
