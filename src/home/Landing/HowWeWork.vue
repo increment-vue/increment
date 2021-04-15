@@ -1,6 +1,6 @@
 <template>
     <div class="cw-banner" id="how-we-work">
-    <h1 class="text">What We Do</h1>
+    <h1 class="text">How We Work</h1>
        <div v-for="(item, i) in works" :key="i" :index="i">
         <div v-if="i%2==0" style="display:flex;margin-top:3%;">
            <div style="width:80%;">
@@ -83,13 +83,14 @@ data(){
   float: left;
   background: white;
   margin-bottom:10%;
+  padding: 10%;
 }
 .text{
-  width: 50%;
   position: relative;
   z-index: 1000;
-  margin-left: 50%;
   margin-top: 200px;
+  font-weight: bold;
+  text-align:center;
 }
 .img{
     height:150px;
