@@ -1,10 +1,7 @@
 <template>
   <div class="cw-banner" id="who-we-are">
     <div class="text">
-        <h1>What They Say About Us</h1>
-        <br>
-        <br>
-        <br>
+        <h1><b>What They Say About Us!</b></h1>
         <div class="row">
         <div  class="col-sm-5">
         <div class ="testimony">
@@ -28,12 +25,12 @@
           <p>
             <b>
             <i>"Increment has been a great help in optimizing
-              <br>my company's business process.. The team is<br>very responsive and dynamic. Kudos!"
+              <br>my company's business process. The team is<br>very responsive and dynamic. Kudos!"
             </i> 
             </b>   
           </p>
           <br>
-          <p style = " color:violet "><b>SHANNEN TAN</b></p>
+          <p style = " color:violet"><b>SHANNEN TAN</b></p>
           <p style = " font-size:15px">President & CEO, Mezzo Hotel<br><b>PHILIPPINES</b></p>  
         </div> 
         </div> 
@@ -49,6 +46,8 @@
   float: left;
   background: $primary;
   height: 100vh;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .text{
   width: 50%;
@@ -83,8 +82,6 @@
 @media screen and (max-width: 992px){
   .text{
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
     margin-top: 50px;
   }
   .title{
@@ -99,11 +96,13 @@
 }
 h1{
     text-align: center;
-    margin-left: -680px;
-    margin-top: -125px;
+    margin-left: -621px;
+    margin-top: -113px;
     color: white;
-  
+    font-size: 60px;
 }
+
+
 .testimony{
   border-style: solid;
   border-width: 5px;
@@ -116,11 +115,12 @@ h1{
   font-size: 20px;
 }
 .row{
-    width: 1208px;
-    margin-left: -531px;
+    width: 1250px;
+    margin-left: -556px;
     -webkit-column-gap: 70px;
     -moz-column-gap: 70px;
     column-gap: 70px;
+    margin-top: 60px;
 }
 </style>
 <script>
