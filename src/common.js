@@ -20,10 +20,10 @@ export default{
     url: 'https://www.facebook.com/incrementtechnologies'
   }, {
     icon: faTwitter,
-    url: 'https://twitter.com/hashtag/incrementtechnologies'
+    url: 'https://twitter.com/incrementtechn1'
   }, {
     icon: faInstagram,
-    url: 'https://www.instagram.com/incrementtechnologies'
+    url: 'https://www.instagram.com/incrementtechph'
   },{
     icon: faLinkedin,
     url: 'https://www.linkedin.com/company/incrementtechnologies'
