@@ -33,8 +33,8 @@
   color: '#0089bf'
 }
 .navbar{
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 img{
   width: auto;
