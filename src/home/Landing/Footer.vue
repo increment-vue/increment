@@ -4,10 +4,10 @@
       <div class="col-6">
         <p>ABOUT US</p>
         <div>
-          <p>Increment Technologies is a team of highly motivated technopreneurs. We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
+          <p>Increment Technologies is a team of highly motivated technopreneurs.  We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
         </div>
         <span v-for="(item, index) in common.socialIcons" :key="index" class="social-icons-holder"  style="padding-right:25px;">
-        <font-awesome-icon :icon="item.icon" class="social-icons fa-lg" @click="openExternal(item.url)"></font-awesome-icon>
+        <font-awesome-icon :icon="item.icon" class="social-icons fa-lg" @click="openWindow(item.url)"></font-awesome-icon>
       </span>
       </div>
       <div class="col-6">
@@ -29,7 +29,7 @@
         <br>
         <li>
               <font-awesome-icon :icon="faMapMarker" class="social-icons fa-lg" style="color: black;"></font-awesome-icon>
-               <span style="padding:25px;">{{common.address}}</span>
+               <a href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676" target="_blank" style="padding:25px;color:black;">{{common.address}}</a>
         </li>
         <br>
       </ul>
@@ -162,10 +162,14 @@ hr{
   margin-top:20px;
   margin-bottom:-10px;
 }
+.action-link:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color: $warning;
+}
 </style>
 <script>
 import ROUTER from 'src/router'
-import Jquery from 'jquery'
 import COMMON from 'src/common.js'
 import { faCopyright, faEnvelope, faMapMarker, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 export default {
@@ -184,12 +188,9 @@ export default {
     redirect(parameter){
       ROUTER.push(parameter)
     },
-    external(url){
+    openWindow(url){
       window.open(url, '_BLANK')
     },
-    openModal(id){
-      Jquery(id).modal('show')
-    }
   }
 }
 </script>

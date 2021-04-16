@@ -9,6 +9,9 @@
     <LandingOurValues />
     <LandingTechnologies />
     <LandingWhatTheySayAboutUs />
+    <!-- Calendly inline widget begin -->
+    <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div> -->
+    <!-- Calendly inline widget end -->
     <span class="return-to-top" @click="scrollTo()">
       <i class="fas fa-angle-up" style="font-size: 35px"></i>
     </span>
@@ -36,9 +39,9 @@ div.item-holder{
   display: flex;
   flex-direction: column;
   border-bottom: solid 20px gray;
-  -webkit-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  // -webkit-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+  // -moz-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+  // border-radius: 10px;
 }
 .item-content:hover{
   cursor: pointer;
