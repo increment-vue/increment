@@ -13,7 +13,7 @@
             </b>    
           </p>
           <br>
-          <p style = " color:violet "><b>JEREMY REID</b></p>
+          <p id="name"><b>JEREMY REID</b></p>
           <p style = " font-size:15px">Owner, Talkfluent<br><b>AUSTRALIA</b></p>  
         </div> 
         </div> 
@@ -30,7 +30,7 @@
             </b>   
           </p>
           <br>
-          <p style = " color:violet"><b>SHANNEN TAN</b></p>
+          <p id="name"><b>SHANNEN TAN</b></p>
           <p style = " font-size:15px">President & CEO, Mezzo Hotel<br><b>PHILIPPINES</b></p>  
         </div> 
         </div> 
@@ -41,6 +41,9 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+#name {
+  color: #8F00B5;
+}
 .cw-banner{
   width: 100%;
   float: left;
