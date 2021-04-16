@@ -9,13 +9,26 @@
           Just relax and we will give solutions to your needs. Got something<br>
           awesome for us to work on?
         </h3>
-        <button>Contact Us</button>
+        <button class="button">Contact Us</button>
       </div>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.button{
+  background: #00E68A;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 42%;
+  margin-top: 10%;
+}
 .item-holder{
   position: absolute;
   width: 62%;
