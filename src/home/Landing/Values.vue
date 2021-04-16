@@ -1,63 +1,120 @@
 <template>
-  <div class="cw-banner" id="who-we-are">
-    <div class="text">
-        <h1>Our Values</h1>
-  </div>
+  <div class="cw-banner" id="our-services">
+    <div class="text-center mt-5 p-5">
+        <h1 class="title" style="color:white;font-size:60px;"><b>Our Values</b></h1>
+    </div>
+    <div class="mt-5">
+      <div class="col-sm-12">
+        <div style="color:white;">
+          <div class="mb-5 d-flex align-items-center justify-content-center">
+            <div class="col col-sm-3" id="col">
+              <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2><b>1</b></h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph"><i>We do the right thing. Always.</i></b>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-3 ml-5" id="col">
+              <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2><b>2</b></h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph"><i>We provide what is best.</i></b>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-3 ml-5" id="col">
+              <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2><b>3</b></h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph"><i>We are committed to everything we do.</i></b>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  class="mt-5 d-flex align-items-center justify-content-center">
+              <div class="col col-sm-3" id="col">
+                <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2><b>4</b></h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph"><i>We deliver success to our customers.</i></b>
+                </div>
+              </div>
+              </div>
+              <div class="col col-sm-3 ml-5" id="col">
+                <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2><b>5</b></h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph"><i>Communication is our tool for excellence.</i></b>
+                </div>
+              </div>
+              </div>
+              <div class="col col-sm-3 ml-5" id="col">
+                <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2><b>6</b></h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph"><i>We always help everyone.</i></b>
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .cw-banner{
   width: 100%;
-  float: left;
+  float: left; 
   background: $secondary;
-  height: 100vh;
+  padding-bottom: 10%;
 }
-.text{
-  width: 50%;
-  float: left;
-  position: relative;
-  z-index: 1000;
-  margin-left: 50%;
-  margin-top: 200px;
+.d-flex{
+  height:inherit;
 }
-.text .title{
-  width: 100%;
-  float: left;
+#col{
+  border: 4px solid white;
+  border-radius:15px;
+  height:150px;
+  width:320px;
 }
-.title h1{
-  font-size: 40px;
+
+h2{
+  font-size: 30px;
+  color: #00E68A;
+
 }
-.text .description{
-  margin-top: 25px;
-  width: 90%;
-  margin-right: 10%;
-  float: left;
-  text-align: justify;
+.paragraph{
+  font-size: 25px;
 }
-.image{
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  left: 0;
-  z-index: 0;
-}
+
 @media screen and (max-width: 992px){
-  .text{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 50px;
-  }
-  .title{
-    text-align: center;
+  #col{
+  border: 3px solid white;
+  border-radius:15px;
+  height:150px;
+  width:320px;
   }
 
-  .image{
-    position: relative;
-    max-height: 100%;
-    width: inherit;
-  }
+.paragraph{
+  font-size: 20px;
+}
+
+
 }
 
 </style>

@@ -1,67 +1,42 @@
 <template>
   <footer>
     <div class="footer row">
-    <!--  <ul class="footer-widget contact-us">
-        <li class="title"><b>{{common.APP_NAME}}</b></li>
-        <li class="link"><a v-on:click="redirect('/')">Home</a></li>-->
-       <!--  <li class="link"><a v-on:click="redirect('/')">About Us</a></li>
-        <li class="link"><a v-on:click="redirect('/')">Contact Us</a></li> -->
-      <!--</ul>
-      <ul class="footer-widget">
-        <li class="title"><b>Privacy and Terms</b></li>
-        <li class="link"><a @click="openModal('#termsAndConditionsModal')">Terms & Conditions</a></li>
-        <li class="link"><a @click="openModal('#privacyModal')">Privacy Policy</a></li>
-      </ul>-->
       <div class="col-6">
         <p>ABOUT US</p>
         <div>
-          <p>Increment Technologies is a team of highly motivated technopreneurs. We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
+          <p>Increment Technologies is a team of highly motivated technopreneurs.  We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
         </div>
-        <span class="social-icons-holder">
-        <font-awesome-icon :icon="item.icon" class="social-icons" v-for="(item, index) in common.socialIcons" :key="index" @click="openExternal(item.url)"></font-awesome-icon>
+        <span v-for="(item, index) in common.socialIcons" :key="index" class="social-icons-holder"  style="padding-right:25px;">
+        <font-awesome-icon :icon="item.icon" class="social-icons fa-lg" @click="openWindow(item.url)"></font-awesome-icon>
       </span>
-        <!-- <span class="footer-widget community">
-        <span class="title"><b>Community</b></span>
-        <span class="link">
-          <a target="_BLANK" class="text-gray" :href="'https://www.facebook.com/' + common.socialMedia.facebook" ><i class="fab fa-facebook"></i></a>
-        </span>
-        <span class="link">
-          <a target="_BLANK" class="text-gray" :href="'https://www.twitter.com/' + common.socialMedia.facebook" ><i class="fab fa-twitter"></i></a>
-        </span>
-        <span class="link">
-          <a target="_BLANK" class="text-gray" :href="'https://www.instagram.com/' + common.socialMedia.facebook" ><i class="fab fa-instagram"></i></a>
-        </span>
-        <span class="link">
-          <a target="_BLANK" class="text-gray" :href="'https://www.linkedin.com/' + common.socialMedia.facebook" ><i class="fab fa-linkedin"></i></a>
-        </span>
-      </span> -->
       </div>
       <div class="col-6">
         <p>CONTACT US</p>
               <ul>
         <li>
             <a :href="'tel:' + common.APP_PHONE_NUMBER" style="color: black;">
-              <font-awesome-icon :icon="faPhoneAlt" class="social-icons"></font-awesome-icon>
-              {{common.APP_PHONE_NUMBER}}
+              <font-awesome-icon :icon="faPhoneAlt" class="social-icons fa-lg"></font-awesome-icon>
+              <span style="padding:25px;">{{common.APP_PHONE_NUMBER}}</span>
             </a>
         </li>
-
-        <li>
-              <font-awesome-icon :icon="faMapMarker" class="social-icons"></font-awesome-icon>
-              {{common.address}}
-          <!-- </span> -->
-        </li>
-
+        <br>
         <li>
                <a :href="'mailto:' + common.APP_EMAIL + '?Subject=INQUIRE'" target="_top" style="color: black;" @click="contact('Click email')">
-                <font-awesome-icon :icon="faEnvelope" class="social-icons"></font-awesome-icon>
-                {{common.APP_EMAIL}}
+                <font-awesome-icon :icon="faEnvelope" class="social-icons fa-lg"></font-awesome-icon>
+                <span style="padding:25px;">{{common.APP_EMAIL}}</span>
               </a>
         </li>
+        <br>
+        <li>
+              <font-awesome-icon :icon="faMapMarker" class="social-icons fa-lg" style="color: black;"></font-awesome-icon>
+               <a href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676" target="_blank" style="padding:25px;color:black;">{{common.address}}</a>
+        </li>
+        <br>
       </ul>
       </div>
+      <hr>
         <span class="copyright">
-        <label>Copyright @ {{common.APP_COPYRIGHT}}.</label>
+        <p>Copyright 	&copy; {{common.APP_COPYRIGHT}}.</p>
       </span>
     </div>
   </footer>
@@ -90,6 +65,7 @@ footer {
   padding: 0px;
   margin-bottom: 0px;
 }
+
 .footer-widget li{
   list-style: none;
   padding: 5px 10px 5px 10px;
@@ -121,6 +97,9 @@ footer-widget .title:hover{
   width: 100%;
   float: left;
 }
+li{
+  position: flex;
+}
 .community .link i{
   font-size: 24px;
   padding: 0 10px 0 10px;
@@ -145,7 +124,7 @@ footer-widget .title:hover{
 .copyright{
   width: 100%;
   float: left;
-  padding-top: 5px;
+  padding-top: 15px;
   padding-bottom: 5px;
   font-size: 12px;
   text-align: center;
@@ -167,26 +146,32 @@ footer-widget .title:hover{
   }
   .social-icons-holder{
   width: 10%;
-  float: left;
   margin-top: 2vh;
-  margin-right: 10%;
   }
   .social-icons{
-  margin: 5px;
-  font-size: 5vh;
-  font-size: 200%;
+  margin: 15px;
   color: #fff;
-  float: right;
-  margin-right: 10%;
 }
+}
+hr{
+  height:2px;
+  border-width:2px;
+  color:white;
+  background-color:white;
+  width:100%;
+  margin-top:20px;
+  margin-bottom:-10px;
+}
+.action-link:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color: $warning;
 }
 </style>
 <script>
 import ROUTER from 'src/router'
-import Jquery from 'jquery'
 import COMMON from 'src/common.js'
 import { faCopyright, faEnvelope, faMapMarker, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
-// import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
 export default {
   mounted(){
   },
@@ -203,12 +188,9 @@ export default {
     redirect(parameter){
       ROUTER.push(parameter)
     },
-    external(url){
+    openWindow(url){
       window.open(url, '_BLANK')
     },
-    openModal(id){
-      Jquery(id).modal('show')
-    }
   }
 }
 </script>

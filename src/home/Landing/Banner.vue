@@ -24,7 +24,7 @@
   top: 65%
 }
 h3{
-  font-size: 30px;
+  font-size: 20px;
   margin-left: 10%;
   margin-right: 5%;
   color: white;
