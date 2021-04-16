@@ -3,7 +3,7 @@
     <div class="text-center mt-5 p-5">
         <h1 class="title" style="color:white;font-size:60px;"><b>Our Services</b></h1>
     </div>
-    <div class="container mt-5">
+    <div class="mt-5">
       <div class="col-sm-12 d-flex">
         <div class="col-sm-3 m-0">
             <div class="row">
@@ -63,6 +63,8 @@
   float: left; 
   background: $secondary;
   padding-bottom: 10%;
+  padding-left:5%;
+  padding-right:5%;
 }
 #paragraph{
   text-align:center;
