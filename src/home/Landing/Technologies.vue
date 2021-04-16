@@ -24,7 +24,7 @@ data(){
     return{
         works: [{
             title: 'WEB DEVELOPMENT',
-            desc: 'Laravel, Vuejs, Javascript, TeactJS, React Native, API Integrations, Android Development, iOS Development, Java, Wordpress, Shopify + API, PHP, CodeIgniter, HTML5, CSS3, Xampp, MySQL, Woocommerce Integration, Alibaba Dropshipping, Shopify, Paypal API Integration, Stripe API Integration, Instagram API Integration, Google API Integration, Facebook API Integration, Messaging ',
+            desc: 'Laravel, Vuejs, Javascript, TeactJS, React Native, API Integrations, Android Development, iOS Development, Java, Wordpress, Shopify + API, PHP, CodeIgniter, HTML5, CSS3, Xampp, MySQL, Woocommerce Integration, Alibaba Dropshipping, Shopify, Paypal API Integration, Stripe API Integration, Instagram API Integration, Google API Integration, Facebook API Integration, Messaging  ',
             src: require("assets/img/WebDevelopment.png")
         },{
             title: 'MOBILE DEVELOPMENT',
