@@ -2,7 +2,8 @@
   <footer>
     <div class="footer row">
       <div class="col-6">
-        <p>ABOUT US</p>
+        <h5 style="margin-top:10%;font-weight:bold;">ABOUT US</h5>
+        <br>
         <div>
           <p>Increment Technologies is a team of highly motivated technopreneurs.  We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
         </div>
@@ -11,7 +12,8 @@
       </span>
       </div>
       <div class="col-6">
-        <p>CONTACT US</p>
+        <h5 style="margin-top:10%;font-weight:bold;">CONTACT US</h5>
+        <br>
               <ul>
         <li>
             <a :href="'tel:' + common.APP_PHONE_NUMBER" style="color: black;">
@@ -29,7 +31,7 @@
         <br>
         <li>
               <font-awesome-icon :icon="faMapMarker" class="social-icons fa-lg" style="color: black;"></font-awesome-icon>
-               <a href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676" target="_blank" style="padding:25px;color:black;">{{common.address}}</a>
+               <a href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676" target="_blank" style="padding:25px;color:black;"><p style="padding:50px;margin-top:-75px;">{{common.address}}</p></a>
         </li>
         <br>
       </ul>
@@ -166,7 +168,7 @@ hr{
   cursor: pointer;
   text-decoration: underline;
   color: $warning;
-}
+}  
 </style>
 <script>
 import ROUTER from 'src/router'

@@ -130,5 +130,13 @@ h2{
     margin-right: 5%;
     margin-top: 50px;
     }
+    .img{
+    position: relative;
+    height: 100%;
+    }
+    .imgs{
+    position: relative;
+    height: 100%;
+    }
 }
 </style>
