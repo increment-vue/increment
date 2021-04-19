@@ -1,6 +1,6 @@
 <template>
   <div class="cw-banner" id="who-we-are">
-    <div class="text mt-5">
+    <div class="text-center mt-5">
         <h1 class="title" style="color:black;font-size:60px; margin-bottom: 5%">Case Studies</h1>
     </div>
    <div class="container mt-2">
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="button">
         <button class="button2">View More</button>
       </div>
     </div>
@@ -86,6 +86,11 @@
   float: left;
   background: white;
   height: 100vh;
+  margin-bottom: 35%;
+  margin-top:4%;
+}
+.button{
+  margin-top:-3%;
 }
 .text{
   width: 50%;

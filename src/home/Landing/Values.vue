@@ -9,7 +9,7 @@
       <div class="col-sm-12">
         <div style="color:white;">
           <div class="mb-5 d-flex align-items-center justify-content-center">
-            <div :class="item.firstCard === true ? 'col col-sm-3' : 'cogl col-sm-3 ml-5' " id="col" v-for="(item, i) in values" :key="i" :index="i">
+            <div :class="item.firstCard === true ? 'col col-sm-3' : 'col col-sm-3 ml-5' " id="col" v-for="(item, i) in values" :key="i" :index="i">
               <div class="d-flex">
                 <div class="col col-sm-2 my-auto">
                   <h2>
