@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <button class="button2">View More ></button>
+      <button @click="redirect('our-projects')"  class="button2">View More ></button>
   </div>
 </template>
 
@@ -49,10 +49,13 @@ export default {
       }]
     }
   },
-  methods: {
+   methods: {
     redirect(parameter){
       ROUTER.push(parameter)
-    }
+    },
+    openWindow(url){
+      window.open(url, '_BLANK')
+    },
   }
 }
 </script>
@@ -79,7 +82,7 @@ export default {
   color: white;
   padding: 15px 35px;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
   margin-left: 41%;
   margin-right: 41%;
@@ -143,7 +146,7 @@ img{
     width: inherit;
   }
   span{
-    font-size: 13px;
+    font-size: 12px;
   }
   p{
     font-size: 10px;
@@ -152,7 +155,8 @@ img{
   font-size: 10px;
 }
   .button2{
-  font-size: 14px;
+  font-size: 13px;
+  width: 19vw;
 }
 }
 </style>
