@@ -10,8 +10,8 @@
             <div class="description">
               <span>{{item.title}}</span>
               <p>{{item.description}}</p>
-              <a :href=item.link target="_blank"><button class="button1">Visit Website</button></a>      
             </div>
+            <a :href=item.link target="_blank"><button class="button1">Visit Website</button></a>
           </div>
         </div>
       </div>
@@ -73,6 +73,7 @@ export default {
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 15%;
+  outline-color: white;
 }
 .button2{
   background: #00E68A;
@@ -81,12 +82,14 @@ export default {
   border: none;
   color: white;
   padding: 15px 35px;
+  width: 17vw;
   text-align: center;
   font-size: 25px;
   cursor: pointer;
   margin-left: 41%;
   margin-right: 41%;
   margin-top: 10%;
+  outline-color: white;
 }
 .row{
   width: 19vw;
@@ -111,6 +114,7 @@ export default {
 .description{
   text-align:center;
   margin-left: -12%;
+  height: 10vh;
 }
 span{
   font-size: 17px;
