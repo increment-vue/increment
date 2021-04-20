@@ -33,7 +33,6 @@
               <font-awesome-icon :icon="faMapMarker" class="social-icons fa-lg" style="color: black;"></font-awesome-icon>
                <a href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676" target="_blank" style="padding:25px;color:black;"><p style="padding:50px;margin-top:-75px;">{{common.address}}</p></a>
         </li>
-        <br>
       </ul>
       </div>
       <hr>
@@ -43,6 +42,7 @@
     </div>
   </footer>
 </template>
+
 <style scoped>
 footer {
   width:100%;
@@ -156,18 +156,16 @@ li{
 }
 }
 hr{
-  height:2px;
-  border-width:2px;
+  height: 2px;
   color:white;
   background-color:white;
-  width:100%;
-  margin-top:20px;
-  margin-bottom:-10px;
+  width:  100%;
 }
+
 .action-link:hover{
   cursor: pointer;
   text-decoration: underline;
-  color: $warning;
+  color:#00b89f;
 }  
 </style>
 <script>

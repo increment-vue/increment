@@ -2,7 +2,7 @@
   <div class="cw-banner" id="send-request">
     <div class="text-center mt-5 p-5">
       <h1 class="title" style="font-size:50px;">
-        <b>Drop Us A Line</b>
+        <b>Drop Us A Line!</b>
       </h1>
       <div>
         <p>
@@ -12,7 +12,7 @@
         </p>
       </div>
       <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d981.2168207389841!2d123.9130143!3d10.3524954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc2d9b9e99316c59d!2sUniversity%20of%20San%20Carlos%20-%20Talamban%20Campus!5e0!3m2!1sen!2sph!4v1618812110610!5m2!1sen!2sph" width="100%" height="351.75" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d981.2168207389841!2d123.9130143!3d10.3524954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc2d9b9e99316c59d!2sUniversity%20of%20San%20Carlos%20-%20Talamban%20Campus!5e0!3m2!1sen!2sph!4v1618812110610!5m2!1sen!2sph" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </div>
