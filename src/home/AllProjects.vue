@@ -14,8 +14,8 @@
                     <div class="description">
                         <span>{{item.title}}</span>
                         <p>{{item.description}}</p>
-                        <a :href=item.link target="_blank"><button class="button1">Visit Website</button></a>      
                     </div>
+                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
                 </div>
             </div>
             <br>
@@ -27,8 +27,47 @@
                     <div class="description">
                         <span>{{item.title}}</span>
                         <p>{{item.description}}</p>
-                        <a :href=item.link target="_blank"><button class="button1">Visit Website</button></a>      
                     </div>
+                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in projects3" :key="i" :index="i">
+                    <div class="row">
+                        <img :src="item.src" class="images">
+                    </div>
+                    <div class="description">
+                        <span>{{item.title}}</span>
+                        <p>{{item.description}}</p>
+                    </div>
+                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in projects4" :key="i" :index="i">
+                    <div class="row">
+                        <img :src="item.src" class="images">
+                    </div>
+                    <div class="description">
+                        <span>{{item.title}}</span>
+                        <p>{{item.description}}</p>
+                    </div>
+                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in projects5" :key="i" :index="i">
+                    <div class="row">
+                        <img :src="item.src" class="images">
+                    </div>
+                    <div class="description">
+                        <span>{{item.title}}</span>
+                        <p>{{item.description}}</p>
+                    </div>
+                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
                 </div>
             </div>
         </div>
@@ -46,32 +85,105 @@ export default {
         description: 'Website and Mobile Development',
         src: require("assets/img/project - runway.png"),
         link: 'http://runwayexpress.co.uk/#/',
-        card: true
+        withButton: true
       },{
         title: 'Mezzo Hotel - Philippines',
         description: 'Website Development',
         src: require("assets/img/project - mezzo.png"),
         link: 'https://mezzohotel.com/',
-        card: false
+        withButton: true
       },{
         title: 'Popout Poster - United Kingdom',
         description: 'Website Development',
         src: require("assets/img/project - popoutposter.png"),
         link: 'https://popoutposter.com/',
-        card: false
+        withButton: true
       },{
         title: 'Meat The Sea - Hong Kong',
         description: 'Website Development',
         src: require("assets/img/project - meetthesea.png"),
         link: 'https://www.meatthesea.com/',
-        card: false
+        withButton: true
       }],
       projects2:[{
         title: 'Eat Study & Sip - United States',
         description: 'Website Development',
         src: require("assets/img/project - eatstudyandsip.png"),
         link: 'https://eatstudyandsip.com/',
-        card: true
+        withButton: true
+      },{
+        title: 'SYNQT - United States',
+        description: 'Website and Mobile Development',
+        src: require("assets/img/projects - synqt.png"),
+        link: 'http://wearesynqt.com/',
+        withButton: true
+      },{
+        title: 'Investa Garden - United States',
+        description: 'Website Development',
+        src: require("assets/img/projects - investa.png"),
+        link: 'https://investagarden.com/',
+        withButton: true
+      },{
+        title: 'Pivot SMS - Canada',
+        description: 'Website Development',
+        src: require("assets/img/project - pivot.jpg"),
+        link: '',
+        withButton: true
+      }],
+      projects3:[{
+        title: 'Max Muscle - United States',
+        description: 'Website Development',
+        src: require("assets/img/project - maxmuscle.jpg"),
+        link: 'https://maxmuscle.com/',
+        withButton: true
+      },{
+        title: 'TalkFluentSpanish - Austrilia',
+        description: 'Website and Mobile Development',
+        src: require("assets/img/project - talkfluent.png"),
+        link: 'https://talkfluentspanish.com/',
+        withButton: true
+      },{
+        title: 'Aesha - Philippines',
+        description: 'Mobile Development',
+        src: require("assets/img/project - aesha.png"),
+        withButton: false
+      },{
+        title: 'AgriCord - Austrilia',
+        description: 'Website and Mobile Development',
+        src: require("assets/img/project - agricord.png"),
+        link: 'http://traceag.com.au/#/',
+        withButton: true
+      }],
+      projects4:[{
+        title: 'AgriSend - Austrilia',
+        description: 'Mobile Development',
+        src: require("assets/img/project - agrisend.png"),
+        withButton: false
+      },{
+        title: 'PayHiram - Philippines',
+        description: 'Website and Mobile Development',
+        src: require("assets/img/project - payhiram.png"),
+        link: 'https://payhiram.ph/',
+        withButton: true
+      },{
+        title: 'BirdsEye - Philippines',
+        description: 'Website and Mobile Development',
+        src: require("assets/img/project - birdsEye.png"),
+        link: 'https://birds-eye.org/',
+        withButton: true
+      },{
+        title: 'Zeta Mariani - Gibraltar',
+        description: 'Website Development',
+        src: require("assets/img/project - zetamariani.png"),
+        link: 'http://zetamariani.com/',
+        withButton: true
+      }],
+      projects5:[{
+        title: 'DBSN Group - Philippines',
+        description: 'Website Development',
+        src: require("assets/img/project - dbsn.png"),
+        link: 'http://dbsngroup.com/',
+        withButton: true
       }]
     }
   },
@@ -88,7 +200,7 @@ export default {
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .d-flex{
-    margin-top: 3%;
+    margin-top: 10%;
 }
 .entitle{
     color: white;
@@ -99,53 +211,65 @@ export default {
 .cw-banner{
   width: 100%;
   padding: 5%;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 img{
     width: 100%;
-    height: 350px;
+    height: 30vw;
     left: 0px;
     top: 100px;
 }
 .button1{
   background-color: #00E68A;
   border: none;
-  color: white !important;
+  color: white;
   padding: 1vw 2vw;
   text-align: center;
   font-size: 17px;
   cursor: pointer;
   border-radius: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 14%;
+  margin-top: 10%;
+  outline-color: white;
 }
 .row{
   width: 19vw;
   height: auto;
-  border: 1px solid #BDBDBD ;
+  border: 1px solid #00B89F ;
   background-color: white;
   margin-bottom: 5%;
 }   
 .description{
   text-align:center;
   margin-left: -12%;
+  height: 10vh;
 }
 span{
   font-size: 17px;
   color: black;
-  text-align: center;
+  font-weight: 600;
 }
 p{
   font-size: 14px;
   color: #8F00B5;
-  text-align: center;
 }
 .images{
   width: 18vw;
   height: auto;
   margin:auto;
   padding: 5%;
+}
+@media screen and (max-width: 992px){
+  span{
+    font-size: 10px;
+  }
+  p{
+    font-size: 10px;
+  }
+  .button1{
+  font-size: 10px;
+}
 }
 </style>
 
