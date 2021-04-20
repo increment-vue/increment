@@ -82,19 +82,19 @@ export default {
       common: COMMON,
       menu: [{
         title: 'Who We Are',
-        redirect: '#who'
+        redirect: '/#who-we-are'
       }, {
         title: 'Our Services',
-        redirect: '#services'
+        redirect: '/#our-services'
       }, {
         title: 'Case Studies',
-        redirect: '#studies'
+        redirect: '/#case-studies'
       }, {
         title: 'Technologies',
-        redirect: '#technologies'
+        redirect: '/#technologies'
       }, {
         title: 'Send Request',
-        redirect: '#send-request'
+        redirect: '/send-request'
       }]
     }
   },
