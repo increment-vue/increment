@@ -17,11 +17,12 @@
         </div>
         </div>
         <div class="button">
-        <button class="button2">View More ></button>
+        <button @click="redirect('technologies')" class="button2">View More ></button>
       </div>
     </div>
 </template>
 <script>
+import ROUTER from 'src/router'
 export default{
 data(){
     return{
@@ -47,7 +48,15 @@ data(){
             src: require("assets/img/LowerLevelProgramming.png")
         }]
     }
-}
+},
+    methods: {
+    redirect(parameter){
+      ROUTER.push(parameter)
+    },
+    openWindow(url){
+      window.open(url, '_BLANK')
+    },
+  }
 }
 </script>
 <style scoped lang="scss">
