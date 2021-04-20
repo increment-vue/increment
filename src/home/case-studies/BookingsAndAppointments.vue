@@ -1,7 +1,7 @@
 <template>
 <div>
 <div>
-<img class="image" src="../../assets/img/Booking-and-Appointment.jpg">
+<img class="image" src="../../assets/img/bg-bookingsandappoinments.jpg">
 <h1 class="title"><b>Bookings and Appointments</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $3,000</h3>
 <button id="btn">Inquire Now!</button>

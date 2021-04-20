@@ -1,7 +1,7 @@
 <template>
 <div>
 <div>
-<img class="image" src="../../assets/img/Delivery-App.jpg">
+<img class="image" src="../../assets/img/bg-deliveryapp.jpg">
 <h1 class="title"><b>Delivery App</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $7,000</h3>
 <button id="btn">Inquire Now!</button>

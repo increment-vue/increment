@@ -1,7 +1,7 @@
 <template>
 <div>
 <div>
-<img class="image" src="../../assets/img/Booking-bot.jpg">
+<img class="image" src="../../assets/img/bg-bookingbot.jpg">
 <h1 class="title"><b>Booking Bot</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $1,000</h3>
 <button id="btn">Inquire Now!</button>

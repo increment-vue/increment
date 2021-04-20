@@ -1,7 +1,7 @@
 <template>
 <div>
 <div>
-<img class="image" src="../../assets/img/Company-Profile.jpg">
+<img class="image" src="../../assets/img/bg-companyprofile.jpg">
 <h1 class="title"><b>Company Profiling</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $700</h3>
 <button id="btn">Inquire Now!</button>
