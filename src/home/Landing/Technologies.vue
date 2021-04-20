@@ -16,15 +16,19 @@
            <div style="width:20%"><img :src="item.src" class="img"></div>
         </div>
         </div>
+        <div class="button">
+        <button @click="redirect('technologies')" class="button2">View More ></button>
+      </div>
     </div>
 </template>
 <script>
+import ROUTER from 'src/router'
 export default{
 data(){
     return{
         works: [{
             title: 'WEB DEVELOPMENT',
-            desc: 'Laravel, Vuejs, Javascript, TeactJS, React Native, API Integrations, Android Development, iOS Development, Java, Wordpress, Shopify + API, PHP, CodeIgniter, HTML5, CSS3, Xampp, MySQL, Woocommerce Integration, Alibaba Dropshipping, Shopify, Paypal API Integration, Stripe API Integration, Instagram API Integration, Google API Integration, Facebook API Integration, Messaging  ',
+            desc: 'Laravel, Vuejs, Javascript, Nodejs, ReactJS, React Native, API Integrations, Bootstrap, Android Development, iOS Development, Java, Wordpress, Shopify Storefront + API, PHP, CodeIgniter, HTML5, CSS3, Xampp, Wampp, MySQL, Woocommerce Integration, Alibaba Dropshipping, Amazon Dropshipping, Shopify, Paypal API Integration, Stripe API Integration, Instagram API Integration, Google API Integration, Facebook API Integration, Messaging  ',
             src: require("assets/img/WebDevelopment.png")
         },{
             title: 'MOBILE DEVELOPMENT',
@@ -36,7 +40,7 @@ data(){
             src: require("assets/img/UI_UXDesign.png")
         },{
             title: 'SYSTEM ADMINISTRATOR',
-            desc: 'CentOS, Linux, AWS, CPANEL, Google Cloud, GodDaddy, SiteGround, AWS, CPanel, Dedicated Server and Related',
+            desc: 'CentOS, Linux, AWS, CPANEL, Google Cloud, GodDaddy, SiteGround, Dedicated Server and Related Task',
             src: require("assets/img/SystemAdministrator.png")
         },{
             title: 'LOWER LEVEL PROGRAMMING',
@@ -44,7 +48,15 @@ data(){
             src: require("assets/img/LowerLevelProgramming.png")
         }]
     }
-}
+},
+    methods: {
+    redirect(parameter){
+      ROUTER.push(parameter)
+    },
+    openWindow(url){
+      window.open(url, '_BLANK')
+    },
+  }
 }
 </script>
 <style scoped lang="scss">
@@ -94,6 +106,23 @@ h2{
   margin-right: 10%;
   float: left;
   text-align: justify;
+}
+.button{
+  margin-top:-3%;
+}
+.button2{
+  background: #00E68A;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 42%;
+  margin-right: 42%;
+  margin-top: 10%;
 }
 @media screen and (max-width: 992px){
     .body{
