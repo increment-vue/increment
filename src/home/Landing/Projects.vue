@@ -1,6 +1,7 @@
 <template>
   <div class="cw-banner" id="projects">
     <h1 class="entitle" ><b>Our Projects</b></h1>
+    <div class="container">
       <div class="mt-5">
         <div class="col-sm-12 d-flex">
           <div class="col-sm-3" v-for="(item, i) in projects" :key="i" :index="i">
@@ -15,7 +16,8 @@
           </div>
         </div>
       </div>
-      <button class="button2">View More ></button>
+      <button @click="redirect('our-projects')" class="button2">View More ></button>
+    </div>
   </div>
 </template>
 
@@ -67,10 +69,8 @@ export default {
   font-size: 17px;
   cursor: pointer;
   border-radius: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
   margin-top: 15%;
-  outline-color: white;
+  outline-color: $primary;
 }
 .button2{
   background: #00E68A;
@@ -79,14 +79,11 @@ export default {
   border: none;
   color: white;
   padding: 15px 35px;
-  width: 17vw;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
-  margin-left: 41%;
-  margin-right: 41%;
   margin-top: 10%;
-  outline-color: white;
+  outline-color: $primary;
 }
 .row{
   width: 19vw;
@@ -107,6 +104,9 @@ export default {
   float: left;
   background: $primary;
   padding: 5%;
+}
+.container{
+  text-align: center
 }
 .description{
   text-align:center;
@@ -130,7 +130,7 @@ img{
   padding: 5%;
 }
 
-@media screen and (max-width: 992px){
+@media only screen and (max-width: 992px){
   .text{
     width: 90%;
     margin-left: 5%;
@@ -139,12 +139,6 @@ img{
   }
   .title{
     text-align: center;
-  }
-
-  .image{
-    position: relative;
-    max-height: 100%;
-    width: inherit;
   }
   span{
     font-size: 13px;
@@ -159,4 +153,132 @@ img{
   font-size: 14px;
 }
 }
+@media only screen and (max-width: 768px){
+  .title{
+    text-align: center;
+  }
+  span{
+    font-size: 10px;
+  }
+  p{
+    font-size: 6px;
+  }
+  .button1{
+  font-size: 10px;
+}
+.description{
+  height: 13%;
+}
+  .button2{
+  font-size: 14px;
+}
+}
+@media only screen and (max-width: 540px){
+  img{
+    height: 15vw;
+    width: auto;
+  }
+  .description{
+    height: 25%;
+  }
+  .button1{
+  font-size: 7px;
+}
+  .button2{
+  font-size: 10px;
+}
+}
+@media only screen and (max-width: 441px){
+  .entitle{
+    font-size: 30px;
+  }
+  .row{
+    width: 17vw;
+  }
+  img{
+    height: 15vw;
+    width: auto;
+  }
+  .description{
+    height: 25%;
+  }
+  span{
+    font-size: 5px;
+  }
+  p{
+    font-size: 3px;
+  }
+  .button1{
+  font-size: 5px;
+}
+  .button2{
+  font-size: 7px;
+}
+}
+@media only screen and (max-width: 360px){
+  .entitle{
+    font-size: 30px;
+  }
+  .row{
+    width: 17vw;
+  }
+  img{
+    height: 15vw;
+    width: auto;
+  }
+  .description{
+    height: 25%;
+  }
+  span{
+    font-size: 5px;
+  }
+  p{
+    font-size: 3px;
+  }
+  .button1{
+  font-size: 5px;
+}
+  .button2{
+  font-size: 7px;
+}
+}
+@media only screen and (max-width: 320px){
+  .entitle{
+    font-size: 30px;
+  }
+  .text{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+  }
+  .title{
+    text-align: center;
+  }
+  .row{
+    width: 17vw;
+  }
+  img{
+    height: 15vw;
+    width: auto;
+  }
+
+  span{
+    font-size: 5px;
+  }
+  p{
+    font-size: 3px;
+  }
+  .button1{
+  font-size: 2px;
+}
+.description{
+  height: 16vh;
+}
+  .button2{
+    height: 4px;
+  font-size: 5px;
+}
+}
+
 </style>
