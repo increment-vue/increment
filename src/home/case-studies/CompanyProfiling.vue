@@ -1,11 +1,9 @@
 <template>
-<div>
-<div>
-<img class="image" src="../../assets/img/bg-companyprofile.jpg">
+<div class="image">
+</div>
 <h1 class="title"><b>Company Profiling</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $700</h3>
-<button id="btn">Inquire Now!</button>
-</div>
+<a href="https://calendly.com/incrementtech2020/services-offered" id="btn" type="button">Inquire Now!</a>
 <div class="body">
 <br>
 <br>
@@ -15,28 +13,21 @@
 <p>Increment Technologies Inc., masters the field of building websites for a company allowing it to integrate and suggest navigation as well as the contents on what to put specifically for their website. Offering various options, we cater to showcase product or service features, blog posts, portfolio or accomplished projects, call to action, newsletter, and more. We always make sure to hear out our client’s requests by making their vision into reality. 
 </p>
 </div>
-</div>
 </template>
 <script>
-export default{
-    data(){
-        return{
-        }
-    }
-}
 </script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .image{
-    height:350px;
-    width:1350px;
+    background-image:url(../../assets/img/bg-companyprofile.jpg);
+    height:600px;
+    width:100%;
 }
 .body{
-    padding:10%;
-    margin-top:-50px;
+    margin-top:50px;
+    text-align:justify;
 }
 .title{
-    margin-top:-200px;
     text-align:center;
     color:white;
 }
@@ -44,11 +35,9 @@ export default{
     margin-left:45%;
     background-color: #00E68A;
     color:white;
-    //background: #00E68A;
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
-    //color: white;
     padding: 10px 20px;
     text-align: center;
     cursor: pointer;

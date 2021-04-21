@@ -1,11 +1,10 @@
 <template>
 <div>
-<div>
-<img class="image" src="../../assets/img/bg-deliveryapp.jpg">
+<div class="image">
+</div>
 <h1 class="title"><b>Delivery App</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $7,000</h3>
-<button id="btn">Inquire Now!</button>
-</div>
+<a href="https://calendly.com/incrementtech2020/services-offered" id="btn" type="button">Inquire Now!</a>
 <div class="body">
 <br>
 <br>
@@ -43,12 +42,13 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .image{
-  height:350px;
-  width:1350px;
+    background-image:url(../../assets/img/bg-deliveryapp.jpg);
+    height:600px;
+    width:100%;
 }
 .body{
-    padding:10%;
-    margin-top:-50px;
+    margin-top:50px;
+    text-align:justify;
 }
 .title{
     margin-top:-200px;
