@@ -1,10 +1,10 @@
 <template>
 <div>
-<div>
+<div class="image">
+</div>
 <h1 class="title"><b>Learning System</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $5,000</h3>
-<button id="btn">Inquire Now!</button>
-</div>
+<a href="https://calendly.com/incrementtech2020/services-offered" id="btn" type="button">Inquire Now!</a>
 <div class="body">
 <br>
 <br>
@@ -23,9 +23,10 @@
     background-image:url(../../assets/img/bg-learning.jpg);
     height:600px;
     width:100%;
-}.body{
-    padding:10%;
-    margin-top:-50px;
+}
+.body{
+    margin-top:50px;
+    text-align:justify;
 }
 .title{
     margin-top:-200px;

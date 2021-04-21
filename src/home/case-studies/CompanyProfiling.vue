@@ -1,9 +1,9 @@
 <template>
 <div class="image">
+</div>
 <h1 class="title"><b>Company Profiling</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $700</h3>
-<button id="btn">Inquire Now!</button>
-</div>
+<a href="https://calendly.com/incrementtech2020/services-offered" id="btn" type="button">Inquire Now!</a>
 <div class="body">
 <br>
 <br>
@@ -15,12 +15,6 @@
 </div>
 </template>
 <script>
-export default{
-    data(){
-        return{
-        }
-    }
-}
 </script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
@@ -30,7 +24,7 @@ export default{
     width:100%;
 }
 .body{
-    margin-top:1px;
+    margin-top:50px;
     text-align:justify;
 }
 .title{
@@ -41,11 +35,9 @@ export default{
     margin-left:45%;
     background-color: #00E68A;
     color:white;
-    //background: #00E68A;
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     border: none;
-    //color: white;
     padding: 10px 20px;
     text-align: center;
     cursor: pointer;
