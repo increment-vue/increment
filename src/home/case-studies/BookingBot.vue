@@ -1,7 +1,6 @@
 <template>
 <div>
-<div>
-<img class="image" src="../../assets/img/bg-bookingbot.jpg">
+<div class="image">
 <h1 class="title"><b>Booking Bot</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $1,000</h3>
 <button id="btn">Inquire Now!</button>
@@ -21,9 +20,9 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .image{
-    height:350px;
-    width:1350px;
-
+    background-image:url(../../assets/img/bg-bookingbot.jpg);
+    height:600px;
+    width:100%;
 }
 .body{
     padding:10%;

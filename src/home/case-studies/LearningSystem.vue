@@ -1,7 +1,6 @@
 <template>
 <div>
 <div>
-<img class="image" src="../../assets/img/bg-learning.jpg">
 <h1 class="title"><b>Learning System</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $5,000</h3>
 <button id="btn">Inquire Now!</button>
@@ -21,11 +20,10 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .image{
-    height:350px;
-    width:1350px;
-
-}
-.body{
+    background-image:url(../../assets/img/bg-learning.jpg);
+    height:600px;
+    width:100%;
+}.body{
     padding:10%;
     margin-top:-50px;
 }
