@@ -1,5 +1,6 @@
 <template>
 	<div class="body">
+    <LandingHeader></LandingHeader>
 		<LandingBanner></LandingBanner>
     <LandingWhoWeAre></LandingWhoWeAre>
     <LandingOurServices />
@@ -9,6 +10,7 @@
     <LandingOurValues />
     <LandingTechnologies />
     <LandingWhatTheySayAboutUs />
+    <LandingFooter></LandingFooter>
     <!-- Calendly inline widget begin -->
     <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div> -->
     <!-- Calendly inline widget end -->
@@ -125,6 +127,8 @@ div.item-holder{
 <script>
 import ROUTER from 'src/router'
 import Jquery from 'jquery'
+import LandingHeader from 'src/home/Landing/Header.vue'
+import LandingFooter from 'src/home/Landing/Footer.vue'
 import LandingBanner from 'src/home/Landing/Banner.vue'
 import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
 import LandingOurServices from "src/home/Landing/Services.vue";
@@ -136,6 +140,7 @@ import LandingTechnologies from "src/home/Landing/Technologies.vue";
 import LandingWhatTheySayAboutUs from "src/home/Landing/Testimonials.vue";
 export default {
   components: {
+    LandingHeader,
     LandingBanner,
     LandingWhoWeAre,
     LandingOurServices,
@@ -145,6 +150,7 @@ export default {
     LandingOurValues,
     LandingTechnologies,
     LandingWhatTheySayAboutUs,
+    LandingFooter
   },
   mounted() {},
   data() {
