@@ -1,261 +1,146 @@
 <template>
-  <div>
     <div>
-      <img class="banner" :src="require('assets/img/casestudies-bg.jpg')">
-      <h1 class="title">
-        <b>Case Studies</b>
-      </h1>
+        <div class="banner">
+            <img class="banner" :src="require('assets/img/casestudies-bg.jpg')">
+            <h1 class="title"><b>Case Studies</b></h1>
+        </div>
+        <div class="cw-banner">
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in cases" :key="i" :index="i" id="card">
+                    <div class="rows">
+                        <img :src="item.src" class="image">
+                            <div class="description">
+                                <div class="paragraph">
+                                    <p class="mt-2" style="font-size:16px">
+                                    <b>{{item.title}}</b>
+                                    </p>
+                                    <p style="font-size:14px">{{item.desc}}</p>
+                                </div>
+                            <div class="mt-3">
+                                <div class= "mb-3">
+                                    <button @click="redirect(item.links)" class="button1">Read More</button>
+                                </div>
+                                <div class="price">
+                                    <label>Starting Price:</label>
+                                    <br>
+                                    <h4>{{item.price}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in cases2" :key="i" :index="i" id="card">
+                    <div class="rows">
+                        <img :src="item.src" class="image">
+                            <div class="description">
+                                <div class="paragraph">
+                                    <p class="mt-2" style="font-size:16px">
+                                    <b>{{item.title}}</b>
+                                    </p>
+                                    <p style="font-size:14px">{{item.desc}}</p>
+                                </div>
+                            <div class="mt-3">
+                                <div class= "mb-3">
+                                    <button @click="redirect(item.links)" class="button1">Read More</button>
+                                </div>
+                                <div class="price">
+                                    <label>Starting Price:</label>
+                                    <br>
+                                    <h4>{{item.price}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in cases3" :key="i" :index="i" id="card">
+                    <div class="rows">
+                        <img :src="item.src" class="image">
+                            <div class="description">
+                                <div class="paragraph">
+                                    <p class="mt-2" style="font-size:16px">
+                                    <b>{{item.title}}</b>
+                                    </p>
+                                    <p style="font-size:14px">{{item.desc}}</p>
+                                </div>
+                            <div class="mt-3">
+                                <div class= "mb-3">
+                                    <button @click="redirect(item.links)" class="button1">Read More</button>
+                                </div>
+                                <div class="price">
+                                    <label>Starting Price:</label>
+                                    <br>
+                                    <h4>{{item.price}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in cases4" :key="i" :index="i" id="card">
+                    <div class="rows">
+                        <img :src="item.src" class="image">
+                            <div class="description">
+                                <div class="paragraph">
+                                    <p class="mt-2" style="font-size:16px">
+                                    <b>{{item.title}}</b>
+                                    </p>
+                                    <p style="font-size:14px">{{item.desc}}</p>
+                                </div>
+                            <div class="mt-3">
+                                <div class= "mb-3">
+                                    <button @click="redirect(item.links)" class="button1">Read More</button>
+                                </div>
+                                <div class="price">
+                                    <label>Starting Price:</label>
+                                    <br>
+                                    <h4>{{item.price}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 d-flex">
+                <div class="col-sm-3" v-for="(item, i) in cases5" :key="i" :index="i" id="card">
+                    <div class="rows">
+                        <img :src="item.src" class="image">
+                            <div class="description">
+                                <div class="paragraph">
+                                    <p class="mt-2" style="font-size:16px">
+                                    <b>{{item.title}}</b>
+                                    </p>
+                                    <p style="font-size:14px">{{item.desc}}</p>
+                                </div>
+                            <div class="mt-3">
+                                <div class= "mb-3">
+                                    <button @click="redirect(item.links)" class="button1">Read More</button>
+                                </div>
+                                <div class="price">
+                                    <label>Starting Price:</label>
+                                    <br>
+                                    <h4>{{item.price}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="cw-banner" id="case-studies">
-      <div class="container pl-0 mt-2">
-        <div class="col-sm-12 pl-0 d-flex">
-          <div :class="item.firstCard === true ? 'col col-sm-3 ml-0' : 'col col-sm-3 ml-3' " v-for="(item, i) in cases" :key="i" :index="i" id="card">
-            <div class="row">
-              <img class="image" :src="item.src">
-            </div>
-            <div class="row pb-5" style="height:40%;">
-              <div class="col-sm-12" id="paragraph">
-                <p style="font-size:16px">
-                  <b>{{item.title}}</b>
-                </p>
-                <p style="font-size:14px">{{item.desc}}</p>
-              </div>
-            </div>
-            <div class="row mt-3" style="display:block;">
-              <div class="mb-3">
-                <button @click="redirect(item.links)" class="button1">Read More</button>
-              </div>
-              <div class="price">
-                <label>Starting Price:</label>
-                <br>
-                <h4>{{item.price}}</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 col-sm-12 pl-0 d-flex">
-          <div :class="item.firstCard === true ? 'col col-sm-3 ml-0' : 'col col-sm-3 ml-3' " v-for="(item, i) in cases2" :key="i" :index="i" id="card">
-            <div class="row">
-              <img class="image" :src="item.src">
-            </div>
-            <div class="row pb-5" style="height:40%;">
-              <div class="col-sm-12" id="paragraph">
-                <p style="font-size:16px">
-                  <b>{{item.title}}</b>
-                </p>
-                <p style="font-size:14px">{{item.desc}}</p>
-              </div>
-            </div>
-            <div class="row mt-3" style="display:block;">
-              <div class="mb-3">
-                <button @click="redirect(item.links)" class="button1">Read More</button>
-              </div>
-              <div class="price">
-                <label>Starting Price:</label>
-                <br>
-                <h4>{{item.price}}</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 col-sm-12 pl-0 d-flex">
-          <div :class="item.firstCard === true ? 'col col-sm-3 ml-0' : 'col col-sm-3 ml-3' " v-for="(item, i) in cases3" :key="i" :index="i" id="card">
-            <div class="row">
-              <img class="image" :src="item.src">
-            </div>
-            <div class="row pb-5" style="height:40%;">
-              <div class="col-sm-12" id="paragraph">
-                <p style="font-size:16px">
-                  <b>{{item.title}}</b>
-                </p>
-                <p style="font-size:14px">{{item.desc}}</p>
-              </div>
-            </div>
-            <div class="row mt-3" style="display:block;">
-              <div class="mb-3">
-                <button @click="redirect(item.links)" class="button1">Read More</button>
-              </div>
-              <div class="price">
-                <label>Starting Price:</label>
-                <br>
-                <h4>{{item.price}}</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 col-sm-12 pl-0 d-flex">
-          <div :class="item.firstCard === true ? 'col col-sm-3 ml-0' : 'col col-sm-3 ml-3' " v-for="(item, i) in case4" :key="i" :index="i" id="card">
-            <div class="row">
-              <img class="image" :src="item.src">
-            </div>
-            <div class="row pb-5" style="height:40%;">
-              <div class="col-sm-12" id="paragraph">
-                <p style="font-size:16px">
-                  <b>{{item.title}}</b>
-                </p>
-                <p style="font-size:14px">{{item.desc}}</p>
-              </div>
-            </div>
-            <div class="row mt-3" style="display:block;">
-              <div class="mb-3">
-                <button @click="redirect(item.links)" class="button1">Read More</button>
-              </div>
-              <div class="price">
-                <label>Starting Price:</label>
-                <br>
-                <h4>{{item.price}}</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 col-sm-12 pl-0 d-flex">
-          <div :class="item.firstCard === true ? 'col col-sm-3 ml-0' : 'col col-sm-3 ml-3' " v-for="(item, i) in cases5" :key="i" :index="i" id="card">
-            <div class="row">
-              <img class="image" :src="item.src">
-            </div>
-            <div class="row pb-5" style="height:40%;">
-              <div class="col-sm-12" id="paragraph">
-                <p style="font-size:16px">
-                  <b>{{item.title}}</b>
-                </p>
-                <p style="font-size:14px">{{item.desc}}</p>
-              </div>
-            </div>
-            <div class="row mt-4" style="display:block;">
-              <div class="mb-3">
-                <button @click="redirect(item.links)" class="button1">Read More</button>
-              </div>
-              <div class="price">
-                <label>Starting Price:</label>
-                <br>
-                <h4>{{item.price}}</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
-<style scoped lang="scss">
-@import "~assets/style/colors.scss";
-.cw-banner {
-  width: 100%;
-  float: left;
-  background: white;
-  margin-top:15%;
-  padding-bottom: 10%;
-}
-.banner{
-    width: 100%;
-    height: 350px;
-    left: 0px;
-    top: 100px;
-}
-.button {
-  margin-top: -3%;
-}
-
-.image {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#card {
-  border: solid 1px #00b89f;
-  text-align: center;
-}
-#paragraph {
-  text-align: center;
-  font-size: 15px;
-  color: #000000;
-  // height: 20%;
-}
-.button1 {
-  background-color: white;
-  border: none;
-  color: #bdbdbd !important;
-  // padding: 15px 32px;
-  text-align: center;
-  font-size: 13px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: solid 1px #e5e5e5;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  width: 120px;
-  height: 45px;
-  outline-color: white;
-//   border-color:white;
-}
-.button2 {
-  background: #00e68a;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 42%;
-  margin-right: 42%;
-  margin-top: 10%;
-}
-.price {
-  border: 0.5px solid #3f0050;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 5px #00b89f;
-  border-radius: 5px;
-  width: 150px;
-  height: 80px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.title{
-     color: white;
-    font-size: 55px;
-    text-align: center;
-    margin-top: -14%;
-}
-h4 {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 41px;
-  // display: flex;
-  text-align: center;
-  color: #00b89f;
-}
-@media screen and (max-width: 992px) {
-  .text {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 50px;
-  }
-  .title {
-    text-align: center;
-  }
-
-  .image {
-    position: relative;
-    max-height: 100%;
-    width: inherit;
-  }
-  #pad {
-    //   margin-top:100%;
-    height: 50%;
-  }
-}
-</style>
 <script>
-import ROUTER from "src/router";
-import COMMON from "src/common.js";
+import ROUTER from 'src/router'
 export default {
-  data() {
+    mounted(){
+  },
+  data(){
     return {
-      cases: [
+     cases: [
         {
           src: require("assets/img/Booking-and-Appointment.jpg"),
           title: "Bookings and Appointments",
@@ -417,20 +302,131 @@ export default {
           price: "$7,000",
           links: "case-studies/transportation-system",
           firstCard: false   
-        }
-      ]
-    };
-  },
-  mounted() {},
-  datas() {
-    return {
-      common: COMMON
-    };
+        }]
+    }
   },
   methods: {
-    redirect(parameter) {
-      ROUTER.push(parameter);
-    }
+    redirect(parameter){
+      ROUTER.push(parameter)
+    },
+    openWindow(url){
+      window.open(url, '_BLANK')
+    },
   }
-};
+}
 </script>
+<style scoped lang="scss">
+@import "~assets/style/colors.scss";
+.banner{
+    width: 100%;
+    height: 350px;
+    left: 0px;
+    margin-bottom: 5%;
+}
+.d-flex{
+    margin-top: 5%;
+}
+.title{
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    margin-top: -18%;
+}
+.description{
+    padding: 5%;
+    margin-bottom: 10%;
+}
+.cw-banner{
+  width: 100%;
+  padding-left: 10%;
+  padding-right:10%;
+  margin-bottom:15%;
+}
+.paragraph {
+  text-align: center;
+  font-size: 15px;
+  height: 50vh;
+  color: #000000;
+  // height: 20%;
+}
+.button1 {
+  background-color: white;
+  border: none;
+  color: #bdbdbd !important;
+  // padding: 15px 32px;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid 1px #e5e5e5;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  width: 120px;
+  height: 45px;
+  outline-color: white;
+//   border-color:white;
+}
+.rows{
+  width: 18vw;
+  height: auto;
+  border: 1px solid #00b89f ;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.price {
+  border: 0.5px solid #3f0050;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px #00b89f;
+  border-radius: 5px;
+  width: 150px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+h4 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  // display: flex;
+  text-align: center;
+  color: #00b89f;
+}
+.image{
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 992px) {
+  .text {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+  }
+  .title {
+    text-align: center;
+  }
+  .image {
+    position: relative;
+    max-height: 100%;
+    width: inherit;
+  }
+  #pad {
+    //   margin-top:100%;
+    height: 50%;
+  }
+  .price {
+  border: 0.5px solid #3f0050;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px #00b89f;
+  border-radius: 5px;
+  width: 125px;
+  height: 80px;
+  margin-left:auto;
+  margin-right:auto;
+  
+}
+}
+</style>
+
