@@ -2,7 +2,7 @@
   <div class="incre-row">
     <div class="cw-banner bg-primary">
       <div class="item-holder">
-        <h1 class="text-white text-center title">
+        <h1 class="text-white title">
           <b>WE WANT YOU TO SUCCEED</b>
         </h1>
         <h3>
@@ -57,6 +57,7 @@ button {
   height: 100px;
   line-height: 100px;
   margin-top: 10%;
+  margin-left: 10%;
 }
 .app {
   cursor: pointer;
