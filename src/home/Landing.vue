@@ -1,7 +1,6 @@
 <template>
-	<div class="body">
-    <LandingHeader></LandingHeader>
-		<LandingBanner></LandingBanner>
+  <div class="body">
+    <LandingBanner></LandingBanner>
     <LandingWhoWeAre></LandingWhoWeAre>
     <LandingOurServices />
     <LandingHowWeWork />
@@ -10,7 +9,6 @@
     <LandingOurValues />
     <LandingTechnologies />
     <LandingWhatTheySayAboutUs />
-    <LandingFooter></LandingFooter>
     <!-- Calendly inline widget begin -->
     <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div> -->
     <!-- Calendly inline widget end -->
@@ -22,16 +20,16 @@
 
 <style lang="scss" scoped>
 @import "~assets/style/colors.scss";
-div.item-holder{
-  position: 'absolute';
+div.item-holder {
+  position: "absolute";
   top: -20%;
   z-index: 10;
 }
-.item-holder{
+.item-holder {
   width: 100%;
   height: 500px;
 }
-.item-content{
+.item-content {
   padding: 20px;
   width: 40%;
   float: left;
@@ -45,61 +43,61 @@ div.item-holder{
   // -moz-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
   // border-radius: 10px;
 }
-.item-content:hover{
+.item-content:hover {
   cursor: pointer;
   border-bottom: solid 20px blue;
   border-radius: 10px;
 }
 //
-.title{
+.title {
   text-decoration: underline;
   height: 100px;
   line-height: 100px;
 }
 //
-.details-text{
+.details-text {
   width: 100%;
   float: left;
   margin-top: 25px;
   text-align: center;
   font-size: 17px;
 }
-.action{
+.action {
   width: 100%;
   height: 150px;
   line-height: 150px;
   border-top: solid 5px gray;
   margin-top: auto;
 }
-@media (max-width: 992px){
-  .text-holder{
+@media (max-width: 992px) {
+  .text-holder {
     width: 96%;
     margin-left: 2%;
     margin-right: 2%;
   }
-  .item-holder{
+  .item-holder {
     height: auto;
     min-height: 70vh;
     overflow-y: hidden;
   }
-  .item-content{
+  .item-content {
     width: 100%;
     margin-right: 0%;
     margin-left: 0%;
   }
-  ul{
+  ul {
     padding: 10px;
   }
-  ul li .inclusion-text{
+  ul li .inclusion-text {
     width: 90%;
     margin-left: 0%;
   }
-  ul li i{
+  ul li i {
     width: 10%;
   }
 }
 //
-.body{
+.body {
   margin: 0px;
 }
 .return-to-top {
@@ -125,11 +123,9 @@ div.item-holder{
 </style>
 
 <script>
-import ROUTER from 'src/router'
-import Jquery from 'jquery'
-import LandingHeader from 'src/home/Landing/Header.vue'
-import LandingFooter from 'src/home/Landing/Footer.vue'
-import LandingBanner from 'src/home/Landing/Banner.vue'
+import ROUTER from "src/router";
+import Jquery from "jquery";
+import LandingBanner from "src/home/Landing/Banner.vue";
 import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
 import LandingOurServices from "src/home/Landing/Services.vue";
 import LandingHowWeWork from "src/home/Landing/HowWeWork.vue";
@@ -140,7 +136,6 @@ import LandingTechnologies from "src/home/Landing/Technologies.vue";
 import LandingWhatTheySayAboutUs from "src/home/Landing/Testimonials.vue";
 export default {
   components: {
-    LandingHeader,
     LandingBanner,
     LandingWhoWeAre,
     LandingOurServices,
@@ -150,7 +145,6 @@ export default {
     LandingOurValues,
     LandingTechnologies,
     LandingWhatTheySayAboutUs,
-    LandingFooter
   },
   mounted() {},
   data() {

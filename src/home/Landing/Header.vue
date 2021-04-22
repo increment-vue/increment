@@ -21,10 +21,10 @@
     </button>
     <div class="collapse navbar-collapse">
       <form class="form-inline my-2 my-lg-0 ml-auto">
-        <ul class="navbar-nav" v-if="this.$route.path === '/'">
+        <ul class="navbar-nav">
           <li class="nav-item" v-for="(item, index) in menu" :key="index">
             <div v-if="item.type === 'dropdown'">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #20C1AB;">
+              <a class="nav-link dropdown-toggle" role="button" @click="redirect(item.redirect)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #20C1AB;">
                 <b class="increment-limegreen-light">{{ item.title }}</b>
               </a>
               <div class="dropdown-menu" v-if="item.title === 'Who We Are'" style="position: absolute; left: 42%; border-color: #20C1AB;">
