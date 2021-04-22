@@ -1,127 +1,73 @@
 <template>
   <div>
-    <div>
-      <img src="../../assets/img/bg-translation.jpg" />
-      <h1>Translation System</h1>
-      <h2>Starting Price: $5,000</h2>
-      <div class="container">
-        <a
-          href="https://calendly.com/incrementtech2020"
-          type="button"
-          class="btn btn-success custom"
-          >Inquire Now!</a
-        >
-      </div>
+    <div class="banner">
+      <h1 class="title">TRANSLATION SYSTEM</h1>
+      <h3 id="start-price">Starting Price : $5,000</h3>
+      <a
+        href="https://calendly.com/incrementtech2020/services-offered"
+        id="btn"
+        type="button"
+        >Inquire Now!</a
+      >
+    </div>
+    <div class="container">
+      <p>
+        One of the ways to help people understand other countries with different languages, is to understand their dialect first. A translation software helps people understand in depth of what other people are trying to communicate. It not just helps the community but could focus on molding a child’s knowledge towards understanding a language. This can be applied in schools for teaching the mother tongue based multilingual education. 
 
-      <p id="text">
-        One of the ways to help people understand other countries with different
-        languages, is to understand their dialect first. A translation software
-        helps people understand in depth of what other people are trying to
-        communicate. It not just helps the community but could focus on molding
-        a child’s knowledge towards understanding a language. This can be
-        applied in schools for teaching the mother tongue based multilingual
-        education.
       </p>
-      <p id="text1">
-        Increment Technologies is not new to this kind of software, we have
-        built Talk Fluent Spanish, a spanish learning system that allows users
-        to understand, pronounce, and memorize Spanish the easiest way possible.
-        Knowing that not all people are Polyglot, a person who knows several
-        languages, a translation learning system is a guide for the person to
-        learn and understand the meaning of a dialect.
+      <p>
+        Increment Technologies, can take your business into a higher level of management. We can definitely develop and create a RFID system exclusively for your organization. Creating opportunities for your company to minimize resources, human error, and increase your efficiency in the processes. This means that we will design a centralized system, so that you can streamline your processes.
+
       </p>
-      <br />
-      <br />
-      <br />
     </div>
   </div>
 </template>
 <script>
-export default {};
 </script>
-<style >
-img {
-  height: 600px;
+<style scoped lang="scss">
+@import "~assets/style/colors.scss";
+.banner {
+  background-image: url("../../assets/img/bg-translation.jpg");
+  background-size: cover;
+  height: 70vh;
   width: 100%;
-}
-#text {
-  margin-top: 130px;
-  margin-left: 115px;
-  margin-right: 115px;
-  font-size: 16px;
-}
-#text1 {
-  margin-top: 30px;
-  margin-left: 115px;
-  margin-right: 115px;
-  font-size: 16px;
+  text-align: center;
+  color: white;
+  padding: 35vh 0;
 }
 
-h1 {
-  color: white;
-  margin-top: 150px;
-  position: absolute;
-  left: 30%;
-  right: 30%;
-  top: 98px;
-  /* font-family: Open Sans; */
-  font-style: normal;
-  font-weight: bold;
+.title {
   font-size: 50px;
-  line-height: 68px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
+  font-weight: 800;
+  padding-bottom: 10px;
 }
-h2 {
-  position: absolute;
-  width: 329px;
-  height: 34px;
-  left: 37%;
-  top: 320px;
-  /* margin-top: 115px; */
-  font-style: normal;
+
+#start-price {
   font-size: 30px;
-  line-height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
+  font-weight: 600;
+  padding-bottom: 10px;
 }
-.btn-success {
-  color: #fff;
+
+#btn {
   background-color: #00e68a;
+  color: white;
+  //background: #00E68A;
   box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
   border-radius: 10px;
-  outline: none;
-  border: 0px;
+  border: none;
+  //color: white;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
 }
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  margin-top: 180px;
-  margin-left: 43%;
-}
+
 .container {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin-top: 10vh;
+  margin-bottom: 30vh;
 }
-.custom:hover {
-  background-color: #00e68a !important;
-}
-.custom:hover {
-  background-color: #00e68a !important;
+
+p {
+  text-align: justify;
+  margin-bottom: 30px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div>
 <div class="banner">
-      <h1 class="title">COMPANY PROFILING</h1>
+      <h1 class="title">COMPANY  PROFILING</h1>
       <h3 id="start-price">Starting Price : $700</h3>
       <a
         href="https://calendly.com/incrementtech2020/services-offered"
