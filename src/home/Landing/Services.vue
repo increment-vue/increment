@@ -38,13 +38,7 @@ export default {
       },{
         src:require('assets/img/hosting.png'),
         desc:'We offer fair and affordable hosting and maintenance services. Part of our journey is to make sure that our servers are responding faster from the request of its visitors.'
-      }]
-    }
-  },
-  mounted(){
-  },
-  datas(){
-    return {
+      }],
       common: COMMON
     }
   },

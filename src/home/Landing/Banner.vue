@@ -2,11 +2,12 @@
   <div class="incre-row">
     <div class="cw-banner bg-primary">
       <div class="item-holder">
-        <h1 class="text-white text-center title">
+        <h1 class="text-white title">
           <b>WE WANT YOU TO SUCCEED</b>
         </h1>
-        <h3>We create beautiful and secured websites, and mobile applications.<br>
-          Just relax and we will give solutions to your needs. Got something<br>
+        <h3>
+          We create beautiful and secured websites, and mobile applications.<br />
+          Just relax and we will give solutions to your needs. Got something<br />
           awesome for us to work on?
         </h3>
         <button class="button">Contact Us</button>
@@ -16,8 +17,8 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.button{
-  background: #00E68A;
+.button {
+  background: #00e68a;
   box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   border: none;
@@ -29,20 +30,20 @@
   margin-right: 42%;
   margin-top: 10%;
 }
-.item-holder{
+.item-holder {
   position: absolute;
   width: 62%;
   height: 70%;
   background-color: #3f0050;
-  top: 65%
+  top: 65%;
 }
-h3{
+h3 {
   font-size: 20px;
   margin-left: 10%;
   margin-right: 5%;
   color: white;
 }
-button{
+button {
   margin-left: 10%;
   margin-top: 5%;
   border-radius: 20%;
@@ -52,36 +53,34 @@ button{
   background-color: white;
 }
 //
-.title{
+.title {
   height: 100px;
   line-height: 100px;
-  margin-top: 10%
+  margin-top: 10%;
+  margin-left: 10%;
 }
-.app{
+.app {
   cursor: pointer;
 }
-.custom-btn{
+.custom-btn {
   height: 50px !important;
   border-radius: 5px !important;
   width: 200px !important;
   margin-top: 25px;
 }
-
-.bg-primary{
+.bg-primary {
   background-image: url("../../assets/img/IncrementBanner.jpg");
 }
-
-.bg-black{
+.bg-black {
   background-color: #000;
   margin-top: 10px !important;
 }
-
-.cw-banner{
+.cw-banner {
   width: 100%;
   float: left;
   height: 100vh;
 }
-.text{
+.text {
   width: 45%;
   float: left;
   margin-left: 5%;
@@ -89,78 +88,71 @@ button{
   position: relative;
   z-index: 1000;
 }
-.text .title{
+.text .title {
   width: 100%;
   float: left;
 }
-.title h1{
+.title h1 {
   font-size: 50px;
 }
-.text .description{
+.text .description {
   margin-top: 25px;
   width: 100%;
   float: left;
   text-align: justify;
 }
-.image{
+.image {
   max-width: 100%;
   max-height: 100%;
   position: absolute;
   right: 0;
   z-index: 0;
 }
-
-@media screen and (max-width: 992px){
-  .text{
+@media screen and (max-width: 992px) {
+  .text {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 50px;
   }
-  .title{
+  .title {
     text-align: center;
   }
-
-  .title h1{
+  .title h1 {
     font-size: 300%;
   }
-
-  .description h4{
+  .description h4 {
     font-size: 120%;
     font-weight: 300;
     margin-top: 25px;
     margin-bottom: 25px;
   }
-
-  .image{
+  .image {
     position: relative;
     max-height: 100%;
     width: inherit;
     margin-top: 50px;
   }
-
-  .custom-btn{
+  .custom-btn {
     width: 100% !important;
     margin-top: 10px !important;
   }
 }
 </style>
 <script>
-import ROUTER from 'src/router'
+import ROUTER from "src/router";
 export default {
-  mounted(){
-  },
-  data(){
-    return {
-    }
+  mounted() {},
+  data() {
+    return {};
   },
   methods: {
-    redirect(parameter){
-      ROUTER.push(parameter)
+    redirect(parameter) {
+      ROUTER.push(parameter);
     },
-    externalLink(url){
-      window.open(url, '_blank')
-    }
-  }
-}
+    externalLink(url) {
+      window.open(url, "_blank");
+    },
+  },
+};
 </script>
