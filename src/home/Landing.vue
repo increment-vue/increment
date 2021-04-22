@@ -2,13 +2,13 @@
 	<div class="body">
 		<LandingBanner></LandingBanner>
     <LandingWhoWeAre></LandingWhoWeAre>
-    <LandingOurServices />
-    <LandingHowWeWork />
-    <LandingOurProjects />
-    <LandingCaseStudies />
-    <LandingOurValues />
-    <LandingTechnologies />
-    <LandingWhatTheySayAboutUs />
+    <LandingOurServices></LandingOurServices>
+    <LandingHowWeWork></LandingHowWeWork>
+    <LandingOurProjects></LandingOurProjects>
+    <LandingCaseStudies></LandingCaseStudies>
+    <LandingOurValues></LandingOurValues>
+    <LandingTechnologies></LandingTechnologies>
+    <LandingWhatTheySayAboutUs></LandingWhatTheySayAboutUs>
     <!-- Calendly inline widget begin -->
     <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div> -->
     <!-- Calendly inline widget end -->
