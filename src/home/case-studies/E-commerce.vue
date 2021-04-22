@@ -2,11 +2,11 @@
 <div>
 <div>
     
-    <img src="../../assets/img/bg-ecommerce.jpg">
+    <img :src="require('assets/img/bg-ecommerce.jpg')">
     <h1>E-commerce</h1>
     <h2>Starting Price: $2,000</h2>
     <div class="container">
-        <button type="button" class="btn btn-success">Inquire Now!</button>
+        <a  href="https://calendly.com/incrementtech2020" type="button" class="btn btn-success custom">Inquire Now!</a>
     </div>
     
     
@@ -30,14 +30,13 @@ export default {
     
 }
 </script>
-<style >
+<style scoped lang="scss">
+@import "~assets/style/colors.scss";
 img{
-    height: 400px;
-    width: 1350px;
-    left: 0px;
-    top: 100px;
-    border-radius: 0px;
-
+    height: 600px;
+    width: 100%;
+    
+    
 }
 #text{
     margin-top: 130px;
@@ -65,11 +64,10 @@ img{
 }
 h1{
     color: white;
-    margin-top: 55px;
+    margin-top: 150px;
     position: absolute;
-    width: 307px;
-    height: 68px;
-    left: 518px;
+    left: 37%;
+    right: 37%;
     top: 98px;
     /* font-family: Open Sans; */
     font-style: normal;
@@ -88,8 +86,9 @@ h2{
     position: absolute;
     width: 329px;
     height: 34px;
-    left: 514px;
-    top: 222px;
+    left: 37%;
+    top: 320px;
+    /* margin-top: 115px; */
     font-style: normal;
     font-size: 30px;
     line-height: 41px;
@@ -105,15 +104,20 @@ h2{
 }
 .btn-success {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: #00E68A;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+    border-radius:10px;
+    outline: none;
+    border: 0px;
+    
     
 }
 .btn {
     display: inline-block;
     font-weight: 400;
-    margin-top: -15px;
-    margin-left: 494px;
+    margin-top: 180px;
+    margin-left: 43%;
+
 }
 .container{
     margin: 0;
@@ -134,5 +138,8 @@ h3{
     margin-right: 115px;
     margin-top: 35px;
 } 
+.custom:hover{
+    background-color: #00E68A !important;
+}
 </style>
 

@@ -15,7 +15,7 @@
                         <span>{{item.title}}</span>
                         <p>{{item.description}}</p>
                     </div>
-                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                    <a :href=item.link ><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
                 </div>
             </div>
             <br>
@@ -28,7 +28,7 @@
                         <span>{{item.title}}</span>
                         <p>{{item.description}}</p>
                     </div>
-                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                    <a :href=item.link ><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
                 </div>
             </div>
             <br>
@@ -41,7 +41,7 @@
                         <span>{{item.title}}</span>
                         <p>{{item.description}}</p>
                     </div>
-                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                    <a :href=item.link ><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
                 </div>
             </div>
             <br>
@@ -54,7 +54,7 @@
                         <span>{{item.title}}</span>
                         <p>{{item.description}}</p>
                     </div>
-                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                    <a :href=item.link ><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
                 </div>
             </div>
             <br>
@@ -67,7 +67,7 @@
                         <span>{{item.title}}</span>
                         <p>{{item.description}}</p>
                     </div>
-                    <a :href=item.link target="_blank"><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
+                    <a :href=item.link ><button v-show="item.withButton" v-if="item.withButton === true ? 'item.withButton':'!item.withButoon'" class="button1">Visit Website</button></a>
                 </div>
             </div>
         </div>
@@ -201,12 +201,13 @@ export default {
 @import "~assets/style/colors.scss";
 .d-flex{
     margin-top: 10%;
+    text-align: center;
 }
 .entitle{
     color: white;
     font-size: 55px;
     text-align: center;
-    margin-top: -15%;
+    margin-top: -23%;
 }
 .cw-banner{
   width: 100%;
@@ -215,9 +216,7 @@ export default {
 }
 img{
     width: 100%;
-    height: 30vw;
-    left: 0px;
-    top: 100px;
+    height: 600px;
 }
 .button1{
   background-color: #00E68A;
@@ -225,16 +224,14 @@ img{
   color: white;
   padding: 1vw 2vw;
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 10px;
-  margin-left: 15%;
-  margin-right: 14%;
   margin-top: 10%;
   outline-color: white;
 }
 .row{
-  width: 19vw;
+  width: 16vw;
   height: auto;
   border: 1px solid #00B89F ;
   background-color: white;
@@ -242,30 +239,35 @@ img{
 }   
 .description{
   text-align:center;
-  margin-left: -12%;
-  height: 10vh;
+  height: 12vh;
 }
 span{
-  font-size: 17px;
+  font-size: 15px;
   color: black;
   font-weight: 600;
 }
 p{
-  font-size: 14px;
+  font-size: 13px;
   color: #8F00B5;
 }
 .images{
-  width: 18vw;
+  width: 15vw;
   height: auto;
   margin:auto;
   padding: 5%;
 }
 @media screen and (max-width: 992px){
+  .entitle{
+    margin-top: -30%;
+}
   span{
     font-size: 10px;
   }
   p{
     font-size: 10px;
+  }
+  .description{
+    height: 8vh;
   }
   .button1{
   font-size: 10px;

@@ -1,45 +1,49 @@
 <template>
   <div class="cw-banner" id="case-studies">
-    <div class="text-center mt-5">
-      <h1 class="title" style="color:black;font-size:60px; margin-bottom: 5%">Case Studies</h1>
+    <div class="text-center mt-5 mb-5">
+      <h1 class="title" style="color:black; font-size:60px;">Case Studies</h1>
     </div>
-    <div class="container pl-0 mt-2">
-      <div class="col-sm-12 pl-0 d-flex">
-        <div :class="item.firstCard === true ? 'col col-sm-3 ml-0' : 'col col-sm-3 ml-2' " v-for="(item, i) in cases" :key="i" :index="i" id="card">
-            <div class="row">
-              <img class="image" :src="item.src">
-            </div>
-            <div class="row mt-2 pb-5" style="height:40%;">
-              <div class="col-sm-12" id="paragraph">
-                <p style="font-size:16px"><b>{{item.title}}</b></p>
-                <p style="font-size:14px">{{item.desc}}</p>
+    <div class="mt-2">
+      <div class="col-sm-12 d-flex">
+        <div class="col-sm-3" v-for="(item, i) in cases" :key="i" :index="i" id="card">
+          <div class="rows">
+            <img :src="item.src" class="image">
+              <div class="description">
+                <div class="paragraph">
+                  <p class="mt-2" style="font-size:16px">
+                    <b>{{item.title}}</b>
+                  </p>
+                  <p style="font-size:14px">{{item.desc}}</p>
+                </div>
+                <div class="mt-3">
+                  <div class= "mb-3">
+                    <button @click="redirect(item.links)" class="button1">Read More</button>
+                  </div>
+                  <div class="price">
+                    <label>Starting Price:</label>
+                    <br>
+                    <h4>{{item.price}}</h4>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="row" style="display:block">
-                <div class="mb-3">
-                  <button @click="redirect(item.links)" class="button1">Read More</button>
-                </div>
-                <div class="price">
-                  <label>Starting Price:</label>
-                  <br>
-                  <h4>{{item.price}}</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="button">
-          <button @click="redirect('case-studies')" class="button2">View More</button>
+            </div>     
         </div>
       </div>
+      <div class="button">
+        <button @click="redirect('case-studies')" class="button2">View More</button>
+      </div>
     </div>
+  </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .cw-banner {
   width: 100%;
-  float: left;
+  float:left;
   background: white;
-  padding-bottom: 10%;
+  padding-left: 10%;
+  padding-right:10%;
+  margin-bottom:10%;
 }
 .button {
   margin-top: -3%;
@@ -51,15 +55,20 @@
   max-height: 100%;
 }
 
-#card {
+.rows {
   border: solid 1px #00b89f;
   text-align: center;
 }
-#paragraph {
+.paragraph {
   text-align: center;
   font-size: 15px;
   color: #000000;
+  height: 50vh;
   // height: 20%;
+}
+.description{
+    padding: 5%;
+    margin-bottom: 10%;
 }
 .button1 {
   background-color: white;
@@ -113,7 +122,24 @@ h4 {
   color: #00b89f;
 
 }
-@media screen and (max-width: 992px) {
+
+@media only screen and (min-width: 280px) {
+  .cw-banner {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media only screen and (min-width: 280px) {
+  .cw-banner {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
   .text {
     width: 90%;
     margin-left: 5%;
@@ -129,6 +155,24 @@ h4 {
     max-height: 100%;
     width: inherit;
   }
+  .price {
+  border: 0.5px solid #3f0050;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px #00b89f;
+  border-radius: 5px;
+  width: 125px;
+  height: 80px;
+  margin-left:auto;
+  margin-right:auto;
+  
+}
+ .paragraph {
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  height: 50vh;
+  // padding-bottom:10%;
+}
 }
 </style>
 <script>
