@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <img :src="require('assets/img/bg-payroll.jpg')" />
+      <img src="../../assets/img/bg-payroll.jpg" />
       <h1>Payroll System</h1>
       <h2>Starting Price: $7,000</h2>
       <div class="container">
@@ -36,7 +36,11 @@
     </div>
   </div>
 </template>
-<style scoped>
+<script>
+export default {};
+</script>
+<style scoped lang="scss">
+@import "~assets/style/colors.scss";
 img {
   height: 600px;
   width: 100%;
