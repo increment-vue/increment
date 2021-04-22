@@ -44,8 +44,8 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .image{
-  height:350px;
-  width:1350px;
+  height:600px;
+  width: 100%;
 }
 .body{
     padding:10%;
@@ -62,7 +62,7 @@
     color:white;
     //background: #00E68A;
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     //color: white;
     padding: 10px 20px;

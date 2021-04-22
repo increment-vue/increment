@@ -210,7 +210,7 @@ export default {
 }
 .cw-banner{
   width: 100%;
-  padding: 5%;
+  padding: 15%;
   margin-top: 3%;
 }
 img{
