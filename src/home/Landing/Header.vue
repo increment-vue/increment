@@ -1,21 +1,50 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
     <span class="brand">
-      <a class="navbar-brand" @click="redirect('/')">
-        <img :src="require('assets/img/logo.png')" style="margin-bottom: 5px;">
-      </a>
-      <b>
-      INCREMENT TECHNOLOGIES
-      </b>
+      <div class="row no-gutters">
+        <div class="col-md-3">
+          <a class="navbar-brand" @click="redirect('/')">
+            <img :src="require('assets/img/logo.png')" style="margin-bottom: 5px;">
+          </a>
+        </div>
+        <div class="col-md-9">
+          <b>
+            <div class="increment-purple" style="margin-top: 10px;">INCREMENT</div>
+            <div class="increment-limegreen-light">TECHNOLOGIES</div>
+          </b>
+        </div>
+      </div>
+      
     </span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse">
       <form class="form-inline my-2 my-lg-0 ml-auto">
         <ul class="navbar-nav" v-if="this.$route.path === '/'">
-          <li class="nav-item" v-for="(item, index) in menu" :key="index"><a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" @click="scrollTo(item.redirect)" href="javascript: return false"><b style="color: '#0089bf'">{{item.title}}</b>
-          <i class="fas fa-caret-down"></i></a></li>
+          <li class="nav-item" v-for="(item, index) in menu" :key="index">
+            <div v-if="item.type === 'dropdown'">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #20C1AB;">
+                <b class="increment-limegreen-light">{{ item.title }}</b>
+              </a>
+              <div class="dropdown-menu" v-if="item.title === 'Who We Are'" style="position: absolute; left: 42%; border-color: #20C1AB;">
+                  <a class="dropdown-item" href="#"><b class="increment-limegreen-light">Our Values</b></a>
+                <a class="dropdown-item" href="#"><b class="increment-limegreen-light">What They Say About Us</b></a>
+              </div>
+              <div class="dropdown-menu" v-if="item.title === 'Our Services'" style="position: absolute; left: 53%; border-color: #20C1AB;">
+                  <a class="dropdown-item" href="#">
+                    <b class="increment-limegreen-light">How We Work</b></a>
+                  <a class="dropdown-item" href="#">
+                    <b class="increment-limegreen-light">Our Projects</b>
+                  </a>
+              </div>
+            </div>
+            <div v-else-if="item.type === 'regular'">
+              <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" @click="scrollTo(item.redirect)" href="javascript: return false">
+              <b class="increment-limegreen-light">{{item.title}}</b>
+              </a>
+            </div>
+          </li>
         </ul>
       </form>
     </div>
@@ -24,9 +53,18 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.increment-purple{
+  color: #3F0050;
+}
+.increment-limegreen-light{
+  color: #20C1AB;
+}
+.increment-limegreen-dark{
+  color: #30C5B1;
+}
 .brand{
-  font-size: 24px;
-  color: '#0089bf';
+  font-size: 15px;
+  font-weight: bold;
 }
 .nav-item{
   margin-right: 20px;
@@ -82,19 +120,24 @@ export default {
       common: COMMON,
       menu: [{
         title: 'Who We Are',
-        redirect: '/#who-we-are'
+        redirect: '/#who-we-are',
+        type: 'dropdown'
       }, {
         title: 'Our Services',
-        redirect: '/#our-services'
+        redirect: '/#our-services',
+        type: 'dropdown'
       }, {
         title: 'Case Studies',
-        redirect: '/#case-studies'
+        redirect: '/#case-studies',
+        type: 'regular'
       }, {
         title: 'Technologies',
-        redirect: '/#technologies'
+        redirect: '/#technologies',
+        type: 'regular'
       }, {
         title: 'Send Request',
-        redirect: '/send-request'
+        redirect: '/send-request',
+        type: 'regular'
       }]
     }
   },
