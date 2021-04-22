@@ -1,10 +1,12 @@
 <template>
 <div>
-<div class="iamge">
-</div>
+<div class="image">
+<div class="centered">
 <h1 class="title"><b>Online Enrollment</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $7,000</h3>
 <a href="https://calendly.com/incrementtech2020/services-offered" id="btn" type="button">Inquire Now!</a>
+</div>
+</div>
 <div class="body">
 <br>
 <br>
@@ -27,16 +29,20 @@
     width:100%;
 }
 .body{
-    margin-top:50px;
     text-align:justify;
 }
 .title{
-    margin-top:-200px;
     text-align:center;
     color:white;
 }
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 #btn{
-    margin-left:45%;
+    margin-left:35%;
     background-color: #00E68A;
     color:white;
     //background: #00E68A;

@@ -1,9 +1,12 @@
 <template>
+<div>
 <div class="image">
-</div>
+<div class="centered">
 <h1 class="title"><b>Company Profiling</b></h1>
 <h3 style="text-align:center;color:white;">Starting Price : $700</h3>
 <a href="https://calendly.com/incrementtech2020/services-offered" id="btn" type="button">Inquire Now!</a>
+</div>
+</div>
 <div class="body">
 <br>
 <br>
@@ -12,6 +15,7 @@
 <br>
 <p>Increment Technologies Inc., masters the field of building websites for a company allowing it to integrate and suggest navigation as well as the contents on what to put specifically for their website. Offering various options, we cater to showcase product or service features, blog posts, portfolio or accomplished projects, call to action, newsletter, and more. We always make sure to hear out our client’s requests by making their vision into reality. 
 </p>
+</div>
 </div>
 </template>
 <script>
@@ -24,15 +28,20 @@
     width:100%;
 }
 .body{
-    margin-top:50px;
     text-align:justify;
 }
 .title{
     text-align:center;
     color:white;
 }
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 #btn{
-    margin-left:45%;
+    margin-left:35%;
     background-color: #00E68A;
     color:white;
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
