@@ -21,4 +21,8 @@ export default {
 #app {
   font-family: "Open Sans", sans-serif;
 }
+
+router-view {
+  width: 100%;
+}
 </style>
