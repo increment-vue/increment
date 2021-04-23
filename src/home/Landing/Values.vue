@@ -52,6 +52,7 @@
   float: left;
   background: $secondary;
   padding-bottom: 10%; 
+  min-height: 100vh;
 }
 .d-flex {
   height: inherit;
