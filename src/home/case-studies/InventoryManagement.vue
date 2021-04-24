@@ -12,17 +12,27 @@
     </div>
     <div class="container">
       <p>
-        Inventory Management System is a very important tool whether you are an established company or a start-up. This solution is a tool used by business owners to manage, track, and optimize their warehouse or inventory at the same time. It benefits your company by providing accurate purchase records, barcode identification, reports & sales history, sales forecast, and more.
-
+        Inventory Management System is a very important tool whether you are an
+        established company or a start-up. This solution is a tool used by
+        business owners to manage, track, and optimize their warehouse or
+        inventory at the same time. It benefits your company by providing
+        accurate purchase records, barcode identification, reports & sales
+        history, sales forecast, and more.
       </p>
       <p>
-        Increment Technologies, create opportunities to achieve efficiency in your processes. Through Inventory Management, we can help you organize your warehouse management, tracking system, sales history, or with any qualifications you want to build in your own Inventory system, we can make it happen here at Increment. With our company’s skills and expertise, we ought to develop a software that is fit for your needs. 
+        Increment Technologies, create opportunities to achieve efficiency in
+        your processes. Through Inventory Management, we can help you organize
+        your warehouse management, tracking system, sales history, or with any
+        qualifications you want to build in your own Inventory system, we can
+        make it happen here at Increment. With our company’s skills and
+        expertise, we ought to develop a software that is fit for your needs.
       </p>
     </div>
+    <span class="return-to-top" @click="scrollTo()">
+      <i class="fa fa-angle-up" style="font-size: 35px"></i>
+    </span>
   </div>
 </template>
-<script>
-</script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .banner {
@@ -69,4 +79,39 @@ p {
   text-align: justify;
   margin-bottom: 30px;
 }
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
+  color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.fa-angle-up {
+  color: $white !important;
+}
+.return-to-top:hover {
+  cursor: pointer;
+  color: $primary;
+}
 </style>
+<script>
+import Jquery from "jquery";
+export default {
+  methods: {
+    scrollTo() {
+      Jquery("html, body").animate(
+        {
+          scrollTop: Jquery(".banner").offset().top,
+        },
+        500
+      );
+    },
+  },
+};
+</script>

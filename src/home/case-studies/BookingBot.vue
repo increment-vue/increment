@@ -29,10 +29,11 @@
         not losing their potential customers just because of neglected orders.
       </p>
     </div>
+    <span class="return-to-top" @click="scrollTo()">
+      <i class="fa fa-angle-up" style="font-size: 35px"></i>
+    </span>
   </div>
 </template>
-<script>
-</script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .banner {
@@ -79,4 +80,40 @@ p {
   text-align: justify;
   margin-bottom: 30px;
 }
+
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
+  color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.fa-angle-up {
+  color: $white !important;
+}
+.return-to-top:hover {
+  cursor: pointer;
+  color: $primary;
+}
 </style>
+<script>
+import Jquery from "jquery";
+export default {
+  methods: {
+    scrollTo() {
+      Jquery("html, body").animate(
+        {
+          scrollTop: Jquery(".banner").offset().top,
+        },
+        500
+      );
+    },
+  },
+};
+</script>

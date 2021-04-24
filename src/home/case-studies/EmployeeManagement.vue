@@ -12,16 +12,30 @@
     </div>
     <div class="container">
       <p>
-        The Employee Management System maintains the professional and personal details of the employees as well as the company itself, in an organized manner. It’s importance to the company is that it manages and lowers the burden or even pressure on the Human Resource Department and Business Managers. This does not just benefit the established companies, but also those who are managing their business alone, with a starting number of workforce; since start-up business needs to be taken care and monitored in order for it to expand.
+        The Employee Management System maintains the professional and personal
+        details of the employees as well as the company itself, in an organized
+        manner. It’s importance to the company is that it manages and lowers the
+        burden or even pressure on the Human Resource Department and Business
+        Managers. This does not just benefit the established companies, but also
+        those who are managing their business alone, with a starting number of
+        workforce; since start-up business needs to be taken care and monitored
+        in order for it to expand.
       </p>
       <p>
-        Increment Technologies, exclusively develops a software for Employee Management that would benefit the company in terms of the following: employee monitoring, fewer compliance risk, minimizing manual errors, higher productivity, lower cost, and monitoring of working hours. As a business, your number one asset is your employees, thus making sure that they are properly managed especially when they are increasing, having a proper software or system would definitely ease the stress.
+        Increment Technologies, exclusively develops a software for Employee
+        Management that would benefit the company in terms of the following:
+        employee monitoring, fewer compliance risk, minimizing manual errors,
+        higher productivity, lower cost, and monitoring of working hours. As a
+        business, your number one asset is your employees, thus making sure that
+        they are properly managed especially when they are increasing, having a
+        proper software or system would definitely ease the stress.
       </p>
     </div>
+    <span class="return-to-top" @click="scrollTo()">
+      <i class="fa fa-angle-up" style="font-size: 35px"></i>
+    </span>
   </div>
 </template>
-<script>
-</script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .banner {
@@ -68,4 +82,39 @@ p {
   text-align: justify;
   margin-bottom: 30px;
 }
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
+  color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.fa-angle-up {
+  color: $white !important;
+}
+.return-to-top:hover {
+  cursor: pointer;
+  color: $primary;
+}
 </style>
+<script>
+import Jquery from "jquery";
+export default {
+  methods: {
+    scrollTo() {
+      Jquery("html, body").animate(
+        {
+          scrollTop: Jquery(".banner").offset().top,
+        },
+        500
+      );
+    },
+  },
+};
+</script>
