@@ -12,20 +12,25 @@
     </div>
     <div class="container">
       <p>
-        What can a Software Development Company do with transportation? It can develop a high-quality fleet management system that could store information for public transportation, RFID system, and more. A fleet management system allows businesses to effectively organize and coordinate work vehicles to improve efficiency, reduce costs, and provide compliance with government’s standards and regulations.
-
-
+        What can a Software Development Company do with transportation? It can
+        develop a high-quality fleet management system that could store
+        information for public transportation, RFID system, and more. A fleet
+        management system allows businesses to effectively organize and
+        coordinate work vehicles to improve efficiency, reduce costs, and
+        provide compliance with government’s standards and regulations.
       </p>
       <p>
-        Increment Technologies can offer a variety of services, such as RFID system, ticketing system, payment, inventory, store passenger information, booking system, scheduling, or even contact tracing. We are capable of developing services based on your qualifications and we believe that this can create opportunities for you to increase your efficiency and reduce cost when it comes to manpower, convenience and effort.
-
-
+        Increment Technologies can offer a variety of services, such as RFID
+        system, ticketing system, payment, inventory, store passenger
+        information, booking system, scheduling, or even contact tracing. We are
+        capable of developing services based on your qualifications and we
+        believe that this can create opportunities for you to increase your
+        efficiency and reduce cost when it comes to manpower, convenience and
+        effort.
       </p>
     </div>
   </div>
 </template>
-<script>
-</script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .banner {
@@ -72,4 +77,39 @@ p {
   text-align: justify;
   margin-bottom: 30px;
 }
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
+  color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.fa-angle-up {
+  color: $white !important;
+}
+.return-to-top:hover {
+  cursor: pointer;
+  color: $primary;
+}
 </style>
+<script>
+import Jquery from "jquery";
+export default {
+  methods: {
+    scrollTo() {
+      Jquery("html, body").animate(
+        {
+          scrollTop: Jquery(".banner").offset().top,
+        },
+        500
+      );
+    },
+  },
+};
+</script>
