@@ -13,7 +13,7 @@
     <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div> -->
     <!-- Calendly inline widget end -->
     <span class="return-to-top" @click="scrollTo()">
-      <i class="fa fa-angle-up" style="font-size: 35px"></i>
+      <i class="fa fa-angle-up" style="font-size: 35px;"></i>
     </span>
   </div>
 </template>
@@ -104,8 +104,8 @@ div.item-holder {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background: $white;
-  color: primary;
+  background: $primary;
+  color: $white;
   height: 50px;
   width: 50px;
   border-radius: 5px;
@@ -114,7 +114,7 @@ div.item-holder {
 }
 
 .fa-angle-up {
-  color: $primary !important;
+  color: $white !important;
 }
 .return-to-top:hover {
   cursor: pointer;
@@ -157,7 +157,7 @@ export default {
     scrollTo() {
       Jquery("html, body").animate(
         {
-          scrollTop: Jquery("#header").offset().top,
+          scrollTop: Jquery(".body").offset().top,
         },
         500
       );

@@ -101,7 +101,7 @@
       </div>
     </div>
     <span class="return-to-top" @click="scrollTo()">
-      <i class="fas fa-angle-up" style="font-size: 35px"></i>
+      <i class="fa fa-angle-up" style="font-size: 35px"></i>
     </span>
   </div>
 </template>
@@ -174,11 +174,32 @@ h4 {
   width: 150px;
   height: 150px;
 }
+
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
+  color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.fa-angle-up {
+  color: $white !important;
+}
+.return-to-top:hover {
+  cursor: pointer;
+  color: $primary;
+}
 </style>
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
-import $ from "jquery";
+import Jquery from "jquery";
 export default {
   mounted() {
     console.log(this.$route);

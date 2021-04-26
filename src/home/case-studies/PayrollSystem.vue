@@ -12,16 +12,24 @@
     </div>
     <div class="container">
       <p>
-        A Payroll System is one of the top necessities of a company. It is an important software that calculates payroll accurately in compliance with taxing authority. The very main purpose of a payroll system is to prepare a detailed salary record of all the employees in an organization, making it sure that it has the accurate computation of the working hours.
+        A Payroll System is one of the top necessities of a company. It is an
+        important software that calculates payroll accurately in compliance with
+        taxing authority. The very main purpose of a payroll system is to
+        prepare a detailed salary record of all the employees in an
+        organization, making it sure that it has the accurate computation of the
+        working hours.
       </p>
       <p>
-        Increment Technologies can and will achieve this system that accurately computes the salaries of the employees, can handle multi company transactions, provide detailed reports from payment transactions, and maintain employee profiles. We believe that Increment Technologies is the right software company that will surely provide you the solutions you need in your business.
+        Increment Technologies can and will achieve this system that accurately
+        computes the salaries of the employees, can handle multi company
+        transactions, provide detailed reports from payment transactions, and
+        maintain employee profiles. We believe that Increment Technologies is
+        the right software company that will surely provide you the solutions
+        you need in your business.
       </p>
     </div>
   </div>
 </template>
-<script>
-</script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .banner {
@@ -68,4 +76,39 @@ p {
   text-align: justify;
   margin-bottom: 30px;
 }
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
+  color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.fa-angle-up {
+  color: $white !important;
+}
+.return-to-top:hover {
+  cursor: pointer;
+  color: $primary;
+}
 </style>
+<script>
+import Jquery from "jquery";
+export default {
+  methods: {
+    scrollTo() {
+      Jquery("html, body").animate(
+        {
+          scrollTop: Jquery(".banner").offset().top,
+        },
+        500
+      );
+    },
+  },
+};
+</script>
