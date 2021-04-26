@@ -1,17 +1,17 @@
 <template>
   <footer>
     <div class="footer row">
-      <div class="col-6">
+      <div class="col-md-6 col-sm-12">
         <h5 style="margin-top:10%;font-weight:bold;">ABOUT US</h5>
         <br>
         <div>
           <p>Increment Technologies is a team of highly motivated technopreneurs.  We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthly online products.</p>
         </div>
         <span v-for="(item, index) in common.socialIcons" :key="index" class="social-icons-holder"  style="padding-right:25px;">
-        <font-awesome-icon :icon="item.icon" class="social-icons fa-lg" @click="openWindow(item.url)"></font-awesome-icon>
+        <font-awesome-icon :icon="item.icon" class="social-icon fa-lg" @click="openWindow(item.url)"></font-awesome-icon>
       </span>
       </div>
-      <div class="col-6">
+      <div class="col-md-6 col-sm-12">
         <h5 style="margin-top:10%;font-weight:bold;">CONTACT US</h5>
         <br>
               <ul>
@@ -31,7 +31,7 @@
         <br>
         <li>
               <font-awesome-icon :icon="faMapMarker" class="social-icons fa-lg" style="color: black;"></font-awesome-icon>
-               <a href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676" target="_blank" style="padding:25px;color:black;"><p style="padding:50px;margin-top:-75px;">{{common.address}}</p></a>
+               <a href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676" target="_blank" style="color:black;"><p class="px-lg-5 px-sm-0" style="margin-top:-25px;">{{common.address}}</p></a>
         </li>
       </ul>
       </div>
@@ -102,6 +102,9 @@ footer-widget .title:hover{
 li{
   position: flex;
 }
+ul {
+  list-style-type: none;
+}
 .community .link i{
   font-size: 24px;
   padding: 0 10px 0 10px;
@@ -130,43 +133,45 @@ li{
   padding-bottom: 5px;
   font-size: 12px;
   text-align: center;
-  margin-top: 45px;
+  margin-top: 5px;
   color: #6f6f6f !important;
 }
 @media screen and (max-width: 992px){
-  .footer-widget{
-    width: 100%;
-    text-align: center;
-    margin-right: 0%;
-    padding: 0px;
-  }
-  .community .title{
-    text-align: center;
-  }
-  .community i{
-    width: 20%;
-  }
-  .social-icons-holder{
-  width: 10%;
-  margin-top: 2vh;
-  }
-  .social-icons{
-  margin: 15px;
-  color: #fff;
+.footer-widget{
+width: 100%;
+text-align: center;
+margin-right: 0%;
+padding: 0px;
+}
+.community .title{
+text-align: center;
+}
+.community i{
+width: 20%;
+}
+.social-icons-holder{
+width: 10%;
+margin-top: 2vh;
+}
+.social-icons{
+color: black;
+margin-left:-40px;
+}
+.social-icon{
+  color:black;
 }
 }
 hr{
-  height: 2px;
-  color:white;
-  background-color:white;
-  width:  100%;
+height: 2px;
+color:white;
+background-color:white;
+width:  100%;
 }
-
 .action-link:hover{
-  cursor: pointer;
-  text-decoration: underline;
-  color:#00b89f;
-}  
+cursor: pointer;
+text-decoration: underline;
+color:#00b89f;
+}
 </style>
 <script>
 import ROUTER from 'src/router'
