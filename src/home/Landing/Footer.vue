@@ -24,7 +24,7 @@
           ></font-awesome-icon>
         </span>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12" id="div2">
         <h5 style="margin-top: 10%; font-weight: bold">CONTACT US</h5>
         <br />
         <ul>
@@ -210,6 +210,10 @@ hr {
 @media screen and (max-width: 640px) {
   .footer {
     text-align: center;
+  }
+  #div2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 }
 </style>
