@@ -53,17 +53,20 @@
             </a>
           </li>
           <br />
-          <li>
+          <li id="map-li">
+            <font-awesome-icon
+              :icon="faMapMarker"
+              class="social-icons fa-lg"
+              style="color: black"
+              id="map"
+            ></font-awesome-icon>
             <a
               href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676"
               target="_blank"
               style="color: black"
-              ><font-awesome-icon
-                :icon="faMapMarker"
-                class="social-icons fa-lg"
-                style="color: black"
-              ></font-awesome-icon>
-              <span style="padding: 25px">{{ common.address }}</span></a
+              ><p class="px-lg-5 px-sm-0" style="margin-top: -25px">
+                {{ common.address }}
+              </p></a
             >
           </li>
         </ul>
@@ -211,6 +214,16 @@ hr {
   .footer {
     text-align: center;
   }
+
+  #map {
+    float: left;
+    margin-left: 3px;
+  }
+
+  #map-li {
+    margin-top: 15px;
+  }
+
   #div2 {
     margin-top: 25px;
     margin-bottom: 25px;
