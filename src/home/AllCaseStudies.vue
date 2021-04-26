@@ -5,132 +5,30 @@
             <h1 class="title"><b>Case Studies</b></h1>
         </div>
         <div class="cw-banner">
-            <div class="col-sm-12 d-flex">
-                <div class="col-sm-3" v-for="(item, i) in cases" :key="i" :index="i" id="card">
-                    <div class="rows">
-                        <img :src="item.src" class="image">
-                            <div class="description">
-                                <div class="paragraph">
-                                    <p class="mt-2" style="font-size:16px">
-                                    <b>{{item.title}}</b>
-                                    </p>
-                                    <p style="font-size:14px">{{item.desc}}</p>
-                                </div>
-                            <div class="mt-3">
-                                <div class= "mb-3">
-                                    <button @click="redirect(item.links)" class="button1">Read More</button>
-                                </div>
-                                <div class="price">
-                                    <label>Starting Price:</label>
-                                    <br>
-                                    <h4>{{item.price}}</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row no-gutters">
+        <span class="col-md-3" v-for="(item, index) in cases" :key="index">
+          <center class="element">
+             <img :src="item.src" class="image">
+             <div class="mt-3">
+            <p class="text"><b>{{ item.title }}</b></p>
             </div>
-            <div class="col-sm-12 d-flex">
-                <div class="col-sm-3" v-for="(item, i) in cases2" :key="i" :index="i" id="card">
-                    <div class="rows">
-                        <img :src="item.src" class="image">
-                            <div class="description">
-                                <div class="paragraph">
-                                    <p class="mt-2" style="font-size:16px">
-                                    <b>{{item.title}}</b>
-                                    </p>
-                                    <p style="font-size:14px">{{item.desc}}</p>
-                                </div>
-                            <div class="mt-3">
-                                <div class= "mb-3">
-                                    <button @click="redirect(item.links)" class="button1">Read More</button>
-                                </div>
-                                <div class="price">
-                                    <label>Starting Price:</label>
-                                    <br>
-                                    <h4>{{item.price}}</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+           <div class="p-3 rows"> <p class="paragraph">{{ item.desc }}
+            </p>
+           </div>
+           <div class="mt-3">
+                  <div class= "mb-3">
+                    <button @click="redirect(item.links)" class="button1">Read More</button>
+                  </div>
+                  <div class="price mb-5">
+                    <label>Starting Price:</label>
+                    <br>
+                    <h4>{{item.price}}</h4>
+                  </div>
                 </div>
-            </div>
-            <div class="col-sm-12 d-flex">
-                <div class="col-sm-3" v-for="(item, i) in cases3" :key="i" :index="i" id="card">
-                    <div class="rows">
-                        <img :src="item.src" class="image">
-                            <div class="description">
-                                <div class="paragraph">
-                                    <p class="mt-2" style="font-size:16px">
-                                    <b>{{item.title}}</b>
-                                    </p>
-                                    <p style="font-size:14px">{{item.desc}}</p>
-                                </div>
-                            <div class="mt-3">
-                                <div class= "mb-3">
-                                    <button @click="redirect(item.links)" class="button1">Read More</button>
-                                </div>
-                                <div class="price">
-                                    <label>Starting Price:</label>
-                                    <br>
-                                    <h4>{{item.price}}</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 d-flex">
-                <div class="col-sm-3" v-for="(item, i) in cases4" :key="i" :index="i" id="card">
-                    <div class="rows">
-                        <img :src="item.src" class="image">
-                            <div class="description">
-                                <div class="paragraph">
-                                    <p class="mt-2" style="font-size:16px">
-                                    <b>{{item.title}}</b>
-                                    </p>
-                                    <p style="font-size:14px">{{item.desc}}</p>
-                                </div>
-                            <div class="mt-3">
-                                <div class= "mb-3">
-                                    <button @click="redirect(item.links)" class="button1">Read More</button>
-                                </div>
-                                <div class="price">
-                                    <label>Starting Price:</label>
-                                    <br>
-                                    <h4>{{item.price}}</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 d-flex">
-                <div class="col-sm-3" v-for="(item, i) in cases5" :key="i" :index="i" id="card">
-                    <div class="rows">
-                        <img :src="item.src" class="image">
-                            <div class="description">
-                                <div class="paragraph">
-                                    <p class="mt-2" style="font-size:16px">
-                                    <b>{{item.title}}</b>
-                                    </p>
-                                    <p style="font-size:14px">{{item.desc}}</p>
-                                </div>
-                            <div class="mt-3">
-                                <div class= "mb-3">
-                                    <button @click="redirect(item.links)" class="button1">Read More</button>
-                                </div>
-                                <div class="price">
-                                    <label>Starting Price:</label>
-                                    <br>
-                                    <h4>{{item.price}}</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </center>
+        </span>
+      </div>
+      </div>
     </div>
 </template>
 <script>
@@ -177,8 +75,7 @@ export default {
           price: "$7,000",
           links: "case-studies/delivery-app",
           firstCard: false
-        }],
-        cases2:[{
+        },{
           src: require("assets/img/E-commerce-Solution.jpg"),
           title: "Ecommerce",
           desc:
@@ -212,8 +109,7 @@ export default {
           price: "$7,000",
           links: "case-studies/inventory-management-system",
           firstCard: false   
-        }],
-        cases3:[{
+        },{
           src: require("assets/img/Learning-Management-System.jpg"),
           title: "Learning System",
           desc:
@@ -248,8 +144,7 @@ export default {
           price: "$7,000",
           links: "case-studies/online-enrollment-system",
           firstCard: false
-        }],
-        cases4:[{
+        },{
           src: require("assets/img/Payment-System.jpg"),
           title: "Payment System",
           desc:
@@ -284,8 +179,7 @@ export default {
           price: "$7,000",
           links: "case-studies/rfid-system",
           firstCard: false
-        }],
-        cases5:[{
+        },{
           src: require("assets/img/Translation.jpg"),
           title: "Translation System",
           desc:
@@ -323,31 +217,41 @@ export default {
     left: 0px;
     margin-bottom: 5%;
 }
-.d-flex{
-    margin-top: 5%;
-}
 .title{
     color: white;
     font-size: 55px;
     text-align: center;
     margin-top: -18%;
 }
-.description{
-    padding: 5%;
-    margin-bottom: 10%;
-}
-.cw-banner{
+.cw-banner {
   width: 100%;
+  float:left;
+  background: white;
   padding-left: 10%;
   padding-right:10%;
-  margin-bottom:15%;
+  margin-bottom:10%;
 }
-.paragraph {
-  text-align: center;
-  font-size: 15px;
-  height: 50vh;
-  color: #000000;
-  // height: 20%;
+
+.text{
+    font-size: 16px;
+}
+.button {
+  margin-top: -3%;
+  
+}
+
+.paragraph{
+    font-size: 14px;
+}
+
+.image {
+  max-width: 100%;;
+  max-height: 100%;
+}
+
+.rows {
+  margin-bottom:10%;
+  height: 250px;
 }
 .button1 {
   background-color: white;
@@ -360,17 +264,24 @@ export default {
   border-radius: 10px;
   border: solid 1px #e5e5e5;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  outline-color: white;
   width: 120px;
   height: 45px;
-  outline-color: white;
-//   border-color:white;
 }
-.rows{
-  width: 18vw;
-  height: auto;
-  border: 1px solid #00b89f ;
-  margin-bottom: 5%;
+.button2 {
+  background: #00e68a;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 42%;
+  margin-right: 42%;
+  margin-top: 10%;
+  outline-color: white;
 }
 .price {
   border: 0.5px solid #3f0050;
@@ -379,9 +290,9 @@ export default {
   border-radius: 5px;
   width: 150px;
   height: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  
 }
 h4 {
   font-family: Open Sans;
@@ -392,10 +303,12 @@ h4 {
   // display: flex;
   text-align: center;
   color: #00b89f;
+
 }
-.image{
-  width: 100%;
-  height: 100%;
+.element {
+  border: 1px solid #00B89F;
+  margin: 10px;
+  height: auto;
 }
 @media screen and (max-width: 992px) {
   .text {
@@ -404,8 +317,19 @@ h4 {
     margin-right: 5%;
     margin-top: 50px;
   }
+  .rows {
+  margin-bottom:20%;
+  height: 300px;
+}
+.text{
+    font-size: 22px;
+}
+.paragraph{
+    font-size: 20px;
+}
   .title {
     text-align: center;
+    margin-top:-33%;
   }
   .image {
     position: relative;

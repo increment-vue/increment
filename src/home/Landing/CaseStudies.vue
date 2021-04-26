@@ -3,36 +3,32 @@
     <div class="text-center mt-5 mb-5">
       <h1 class="title" style="color:black; font-size:60px;">Case Studies</h1>
     </div>
-    <div class="mt-2">
-      <div class="col-sm-12 d-flex">
-        <div class="col-sm-3" v-for="(item, i) in cases" :key="i" :index="i" id="card">
-          <div class="rows">
-            <img :src="item.src" class="image">
-              <div class="description">
-                <div class="paragraph">
-                  <p class="mt-2" style="font-size:16px">
-                    <b>{{item.title}}</b>
-                  </p>
-                  <p style="font-size:14px">{{item.desc}}</p>
-                </div>
-                <div class="mt-3">
+    <div class="row no-gutters">
+        <span class="col-md-3" v-for="(item, index) in cases" :key="index">
+          <center class="element">
+             <img :src="item.src" class="image">
+            <div class="mt-3">
+            <p class="text"><b>{{ item.title }}</b></p>
+            </div>
+           <div class="p-3 rows"> <p class="paragraph">{{ item.desc }}
+            </p>
+           </div>
+           <div class="mt-3">
                   <div class= "mb-3">
                     <button @click="redirect(item.links)" class="button1">Read More</button>
                   </div>
-                  <div class="price">
+                  <div class="price mb-5">
                     <label>Starting Price:</label>
                     <br>
                     <h4>{{item.price}}</h4>
                   </div>
                 </div>
-              </div>
-            </div>     
-        </div>
+          </center>
+        </span>
       </div>
-      <div class="button">
+    <div class="button">
         <button @click="redirect('case-studies')" class="button2">View More</button>
       </div>
-    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -56,19 +52,8 @@
 }
 
 .rows {
-  border: solid 1px #00b89f;
-  text-align: center;
-}
-.paragraph {
-  text-align: center;
-  font-size: 15px;
-  color: #000000;
-  height: 50vh;
-  // height: 20%;
-}
-.description{
-    padding: 5%;
-    margin-bottom: 10%;
+  margin-bottom:10%;
+  height: 250px;
 }
 .button1 {
   background-color: white;
@@ -84,6 +69,12 @@
   outline-color: white;
   width: 120px;
   height: 45px;
+}
+.paragraph{
+  font-size:14px;
+}
+.text{
+  font-size: 16px;
 }
 .button2 {
   background: #00e68a;
@@ -122,13 +113,10 @@ h4 {
   color: #00b89f;
 
 }
-
-@media only screen and (min-width: 280px) {
-  .cw-banner {
-    width: 100%;
-    height: auto;
-  }
-
+.element {
+  border: 1px solid #00B89F;
+  margin: 10px;
+  height: auto;
 }
 
 @media only screen and (min-width: 280px) {
@@ -139,7 +127,15 @@ h4 {
 
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 280px) {
+  .cw-banner {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
   .text {
     width: 90%;
     margin-left: 5%;
@@ -149,6 +145,17 @@ h4 {
   .title {
     text-align: center;
   }
+  .paragraph{
+    font-size: 20px;
+}
+
+.text{
+  font-size: 22px;
+}
+  .rows {
+  margin-bottom:20%;
+  height: 250px;
+}
 
   .image {
     position: relative;
@@ -166,13 +173,7 @@ h4 {
   margin-right:auto;
   
 }
- .paragraph {
-  text-align: center;
-  font-size: 15px;
-  color: #000000;
-  height: 50vh;
-  // padding-bottom:10%;
-}
+
 }
 </style>
 <script>
