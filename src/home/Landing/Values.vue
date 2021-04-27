@@ -5,7 +5,25 @@
         <b>Our Values</b>
       </h1>
     </div>
-    <div>
+    <div class="row no-gutters">
+        <span class="col-md-4" v-for="(item, index) in values" :key="index">
+          <div class="single-card">
+            <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2>
+                    <b>{{item.num}}</b>
+                  </h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph">
+                    <i>{{item.desc}}</i>
+                  </b>
+                </div>
+            </div>
+            </div>
+        </span>
+    </div>
+    <!-- <div>
       <div class="col-sm-12">
         <div style="color:white;">
           <div class="mb-5 d-flex align-items-center justify-content-center">
@@ -42,7 +60,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <style scoped lang="scss">
@@ -53,9 +71,12 @@
   background: $secondary;
   padding-bottom: 10%; 
   min-height: 100vh;
+  padding-left:5%;
+  padding-right:5%;
 }
 .d-flex {
   height: inherit;
+  margin-top:-10%;
 }
 #col {
   border: 4px solid white;
@@ -68,9 +89,22 @@ h2 {
   font-size: 30px;
   color: #00e68a;
 }
+.single-card {
+  border: 5px solid white;
+  padding: 10px;
+  padding-top: 30px;
+  margin: 20px;
+  height: 150px;
+  border-radius: 10px;
+}
 .paragraph {
   font-size: 25px;
+  color:white;
+  // margin-top: -25%;
 }
+// .rows{
+//   margin-top:-10%;
+// }
 
 @media screen and (max-width: 992px) {
   #col {
@@ -79,9 +113,11 @@ h2 {
     height: 150px;
     width: 320px;
   }
-
+  .d-flex{
+    margin-top: -5%;
+  }
   .paragraph {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 </style>
@@ -107,8 +143,6 @@ export default {
           desc:'We are committed to everything we do.',
           firstCard: false
         },
-      ],
-      val: [
         {
           num:'4',
           desc:'We deliver success to our customers.',

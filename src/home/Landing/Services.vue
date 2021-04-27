@@ -3,20 +3,18 @@
     <div class="text-center mt-5 p-5">
         <h1 class="title" style="color:white;font-size:60px;"><b>Our Services</b></h1>
     </div>
-    <div class="mt-5">
-      <div class="col-sm-12 d-flex" >
-        <div class="col-sm-3 m-0" v-for="(item, i) in services" :key="i" :index="i">
-            <div class="row">
-              <img :src="item.src">
-            </div>
-            <div class="row mt-5">
+    <div class="row no-gutters">
+        <span class="col-md-3" v-for="(item, index) in services" :key="index">
+          <center>
+             <img :src="item.src">
+          <div class="row mt-5 mb-5 p-3">
               <div class="col-sm-12" id="paragraph">
                 {{item.desc}}                      
               </div>
             </div>
-        </div>
+          </center>
+        </span>
       </div>
-    </div>
   </div>
 </template>
 
@@ -53,7 +51,7 @@ export default {
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .cw-banner{
-  width: 100%;
+  // width: 100%;
   float: left; 
   background: $secondary;
   padding-bottom: 10%;
