@@ -179,24 +179,13 @@ img{
   background-color: #00E68A;
   border: none;
   color: white;
-  padding: 1vw 2vw;
-  font-size: 15px;
   cursor: pointer;
   border-radius: 10px;
   margin-top: 10%;
   outline-color: white;
-}
-.button2{
-  background-color: #00E68A;
-  border: none;
-  color: white;
-  padding: 1vw 2vw;
+  box-shadow: 0px 10px 10px rgba(96, 243, 116, 0.25);
+  padding: 10px 20px;
   text-align: center;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-top: 10%;
-  outline-color: white;
 }
 .box{
   width: 90%;

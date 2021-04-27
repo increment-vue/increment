@@ -16,7 +16,7 @@
           </center>
         </span>
       </div>
-      <button @click="redirect('our-projects')" class="button2">View More ></button>
+      <button @click="redirect('our-projects')" class="button2">View More <b style="font-weight: 800px">></b></button>
     </div>
   </div>
 </template>
@@ -64,24 +64,24 @@ export default {
   background-color: #E0E0E0;
   border: none;
   color: #BDBDBD !important;
-  padding: 1vw 2vw;
-  font-size: 17px;
   cursor: pointer;
   border-radius: 10px;
-  margin-top: 5%;
-  outline-color: $primary;
-}
-.button2{
-  background: #00E68A;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  border: none;
-  color: white;
-  padding: 15px 35px;
-  font-size: 20px;
-  cursor: pointer;
   margin-top: 10%;
   outline-color: $primary;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  padding: 10px 20px;
+  text-align: center;
+}
+.button2{
+  background-color: #00e68a;
+  color: white;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15%;
 }
 .box{
   width: 90%;
@@ -89,6 +89,7 @@ export default {
   border: 1px solid white;
   background-color: white;
   margin-top: 5%;
+  margin-bottom: 3%;
 }
 .entitle {
   text-align: center;
@@ -123,7 +124,7 @@ img{
   padding: 5%;
 }
 .description{
-  height: 9vh;
+  height: 11vh;
   margin-bottom: 5%;
 }
 </style>
