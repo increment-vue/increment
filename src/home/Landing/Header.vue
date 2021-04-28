@@ -1,11 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
     <span class="brand">
+    <a href="/" style="text-decoration: none;">
       <div class="row no-gutters">
         <div class="col-md-3">
-          <a class="navbar-brand" @click="redirect('/')">
-            <img :src="require('assets/img/logo.png')" style="margin-bottom: 5px;">
-          </a>
+            <img class="navbar- brand" :src="require('assets/img/logo.png')" style="margin-top: 8px; margin-right: 20px;">
         </div>
         <div class="col-md-9">
           <b>
@@ -14,7 +13,7 @@
           </b>
         </div>
       </div>
-      
+    </a>
     </span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
@@ -23,26 +22,33 @@
       <form class="form-inline my-2 my-lg-0 ml-auto">
         <ul class="navbar-nav">
           <li class="nav-item" v-for="(item, index) in menu" :key="index">
-            <div v-if="item.type === 'dropdown'">
-              <a class="nav-link dropdown-toggle" role="button" @click="redirect(item.redirect)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #20C1AB;">
+            <div class="btn-group dropdown" v-if="item.type === 'dropdown'">
+              <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #20C1AB;" @click="headerScrollTo(item.redirect)">
                 <b class="increment-limegreen-light">{{ item.title }}</b>
               </a>
-              <div class="dropdown-menu" v-if="item.title === 'Who We Are'" style="position: absolute; left: 42%; border-color: #20C1AB;">
-                  <a class="dropdown-item" href="#"><b class="increment-limegreen-light">Our Values</b></a>
-                <a class="dropdown-item" href="#"><b class="increment-limegreen-light">What They Say About Us</b></a>
+              <div class="dropdown-menu" v-if="item.title === 'Who We Are'" style="position: absolute; border-color: #20C1AB;">
+                <a class="dropdown-item" href="/#our-values" @click="headerScrollTo('#our-values')"><b class="increment-limegreen-light">Our Values</b></a>
+                <a class="dropdown-item" href="/#testimonials" @click="headerScrollTo('#testimonials')"><b class="increment-limegreen-light">What They Say About Us</b></a>
               </div>
-              <div class="dropdown-menu" v-if="item.title === 'Our Services'" style="position: absolute; left: 53%; border-color: #20C1AB;">
-                  <a class="dropdown-item" href="#">
+              <div class="dropdown-menu" v-if="item.title === 'Our Services'" style="position: absolute; border-color: #20C1AB;">
+                <a class="dropdown-item" href="/#how-we-work" @click="headerScrollTo('#how-we-work')">
                     <b class="increment-limegreen-light">How We Work</b></a>
-                  <a class="dropdown-item" href="#">
-                    <b class="increment-limegreen-light">Our Projects</b>
+                <a class="dropdown-item" href="/#our-projects">
+                    <b class="increment-limegreen-light" @click="headerScrollTo('#our-projects')">Our Projects</b>
                   </a>
               </div>
             </div>
             <div v-else-if="item.type === 'regular'">
-              <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" @click="scrollTo(item.redirect)" href="javascript: return false">
-              <b class="increment-limegreen-light">{{item.title}}</b>
-              </a>
+              <div v-if="item.title === 'Send Request'">
+                <a class="nav-link" href="send-request">
+                  <b class="increment-limegreen-light">{{item.title}}</b>
+                </a>
+              </div>
+              <div v-else-if="item.title !== 'Send Request'">
+                <a class="nav-link" :href="item.redirect" @click="headerScrollTo(item.redirect)">
+                  <b class="increment-limegreen-light">{{item.title}}</b>
+                </a>
+              </div>
             </div>
           </li>
         </ul>
@@ -111,6 +117,7 @@ img{
 import ROUTER from 'src/router'
 import COMMON from 'src/common.js'
 import $ from 'jquery'
+
 export default {
   mounted(){
     console.log(this.$route)
@@ -120,11 +127,11 @@ export default {
       common: COMMON,
       menu: [{
         title: 'Who We Are',
-        redirect: '/#who-we-are',
+        redirect: '#who-we-are',
         type: 'dropdown'
       }, {
         title: 'Our Services',
-        redirect: '/#our-services',
+        redirect: '#our-services',
         type: 'dropdown'
       }, {
         title: 'Case Studies',
@@ -136,7 +143,7 @@ export default {
         type: 'regular'
       }, {
         title: 'Send Request',
-        redirect: '/send-request',
+        redirect: 'send-request',
         type: 'regular'
       }]
     }
@@ -145,7 +152,7 @@ export default {
     redirect(parameter){
       ROUTER.push(parameter)
     },
-    scrollTo (id) {
+    headerScrollTo (id) {
       let height = $(window).height()
       $('html, body').animate({
         scrollTop: $(id).offset().top - parseInt(height * 0.1)
@@ -153,4 +160,51 @@ export default {
     },
   }
 }
+
+window.addEventListener('load', function () {
+  $(document).ready(function(){
+    if (window.location.hash == "#who-we-are") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#who-we-are').offset().top - parseInt(height * 0.1)
+        }, 500)
+    } else if (window.location.hash == "#testimonials") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#testimonials').offset().top - parseInt(height * 0.1)
+        }, 500)
+    } else if (window.location.hash == "#our-services") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#our-services').offset().top - parseInt(height * 0.1)
+        }, 500)
+    } else if (window.location.hash == "#how-we-work") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#how-we-work').offset().top - parseInt(height * 0.1)
+        }, 500)
+    } else if (window.location.hash == "#our-projects") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#our-projects').offset().top - parseInt(height * 0.1)
+        }, 500)
+    } else if (window.location.hash == "#case-studies") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#case-studies').offset().top - parseInt(height * 0.1)
+        }, 500)
+    } else if (window.location.hash == "#technologies") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#technologies').offset().top - parseInt(height * 0.1)
+        }, 500)
+    } else if (window.location.hash == "#our-values") {
+      let height = $(window).height()
+        $('html, body').animate({
+          scrollTop: $('#our-values').offset().top - parseInt(height * 0.1)
+        }, 500)
+    }
+  });
+})
+
 </script>
