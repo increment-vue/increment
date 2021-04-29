@@ -1,5 +1,5 @@
 <template>
-  <div class="cw-banner" id="projects">
+  <div class="cw-banner" id="our-projects">
     <div class="container">
       <h1 class="entitle" ><b>Our Projects</b></h1>
       <div class="row no-gutters">
