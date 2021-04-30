@@ -18,7 +18,7 @@
       </div>
       <div class="button">
         <button @click="redirect('technologies')" id="btn">
-          View More <b style="font-weight: 800px">></b>
+          View More <i class="fa fa-arrow-right" style="margin-left: 10px;font-size: 16px;"></i>
         </button>
       </div>
     </div>
@@ -81,9 +81,10 @@ p {
   box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   border: none;
-  padding: 10px 20px;
+  padding: 15px 30px;
   text-align: center;
-  cursor: pointer;
+  margin-top: 12vh;
+  font-weight: 700
 }
 </style>
 <script>
