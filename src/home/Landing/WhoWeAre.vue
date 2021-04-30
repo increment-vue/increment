@@ -51,7 +51,7 @@
 }
 
 .container {
-  padding-top: 50vh;
+  padding-top: 30vh;
   padding-bottom: 20vh;
   text-align: center;
   color: black;
@@ -74,5 +74,45 @@ h3::after {
 
 p {
   margin-top: 2vh;
+}
+@media only screen and (max-width: 768px) {
+.container {
+margin-top: -20%;
+}
+}
+@media only screen and (max-width: 540px) {
+.container {
+margin-top: -45%;
+}
+}
+@media only screen and (max-width: 414px) {
+.container {
+margin-top: -50%;
+}
+}
+@media only screen and (max-width: 411px) {
+.container {
+margin-top: -45%;
+}
+}
+@media only screen and (max-width: 375px) {
+.container {
+margin-top: -40%;
+}
+}
+@media only screen and (max-width: 360px) {
+.container {
+margin-top: -50%;
+}
+}
+@media only screen and (max-width: 320px) {
+.container {
+margin-top: -55%;
+}
+}
+@media only screen and (max-width: 280px) {
+.container {
+margin-top: -90%;
+}
 }
 </style>
