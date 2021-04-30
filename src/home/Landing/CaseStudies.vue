@@ -27,7 +27,9 @@
         </span>
       </div>
     <div class="button">
-        <button @click="redirect('case-studies')" class="button2">View More</button>
+        <center><button @click="redirect('case-studies')" id="btn">
+          View More <b style="font-weight: 800px">></b>
+        </button></center>
       </div>
   </div>
 </template>
@@ -49,6 +51,18 @@
 .image {
   max-width: 100%;;
   max-height: 100%;
+}
+
+#btn {
+    background-color: #00e68a;
+  color: white;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15%;
 }
 
 .rows {
@@ -75,21 +89,6 @@
 }
 .text{
   font-size: 16px;
-}
-.button2 {
-  background: #00e68a;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 42%;
-  margin-right: 42%;
-  margin-top: 10%;
-  outline-color: white;
 }
 .price {
   border: 0.5px solid #3f0050;
@@ -125,17 +124,26 @@ h4 {
     height: auto;
   }
 
+
+
 }
 
-@media only screen and (min-width: 280px) {
+@media only screen and (max-width: 280px) {
   .cw-banner {
     width: 100%;
     height: auto;
   }
+  .rows {
+  margin-bottom:50%;
+  height: 250px;
+}
+  .paragraph{
+  font-size:12px;
+}
 
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
   .text {
     width: 90%;
     margin-left: 5%;
@@ -145,17 +153,7 @@ h4 {
   .title {
     text-align: center;
   }
-  .paragraph{
-    font-size: 20px;
-}
 
-.text{
-  font-size: 22px;
-}
-  .rows {
-  margin-bottom:20%;
-  height: 250px;
-}
 
   .image {
     position: relative;

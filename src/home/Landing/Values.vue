@@ -9,12 +9,12 @@
         <span class="col-md-4" v-for="(item, index) in values" :key="index">
           <div class="single-card">
             <div class="d-flex">
-                <div class="col col-sm-2 my-auto">
+                <div class="col col-sm-2 my-auto pad">
                   <h2>
                     <b>{{item.num}}</b>
                   </h2>
                 </div>
-                <div class="col col-sm-10 my-auto">
+                <div class="col col-sm-10 ml0 mr-0 pl-0 pr-0 my-auto">
                   <b class="paragraph">
                     <i>{{item.desc}}</i>
                   </b>
@@ -23,44 +23,6 @@
             </div>
         </span>
     </div>
-    <!-- <div>
-      <div class="col-sm-12">
-        <div style="color:white;">
-          <div class="mb-5 d-flex align-items-center justify-content-center">
-            <div :class="item.firstCard === true ? 'col col-sm-3' : 'col col-sm-3 ml-5' " id="col" v-for="(item, i) in values" :key="i" :index="i">
-              <div class="d-flex">
-                <div class="col col-sm-2 my-auto">
-                  <h2>
-                    <b>{{item.num}}</b>
-                  </h2>
-                </div>
-                <div class="col col-sm-10 my-auto">
-                  <b class="paragraph">
-                    <i>{{item.desc}}</i>
-                  </b>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-5 d-flex align-items-center justify-content-center">
-            <div :class="item.firstCard === true ? 'col col-sm-3' : 'col col-sm-3 ml-5' " id="col" v-for="(item, i) in val" :key="i" :index="i">
-              <div class="d-flex">
-                <div class="col col-sm-2 my-auto">
-                  <h2>
-                    <b>{{item.num}}</b>
-                  </h2>
-                </div>
-                <div class="col col-sm-10 my-auto">
-                  <b class="paragraph">
-                    <i>{{item.desc}}</i>
-                  </b>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 <style scoped lang="scss">
@@ -74,10 +36,7 @@
   padding-left:5%;
   padding-right:5%;
 }
-.d-flex {
-  height: inherit;
-  margin-top:-10%;
-}
+
 #col {
   border: 4px solid white;
   border-radius: 15px;
@@ -92,7 +51,7 @@ h2 {
 .single-card {
   border: 5px solid white;
   padding: 10px;
-  padding-top: 30px;
+  padding-top: 40px;
   margin: 20px;
   height: 150px;
   border-radius: 10px;
@@ -106,20 +65,76 @@ h2 {
 //   margin-top:-10%;
 // }
 
-@media screen and (max-width: 992px) {
-  #col {
-    border: 3px solid white;
-    border-radius: 15px;
-    height: 150px;
-    width: 320px;
+@media (max-width: 280px){
+  .cw-banner {
+    width: 100%;
   }
-  .d-flex{
-    margin-top: -5%;
+  .paragraph i {
+    font-size: 12px;
+    line-height: 0rem;
+    width: 30%;
   }
-  .paragraph {
-    font-size: 30px;
+    .pad{
+    margin-right:-70%;
+  }
+
+}
+@media (max-width: 375px){
+    .pad{
+    margin-right:-100%;
+  }
+
+}
+@media (max-width: 540px){
+  .pad{
+    margin-right:-70%;
+  }
+  .cw-banner {
+    min-height:50vh;
   }
 }
+
+@media (max-width: 1024px){
+  .cw-banner {
+    min-height:50vh;
+  }
+   .paragraph i {
+    font-size: 18px;
+    // line-height: 0rem;
+    // width: 30%;
+  }
+}
+
+@media (min-width: 768px){
+  .cw-banner {
+    min-height:50vh;
+  }
+   .paragraph i {
+    font-size: 14px;
+    // line-height: 0rem;
+    // width: 30%;
+  }
+  .pad{
+    margin-right:10%;
+  }
+}
+
+// @media screen and (max-width: 992px) {
+//   #col {
+//     border: 3px solid white;
+//     border-radius: 15px;
+//     height: 150px;
+//     width: 320px;
+//   }
+//   .d-flex{
+//     margin-top: -5%;
+//   }
+//   .paragraph {
+//     font-size: 20px;
+//     // margin-top:-50%;
+//   }
+
+// }
 </style>
 <script>
 import ROUTER from "src/router";

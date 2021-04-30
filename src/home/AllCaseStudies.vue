@@ -321,12 +321,12 @@ h4 {
   margin-bottom:20%;
   height: 300px;
 }
-.text{
-    font-size: 22px;
-}
-.paragraph{
-    font-size: 20px;
-}
+// .text{
+//     font-size: 22px;
+// }
+// .paragraph{
+//     font-size: 20px;
+// }
   .title {
     text-align: center;
     margin-top:-33%;
