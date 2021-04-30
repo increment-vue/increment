@@ -102,11 +102,10 @@ export default {
   width: 100%;
   float: left;
   background: $primary;
-  padding: 5%;
 }
 .container {
   padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-bottom: 15vh;
   text-align: center;
 }
 .p1{
