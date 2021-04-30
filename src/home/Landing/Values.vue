@@ -1,5 +1,5 @@
 <template>
-  <div class="cw-banner" id="our-services">
+  <div class="cw-banner" id="our-values">
     <div class="text-center mt-5 p-5">
       <h1 class="title" style="color:white;font-size:60px;">
         <b>Our Values</b>

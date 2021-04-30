@@ -3,100 +3,92 @@
     <div class="banner" id="header">
       <h1 class="title">Technologies</h1>
     </div>
-    <div class="main">
-      <div class="content">
-        <p id="p1">
-          Increment Technologies is a Software Development Company that
-          specializes in Website and Mobile Application. The following
-          technologies were strategically chosen based on our developers’
-          expertise creating an exceptional service to our clients. Increment
-          uses these technologies depending on the client’s qualifications.
-          Innovating your business and integrating it with these technologies
-          will create opportunities for the organization to grow. Allowing a
-          centralized data storage, automation of tasks, reporting the progress
-          or lags in an organization’s activities, increasing efficiency,
-          reducing cost, eliminating human errors, managing assets, and etc.,
-          will lead to convenience and retrenchment.
-        </p>
-        <h4>WEB DEVELOPMENT</h4>
-        <div class="row no-gutters">
-          <span
-            class="col-md-3"
-            v-for="(element, index) in web_development"
-            :key="index"
-          >
-            <center class="element">
-              <img :src="element.img" class="element-image" />
-              <p>
-                <b>{{ element.name }}</b>
-              </p>
-              <p>{{ element.description }}</p>
-            </center>
-          </span>
-        </div>
-        <h4>MOBILE DEVELOPMENT</h4>
-        <div class="row no-gutters">
-          <span
-            class="col-md-3"
-            v-for="(element, index) in mobile_development"
-            :key="index"
-          >
-            <center class="element">
-              <img :src="element.img" class="element-image" />
-              <p>
-                <b>{{ element.name }}</b>
-              </p>
-              <p>{{ element.description }}</p>
-            </center>
-          </span>
-        </div>
-        <h4>UI/UX Designs</h4>
-        <div class="row no-gutters">
-          <span
-            class="col-md-3"
-            v-for="(element, index) in ui_ux_designs"
-            :key="index"
-          >
-            <center class="element">
-              <img :src="element.img" class="element-image" />
-              <p>
-                <b>{{ element.name }}</b>
-              </p>
-              <p>{{ element.description }}</p>
-            </center>
-          </span>
-        </div>
-        <h4>SYSTEM ADMINISTRATOR</h4>
-        <div class="row no-gutters">
-          <span
-            class="col-md-3"
-            v-for="(element, index) in system_administrator"
-            :key="index"
-          >
-            <center class="element">
-              <img :src="element.img" class="element-image" />
-              <p>
-                <b>{{ element.name }}</b>
-              </p>
-              <p>{{ element.description }}</p>
-            </center>
-          </span>
-        </div>
-        <h4>LOWER LEVEL PROGRAMMING</h4>
-        <div class="row no-gutters">
-          <span
-            class="col-md-3"
-            v-for="(element, index) in lower_level_programming"
-            :key="index"
-          >
-            <center class="element">
-              <img :src="element.img" class="element-image" />
-              <p>
-                <b>{{ element.name }}</b>
-              </p>
-              <p>{{ element.description }}</p>
-            </center>
-          </span>
+    <div>
+      <div class="container">
+        <div class="content">
+          <p id="p1">
+            Increment Technologies is a Software Development Company that
+            specializes in Website and Mobile Application. The following
+            technologies were strategically chosen based on our developers’
+            expertise creating an exceptional service to our clients. Increment
+            uses these technologies depending on the client’s qualifications.
+            Innovating your business and integrating it with these technologies
+            will create opportunities for the organization to grow. Allowing a
+            centralized data storage, automation of tasks, reporting the
+            progress or lags in an organization’s activities, increasing
+            efficiency, reducing cost, eliminating human errors, managing
+            assets, and etc., will lead to convenience and retrenchment.
+          </p>
+          <h4>WEB DEVELOPMENT</h4>
+          <div class="row no-gutters">
+            <span
+              class="col-md-3"
+              v-for="(item, index) in web_development"
+              :key="index"
+            >
+              <center class="single-card">
+                <span class="image-holder"><img :src="item.img" /></span>
+                <h6>{{ item.name }}</h6>
+                <p>{{ item.description }}</p>
+              </center>
+            </span>
+          </div>
+          <h4>MOBILE DEVELOPMENT</h4>
+          <div class="row no-gutters">
+            <span
+              class="col-md-3"
+              v-for="(item, index) in mobile_development"
+              :key="index"
+            >
+              <center class="single-card">
+                <span class="image-holder"><img :src="item.img" /></span>
+                <h6>{{ item.name }}</h6>
+                <p>{{ item.description }}</p>
+              </center>
+            </span>
+          </div>
+          <h4>UI/UX Designs</h4>
+          <div class="row no-gutters">
+            <span
+              class="col-md-3"
+              v-for="(item, index) in ui_ux_designs"
+              :key="index"
+            >
+              <center class="single-card">
+                <span class="image-holder"><img :src="item.img" /></span>
+                <h6>{{ item.name }}</h6>
+                <p>{{ item.description }}</p>
+              </center>
+            </span>
+          </div>
+          <h4>SYSTEM ADMINISTRATOR</h4>
+          <div class="row no-gutters">
+            <span
+              class="col-md-3"
+              v-for="(item, index) in system_administrator"
+              :key="index"
+            >
+              <center class="single-card">
+                <span class="image-holder"><img :src="item.img" /></span>
+                <h6>{{ item.name }}</h6>
+                <p>{{ item.description }}</p>
+              </center>
+            </span>
+          </div>
+          <h4>LOWER LEVEL PROGRAMMING</h4>
+          <div class="row no-gutters">
+            <span
+              class="col-md-3"
+              v-for="(item, index) in lower_level_programming"
+              :key="index"
+            >
+              <center class="single-card">
+                <span class="image-holder"><img :src="item.img" /></span>
+                <h6>{{ item.name }}</h6>
+                <p>{{ item.description }}</p>
+              </center>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -116,38 +108,77 @@
   background-position: bottom;
   height: 60vh;
   width: 100%;
+  float: left;
   text-align: center;
   color: white;
   padding: 30vh 0;
+  margin-bottom: 10vh;
 }
 
+.single-card {
+  border: 1px solid $primary;
+  margin: 6px;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 65vh;
+}
 .title {
   font-size: 50px;
   font-weight: 800;
-  padding: 10px;
-  margin-right: 10%;
-  margin-left: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
-#start-price {
-  font-size: 30px;
-  font-weight: 600;
-  padding-bottom: 10px;
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 40px;
+    font-weight: 800;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
 }
 
-.main {
+.row {
   margin-top: 10vh;
-  margin-bottom: 30vh;
-  margin-right: 10%;
-  margin-left: 10%;
+  text-align: center;
+  height: auto;
+}
+
+.container {
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  text-align: center;
   color: black;
+}
+
+.image-holder {
+  width: 100%;
+  height: 50px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }
 
 #p1 {
   text-align: justify;
   margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 16px;
 }
 
+p {
+  font-size: 14px;
+}
+
+h6 {
+  font-weight: 700;
+  padding: 8px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
 p {
   text-align: center;
   margin-top: 30px;
@@ -161,18 +192,6 @@ h4 {
   font-weight: 700;
   margin-bottom: 50px;
   text-align: center;
-}
-
-.element {
-  border: 1px solid $primary;
-  padding: 5px;
-  padding-top: 20px;
-  margin: 10px;
-  height: 500px;
-}
-.element-image {
-  width: 150px;
-  height: 150px;
 }
 
 .return-to-top {
