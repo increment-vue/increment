@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <LandingHeader></LandingHeader>
-    <router-view></router-view>
+    <transition><router-view></router-view></transition>
     <LandingFooter></LandingFooter>
   </div>
 </template>
@@ -22,7 +22,4 @@ export default {
   font-family: "Open Sans", sans-serif;
 }
 
-router-view {
-  width: 100%;
-}
 </style>

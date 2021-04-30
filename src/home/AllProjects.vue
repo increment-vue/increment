@@ -15,7 +15,7 @@
               <span>{{item.title}}</span>
               <p>{{item.description}}</p>
             </div>
-            <a :href=item.link target="_blank"><button class="button1">Visit Website</button></a>
+            <a :href="item.link" v-if="item.withButton" target="_blank"><button class="button1">Visit Website</button></a>
           </center>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default {
         link: 'https://maxmuscle.com/',
         withButton: true
       },{
-        title: 'TalkFluentSpanish - Austrilia',
+        title: 'TalkFluentSpanish - Australia',
         description: 'Website and Mobile Development',
         src: require("assets/img/project - talkfluent.png"),
         link: 'https://talkfluentspanish.com/',
@@ -97,14 +97,14 @@ export default {
         src: require("assets/img/project - aesha.png"),
         withButton: false
       },{
-        title: 'AgriCord - Austrilia',
+        title: 'AgriCord - Australia',
         description: 'Website and Mobile Development',
         src: require("assets/img/project - agricord.png"),
         link: 'http://traceag.com.au/#/',
         withButton: true
       },
       {
-        title: 'AgriSend - Austrilia',
+        title: 'AgriSend - Australia',
         description: 'Mobile Development',
         src: require("assets/img/project - agrisend.png"),
         withButton: false
@@ -181,7 +181,7 @@ img{
   color: white;
   cursor: pointer;
   border-radius: 10px;
-  margin-top: 10%;
+  margin-top: 2%;
   outline-color: white;
   box-shadow: 0px 10px 10px rgba(96, 243, 116, 0.25);
   padding: 10px 20px;
