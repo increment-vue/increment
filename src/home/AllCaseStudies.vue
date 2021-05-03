@@ -1,28 +1,31 @@
 <template>
-  <div>
+  <div id="header">
     <div class="banner">
       <h1 class="title">Case Studies</h1>
     </div>
     <div class="container">
-      <div style="color:white">Case Studies</div>
+      <div style="color: white">Case Studies</div>
       <div class="row no-gutters">
         <span class="col-md-3" v-for="(item, index) in cases" :key="index">
           <center class="single-card">
             <span class="image-holder"><img :src="item.src" /></span>
             <h6>{{ item.title }}</h6>
-            <p>{{ item.desc }}</p>
-            <button @click="redirect(item.links)" class="button1">
-              Read More
-            </button>
             <div class="price">
               <label>Starting Price:</label>
               <br />
               <h4>{{ item.price }}</h4>
             </div>
+            <p>{{ item.desc }}</p>
+            <button @click="redirect(item.links)" class="button1">
+              Read More
+            </button>
           </center>
         </span>
       </div>
     </div>
+    <span class="return-to-top" @click="scrollTo()">
+      <i class="fa fa-angle-up" style="font-size: 35px"></i>
+    </span>
   </div>
 </template>
 <style scoped lang="scss">
@@ -138,9 +141,30 @@ h4 {
   margin: 10px;
   min-height: 60vh;
 }
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
+  color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.fa-angle-up {
+  color: $white !important;
+}
+.return-to-top:hover {
+  cursor: pointer;
+  color: $primary;
+}
 </style>
 <script>
 import ROUTER from "src/router";
+import Jquery from "jquery";
 export default {
   data() {
     return {
@@ -295,6 +319,14 @@ export default {
   methods: {
     redirect(parameter) {
       ROUTER.push(parameter);
+    },
+    scrollTo() {
+      Jquery("html, body").animate(
+        {
+          scrollTop: Jquery("#header").offset().top,
+        },
+        500
+      );
     },
   },
 };
