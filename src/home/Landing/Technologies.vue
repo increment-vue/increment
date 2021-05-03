@@ -76,15 +76,16 @@ p {
 }
 
 #btn {
-  background-color: #00e68a;
+  background-color: $secondary;
   color: white;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   border: none;
   padding: 15px 30px;
   text-align: center;
   margin-top: 12vh;
-  font-weight: 700
+  font-weight: 700;
+  outline-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
 }
 </style>
 <script>
