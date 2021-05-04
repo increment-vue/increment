@@ -316,6 +316,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.scrollTop();
+  },
   methods: {
     redirect(parameter) {
       ROUTER.push(parameter);
@@ -327,6 +330,9 @@ export default {
         },
         500
       );
+    },
+    scrollTop(){
+      window.scrollTo(0, 0);
     },
   },
 };

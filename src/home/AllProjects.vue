@@ -31,7 +31,6 @@
 import ROUTER from "src/router";
 import Jquery from "jquery";
 export default {
-  mounted() {},
   data() {
     return {
       projects: [
@@ -155,6 +154,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.scrollTop();
+  },
   methods: {
     redirect(parameter) {
       ROUTER.push(parameter);
@@ -169,6 +171,9 @@ export default {
         },
         500
       );
+    },
+    scrollTop(){
+      window.scrollTo(0, 0);
     },
   },
 };

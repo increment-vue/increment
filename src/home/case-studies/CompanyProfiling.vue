@@ -127,6 +127,9 @@ h5 {
 <script>
 import Jquery from "jquery";
 export default {
+  mounted() {
+    this.scrollTop();
+  },
   methods: {
     scrollTo() {
       Jquery("html, body").animate(
@@ -135,6 +138,9 @@ export default {
         },
         500
       );
+    },
+    scrollTop(){
+      window.scrollTo(0, 0);
     },
   },
 };
