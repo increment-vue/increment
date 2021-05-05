@@ -55,6 +55,7 @@ h3 {
   margin-bottom: 10%;
   color: white;
   font-size: 40px;
+  font-weight: 700
 }
 .incre-row {
   height: 900px;
@@ -62,6 +63,7 @@ h3 {
 @media only screen and (max-width: 1024px) {
 .item-holder {
   top: 55%;
+  width: 70%;
 }
 .cw-banner {
   height: 75vh;
@@ -75,26 +77,59 @@ button {
 }
 .item-holder {
   top: 40%;
+  width: 70%;
+}
+h3{
+  font-size: 16px;
+}
+.title {
+  font-size: 35px;
+  font-weight: 600
 }
 }
 @media only screen and (max-width: 485px) {
 .item-holder {
   top: 30%;
+  width: 70%;
+}
+h3{
+  font-size: 16px;
+}
+.title {
+  font-size: 35px;
+  font-weight: 600
 }
 }
 @media only screen and (max-width: 414px) {
 .item-holder {
   top: 40%;
+  width: 70%;
+}
+h3{
+  font-size: 16px;
+}
+.title {
+  font-size: 35px;
+  font-weight: 600
 }
 }
 @media only screen and (max-width: 411px) {
 .item-holder {
   top: 45%;
+  width: 70%;
+}
+.title {
+  font-size: 35px;
+  font-weight: 600
 }
 }
 @media only screen and (max-width: 375px) {
 .item-holder {
   top: 50%;
+  width: 70%;
+}
+h3{
+  font-size: 16px;
 }
 .title{
   font-size: 30px;
@@ -104,13 +139,23 @@ button {
 .title {
   font-size: 30px;
 }
+.item-holder {
+  width: 70%;
+}
+h3{
+  font-size: 16px;
+}
 }
 @media only screen and (max-width: 320px) {
 .item-holder {
-  top: 50%;
+  top: 45%;
+  width: 75%;
 }
 .title{
-  font-size: 30px;
+  font-size: 25px;
+}
+h3{
+  font-size: 16px;
 }
 button {
   padding: 10px 20px;
@@ -120,7 +165,7 @@ button {
 }
 @media only screen and (max-width: 280px) {
 .title {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 15%;
 }
 h3 {
