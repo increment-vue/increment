@@ -174,6 +174,8 @@ img {
   margin-left: 2.5px;
   height: 38px;
 }
+.dropdown:hover .dropdown-menu{display: block;}
+// .dropdown:hover .dropdown-item {display: block;}
 </style>
 <script>
 import ROUTER from "src/router";
