@@ -51,7 +51,7 @@
 }
 
 .container {
-  padding-top: 30vh;
+  padding-top:50vh;
   padding-bottom: 20vh;
   text-align: center;
   color: black;

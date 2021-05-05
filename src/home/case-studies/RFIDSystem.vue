@@ -40,34 +40,50 @@
 @import "~assets/style/colors.scss";
 .banner {
   background-image: url("../../assets/img/bg-rfid.jpg");
-  background-size: cover;
-  height: 70vh;
+  background-size: 100% 70vh;
+  min-height: 70vh;
   width: 100%;
   text-align: center;
   color: white;
-  padding: 35vh 0;
 }
 
 .title {
   font-size: 50px;
   font-weight: 800;
+  padding-right: 10%;
+  padding-left: 10%;
   padding-bottom: 10px;
+  padding-top: 35vh;
 }
-
 #start-price {
   font-size: 30px;
   font-weight: 600;
   padding-bottom: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 35px;
+    font-weight: 800;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #start-price {
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+}
+
 #btn {
-  background-color: #00e68a;
+  background-color: $secondary;
   color: white;
-  //background: #00E68A;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   border: none;
-  //color: white;
   padding: 10px 20px;
   text-align: center;
   cursor: pointer;
@@ -76,12 +92,20 @@
 .container {
   margin-top: 10vh;
   margin-bottom: 30vh;
+  color: black;
 }
 
 p {
   text-align: justify;
   margin-bottom: 30px;
 }
+
+h5 {
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
 .return-to-top {
   position: fixed;
   bottom: 10px;
@@ -106,6 +130,9 @@ p {
 <script>
 import Jquery from "jquery";
 export default {
+  mounted() {
+    this.scrollTop();
+  },
   methods: {
     scrollTo() {
       Jquery("html, body").animate(
@@ -114,6 +141,9 @@ export default {
         },
         500
       );
+    },
+    scrollTop(){
+      window.scrollTo(0, 0);
     },
   },
 };

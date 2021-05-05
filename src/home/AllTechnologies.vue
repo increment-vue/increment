@@ -222,6 +222,7 @@ import Jquery from "jquery";
 export default {
   mounted() {
     console.log(this.$route);
+    this.scrollTop();
   },
   data() {
     return {
@@ -555,6 +556,9 @@ export default {
         },
         500
       );
+    },
+    scrollTop(){
+      window.scrollTo(0, 0);
     },
   },
 };

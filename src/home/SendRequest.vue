@@ -1,8 +1,11 @@
 <template>
   <div class="cw-banner" id="send-request">
-    <div class="container text-center mt-5 p-5">
-      <h1 class="title" style="font-size: 50px">
-        <b>Drop Us A Line!</b>
+    <div class="container">
+      <h1
+        class="title"
+        style="font-size: 50px; color: #3f0050; font-weight: 700"
+      >
+        Drop Us A Line!
       </h1>
       <div>
         <p>
@@ -43,32 +46,19 @@
   width: 100%;
   float: left;
   background: white;
-  padding-bottom: 60%;
-  padding-left: 5%;
-  padding-right: 5%;
-  height: 100vh;
+  min-height: 100vh;
+  text-align: center;
 }
+.container {
+  padding-bottom: 20vh;
+  padding-top: 20vh;
+}
+
 iframe {
   margin-top: 5%;
 }
 a {
   color: #00b89f;
-}
-.title {
-  margin-top: 5%;
-}
-
-@media screen and (max-width: 992px) {
-  iframe {
-    margin-top: 5%;
-  }
-}
-
-.cw-banner {
-  height: 130vh;
-}
-.title {
-  margin-top: 10%;
 }
 
 .return-to-top {
@@ -91,64 +81,6 @@ a {
   cursor: pointer;
   color: $primary;
 }
-
-@media screen and (max-width: 768px) {
-  iframe {
-    margin-top: 5%;
-  }
-}
-
-.cw-banner {
-  height: 90vh;
-}
-.title {
-  margin-top: 10%;
-}
-@media screen and (max-width: 375px) {
-  iframe {
-    margin-top: 5%;
-  }
-}
-.cw-banner {
-  height: 160vh;
-}
-@media screen and (max-width: 375px) {
-  iframe {
-    margin-top: 5%;
-  }
-  .title {
-    font-size: 30px;
-  }
-}
-.cw-banner {
-  height: 200vh;
-}
-@media screen and (max-width: 441px) {
-  iframe {
-    margin-top: 5%;
-  }
-  .title {
-    font-size: 30px;
-  }
-}
-.cw-banner {
-  height: 130vh;
-}
-@media screen and (max-width: 360px) {
-  iframe {
-    margin-top: 5%;
-  }
-  .title {
-    font-size: 30px;
-  }
-  .cw-banner {
-  height: 160vh;
-}
-}
-
-
-
-
 </style>
 <script>
 import ROUTER from "src/router";

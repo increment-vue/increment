@@ -77,28 +77,30 @@ export default {
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .button1 {
-  background-color: #e0e0e0;
+  background-color: white;
   border: none;
   color: #bdbdbd !important;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-top: 1vh;
-  outline-color: $primary;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
-  padding: 8px 15px;
   text-align: center;
   font-size: 13px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid 1px #e5e5e5;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+  outline-color: white;
+  padding: 8px 15px;
+  margin-bottom: 15px;
 }
 .button2 {
-  background-color: #00e68a;
+  background-color: $secondary;
   color: white;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   border: none;
   padding: 15px 30px;
   text-align: center;
   margin-top: 12vh;
   font-weight: 700;
+  outline-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
 }
 .row {
   margin-top: 10vh;

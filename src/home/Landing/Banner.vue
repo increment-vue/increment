@@ -19,12 +19,12 @@
 @import "~assets/style/colors.scss";
 button {
   margin-top: 5%;
-  background-color: #00e68a;
+  background-color: $secondary;
   color: white;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   border: none;
-  padding: 15px 60px;
+  padding: 15px 40px;
   text-align: center;
   cursor: pointer;
   font-size: 20px;
