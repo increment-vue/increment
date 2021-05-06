@@ -73,6 +73,22 @@ h6 {
   margin: 10px;
   min-height: 60vh;
 }
+
+@media only screen and (max-width: 500px) {
+  .single-card {
+    border: 1px solid $secondary;
+    margin: 10px;
+    min-height: 50vh;
+  }
+
+  p {
+    font-size: 14px;
+    padding-right: 8px;
+    padding-left: 8px;
+    min-height: 200px;
+  }
+}
+
 .container {
   margin-top: 30px;
   padding-top: 20vh;
@@ -331,7 +347,7 @@ export default {
         500
       );
     },
-    scrollTop(){
+    scrollTop() {
       window.scrollTo(0, 0);
     },
   },
