@@ -1,17 +1,56 @@
 <template>
   <div class="cw-banner" id="who-we-are">
     <div class="text">
-        <h1>What They Say About Us</h1>
-  </div>
+        <h1><b>What They Say About Us!</b></h1>
+        <div class="row">
+        <div  class="col-sm-5">
+        <div class ="testimony">
+        <div>
+        <br>
+          <p>
+            <b><i>"They are amazing. The help me developed
+              <br>my audio base languages<br>translation website."</i>
+            </b>    
+          </p>
+          <br>
+          <p id="name"><b>JEREMY REID</b></p>
+          <p style = " font-size:15px">Owner, Talkfluent<br><b>AUSTRALIA</b></p>  
+        </div> 
+        </div> 
+        </div>
+           <div  class="col-sm-5">
+        <div class ="testimony">
+        <div>
+        <br>
+          <p>
+            <b>
+            <i>"Increment has been a great help in optimizing
+              <br>my company's business process. The team is<br>very responsive and dynamic. Kudos!"
+            </i> 
+            </b>   
+          </p>
+          <br>
+          <p id="name"><b>SHANNEN TAN</b></p>
+          <p style = " font-size:15px">President & CEO, Mezzo Hotel<br><b>PHILIPPINES</b></p>  
+        </div> 
+        </div> 
+        </div>
+        </div>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+#name {
+  color: #8F00B5;
+}
 .cw-banner{
   width: 100%;
   float: left;
   background: $primary;
   height: 100vh;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .text{
   width: 50%;
@@ -21,6 +60,7 @@
   margin-left: 50%;
   margin-top: 200px;
 }
+
 .text .title{
   width: 100%;
   float: left;
@@ -45,8 +85,6 @@
 @media screen and (max-width: 992px){
   .text{
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
     margin-top: 50px;
   }
   .title{
@@ -59,7 +97,34 @@
     width: inherit;
   }
 }
+h1{
+    text-align: center;
+    margin-left: -621px;
+    margin-top: -113px;
+    color: white;
+    font-size: 60px;
+}
 
+
+.testimony{
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  border-color: white;
+  text-align: center;
+  max-width: 600px;
+  height: 300px;
+  color: white;
+  font-size: 20px;
+}
+.row{
+    width: 1250px;
+    margin-left: -556px;
+    -webkit-column-gap: 70px;
+    -moz-column-gap: 70px;
+    column-gap: 70px;
+    margin-top: 60px;
+}
 </style>
 <script>
 import ROUTER from 'src/router'

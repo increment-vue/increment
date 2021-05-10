@@ -3,19 +3,32 @@
     <div class="cw-banner bg-primary">
       <div class="item-holder">
         <h1 class="text-white text-center title">
-          WE WANT YOU TO SUCCEED
+          <b>WE WANT YOU TO SUCCEED</b>
         </h1>
         <h3>We create beautiful and secured websites, and mobile applications.<br>
           Just relax and we will give solutions to your needs. Got something<br>
           awesome for us to work on?
         </h3>
-        <button>Contact Us</button>
+        <button class="button">Contact Us</button>
       </div>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.button{
+  background: #00E68A;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 42%;
+  margin-top: 10%;
+}
 .item-holder{
   position: absolute;
   width: 62%;
@@ -24,7 +37,7 @@
   top: 65%
 }
 h3{
-  font-size: 30px;
+  font-size: 20px;
   margin-left: 10%;
   margin-right: 5%;
   color: white;

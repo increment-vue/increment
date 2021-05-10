@@ -1,81 +1,140 @@
 <template>
-  <div class="cw-banner" id="who-we-are">
-    <div class="text">
-        <h1>Our Values</h1>
-  </div>
+  <div class="cw-banner" id="our-services">
+    <div class="text-center mt-5 p-5">
+      <h1 class="title" style="color:white;font-size:60px;">
+        <b>Our Values</b>
+      </h1>
+    </div>
+    <div>
+      <div class="col-sm-12">
+        <div style="color:white;">
+          <div class="mb-5 d-flex align-items-center justify-content-center">
+            <div :class="item.firstCard === true ? 'col col-sm-3' : 'col col-sm-3 ml-5' " id="col" v-for="(item, i) in values" :key="i" :index="i">
+              <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2>
+                    <b>{{item.num}}</b>
+                  </h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph">
+                    <i>{{item.desc}}</i>
+                  </b>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 d-flex align-items-center justify-content-center">
+            <div :class="item.firstCard === true ? 'col col-sm-3' : 'col col-sm-3 ml-5' " id="col" v-for="(item, i) in val" :key="i" :index="i">
+              <div class="d-flex">
+                <div class="col col-sm-2 my-auto">
+                  <h2>
+                    <b>{{item.num}}</b>
+                  </h2>
+                </div>
+                <div class="col col-sm-10 my-auto">
+                  <b class="paragraph">
+                    <i>{{item.desc}}</i>
+                  </b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.cw-banner{
+.cw-banner {
   width: 100%;
   float: left;
   background: $secondary;
-  height: 100vh;
+  padding-bottom: 10%; 
 }
-.text{
-  width: 50%;
-  float: left;
-  position: relative;
-  z-index: 1000;
-  margin-left: 50%;
-  margin-top: 200px;
+.d-flex {
+  height: inherit;
 }
-.text .title{
-  width: 100%;
-  float: left;
-}
-.title h1{
-  font-size: 40px;
-}
-.text .description{
-  margin-top: 25px;
-  width: 90%;
-  margin-right: 10%;
-  float: left;
-  text-align: justify;
-}
-.image{
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  left: 0;
-  z-index: 0;
-}
-@media screen and (max-width: 992px){
-  .text{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 50px;
-  }
-  .title{
-    text-align: center;
-  }
-
-  .image{
-    position: relative;
-    max-height: 100%;
-    width: inherit;
-  }
+#col {
+  border: 4px solid white;
+  border-radius: 15px;
+  height: 150px;
+  width: 320px;
 }
 
+h2 {
+  font-size: 30px;
+  color: #00e68a;
+}
+.paragraph {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 992px) {
+  #col {
+    border: 3px solid white;
+    border-radius: 15px;
+    height: 150px;
+    width: 320px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+}
 </style>
 <script>
-import ROUTER from 'src/router'
-import COMMON from 'src/common.js'
+import ROUTER from "src/router";
+import COMMON from "src/common.js";
 export default {
-  mounted(){
+  data() {
+    return {
+      values: [
+        {
+          num:'1',
+          desc:'We do the right thing. Always.',
+          firstCard: true
+        },
+        {
+          num:'2',
+          desc:'We provide what is best.',
+          firstCard: false
+        },
+        {
+          num:'3',
+          desc:'We are committed to everything we do.',
+          firstCard: false
+        },
+      ],
+      val: [
+        {
+          num:'4',
+          desc:'We deliver success to our customers.',
+          firstCard: true
+        },
+        {
+          num:'5',
+          desc:'Communication is our tool for excellence.',
+          firstCard: false
+        },
+        {
+          num:'6',
+          desc:'We always help everyone.',
+          firstCard: false
+      }]
+    };
   },
-  data(){
+  mounted() {},
+  datas() {
     return {
       common: COMMON
-    }
+    };
   },
   methods: {
-    redirect(parameter){
-      ROUTER.push(parameter)
+    redirect(parameter) {
+      ROUTER.push(parameter);
     }
   }
-}
+};
 </script>

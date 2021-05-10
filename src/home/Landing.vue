@@ -1,8 +1,7 @@
 <template>
 	<div class="body">
 		<LandingBanner></LandingBanner>
-		<LandingBanner1></LandingBanner1>
-    <LandingWhoWeAre />
+    <LandingWhoWeAre></LandingWhoWeAre>
     <LandingOurServices />
     <LandingHowWeWork />
     <LandingOurProjects />
@@ -11,7 +10,7 @@
     <LandingTechnologies />
     <LandingWhatTheySayAboutUs />
     <!-- Calendly inline widget begin -->
-    <!--<div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div>-->
+    <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/kennettecanales/30min" style="min-width:320px;height:630px;"></div> -->
     <!-- Calendly inline widget end -->
     <span class="return-to-top" @click="scrollTo()">
       <i class="fas fa-angle-up" style="font-size: 35px"></i>
@@ -40,9 +39,9 @@ div.item-holder{
   display: flex;
   flex-direction: column;
   border-bottom: solid 20px gray;
-  -webkit-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  // -webkit-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+  // -moz-box-shadow: 5px -5px 15px -5px rgba(0, 0, 0, 0.3);
+  // border-radius: 10px;
 }
 .item-content:hover{
   cursor: pointer;
@@ -127,7 +126,6 @@ div.item-holder{
 import ROUTER from 'src/router'
 import Jquery from 'jquery'
 import LandingBanner from 'src/home/Landing/Banner.vue'
-import LandingBanner1 from 'src/home/Landing/Banner1.vue'
 import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
 import LandingOurServices from "src/home/Landing/Services.vue";
 import LandingHowWeWork from "src/home/Landing/HowWeWork.vue";
@@ -139,7 +137,6 @@ import LandingWhatTheySayAboutUs from "src/home/Landing/Testimonials.vue";
 export default {
   components: {
     LandingBanner,
-    LandingBanner1,
     LandingWhoWeAre,
     LandingOurServices,
     LandingHowWeWork,

@@ -4,7 +4,7 @@ export default{
   APP_NAME: 'Increment Technologies',
   APP_TAGLINE: 'We want you to Succeed!',
   APP_EMAIL: 'support@increment.ltd',
-  APP_COPYRIGHT: 'INRCREMENT TECHNOLOGIES. All Rights Reserved. ' + new Date().getFullYear(),
+  APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES. All Rights Reserved. ' + new Date().getFullYear(),
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'http://increment.ltd',
   APP_PHONE_NUMBER: '+639171837855',
@@ -20,10 +20,10 @@ export default{
     url: 'https://www.facebook.com/incrementtechnologies'
   }, {
     icon: faTwitter,
-    url: 'https://twitter.com/hashtag/incrementtechnologies'
+    url: 'https://twitter.com/incrementtechn1'
   }, {
     icon: faInstagram,
-    url: 'https://www.instagram.com/incrementtechnologies'
+    url: 'https://www.instagram.com/incrementtechph'
   },{
     icon: faLinkedin,
     url: 'https://www.linkedin.com/company/incrementtechnologies'
