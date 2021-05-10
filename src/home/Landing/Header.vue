@@ -75,13 +75,6 @@
                     >
                       <b class="increment-limegreen-light">How We Work</b>
                     </a>
-                    <a class="dropdown-item" href="/#our-projects">
-                      <b
-                        class="increment-limegreen-light"
-                        @click="headerScrollTo('#our-projects')"
-                        >Our Projects</b
-                      >
-                    </a>
                   </div>
                 </div>
                 <div v-else-if="item.type === 'regular'">
@@ -157,13 +150,6 @@
                 @click="headerScrollTo('#how-we-work')"
               >
                 <b class="increment-limegreen-light">How We Work</b>
-              </a>
-              <a class="dropdown-item" href="/#our-projects">
-                <b
-                  class="increment-limegreen-light"
-                  @click="headerScrollTo('#our-projects')"
-                  >Our Projects</b
-                >
               </a>
             </div>
           </div>
@@ -362,6 +348,11 @@ export default {
           title: "Our Services",
           redirect: "#our-services",
           type: "dropdown",
+        },
+        {
+          title: "Our Projects",
+          redirect: "/#our-projects",
+          type: "regular",
         },
         {
           title: "Case Studies",
