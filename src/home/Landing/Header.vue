@@ -5,11 +5,11 @@
         <a class="navbar-brand" v-on:click="redirect('/')">
           <img
             src="../../assets/img/logo.png"
-            style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%;"
-          >
+            style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
+          />
           <label class="headerName">
             <b class="increment-purple">INCREMENT</b>
-            <br>
+            <br />
             <b style="color: #00b89f">TECHNOLOGIES</b>
           </label>
         </a>
@@ -58,7 +58,9 @@
                       href="/#testimonials"
                       @click="headerScrollTo('#testimonials')"
                     >
-                      <b class="increment-limegreen-light">What They Say About Us</b>
+                      <b class="increment-limegreen-light"
+                        >What They Say About Us</b
+                      >
                     </a>
                   </div>
                   <div
@@ -77,7 +79,8 @@
                       <b
                         class="increment-limegreen-light"
                         @click="headerScrollTo('#our-projects')"
-                      >Our Projects</b>
+                        >Our Projects</b
+                      >
                     </a>
                   </div>
                 </div>
@@ -128,7 +131,11 @@
               v-if="item.title === 'Who We Are'"
               style="position: absolute; border-color: #20c1ab"
             >
-              <a class="dropdown-item" href="/#our-values" @click="headerScrollTo('#our-values')">
+              <a
+                class="dropdown-item"
+                href="/#our-values"
+                @click="headerScrollTo('#our-values')"
+              >
                 <b class="increment-limegreen-light">Our Values</b>
               </a>
               <a
@@ -144,14 +151,19 @@
               v-if="item.title === 'Our Services'"
               style="position: absolute; border-color: #20c1ab"
             >
-              <a class="dropdown-item" href="/#how-we-work" @click="headerScrollTo('#how-we-work')">
+              <a
+                class="dropdown-item"
+                href="/#how-we-work"
+                @click="headerScrollTo('#how-we-work')"
+              >
                 <b class="increment-limegreen-light">How We Work</b>
               </a>
               <a class="dropdown-item" href="/#our-projects">
                 <b
                   class="increment-limegreen-light"
                   @click="headerScrollTo('#our-projects')"
-                >Our Projects</b>
+                  >Our Projects</b
+                >
               </a>
             </div>
           </div>
@@ -162,7 +174,11 @@
               </a>
             </div>
             <div v-else-if="item.title !== 'Send Request'">
-              <a class="nav-link" :href="item.redirect" @click="headerScrollTo(item.redirect)">
+              <a
+                class="nav-link"
+                :href="item.redirect"
+                @click="headerScrollTo(item.redirect)"
+              >
                 <b class="increment-limegreen-light">{{ item.title }}</b>
               </a>
             </div>
@@ -230,9 +246,9 @@ img {
   cursor: pointer;
 }
 .fa-bars {
-  border: solid 1px #fff;
+  border: solid 1px $primary;
   font-size: 20px !important;
-  padding: 10px 8px 10px 8px !important;
+  padding: 8px 10px 8px 10px !important;
   color: $primary !important;
 }
 .button:hover {
@@ -247,7 +263,7 @@ img {
   float: left;
   width: 120px;
   border: solid 1.2px #d3d3d3;
-  border-radius: 30px;
+  border-radius: 10px;
   text-align: center;
   margin-right: 2.5px;
   margin-left: 2.5px;
@@ -256,6 +272,7 @@ img {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
 .hide .show {
   display: none !important;
 }
@@ -280,13 +297,13 @@ img {
     text-align: right;
     float: left;
     display: block;
-    margin-top: -10%;
+    margin-top: -15%;
   }
   .hide .show {
     display: block !important;
   }
   .navbar-nav {
-    margin-top: 1%;    
+    margin-top: 1%;
   }
 }
 @media screen and (max-width: 330px) {
@@ -312,7 +329,7 @@ img {
     text-align: right;
     float: left;
     display: block;
-    margin-top: -23%;
+    margin-top: -25%;
   }
   .hide .show {
     display: block !important;
@@ -339,29 +356,29 @@ export default {
         {
           title: "Who We Are",
           redirect: "#who-we-are",
-          type: "dropdown"
+          type: "dropdown",
         },
         {
           title: "Our Services",
           redirect: "#our-services",
-          type: "dropdown"
+          type: "dropdown",
         },
         {
           title: "Case Studies",
           redirect: "/#case-studies",
-          type: "regular"
+          type: "regular",
         },
         {
           title: "Technologies",
           redirect: "/#technologies",
-          type: "regular"
+          type: "regular",
         },
         {
           title: "Send Request",
           redirect: "send-request",
-          type: "regular"
-        }
-      ]
+          type: "regular",
+        },
+      ],
     };
   },
   methods: {
@@ -372,21 +389,21 @@ export default {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $(id).offset().top - parseInt(height * 0.1)
+          scrollTop: $(id).offset().top - parseInt(height * 0.1),
         },
         500
       );
-    }
-  }
+    },
+  },
 };
 
-window.addEventListener("load", function() {
-  $(document).ready(function() {
+window.addEventListener("load", function () {
+  $(document).ready(function () {
     if (window.location.hash == "#who-we-are") {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#who-we-are").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#who-we-are").offset().top - parseInt(height * 0.1),
         },
         500
       );
@@ -394,7 +411,7 @@ window.addEventListener("load", function() {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#testimonials").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#testimonials").offset().top - parseInt(height * 0.1),
         },
         500
       );
@@ -402,7 +419,7 @@ window.addEventListener("load", function() {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#our-services").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#our-services").offset().top - parseInt(height * 0.1),
         },
         500
       );
@@ -410,7 +427,7 @@ window.addEventListener("load", function() {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#how-we-work").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#how-we-work").offset().top - parseInt(height * 0.1),
         },
         500
       );
@@ -418,7 +435,7 @@ window.addEventListener("load", function() {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#our-projects").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#our-projects").offset().top - parseInt(height * 0.1),
         },
         500
       );
@@ -426,7 +443,7 @@ window.addEventListener("load", function() {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#case-studies").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#case-studies").offset().top - parseInt(height * 0.1),
         },
         500
       );
@@ -434,7 +451,7 @@ window.addEventListener("load", function() {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#technologies").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#technologies").offset().top - parseInt(height * 0.1),
         },
         500
       );
@@ -442,7 +459,7 @@ window.addEventListener("load", function() {
       let height = $(window).height();
       $("html, body").animate(
         {
-          scrollTop: $("#our-values").offset().top - parseInt(height * 0.1)
+          scrollTop: $("#our-values").offset().top - parseInt(height * 0.1),
         },
         500
       );
