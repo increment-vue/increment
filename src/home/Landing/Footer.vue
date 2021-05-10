@@ -235,14 +235,6 @@ import ROUTER from 'src/router'
 import COMMON from 'src/common.js'
 import { faCopyright, faEnvelope, faMapMarker, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 // import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
-import ROUTER from "src/router";
-import COMMON from "src/common.js";
-import {
-  faCopyright,
-  faEnvelope,
-  faMapMarker,
-  faPhoneAlt,
-} from "@fortawesome/free-solid-svg-icons";
 export default {
   mounted() {},
   data() {
