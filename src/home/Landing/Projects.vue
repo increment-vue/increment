@@ -1,284 +1,150 @@
 <template>
-  <div class="cw-banner" id="projects">
-    <h1 class="entitle" ><b>Our Projects</b></h1>
+  <div class="cw-banner" id="our-projects">
     <div class="container">
-      <div class="mt-5">
-        <div class="col-sm-12 d-flex">
-          <div class="col-sm-3" v-for="(item, i) in projects" :key="i" :index="i">
-            <div class="row">
-              <img :src="item.src">
+      <h1 class="entitle"><b>Our Projects</b></h1>
+      <div class="row no-gutters">
+        <span
+          class="col-md-3"
+          v-for="(item, i) in projects"
+          :key="i"
+          :index="i"
+        >
+          <center>
+            <div class="box">
+              <img :src="item.src" />
             </div>
             <div class="description">
-              <span>{{item.title}}</span>
-              <p>{{item.description}}</p>
+              <p class="p1">{{ item.title }}</p>
+              <p>{{ item.description }}</p>
             </div>
-            <a :href=item.link target="_blank"><button class="button1">Visit Website</button></a>
-          </div>
-        </div>
+            <a :href="item.link" target="_blank"
+              ><button class="button1">Visit Website</button></a
+            >
+          </center>
+        </span>
       </div>
-      <button @click="redirect('our-projects')" class="button2">View More ></button>
+      <button @click="redirect('our-projects')" class="button2">
+        View More<i
+          class="fa fa-arrow-right"
+          style="margin-left: 10px; font-size: 16px"
+        ></i>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-import ROUTER from 'src/router'
+import ROUTER from "src/router";
 export default {
-  mounted(){
-  },
-  data(){
+  mounted() {},
+  data() {
     return {
-      projects: [{
-        title: 'Runway Express - Philippines',
-        description: 'Website and Mobile Development',
-        src: require("assets/img/project - runway.png"),
-        link: 'http://runwayexpress.co.uk/#/'
-      },{
-        title: 'Mezzo Hotel - Philippines',
-        description: 'Website Development',
-        src: require("assets/img/project - mezzo.png"),
-        link: 'https://mezzohotel.com/'
-      },{
-        title: 'Popout Poster - United Kingdom',
-        description: 'Website Development',
-        src: require("assets/img/project - popoutposter.png"),
-        link: 'https://popoutposter.com/'
-      },{
-        title: 'Meat The Sea - Hong Kong',
-        description: 'Website Development',
-        src: require("assets/img/project - meetthesea.png"),
-        link: 'https://www.meatthesea.com/'
-      }]
-    }
+      projects: [
+        {
+          title: "Runway Express - Philippines",
+          description: "Website and Mobile Development",
+          src: require("assets/img/project - runway.png"),
+          link: "http://runwayexpress.co.uk/#/",
+        },
+        {
+          title: "Mezzo Hotel - Philippines",
+          description: "Website Development",
+          src: require("assets/img/project - mezzo.png"),
+          link: "https://mezzohotel.com/",
+        },
+        {
+          title: "Popout Poster - United Kingdom",
+          description: "Website Development",
+          src: require("assets/img/project - popoutposter.png"),
+          link: "https://popoutposter.com/",
+        },
+        {
+          title: "Meat The Sea - Hong Kong",
+          description: "Website Development",
+          src: require("assets/img/project - meetthesea.png"),
+          link: "https://www.meatthesea.com/",
+        },
+      ],
+    };
   },
   methods: {
-    redirect(parameter){
-      ROUTER.push(parameter)
-    }
-  }
-}
+    redirect(parameter) {
+      ROUTER.push(parameter);
+    },
+  },
+};
 </script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.button1{
-  background-color: #E0E0E0;
+.button1 {
+  background-color: white;
   border: none;
-  color: #BDBDBD !important;
-  padding: 1vw 2vw;
+  color: #bdbdbd !important;
   text-align: center;
-  font-size: 17px;
+  font-size: 13px;
   cursor: pointer;
   border-radius: 10px;
-  margin-top: 15%;
-  outline-color: $primary;
+  border: solid 1px #e5e5e5;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+  outline-color: white;
+  padding: 8px 15px;
+  margin-bottom: 15px;
 }
-.button2{
-  background: #00E68A;
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  border: none;
+.button2 {
+  background-color: $secondary;
   color: white;
-  padding: 15px 35px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px 30px;
   text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  margin-top: 10%;
-  outline-color: $primary;
+  margin-top: 12vh;
+  font-weight: 700;
+  outline-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
 }
-.row{
-  width: 19vw;
+.row {
+  margin-top: 10vh;
+}
+
+.box {
+  width: 90%;
   height: auto;
   border: 1px solid white;
   background-color: white;
-  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 .entitle {
   text-align: center;
-  font-size: 55px;
-  margin-top: 5%;
+  font-size: 50px;
   color: white;
-  margin-bottom: 8%;
 }
-.cw-banner{
+.cw-banner {
   width: 100%;
   float: left;
   background: $primary;
-  padding: 5%;
 }
-.container{
-  text-align: center
+.container {
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  text-align: center;
 }
-.description{
-  text-align:center;
-  margin-left: -12%;
-  height: 10vh;
-}
-span{
+.p1 {
   font-size: 17px;
   color: white;
-  text-align: center;
 }
-p{
+p {
   font-size: 14px;
-  color: #8F00B5;
-  text-align: center;
+  color: #8f00b5;
 }
-img{
-  width: 18vw;
+img {
+  width: 100%;
   height: auto;
-  margin:auto;
+  margin: auto;
   padding: 5%;
 }
-
-@media only screen and (max-width: 992px){
-  .text{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 50px;
-  }
-  .title{
-    text-align: center;
-  }
-  span{
-    font-size: 13px;
-  }
-  p{
-    font-size: 10px;
-  }
-  .button1{
-  font-size: 10px;
+.description {
+  height: 11vh;
+  margin-bottom: 5%;
 }
-  .button2{
-  font-size: 14px;
-}
-}
-@media only screen and (max-width: 768px){
-  .title{
-    text-align: center;
-  }
-  span{
-    font-size: 10px;
-  }
-  p{
-    font-size: 6px;
-  }
-  .button1{
-  font-size: 10px;
-}
-.description{
-  height: 13%;
-}
-  .button2{
-  font-size: 14px;
-}
-}
-@media only screen and (max-width: 540px){
-  img{
-    height: 15vw;
-    width: auto;
-  }
-  .description{
-    height: 25%;
-  }
-  .button1{
-  font-size: 7px;
-}
-  .button2{
-  font-size: 10px;
-}
-}
-@media only screen and (max-width: 441px){
-  .entitle{
-    font-size: 30px;
-  }
-  .row{
-    width: 17vw;
-  }
-  img{
-    height: 15vw;
-    width: auto;
-  }
-  .description{
-    height: 25%;
-  }
-  span{
-    font-size: 5px;
-  }
-  p{
-    font-size: 3px;
-  }
-  .button1{
-  font-size: 5px;
-}
-  .button2{
-  font-size: 7px;
-}
-}
-@media only screen and (max-width: 360px){
-  .entitle{
-    font-size: 30px;
-  }
-  .row{
-    width: 17vw;
-  }
-  img{
-    height: 15vw;
-    width: auto;
-  }
-  .description{
-    height: 25%;
-  }
-  span{
-    font-size: 5px;
-  }
-  p{
-    font-size: 3px;
-  }
-  .button1{
-  font-size: 5px;
-}
-  .button2{
-  font-size: 7px;
-}
-}
-@media only screen and (max-width: 320px){
-  .entitle{
-    font-size: 30px;
-  }
-  .text{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 50px;
-  }
-  .title{
-    text-align: center;
-  }
-  .row{
-    width: 17vw;
-  }
-  img{
-    height: 15vw;
-    width: auto;
-  }
-
-  span{
-    font-size: 5px;
-  }
-  p{
-    font-size: 3px;
-  }
-  .button1{
-  font-size: 2px;
-}
-.description{
-  height: 16vh;
-}
-  .button2{
-    height: 4px;
-  font-size: 5px;
-}
-}
-
 </style>
