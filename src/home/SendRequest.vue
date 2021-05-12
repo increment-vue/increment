@@ -20,7 +20,7 @@
       </div>
       <div
         class="calendly-inline-widget"
-        style="min-width: 380px; height: 70vh"
+        style="min-width: 300px; height: 70vh"
         data-url="https://calendly.com/incrementtech2020/services-offered"
       ></div>
       <div>

@@ -102,6 +102,7 @@
     <div class="collapse hide" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li
+          data-target=".hide.show"
           v-for="(item, index) in menu"
           :key="index"
           class="nav-item"
@@ -111,6 +112,7 @@
             <a
               class="nav-link dropdown-toggle"
               role="button"
+              data-target=".hide.show"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
@@ -125,6 +127,7 @@
               style="position: absolute; border-color: #20c1ab"
             >
               <a
+                data-target=".hide.show"
                 class="dropdown-item"
                 href="/#our-values"
                 @click="headerScrollTo('#our-values')"
@@ -132,6 +135,7 @@
                 <b class="increment-limegreen-light">Our Values</b>
               </a>
               <a
+                data-target=".hide.show"
                 class="dropdown-item"
                 href="/#testimonials"
                 @click="headerScrollTo('#testimonials')"
@@ -145,6 +149,7 @@
               style="position: absolute; border-color: #20c1ab"
             >
               <a
+                data-target=".hide.show"
                 class="dropdown-item"
                 href="/#how-we-work"
                 @click="headerScrollTo('#how-we-work')"
@@ -155,12 +160,13 @@
           </div>
           <div v-else-if="item.type === 'regular'">
             <div v-if="item.title === 'Send Request'">
-              <a class="nav-link" href="send-request">
+              <a data-target=".hide.show" class="nav-link" href="send-request">
                 <b class="increment-limegreen-light">{{ item.title }}</b>
               </a>
             </div>
             <div v-else-if="item.title !== 'Send Request'">
               <a
+                data-target=".hide.show"
                 class="nav-link"
                 :href="item.redirect"
                 @click="headerScrollTo(item.redirect)"
@@ -261,7 +267,6 @@ img {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-
 
 @media screen and (max-width: 992px) {
   .navbar-menu-toggler-md {
