@@ -32,7 +32,7 @@ button {
 }
 .item-holder {
   position: absolute;
-  width: 60%;
+  width: 70%;
   background-color: #3f0050;
   top: 65%;
   padding: 5%;
@@ -61,7 +61,8 @@ h3 {
 }
 @media only screen and (max-width: 1024px) {
 .item-holder {
-  top: 55%;
+  width: 80%;
+  top: 60%;
 }
 .cw-banner {
   height: 75vh;
@@ -74,7 +75,8 @@ button {
   margin-bottom: 15%;
 }
 .item-holder {
-  top: 40%;
+  width: 100%;
+  margin-top: 40%;
 }
 }
 @media only screen and (max-width: 485px) {
