@@ -15,15 +15,14 @@
           <a href="mailto:increment2020@gmail.com">increment2020@gmail.com</a>
           or call/message us
           <a href="tel:+639171837855">(+63) 9171837855</a>.<br />
-          You can also set an appointment to
-          <a
-            href="https://calendly.com/incrementtech2020/services-offered"
-            target="_blank"
-            >www.calendly.com/incrementtech2020</a
-          >
-          for a short discussion.
+          You can also set an appointment in calendly for a short discussion.
         </p>
       </div>
+      <div
+        class="calendly-inline-widget"
+        style="min-width: 380px; height: 70vh"
+        data-url="https://calendly.com/incrementtech2020/services-offered"
+      ></div>
       <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d981.2168207389841!2d123.9130143!3d10.3524954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc2d9b9e99316c59d!2sUniversity%20of%20San%20Carlos%20-%20Talamban%20Campus!5e0!3m2!1sen!2sph!4v1618812110610!5m2!1sen!2sph"
@@ -81,7 +80,15 @@ a {
   cursor: pointer;
   color: $primary;
 }
+object {
+  width: 100%;
+  min-height: 60vh;
+}
+._3t7mZz3weV {
+  background-color: white;
+}
 </style>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
