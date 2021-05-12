@@ -185,9 +185,11 @@
 .header-section {
   float: left;
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .navbar-nav {
-  margin-top: -10%;
+  margin-top: -8%;
   float: left;
 }
 .increment-purple {
@@ -209,6 +211,7 @@
 .brand {
   margin-top: 0.5%;
 }
+
 label {
   font-size: 16px;
   font-weight: bold;
@@ -259,9 +262,7 @@ img {
   display: block;
 }
 
-.hide .show {
-  display: none !important;
-}
+
 @media screen and (max-width: 992px) {
   .navbar-menu-toggler-md {
     width: 100%;
@@ -269,9 +270,6 @@ img {
     float: left;
     display: block;
     margin-top: -6%;
-  }
-  .hide .show {
-    display: block !important;
   }
   .navbar-nav {
     margin-top: 1%;
@@ -283,10 +281,7 @@ img {
     text-align: right;
     float: left;
     display: block;
-    margin-top: -15%;
-  }
-  .hide .show {
-    display: block !important;
+    margin-top: -16%;
   }
   .navbar-nav {
     margin-top: 1%;
@@ -299,9 +294,6 @@ img {
     float: left;
     display: block;
     margin-top: -15%;
-  }
-  .hide .show {
-    display: block !important;
   }
   .navbar-nav {
     margin-top: 1%;
@@ -316,9 +308,6 @@ img {
     float: left;
     display: block;
     margin-top: -25%;
-  }
-  .hide .show {
-    display: block !important;
   }
   .navbar-nav {
     margin-top: 1%;
