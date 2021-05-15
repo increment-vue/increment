@@ -75,6 +75,7 @@ button {
   margin-bottom: 15%;
 }
 .item-holder {
+  text-align: center !important;
   width: 100%;
   margin-top: 40%;
 }
