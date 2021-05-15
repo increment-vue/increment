@@ -6,7 +6,7 @@
         <span class="col-md-6" v-for="(item, index) in list" :key="index">
           <center class="single-card">
             <h5 class="qoute">{{ item.quote }}</h5>
-            <h5 class="name">
+            <h5 class="name text-white">
               <b>{{ item.name }}</b>
             </h5>
             <p>{{ item.position }}</p>

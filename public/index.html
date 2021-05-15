@@ -40,6 +40,17 @@
   </script>
 
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187482436-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-187482436-1');
+  </script>
+
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
   <!-- Open Graph -->
@@ -55,32 +66,32 @@
 </head>
 
 <body>
-  <!-- <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId            : '195290608225017',
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v6.0'
-        });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
-    <div class="fb-customerchat"
-     page_id="868630263266919"
-     theme_color="#cbab58"
-     logged_in_greeting="How can we help you?"
-     logged_out_greeting="How can we help you?"
-     greeting_dialog_display="hide"
-     >
-    </div> -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '510072170358554',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v6.0'
+      });
+    };
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <div class="fb-customerchat"
+   page_id="2456503467916179"
+   theme_color="#cbab58"
+   logged_in_greeting="How can we help you?"
+   logged_out_greeting="How can we help you?"
+   greeting_dialog_display="hide"
+   >
+  </div>
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>

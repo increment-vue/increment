@@ -103,7 +103,7 @@ div.item-holder {
 .return-to-top {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  left: 10px;
   background: $primary;
   color: $white;
   height: 50px;
