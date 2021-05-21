@@ -10,7 +10,11 @@
           Just relax and we will give solutions to your needs. Got something<br />
           awesome for us to work on?
         </h3>
-        <a href="https://calendly.com/incrementtech2020/services-offered" target="_blank"><button>Contact Us</button></a>
+        <a
+          href="https://calendly.com/incrementtech2020/services-offered"
+          target="_blank"
+          ><button>Contact Us</button></a
+        >
       </div>
     </div>
   </div>
@@ -43,7 +47,11 @@ h3 {
   color: white;
 }
 .bg-primary {
-  background-image: url("../../assets/img/IncrementBanner.jpg");
+  background-image: url("../../assets/img/Banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 .cw-banner {
   width: 100%;
@@ -60,81 +68,81 @@ h3 {
   height: 900px;
 }
 @media only screen and (max-width: 1024px) {
-.item-holder {
-  width: 80%;
-  top: 60%;
-}
-.cw-banner {
-  height: 75vh;
-}
+  .item-holder {
+    width: 80%;
+    top: 60%;
+  }
+  .cw-banner {
+    height: 75vh;
+  }
 }
 @media only screen and (max-width: 540px) {
-button {
-  padding: 10px 30px;
-  font-size: 20px;
-  margin-bottom: 15%;
-}
-.item-holder {
-  text-align: center !important;
-  width: 100%;
-  margin-top: 40%;
-}
+  button {
+    padding: 10px 30px;
+    font-size: 20px;
+    margin-bottom: 15%;
+  }
+  .item-holder {
+    text-align: center !important;
+    width: 100%;
+    margin-top: 40%;
+  }
 }
 @media only screen and (max-width: 485px) {
-.item-holder {
-  top: 30%;
-}
+  .item-holder {
+    top: 30%;
+  }
 }
 @media only screen and (max-width: 414px) {
-.item-holder {
-  top: 40%;
-}
+  .item-holder {
+    top: 40%;
+  }
 }
 @media only screen and (max-width: 411px) {
-.item-holder {
-  top: 45%;
-}
+  .item-holder {
+    top: 45%;
+  }
 }
 @media only screen and (max-width: 375px) {
-.item-holder {
-  top: 50%;
-}
-.title{
-  font-size: 30px;
-}
+  .item-holder {
+    top: 50%;
+  }
+  .title {
+    font-size: 30px;
+  }
 }
 @media only screen and (max-width: 360px) {
-.title {
-  font-size: 30px;
-}
+  .title {
+    font-size: 30px;
+  }
 }
 @media only screen and (max-width: 320px) {
-.item-holder {
-  top: 50%;
-}
-.title{
-  font-size: 30px;
-}
-button {
-  padding: 10px 20px;
-  font-size: 15px;
-  margin-bottom: 15%;
-}
+  .item-holder {
+    top: 50%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-bottom: 15%;
+  }
 }
 @media only screen and (max-width: 280px) {
-.title {
-  font-size: 30px;
-  margin-bottom: 15%;
-}
-h3 {
-  font-size: 15px;
-}
-button {
-  padding: 5px 20px;
-  font-size: 20px;
-  margin-bottom: 15%;
-  font-size: 15px;
-}
+  .title {
+    font-size: 30px;
+    margin-bottom: 15%;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  button {
+    padding: 5px 20px;
+    font-size: 20px;
+    margin-bottom: 15%;
+    font-size: 15px;
+  }
 }
 </style>
 <script>
