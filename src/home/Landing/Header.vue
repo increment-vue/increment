@@ -79,7 +79,7 @@
                 </div>
                 <div v-else-if="item.type === 'regular'">
                   <div v-if="item.title === 'Send Request'">
-                    <a class="nav-link" href="send-request">
+                    <a class="nav-link" href="/send-request">
                       <b class="increment-limegreen-light">{{ item.title }}</b>
                     </a>
                   </div>
@@ -160,7 +160,7 @@
           </div>
           <div v-else-if="item.type === 'regular'">
             <div v-if="item.title === 'Send Request'">
-              <a data-target=".hide.show" class="nav-link" href="send-request">
+              <a data-target=".hide.show" class="nav-link" href="/send-request">
                 <b class="increment-limegreen-light">{{ item.title }}</b>
               </a>
             </div>
@@ -360,7 +360,7 @@ export default {
         },
         {
           title: "Send Request",
-          redirect: "send-request",
+          redirect: "/send-request",
           type: "regular",
         },
       ],
