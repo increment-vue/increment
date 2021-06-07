@@ -63,6 +63,20 @@ export default {
           withButton: true,
         },
         {
+          title: "AskThePros.com - United States",
+          description: "Website Development",
+          src: require("assets/img/project - askthepros.png"),
+          link: "#",
+          withButton: false,
+        },
+        {
+          title: "Kicktronics - United States",
+          description: "Mobile Development",
+          src: require("assets/img/project - kicktronics.png"),
+          link: "#",
+          withButton: false,
+        },
+        {
           title: "Eat Study & Sip - United States",
           description: "Website Development",
           src: require("assets/img/project - eatstudyandsip.png"),
