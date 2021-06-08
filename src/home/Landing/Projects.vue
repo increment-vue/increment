@@ -125,7 +125,7 @@ export default {
   background: $primary;
 }
 .container {
-  padding-top: 10vh;
+  padding-top: 15vh;
   padding-bottom: 15vh;
   text-align: center;
 }
