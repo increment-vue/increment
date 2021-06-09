@@ -268,16 +268,20 @@ img {
   display: block;
 }
 
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 991px) {
   .navbar-menu-toggler-md {
     width: 100%;
     text-align: right;
     float: left;
     display: block;
-    margin-top: -6%;
+    margin-top: -7vh;
+    background-color: orange;
   }
   .navbar-nav {
     margin-top: 1%;
+    display: none;
+    background-color: palegoldenrod;
   }
 }
 @media screen and (max-width: 600px) {
@@ -286,7 +290,8 @@ img {
     text-align: right;
     float: left;
     display: block;
-    margin-top: -16%;
+    margin-top: -7vh;
+    background-color: plum;
   }
   .navbar-nav {
     margin-top: 1%;
@@ -298,7 +303,7 @@ img {
     text-align: right;
     float: left;
     display: block;
-    margin-top: -15%;
+    margin-top: -7vh;
   }
   .navbar-nav {
     margin-top: 1%;
@@ -313,9 +318,11 @@ img {
     float: left;
     display: block;
     margin-top: -25%;
+    
   }
   .navbar-nav {
     margin-top: 1%;
+    
   }
 }
 // .dropdown:hover .dropdown-item {display: block;}
