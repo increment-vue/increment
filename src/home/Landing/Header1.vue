@@ -108,31 +108,38 @@
                 </div>
               </span>
         </div>
-        <div class="collapse show my-row" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+        <div class="collapse " id="navbarSupportedContent" >
+          <ul class="navbar-nav ml-auto" >
             <li
               data-target=".hide.show"
               v-for="(item, index) in menu"
               :key="index"
-              class="nav-item"
+              class="nav-item "
             >
               <div class="btn-group dropdown" v-if="item.type === 'dropdown'">
+                <!-- button title -->
                 <a
-                  type="button"
-                  class="nav-link dropdown-toggle btn"
+                  class="nav-link  " 
                   role="button"
-                  data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                   style="color: #20c1ab"
+                  type="button"
+                  @click="headerScrollTo('#who-we-are')"
                 >
                   <b class="increment-limegreen-light">{{ item.title }}</b>
                 </a>
+                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only" >Toggle Dropdown</span>
+                </a>
+                <!-- button menu -->
                 <div
                   class="dropdown-menu who-menu"
                   v-if="item.title === 'Who We Are'"
                   style="position: absolute; border-color: #20c1ab"
+
                 >
+                  <!-- button content -->
                   <a
                     data-target=".hide.show"
                     class="dropdown-item"
@@ -296,6 +303,9 @@ img {
 
 }
 
+.li:hover {
+  background: grey;
+}
 @media screen and (min-width: 992px){
     .my-row{
       display: none;
@@ -303,6 +313,11 @@ img {
 }
 
 @media screen and (max-width: 991px) {
+  .my-space {
+    width: 70%;
+    height: 40%;
+
+  }
   .navbar-menu-toggler-md { //icon
     width: 100%;
     text-align: right;
@@ -312,7 +327,7 @@ img {
   }
   .navbar-nav {
     margin-top: 1%;
-    background-color: pink;
+    background-color: none;
     padding: 1%;
     margin-right: -6%;
     float: right;
@@ -359,7 +374,7 @@ img {
     margin-top: -7%;
   }
   .navbar-nav {
-    background-color: lightsteelblue;
+    background-color: none;
     float: right;
   }
 }
