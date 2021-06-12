@@ -10,7 +10,7 @@
                     style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
                   />
                   <label class="headerName">
-                    <b class="increment-purple">PLATONIC</b>
+                    <b class="increment-purple">INCREMENT</b>
                     <br />
                     <b style="color: #00b89f">TECHNOLOGIES</b>
                   </label>
