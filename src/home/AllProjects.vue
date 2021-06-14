@@ -101,7 +101,7 @@ export default {
           title: "Pivot SMS - Canada",
           description: "Website Development",
           src: require("assets/img/project - pivot.jpg"),
-          link: "",
+          link: "https://pivotsms.co/",
           withButton: true,
         },
         {
