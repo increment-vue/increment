@@ -1,114 +1,139 @@
 <template>
   <div class="container my-container">
       <div class="navbar navbar-expand-lg fixed-top bg-light row ">
-        <div class="header-section">
+        <div class="header-section" >
             
-              <span class="brand col-6" >
-                <a class="navbar-brand" v-on:click="redirect('/')" >
-                  <img
-                    src="../../assets/img/logo.png"
-                    style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
-                  />
-                  <label class="headerName">
-                    <b class="increment-purple">PLATONIC</b>
-                    <br />
-                    <b style="color: #00b89f">TECHNOLOGIES</b>
-                  </label>
-                </a>
-              </span>
-            
-              <span class="menu col-6">
-                <span class="navbar-menu-toggler-md">
-                  <i
-                    class="fa fa-bars"
-                    role="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  ></i>
-                  
-                </span>
-                <div class="collapse navbar-collapse">
-                  <form class="form-inline my-2 my-lg-0 ml-auto">
-                    <ul class="navbar-nav">
-                      <li class="nav-item header-right" v-for="(item, index) in menu" :key="index">
-                        <div class="btn-group dropdown" v-if="item.type === 'dropdown'">
-                          <a
-                            class="nav-link dropdown-toggle "
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            style="color: #20c1ab"
-                            
-                          >
-                            <b class="increment-limegreen-light">{{ item.title }}</b>
-                          </a>
-                          <div
-                            class="dropdown-menu who-menu"
-                            v-if="item.title === 'Who We Are'"
-                            style="position: absolute; border-color: #20c1ab"
-                            href="/#who-we-are"
-                            
-                          >
-                            <a
-                              class="dropdown-item"
-                              href="/#our-values"
-                              @click="headerScrollTo('#our-values')"
-                            >
-                              <b class="increment-limegreen-light">Our Values</b>
-                            </a>
-                            <a
-                              class="dropdown-item"
-                              href="/#testimonials"
-                              
-                            >
-                              <b class="increment-limegreen-light"
-                                >What They Say About Us</b
-                              >
-                            </a>
-                          </div>
-                          <div
-                            class="dropdown-menu serve-menu"
+          <span class="brand  col-6"  >
+            <a class="navbar-brand" v-on:click="redirect('/')">
+              <img
+                src="../../assets/img/logo.png"
+                style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
+              />
+              <label class="headerName">
+                <b class="increment-purple">INCREMENT</b>
+                <br />
+                <b style="color: #00b89f">TECHNOLOGIES</b>
+              </label>
+            </a>
+          </span>
+        
+          <span class="menu ">
+            <span class="navbar-menu-toggler-md">
+              <i
+                class="fa fa-bars"
+                role="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              ></i>
+              
+            </span>
+            <div class="collapse navbar-collapse" >
+              <form class="form-inline my-2 my-lg-0 ml-auto">
+                <ul class="navbar-nav">
+                  <li class="nav-item header-right" v-for="(item, index) in menu" :key="index">
+                    <div class="btn-group dropdown" v-if="item.title === 'Who We Are'">
+                      <!-- button title -->
+                      <a
+                        class="nav-link  " 
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        style="color: #20c1ab"
+                        type="button"
+                        href="/#who-we-are"
+                      >
+                        <b class="increment-limegreen-light">{{ item.title }}</b>
+                      </a>
+                      <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <span class="sr-only" >Toggle Dropdown</span>
+                      </a>
+                      <!-- button menu -->
+                      <div
+                        class="dropdown-menu who-menu"
+                        style="position: absolute; border-color: #20c1ab"
+                      >
+                        <!-- button content -->
+                        <a
+                          data-target=".hide.show"
+                          class="dropdown-item"
+                          href="/#our-values"
+                        >
+                          <b class="increment-limegreen-light">Our Values</b>
+                        </a>
+                        <a
+                          data-target=".hide.show"
+                          class="dropdown-item"
+                          href="/#testimonials"
+                          
+                        >
+                          <b class="increment-limegreen-light">What They Say About Us</b>
+                        </a>
+                      </div>
+
+                    </div>
+                    <div class="btn-group dropdown" v-if="item.title === 'Our Services'">
+                      <!-- button title -->
+                      <a
+                        class="nav-link  " 
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        style="color: #20c1ab"
+                        type="button"
+                        href="/#our-services"
+                      >
+                        <b class="increment-limegreen-light">{{ item.title }}</b>
+                      </a>
+                      <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <span class="sr-only" >Toggle Dropdown</span>
+                      </a>
+                      <!-- button menu -->
+                      
+                        <!-- button content -->
+                        <div
+                            class="dropdown-menu "
                             v-if="item.title === 'Our Services'"
                             style="position: absolute; border-color: #20c1ab"
                             href='/#our-services'
-                            
+                            @click="headerScrollTo('#our-services')"
+                        >
+                          <a
+                            class="dropdown-item"
+                            href="/#how-we-work"
+                            @click="headerScrollTo('#how-we-work')"
                           >
-                            <a
-                              class="dropdown-item"
-                              href="/#how-we-work"
-                              @click="headerScrollTo('#how-we-work')"
-                            >
-                              <b class="increment-limegreen-light">How We Work</b>
-                            </a>
-                          </div>
+                            <b class="increment-limegreen-light">How We Work</b>
+                          </a>
                         </div>
-                        <div v-else-if="item.type === 'regular'">
-                          <div v-if="item.title === 'Send Request'">
-                            <a class="nav-link" href="/send-request">
-                              <b class="increment-limegreen-light">{{ item.title }}</b>
-                            </a>
-                          </div>
-                          <div v-else-if="item.title !== 'Send Request'">
-                            <a
-                              class="nav-link"
-                              :href="item.redirect"
-                              @click="headerScrollTo(item.redirect)"
-                            >
-                              <b class="increment-limegreen-light">{{ item.title }}</b>
-                            </a>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </form>
-                </div>
-              </span>
+                    
+                    
+                  </div>     
+                    <div v-else-if="item.type === 'regular'">
+                      <div v-if="item.title === 'Send Request'">
+                        <a class="nav-link" href="/send-request">
+                          <b class="increment-limegreen-light">{{ item.title }}</b>
+                        </a>
+                      </div>
+                      <div v-else-if="item.title !== 'Send Request'">
+                        <a
+                          class="nav-link"
+                          :href="item.redirect"
+                          @click="headerScrollTo(item.redirect)"
+                        >
+                          <b class="increment-limegreen-light">{{ item.title }}</b>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </span>
         </div>
-        <div class="collapse " id="navbarSupportedContent" >
+        <div class="collapse" id="navbarSupportedContent" >
           <ul class="navbar-nav ml-auto" >
             <li
               data-target=".hide.show"
@@ -125,11 +150,11 @@
                   aria-expanded="false"
                   style="color: #20c1ab"
                   type="button"
-                  @click="headerScrollTo('#who-we-are')"
+                  href="/#who-we-are"
                 >
                   <b class="increment-limegreen-light">{{ item.title }}</b>
                 </a>
-                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only" >Toggle Dropdown</span>
                 </a>
                 <!-- button menu -->
@@ -137,14 +162,12 @@
                   class="dropdown-menu who-menu"
                   v-if="item.title === 'Who We Are'"
                   style="position: absolute; border-color: #20c1ab"
-
                 >
                   <!-- button content -->
                   <a
                     data-target=".hide.show"
                     class="dropdown-item"
                     href="/#our-values"
-                    @click="headerScrollTo('#our-values')"
                   >
                     <b class="increment-limegreen-light">Our Values</b>
                   </a>
@@ -152,7 +175,7 @@
                     data-target=".hide.show"
                     class="dropdown-item"
                     href="/#testimonials"
-                    @click="headerScrollTo('#testimonials')"
+                    
                   >
                     <b class="increment-limegreen-light">What They Say About Us</b>
                   </a>
@@ -161,12 +184,13 @@
                   class="dropdown-menu serve-menu"
                   v-if="item.title === 'Our Services'"
                   style="position: absolute; border-color: #20c1ab"
+                  @click="headerScrollTo('#our-services')"
+                  href="/#our-services"
                 >
                   <a
                     data-target=".hide.show"
                     class="dropdown-item"
                     href="/#how-we-work"
-                    @click="headerScrollTo('#how-we-work')"
                   >
                     <b class="increment-limegreen-light">How We Work</b>
                   </a>
@@ -206,10 +230,9 @@
 }
 .header-section {
   float: left;
-  width: 105%;
-  margin-top: -5px;
-  margin-bottom: -50px;
- 
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .navbar-nav {
   margin-top: -8%;
@@ -456,24 +479,6 @@ export default {
           type: "regular",
         },
       ],
-      test: [
-        {
-          title: "title 1",
-          type: "dropdown",
-        },
-        {
-          title: "title 2",
-          type: "dropwdown",
-        },
-        {
-          title: "content",
-          type: "regular",
-        },
-        {
-          title: "content",
-          type: "regular",
-        },
-      ],
     };
   },
   methods: {
@@ -481,8 +486,8 @@ export default {
       ROUTER.push(parameter);
     },
     headerScrollTo(id) {
-      this.redirect('/' + id)
-      window.location.reload()
+      //this.redirect('/' + id);
+      //window.location.reload();
       let height = $(window).height();
       $("html, body").animate(
         {
