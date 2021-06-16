@@ -141,10 +141,10 @@
               :key="index"
               class="nav-item "
             >
-              <div class="btn-group dropdown" v-if="item.type === 'dropdown'">
+              <div class="btn-group dropdown" v-if="item.title === 'Who We Are'">
                 <!-- button title -->
                 <a
-                  class="nav-link  " 
+                  class="nav-link " 
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
@@ -155,7 +155,7 @@
                   <b class="increment-limegreen-light">{{ item.title }}</b>
                 </a>
                 <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  <span class="sr-only" >Toggle Dropdown</span>
+                  <span class="sr-only">Toggle Dropdown</span>
                 </a>
                 <!-- button menu -->
                 <div
@@ -180,12 +180,29 @@
                     <b class="increment-limegreen-light">What They Say About Us</b>
                   </a>
                 </div>
+              </div>
+              
+              <div class="btn-group dropdown" v-if="item.title === 'Our Services'">
+                <!-- button title -->
+                <a
+                  class="nav-link " 
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="color: #20c1ab"
+                  type="button"
+                  href="/#our-services"
+                >
+                  <b class="increment-limegreen-light">{{ item.title }}</b>
+                </a>
+                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  <span class="sr-only">Toggle Dropdown</span>
+                </a>
+                <!-- button menu -->
                 <div
                   class="dropdown-menu serve-menu"
                   v-if="item.title === 'Our Services'"
                   style="position: absolute; border-color: #20c1ab"
-                  @click="headerScrollTo('#our-services')"
-                  href="/#our-services"
                 >
                   <a
                     data-target=".hide.show"
@@ -196,6 +213,7 @@
                   </a>
                 </div>
               </div>
+
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
                   <a data-target=".hide.show" class="nav-link" href="/send-request">
@@ -231,11 +249,10 @@
 .header-section {
   float: left;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
 }
 .navbar-nav {
-  margin-top: -8%;
+  margin-top: -69px;
   margin-left: 0%;
   float: left;
    
@@ -269,11 +286,10 @@ label {
   color: "#0089bf";
   padding: 0.5%;
   white-space: nowrap;
-  margin-bottom: 5%;
 }
 .navbar { //icon
   padding-left: -20%;
-  padding-right: 10%;
+  padding-right: 0%;
   padding-top: 2%;
   display: block;
   background-color: none;
@@ -330,16 +346,15 @@ img {
   background: grey;
 }
 @media screen and (min-width: 992px){
-    .my-row{
-      display: none;
-    }
+    #navbarSupportedContent{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991px) {
   .my-space {
     width: 70%;
     height: 40%;
-
   }
   .navbar-menu-toggler-md { //icon
     width: 100%;
@@ -347,13 +362,14 @@ img {
     float: right;
     display: block;
     margin-top: -6%;
+    margin-right: 100px;
+    padding: auto;
   }
   .navbar-nav {
     margin-top: 1%;
     background-color: none;
     padding: 1%;
-    margin-right: -6%;
-    float: right;
+    float: left;
   }
   .header-section { //white space
     float: left;
@@ -364,7 +380,7 @@ img {
   .nav-item {
     background-color: none  ;
     padding: 1%;
-    margin-left: 0%;
+    margin-left: 4%;
   }
   .li{
     background-color: none;
@@ -372,8 +388,7 @@ img {
   }
   .dropdown:hover .dropdown-menu {
     display: block;
-    text-align: right;
-    
+    text-align: left;
   }
 
   .who-menu { //entire menu of who-we-are 
@@ -394,21 +409,28 @@ img {
     text-align: right;
     float: right;
     display: block;
-    margin-top: -7%;
+    margin-top: -7vh;
+    padding: auto;
   }
   .navbar-nav {
     background-color: none;
-    float: right;
+    float: left;
   }
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+    text-align: left;
+  }
+  
 }
 @media screen and (max-width: 330px) {
   .navbar-menu-toggler-md {
     width: 100%;
     text-align: right;
-    float: right;
+    float: center;
     display: block;
-    margin-top: -7%;
-    position: relative;
+    margin-top: -54px;
+    margin-right: 50px;
+    padding: auto;
   }
   .navbar-nav {
     margin-top: 1%;
@@ -416,17 +438,18 @@ img {
 }
 @media only screen and (max-width: 280px) {
   .navbar {
-    width: 84%;
+    width: 100%;
   }
+
   .navbar-menu-toggler-md {
     text-align: right;
     float: left;
     display: block;
-    margin: -7%;
-    
+    margin-top: -50px;
+    margin-left: -25px;
   }
   .navbar-nav {
-    margin-top: 1%;
+    margin-top: 0%;
     
   }
 }
