@@ -205,6 +205,7 @@ h4 {
   border-radius: 5px;
   line-height: 62px;
   text-align: center;
+  float: left;
 }
 
 .fa-angle-up {
