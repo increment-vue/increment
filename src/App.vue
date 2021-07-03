@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import LandingHeader from "src/home/Landing/Header1.vue";
+import LandingHeader from "src/home/Landing/Header.vue";
 import LandingFooter from "src/home/Landing/Footer.vue";
 export default {
   components: {

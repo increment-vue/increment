@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer row">
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-5 col-sm-12">
         <h5 style="margin-top: 10%; font-weight: bold">ABOUT US</h5>
         <br />
         <div>
@@ -24,7 +24,7 @@
           ></font-awesome-icon>
         </span>
       </div>
-      <div class="col-md-6 col-sm-12" id="div2">
+      <div class="col-md-5 col-sm-12" id="div2">
         <h5 style="margin-top: 10%; font-weight: bold">CONTACT US</h5>
         <br />
         <ul>
@@ -88,11 +88,11 @@ footer {
   background: #e9e9e9;
 }
 .footer {
-  width: 80%;
+  width: 90%;
   float: left;
   min-height: 50px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   overflow-y: hidden;
 }
 .footer-widget {
