@@ -44,6 +44,7 @@
                         style="color: #20c1ab"
                         type="button"
                         href="/#who-we-are"
+                        @click="headerScrollTo('#who-we-are')"
                       >
                         <b class="increment-limegreen-light">{{ item.title }}</b>
                       </a>
@@ -60,6 +61,7 @@
                           data-target=".hide.show"
                           class="dropdown-item"
                           href="/#our-values"
+                          @click="headerScrollTo('#our-values')"
                         >
                           <b class="increment-limegreen-light">Our Values</b>
                         </a>
@@ -67,7 +69,7 @@
                           data-target=".hide.show"
                           class="dropdown-item"
                           href="/#testimonials"
-                          
+                          @click="headerScrollTo('#testimonials')"
                         >
                           <b class="increment-limegreen-light">What They Say About Us</b>
                         </a>
@@ -84,6 +86,7 @@
                         style="color: #20c1ab"
                         type="button"
                         href="/#our-services"
+                        @click="headerScrollTo('#our-services')"
                       >
                         <b class="increment-limegreen-light">{{ item.title }}</b>
                       </a>
@@ -97,8 +100,7 @@
                             class="dropdown-menu "
                             v-if="item.title === 'Our Services'"
                             style="position: absolute; border-color: #20c1ab"
-                            href='/#our-services'
-                            @click="headerScrollTo('#our-services')"
+                            
                         >
                           <a
                             class="dropdown-item"
@@ -141,16 +143,18 @@
               :key="index"
               class="nav-item "
             >
-              <div class="btn-group dropdown" v-if="item.title === 'Who We Are'">
+              <div class="btn-group dropdown" v-if="item.title === 'Who We Are'" >
                 <!-- button title -->
                 <a
                   class="nav-link " 
                   role="button"
+                  data-toggle="collapse"
                   aria-haspopup="true"
                   aria-expanded="false"
                   style="color: #20c1ab"
                   type="button"
                   href="/#who-we-are"
+                  @click="headerScrollTo('#who-we-are')"
                 >
                   <b class="increment-limegreen-light">{{ item.title }}</b>
                 </a>
@@ -161,13 +165,14 @@
                 <div
                   class="dropdown-menu who-menu"
                   v-if="item.title === 'Who We Are'"
-                  style="position: absolute; border-color: #20c1ab"
+                  style="position: relative; border-color: #20c1ab"
                 >
                   <!-- button content -->
                   <a
                     data-target=".hide.show"
                     class="dropdown-item"
                     href="/#our-values"
+                    @click="headerScrollTo('#our-values')"
                   >
                     <b class="increment-limegreen-light">Our Values</b>
                   </a>
@@ -175,6 +180,7 @@
                     data-target=".hide.show"
                     class="dropdown-item"
                     href="/#testimonials"
+                    @click="headerScrollTo('#testimonials')"
                     
                   >
                     <b class="increment-limegreen-light">What They Say About Us</b>
@@ -192,6 +198,7 @@
                   style="color: #20c1ab"
                   type="button"
                   href="/#our-services"
+                  @click="headerScrollTo('#our-services')"
                 >
                   <b class="increment-limegreen-light">{{ item.title }}</b>
                 </a>
@@ -202,12 +209,13 @@
                 <div
                   class="dropdown-menu serve-menu"
                   v-if="item.title === 'Our Services'"
-                  style="position: absolute; border-color: #20c1ab"
+                  style="position: relative; border-color: #20c1ab"
                 >
                   <a
                     data-target=".hide.show"
                     class="dropdown-item"
                     href="/#how-we-work"
+                    @click="headerScrollTo('#how-we-work')"
                   >
                     <b class="increment-limegreen-light">How We Work</b>
                   </a>
@@ -248,7 +256,7 @@
 }
 .header-section {
   float: left;
-  width: 100%;
+  width: 90%;
   padding-bottom: 10px;
 }
 .navbar-nav {
@@ -334,12 +342,11 @@ img {
 
 .who-menu {
   background-color: none;
-  margin-left: -50%;
+  margin-left: -30%;
 }
 
 .serve-menu {
   margin-left: -10%;
-
 }
 
 .li:hover {
@@ -375,10 +382,9 @@ img {
     float: left;
     width: 105%;
     margin-top: -5px;
-    margin-bottom: -10px;
   }
   .nav-item {
-    background-color: none  ;
+    background-color: none;
     padding: 1%;
     margin-left: 4%;
   }
@@ -389,18 +395,27 @@ img {
   .dropdown:hover .dropdown-menu {
     display: block;
     text-align: left;
+    border: none;
+    background-color: #f8f9fa;
   }
 
   .who-menu { //entire menu of who-we-are 
     background-color: none;
-    margin-left: -89%;
-    text-align: right;
+    margin-left: -30%;
+    margin-top: 10%;
   }
   .serve-menu {
-    margin-left: -29%;
+    margin-left: 0%;
+    margin-left: -40%;
+    margin-top: 10%;
   }
   .my-row{
     display: block;
+  }
+  .dropdown-toggle-split{
+    color: $secondary;
+    padding-right: 5%;
+    margin-top: 5%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -417,7 +432,7 @@ img {
     float: left;
   }
   .dropdown:hover .dropdown-menu {
-    display: flex;
+    display: block;
     text-align: left;
   }
   
