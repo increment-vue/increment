@@ -425,7 +425,7 @@ img {
     width: 100%; 
     height: 1px; 
     background-color: $secondary;
-    margin-top: 20%;
+    margin-top: 7vh;
   }
 }
 @media screen and (max-width: 768px) {
