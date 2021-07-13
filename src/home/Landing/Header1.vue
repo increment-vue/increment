@@ -136,6 +136,7 @@
           </span>
         </div>
         <div class="collapse" id="navbarSupportedContent" >
+          <div class="header-separator"> </div>
           <ul class="navbar-nav ml-auto" >
             <li
               data-target=".hide.show"
@@ -146,9 +147,8 @@
               <div class="btn-group dropdown" v-if="item.title === 'Who We Are'" >
                 <!-- button title -->
                 <a
-                  class="nav-link " 
+                  class="nav-link  " 
                   role="button"
-                  data-toggle="collapse"
                   aria-haspopup="true"
                   aria-expanded="false"
                   style="color: #20c1ab"
@@ -262,7 +262,7 @@
 .navbar-nav {
   margin-top: -69px;
   margin-left: 0%;
-  float: left;
+  float: center;
    
 }
 .increment-purple {
@@ -337,7 +337,6 @@ img {
 }
 .dropdown:hover .dropdown-menu {
   display: block;
-  text-align: center;
 }
 
 .who-menu {
@@ -352,6 +351,10 @@ img {
 .li:hover {
   background: grey;
 }
+
+.dropdown-toggle-split{
+    color: $secondary;
+  }
 @media screen and (min-width: 992px){
     #navbarSupportedContent{
     display: none;
@@ -368,7 +371,7 @@ img {
     text-align: right;
     float: right;
     display: block;
-    margin-top: -6%;
+    margin-top: -6vh;
     margin-right: 100px;
     padding: auto;
   }
@@ -394,7 +397,7 @@ img {
   }
   .dropdown:hover .dropdown-menu {
     display: block;
-    text-align: left;
+    text-align: center;
     border: none;
     background-color: #f8f9fa;
   }
@@ -412,10 +415,17 @@ img {
   .my-row{
     display: block;
   }
+
   .dropdown-toggle-split{
     color: $secondary;
-    padding-right: 5%;
-    margin-top: 5%;
+    padding-right: 0%;
+  }
+
+  .header-separator{
+    width: 100%; 
+    height: 1px; 
+    background-color: $secondary;
+    margin-top: 20%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -424,8 +434,8 @@ img {
     text-align: right;
     float: right;
     display: block;
-    margin-top: -7vh;
     padding: auto;
+    margin-top: -6vh;
   }
   .navbar-nav {
     background-color: none;
