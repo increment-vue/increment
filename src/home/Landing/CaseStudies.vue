@@ -12,7 +12,7 @@
               <br />
               <h4>{{ item.price }}</h4>
             </div>
-            <p>{{ item.desc }}</p>
+            <div><p>{{ item.desc }}</p></div>
             <button @click="redirect(item.links)" class="button1">
               Read More
             </button>
@@ -48,6 +48,17 @@ p {
   padding-right: 8px;
   padding-left: 8px;
   min-height: 300px;
+
+  height: 400px;
+  //white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  padding: 20px;
+  font-size: 1rem;
+  //margin: 0;
+  //background: white;
+  resize: horizontal;
 }
 
 h6 {

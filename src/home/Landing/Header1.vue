@@ -1,114 +1,140 @@
 <template>
   <div class="container my-container">
       <div class="navbar navbar-expand-lg fixed-top bg-light row ">
-        <div class="header-section">
+        <div class="header-section" >
             
-              <span class="brand col-6" >
-                <a class="navbar-brand" v-on:click="redirect('/')" >
-                  <img
-                    src="../../assets/img/logo.png"
-                    style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
-                  />
-                  <label class="headerName">
-                    <b class="increment-purple">INCREMENT</b>
-                    <br />
-                    <b style="color: #00b89f">TECHNOLOGIES</b>
-                  </label>
-                </a>
-              </span>
-            
-              <span class="menu col-6">
-                <span class="navbar-menu-toggler-md">
-                  <i
-                    class="fa fa-bars"
-                    role="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  ></i>
-                  
-                </span>
-                <div class="collapse navbar-collapse">
-                  <form class="form-inline my-2 my-lg-0 ml-auto">
-                    <ul class="navbar-nav">
-                      <li class="nav-item header-right" v-for="(item, index) in menu" :key="index">
-                        <div class="btn-group dropdown" v-if="item.type === 'dropdown'">
-                          <a
-                            class="nav-link dropdown-toggle "
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            style="color: #20c1ab"
-                            
-                          >
-                            <b class="increment-limegreen-light">{{ item.title }}</b>
-                          </a>
-                          <div
-                            class="dropdown-menu who-menu"
-                            v-if="item.title === 'Who We Are'"
-                            style="position: absolute; border-color: #20c1ab"
-                            href="/#who-we-are"
-                            
-                          >
-                            <a
-                              class="dropdown-item"
-                              href="/#our-values"
-                              @click="headerScrollTo('#our-values')"
-                            >
-                              <b class="increment-limegreen-light">Our Values</b>
-                            </a>
-                            <a
-                              class="dropdown-item"
-                              href="/#testimonials"
-                              
-                            >
-                              <b class="increment-limegreen-light"
-                                >What They Say About Us</b
-                              >
-                            </a>
-                          </div>
-                          <div
-                            class="dropdown-menu serve-menu"
+          <span class="brand  col-6"  >
+            <a class="navbar-brand" v-on:click="redirect('/')">
+              <img
+                src="../../assets/img/logo.png"
+                style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
+              />
+              <label class="headerName">
+                <b class="increment-purple">INCREMENT</b>
+                <br />
+                <b style="color: #00b89f">TECHNOLOGIES</b>
+              </label>
+            </a>
+          </span>
+        
+          <span class="menu ">
+            <span class="navbar-menu-toggler-md">
+              <i
+                class="fa fa-bars"
+                role="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              ></i>
+              
+            </span>
+            <div class="collapse navbar-collapse" >
+              <form class="form-inline my-2 my-lg-0 ml-auto">
+                <ul class="navbar-nav">
+                  <li class="nav-item header-right" v-for="(item, index) in menu" :key="index">
+                    <div class="btn-group dropdown" v-if="item.title === 'Who We Are'">
+                      <!-- button title -->
+                      <a
+                        class="nav-link  " 
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        style="color: #20c1ab"
+                        type="button"
+                      >
+                        <b class="increment-limegreen-light">{{ item.title }}</b>
+                      </a>
+                      <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <span class="sr-only" >Toggle Dropdown</span>
+                      </a>
+                      <!-- button menu -->
+                      <div
+                        class="dropdown-menu who-menu"
+                        style="position: absolute; border-color: #20c1ab"
+                      >
+                        <!-- button content -->
+                        <a
+                          data-target=".hide.show"
+                          class="dropdown-item"
+                          href="/#our-values"
+                          @click="headerScrollTo('#our-values')"
+                        >
+                          <b class="increment-limegreen-light">Our Values</b>
+                        </a>
+                        <a
+                          data-target=".hide.show"
+                          class="dropdown-item"
+                          href="/#testimonials"
+                          @click="headerScrollTo('#testimonials')"
+                        >
+                          <b class="increment-limegreen-light">What They Say About Us</b>
+                        </a>
+                      </div>
+
+                    </div>
+                    <div class="btn-group dropdown" v-if="item.title === 'Our Services'">
+                      <!-- button title -->
+                      <a
+                        class="nav-link  " 
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        style="color: #20c1ab"
+                        type="button"
+                        href="/#our-services"
+                        @click="headerScrollTo('#our-services')"
+                      >
+                        <b class="increment-limegreen-light">{{ item.title }}</b>
+                      </a>
+                      <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <span class="sr-only" >Toggle Dropdown</span>
+                      </a>
+                      <!-- button menu -->
+                      
+                        <!-- button content -->
+                        <div
+                            class="dropdown-menu "
                             v-if="item.title === 'Our Services'"
                             style="position: absolute; border-color: #20c1ab"
-                            href='/#our-services'
                             
+                        >
+                          <a
+                            class="dropdown-item"
+                            href="/#how-we-work"
+                            @click="headerScrollTo('#how-we-work')"
                           >
-                            <a
-                              class="dropdown-item"
-                              href="/#how-we-work"
-                              @click="headerScrollTo('#how-we-work')"
-                            >
-                              <b class="increment-limegreen-light">How We Work</b>
-                            </a>
-                          </div>
+                            <b class="increment-limegreen-light">How We Work</b>
+                          </a>
                         </div>
-                        <div v-else-if="item.type === 'regular'">
-                          <div v-if="item.title === 'Send Request'">
-                            <a class="nav-link" href="/send-request">
-                              <b class="increment-limegreen-light">{{ item.title }}</b>
-                            </a>
-                          </div>
-                          <div v-else-if="item.title !== 'Send Request'">
-                            <a
-                              class="nav-link"
-                              :href="item.redirect"
-                              @click="headerScrollTo(item.redirect)"
-                            >
-                              <b class="increment-limegreen-light">{{ item.title }}</b>
-                            </a>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </form>
-                </div>
-              </span>
+                    
+                    
+                  </div>     
+                    <div v-else-if="item.type === 'regular'">
+                      <div v-if="item.title === 'Send Request'">
+                        <a class="nav-link" href="/send-request">
+                          <b class="increment-limegreen-light">{{ item.title }}</b>
+                        </a>
+                      </div>
+                      <div v-else-if="item.title !== 'Send Request'">
+                        <a
+                          class="nav-link"
+                          :href="item.redirect"
+                          @click="headerScrollTo(item.redirect)"
+                        >
+                          <b class="increment-limegreen-light">{{ item.title }}</b>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </span>
         </div>
-        <div class="collapse " id="navbarSupportedContent" >
+        <div class="collapse" id="navbarSupportedContent" >
+          <div class="header-separator"> </div>
           <ul class="navbar-nav ml-auto" >
             <li
               data-target=".hide.show"
@@ -116,7 +142,7 @@
               :key="index"
               class="nav-item "
             >
-              <div class="btn-group dropdown" v-if="item.type === 'dropdown'">
+              <div class="btn-group dropdown" v-if="item.title === 'Who We Are'" >
                 <!-- button title -->
                 <a
                   class="nav-link  " 
@@ -125,19 +151,19 @@
                   aria-expanded="false"
                   style="color: #20c1ab"
                   type="button"
+                  href="/#who-we-are"
                   @click="headerScrollTo('#who-we-are')"
                 >
                   <b class="increment-limegreen-light">{{ item.title }}</b>
                 </a>
-                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only" >Toggle Dropdown</span>
+                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  <span class="sr-only">Toggle Dropdown</span>
                 </a>
                 <!-- button menu -->
                 <div
                   class="dropdown-menu who-menu"
                   v-if="item.title === 'Who We Are'"
-                  style="position: absolute; border-color: #20c1ab"
-
+                  style="position: relative;"
                 >
                   <!-- button content -->
                   <a
@@ -153,14 +179,35 @@
                     class="dropdown-item"
                     href="/#testimonials"
                     @click="headerScrollTo('#testimonials')"
+                    
                   >
                     <b class="increment-limegreen-light">What They Say About Us</b>
                   </a>
                 </div>
+              </div>
+              
+              <div class="btn-group dropdown" v-if="item.title === 'Our Services'">
+                <!-- button title -->
+                <a
+                  class="nav-link " 
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="color: #20c1ab"
+                  type="button"
+                  href="/#our-services"
+                  @click="headerScrollTo('#our-services')"
+                >
+                  <b class="increment-limegreen-light">{{ item.title }}</b>
+                </a>
+                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  <span class="sr-only">Toggle Dropdown</span>
+                </a>
+                <!-- button menu -->
                 <div
                   class="dropdown-menu serve-menu"
                   v-if="item.title === 'Our Services'"
-                  style="position: absolute; border-color: #20c1ab"
+                  style="position: relative;"
                 >
                   <a
                     data-target=".hide.show"
@@ -172,6 +219,7 @@
                   </a>
                 </div>
               </div>
+
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
                   <a data-target=".hide.show" class="nav-link" href="/send-request">
@@ -206,15 +254,13 @@
 }
 .header-section {
   float: left;
-  width: 105%;
-  margin-top: -5px;
-  margin-bottom: -50px;
- 
+  width: 90%;
+  padding-bottom: 10px;
 }
 .navbar-nav {
-  margin-top: -8%;
+  margin-top: -69px;
   margin-left: 0%;
-  float: left;
+  float: center;
    
 }
 .increment-purple {
@@ -246,11 +292,10 @@ label {
   color: "#0089bf";
   padding: 0.5%;
   white-space: nowrap;
-  margin-bottom: 5%;
 }
 .navbar { //icon
   padding-left: -20%;
-  padding-right: 10%;
+  padding-right: 0%;
   padding-top: 2%;
   display: block;
   background-color: none;
@@ -290,58 +335,59 @@ img {
 }
 .dropdown:hover .dropdown-menu {
   display: block;
-  text-align: center;
 }
 
 .who-menu {
   background-color: none;
-  margin-left: -50%;
+  margin-left: -30%;
 }
 
 .serve-menu {
   margin-left: -10%;
-
 }
 
 .li:hover {
   background: grey;
 }
+
+.dropdown-toggle-split{
+    color: $secondary;
+  }
 @media screen and (min-width: 992px){
-    .my-row{
-      display: none;
-    }
+    #navbarSupportedContent{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991px) {
   .my-space {
     width: 70%;
     height: 40%;
-
   }
   .navbar-menu-toggler-md { //icon
     width: 100%;
     text-align: right;
     float: right;
     display: block;
-    margin-top: -6%;
+    margin-top: -3.18rem;
+    margin-right: 100px;
+    padding: auto;
   }
   .navbar-nav {
     margin-top: 1%;
     background-color: none;
     padding: 1%;
-    margin-right: -6%;
-    float: right;
+    float: left;
   }
   .header-section { //white space
     float: left;
     width: 105%;
     margin-top: -5px;
-    margin-bottom: -10px;
   }
   .nav-item {
-    background-color: none  ;
+    background-color: none;
     padding: 1%;
-    margin-left: 0%;
+    margin-left: 4%;
   }
   .li{
     background-color: none;
@@ -349,20 +395,36 @@ img {
   }
   .dropdown:hover .dropdown-menu {
     display: block;
-    text-align: right;
-    
+    text-align: left;
+    border: none;
+    background-color: #f8f9fa;
   }
 
   .who-menu { //entire menu of who-we-are 
     background-color: none;
-    margin-left: -89%;
-    text-align: right;
+    margin-left: -70%;
+    margin-top: 10%;
   }
   .serve-menu {
-    margin-left: -29%;
+    margin-left: 0%;
+    margin-left: -70%;
+    margin-top: 10%;
   }
   .my-row{
     display: block;
+  }
+
+  .dropdown-toggle-split{
+    color: $secondary;
+    padding-right: 50%;
+  }
+
+  .header-separator{
+    width: 100%; 
+    height: 1px; 
+    position: absolute;
+    background-color: $secondary;
+    margin-top: 4.5rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -371,21 +433,28 @@ img {
     text-align: right;
     float: right;
     display: block;
-    margin-top: -7%;
+    padding: auto;
+    margin-top: -3.18rem;
   }
   .navbar-nav {
     background-color: none;
-    float: right;
+    float: left;
   }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    text-align: left;
+  }
+  
 }
 @media screen and (max-width: 330px) {
   .navbar-menu-toggler-md {
     width: 100%;
     text-align: right;
-    float: right;
+    float: center;
     display: block;
-    margin-top: -7%;
-    position: relative;
+    margin-top: -54px;
+    margin-right: 50px;
+    padding: auto;
   }
   .navbar-nav {
     margin-top: 1%;
@@ -393,17 +462,18 @@ img {
 }
 @media only screen and (max-width: 280px) {
   .navbar {
-    width: 84%;
+    width: 100%;
   }
+
   .navbar-menu-toggler-md {
     text-align: right;
     float: left;
     display: block;
-    margin: -7%;
-    
+    margin-top: -50px;
+    margin-left: -25px;
   }
   .navbar-nav {
-    margin-top: 1%;
+    margin-top: 0%;
     
   }
 }
@@ -456,24 +526,6 @@ export default {
           type: "regular",
         },
       ],
-      test: [
-        {
-          title: "title 1",
-          type: "dropdown",
-        },
-        {
-          title: "title 2",
-          type: "dropwdown",
-        },
-        {
-          title: "content",
-          type: "regular",
-        },
-        {
-          title: "content",
-          type: "regular",
-        },
-      ],
     };
   },
   methods: {
@@ -481,8 +533,8 @@ export default {
       ROUTER.push(parameter);
     },
     headerScrollTo(id) {
-      this.redirect('/' + id)
-      window.location.reload()
+      //this.redirect('/' + id);
+      //window.location.reload();
       let height = $(window).height();
       $("html, body").animate(
         {
