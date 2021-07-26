@@ -12,7 +12,7 @@
               <br />
               <h4>{{ item.price }}</h4>
             </div>
-            <div><p>{{ item.desc }}</p></div>
+            <p>{{ item.desc }}</p>
             <button @click="redirect(item.links)" class="button1">
               Read More
             </button>
@@ -37,42 +37,26 @@
   float: left;
   width: 100%;
 }
-
 .title {
   font-weight: 700;
   font-size: 50px;
 }
-
 p {
   font-size: 14px;
   padding-right: 8px;
   padding-left: 8px;
   min-height: 300px;
-
-  height: 400px;
-  //white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
-  padding: 20px;
-  font-size: 1rem;
-  //margin: 0;
-  //background: white;
-  resize: horizontal;
 }
-
 h6 {
   font-weight: 700;
   padding: 8px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
 .row {
   margin-top: 10vh;
   text-align: center;
 }
-
 .single-card {
   border: 1px solid $secondary;
   margin: 10px;
@@ -84,17 +68,14 @@ h6 {
   text-align: center;
   color: black;
 }
-
 .image-holder {
   width: 100%;
   height: 300px;
 }
-
 img {
   height: 100%;
   width: 100%;
 }
-
 .button1 {
   background-color: white;
   border: none;
@@ -119,11 +100,9 @@ img {
   padding: 8px;
   margin-bottom: 3vh;
 }
-
 label {
   font-size: 12px;
 }
-
 h4 {
   font-family: "Open Sans";
   font-weight: 600;
@@ -158,7 +137,6 @@ export default {
           price: "$3,000",
           links: "case-studies/bookings-and-appointments",
         },
-
         {
           src: require("assets/img/Booking-bot.jpg"),
           title: "Booking Bot",
