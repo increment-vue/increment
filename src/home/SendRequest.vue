@@ -14,7 +14,7 @@
           You can contact us in our business hours through email:
           <a href="mailto:increment2020@gmail.com">increment2020@gmail.com</a>
           or call/message us
-          <a href="tel:+639171837855">(+63) 9171837855</a>.<br />
+          <a href="tel:436-1622">436-1622</a>.<br />
           You can also set an appointment in calendly for a short discussion.
         </p>
       </div>
