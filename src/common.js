@@ -8,7 +8,7 @@ export default{
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'http://increment.ltd',
   APP_PHONE_NUMBER: '436-1622',
-  address: '3rd Floor, Bunzel Bldg., Techhub Area, University of San Carlos - Talamban Campus, Talamban, Cebu City, Philippines',
+  address: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
   api: 'https://mezzohotel.com/img/',
   host: 'https://mezzohotel.com/',
   booking_link: 'https://mezzohotel.com/managebooking.php',

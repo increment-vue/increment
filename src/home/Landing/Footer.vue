@@ -61,7 +61,7 @@
               id="map"
             ></font-awesome-icon>
             <a
-              href="https://www.google.com/maps/place/University+of+San+Carlos+-+Talamban+Campus/@10.3524954,123.9130143,19z/data=!4m8!1m2!2m1!1s3rd+Floor,+Bunzel+Bldg.,+Techhub+Area,+University+of+San+Carlos+-+Talamban+Campus,+Talamban,+Cebu+City,+Philippines!3m4!1s0x0:0xc2d9b9e99316c59d!8m2!3d10.3521222!4d123.9132676"
+              href="https://www.google.com/maps/dir//8WF6%2BH29+The+Meridian,+Cebu+City,+Cebu/@10.323872,123.9098575,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x33a999b33c3e8073:0x6e53cbaa3015872d!2m2!1d123.9101128!2d10.3239233"
               target="_blank"
               style="color: black"
               ><p class="px-lg-5 px-sm-0" style="margin-top: -25px">

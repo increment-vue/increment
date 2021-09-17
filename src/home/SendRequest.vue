@@ -25,7 +25,7 @@
       ></div>
       <div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d981.2168207389841!2d123.9130143!3d10.3524954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc2d9b9e99316c59d!2sUniversity%20of%20San%20Carlos%20-%20Talamban%20Campus!5e0!3m2!1sen!2sph!4v1618812110610!5m2!1sen!2sph"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d801.6856177209382!2d123.90966111141876!3d10.323913839125852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999b33c3e8073%3A0x6e53cbaa3015872d!2sThe%20Meridian!5e0!3m2!1sen!2sph!4v1631842817594!5m2!1sen!2sph"
           width="100%"
           height="400px"
           style="border: 0"
