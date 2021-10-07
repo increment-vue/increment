@@ -6,7 +6,7 @@ export default{
   APP_EMAIL: 'incrementtech2020@gmail.com',
   APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES. All Rights Reserved. ' + new Date().getFullYear(),
   APP_DEVELOPER: 'Increment Technologies',
-  APP_DEVELOPER_URL: 'http://increment.ltd',
+  APP_DEVELOPER_URL: 'https://incrementtechnologies.com',
   APP_PHONE_NUMBER: '436-1622',
   address: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
   api: 'https://mezzohotel.com/img/',

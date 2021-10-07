@@ -29,7 +29,7 @@
         <br />
         <ul>
           <li>
-            <a :href="'tel:' + common.APP_PHONE_NUMBER" style="color: black">
+            <a :href="'tel: (+63 31) '+common.APP_PHONE_NUMBER" style="color: black">
               <font-awesome-icon
                 :icon="faPhoneAlt"
                 class="social-icons fa-lg"
