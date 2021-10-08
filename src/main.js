@@ -8,9 +8,11 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueFacebookPixel from 'vue-analytics-facebook-pixel'
+import {fas} from '@fortawesome/free-solid-svg-icons'
  
 library.add(faUserSecret)
 library.add(faFontAwesome)
+library.add(fas)
 
 Vue.use(VueFacebookPixel)
 
