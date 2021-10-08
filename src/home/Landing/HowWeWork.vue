@@ -106,7 +106,7 @@
 }
 .details-holder .item-holder:hover {
   cursor: pointer;
-  background: $primary;
+  background-image: linear-gradient(50.90deg, $gradientSecondary, $gradientPrimary, $gradientSecondary,);
 }
 .details-holder-click {
   margin-left: 10%;

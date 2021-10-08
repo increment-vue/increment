@@ -1,14 +1,14 @@
 <template>
   <div class="banner" id="testimonials">
-    <div class="sample"></div>
     <div class="container">
       <h1 class="title">What They Say About Us!</h1>
+      <p class="pText">Our clients satisfactions expresses their testimonies</p>
       <div class="row no-gutters">
         <span class="col-md-6" v-for="(item, index) in list" :key="index">
           <center class="single-card">
             <h5 class="qoute">{{ item.quote }}</h5>
             <h5 class="name text-white">
-              <b>{{ item.name }}</b>
+              <b class="name">{{ item.name }}</b>
             </h5>
             <p>{{ item.position }}</p>
             <p>
@@ -27,21 +27,16 @@
   min-height: 70vh;
   float: left;
   width: 100%;
-  // position: absolute;
-  // left: 0%;
-  // right: 0%;
-  // top: 0%;
-  // bottom: 0%;
-  // background: linear-gradient(269.04deg, #8f00b5 1.65%, #00b89f 135.22%);
+  background: linear-gradient(252deg, #8f00b5 0%, #00b89f 100%);
 }
 
 .title {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 50px;
 }
 
 .row {
-  margin-top: 10vh;
+  margin-top: 8vh;
   text-align: center;
 }
 .qoute {
@@ -51,15 +46,16 @@
 }
 
 .name {
-  color: #8f00b5;
+  color: $secondary;
 }
 
 .single-card {
   border: 5px solid white;
-  padding: 10px;
-  padding-top: 30px;
-  margin: 20px;
-  height: 300px;
+  width: 96%;
+  padding: 40px;
+  margin-left: 4%;
+  margin-right: 4%;
+  height: 320px;
   border-radius: 10px;
 }
 .container {
@@ -68,16 +64,15 @@
   text-align: center;
   color: white;
 }
-.sample {
-  height: 114.3590087890625px;
-  width: 1918.9998779296875px;
-  border-radius: 0px;
-  background: linear-gradient(269.04deg, #8f00b5 1.65%, #00b89f 135.22%);
-  height: 114.3590087890625px;
-  width: 1919px;
-  left: 0px;
-  top: 5876px;
-  border-radius: 0px;
+.pText {
+  margin-top: 3%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+.bottom svg{
+  display: block;
+  margin-top: -340px;;
 }
 </style>
 <script>
