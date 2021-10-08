@@ -2,12 +2,13 @@
   <div class="banner" id="testimonials">
     <div class="container">
       <h1 class="title">What They Say About Us!</h1>
+      <p class="pText">Our clients satisfactions expresses their testimonies</p>
       <div class="row no-gutters">
         <span class="col-md-6" v-for="(item, index) in list" :key="index">
           <center class="single-card">
             <h5 class="qoute">{{ item.quote }}</h5>
             <h5 class="name text-white">
-              <b>{{ item.name }}</b>
+              <b class="name">{{ item.name }}</b>
             </h5>
             <p>{{ item.position }}</p>
             <p>
@@ -16,7 +17,7 @@
           </center>
         </span>
       </div>
-    </div>  
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -26,15 +27,16 @@
   min-height: 70vh;
   float: left;
   width: 100%;
+  background: linear-gradient(252deg, #8f00b5 0%, #00b89f 100%);
 }
 
 .title {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 50px;
 }
 
-.row{
-  margin-top: 10vh;
+.row {
+  margin-top: 8vh;
   text-align: center;
 }
 .qoute {
@@ -44,15 +46,16 @@
 }
 
 .name {
-  color: #8F00B5;
+  color: $secondary;
 }
 
 .single-card {
   border: 5px solid white;
-  padding: 10px;
-  padding-top: 30px;
-  margin: 20px;
-  height: 300px;
+  width: 96%;
+  padding: 40px;
+  margin-left: 4%;
+  margin-right: 4%;
+  height: 320px;
   border-radius: 10px;
 }
 .container {
@@ -60,6 +63,16 @@
   padding-bottom: 10vh;
   text-align: center;
   color: white;
+}
+.pText {
+  margin-top: 3%;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+.bottom svg{
+  display: block;
+  margin-top: -340px;;
 }
 </style>
 <script>
