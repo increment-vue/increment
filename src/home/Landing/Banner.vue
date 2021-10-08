@@ -1,73 +1,106 @@
 <template>
   <div class="incre-row">
-    <div class="cw-banner bg-primary">
-      <div class="item-holder">
-        <h1 class="title">
-          <b>WE WANT YOU TO SUCCEED</b>
-        </h1>
-        <h3>
-          We create beautiful and secured websites, and mobile applications.<br />
-          Just relax and we will give solutions to your needs. Got something<br />
-          awesome for us to work on?
-        </h3>
-        <a
-          href="https://calendly.com/incrementtech2020/services-offered"
-          target="_blank"
-          ><button>Contact Us</button></a
-        >
-      </div>
+    <br><br><br>
+    <div class="cw-banner bg-primary"></div>
+    <div class="item-holder bg-gradient">
+      <h1 class="title">
+      <b>WE WANT YOU TO SUCCEED</b>
+      </h1>
+      <p>
+        We create beautiful and secured websites, and mobile applications.<br />
+        Just relax and we will give solutions to your needs. Got something<br />
+        awesome for us to work on?
+      </p>
+      <a
+        href="https://calendly.com/incrementtech2020/services-offered"
+        target="_blank"
+        ><button>Contact Us</button></a
+      >
     </div>
+    <div class="white-box"></div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 button {
   margin-top: 5%;
-  background-color: $secondary;
-  color: white;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  border: none;
-  padding: 15px 40px;
-  text-align: center;
-  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid;
+  box-shadow: 0px 0px 1px #FFFFFF;
+  width: 250px;
+  height: 80px;
+  color: #028170;
+  background-color: white;
+  margin-bottom: 50px;
+  font-weight: bold;
   font-size: 20px;
-  outline-color: #3f0050;
+  line-height: 27px;
+}
+button:hover {
+  background: #00E68A;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 1px #FFFFFF;
+  border-radius: 50px;
+}
+a button:hover{
+  color: white;
 }
 .item-holder {
-  position: absolute;
-  width: 70%;
-  background-color: #3f0050;
+  float:left;
+  width: 1111px;
+  height: 1080px;
   top: 65%;
   padding: 5%;
 }
-h3 {
+.bg-gradient{
+  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
+  url("../../assets/img/gif-banner.gif"),
+  url("../../assets/img/Increment_office.jpeg");
+  background-size: cover,634px,cover;
+  background-position: center,right,center;
+  background-repeat: no-repeat,no-repeat,no-repeat;
+}
+.white-box{
+  background: #FFFFFF 25%;
+  position: absolute;
+  width: 1800px;
+  height: 79px;
+  left: 59px;
+  top: 1001px;
+  margin-top: 72px;
+  }
+p {
   font-size: 20px;
-  margin-bottom: 5%;
+  line-height: 27.24px;
   color: white;
 }
 .bg-primary {
-  background-image: url("../../assets/img/Banner.jpg");
+  background-image: url("../../assets/img/Banner-Meridian.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 .cw-banner {
-  width: 100%;
+  width: 807px;
   float: left;
-  height: 100vh;
+  height: 1080px;
 }
 .title {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 501px;
   color: white;
   font-size: 40px;
+}
+.title b{
+  margin-top: 30%;
+  line-height: 68px;
+  font-size: 50px;
 }
 .incre-row {
   height: 900px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   .item-holder {
     width: 80%;
     top: 60%;
@@ -76,72 +109,54 @@ h3 {
     height: 75vh;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 992px) {
   button {
     padding: 10px 30px;
     font-size: 20px;
     margin-bottom: 15%;
+    background: #FFFFFF;
+    border: 1px solid #028170;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px #FFFFFF;
+    border-radius: 50px;
   }
   .item-holder {
     text-align: center !important;
     width: 100%;
-    margin-top: 40%;
+  }
+  .bg-primary{
+    display: none;
+  }
+  .white-box{
+    display: none;
   }
 }
-@media only screen and (max-width: 485px) {
+@media only screen and (max-width: 992px) {
   .item-holder {
     top: 30%;
   }
-}
-@media only screen and (max-width: 414px) {
-  .item-holder {
-    top: 40%;
+  .bg-gradient{
+    background-position: top center;
+    background-size: cover,634px,cover;
   }
 }
-@media only screen and (max-width: 411px) {
+@media only screen and (max-width: 992px) {
+  p{
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 992px) {
   .item-holder {
     top: 45%;
   }
 }
-@media only screen and (max-width: 375px) {
-  .item-holder {
-    top: 50%;
-  }
+
+@media only screen and (max-width: 992px) {
   .title {
-    font-size: 30px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .title {
-    font-size: 30px;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .item-holder {
-    top: 50%;
-  }
-  .title {
-    font-size: 30px;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 15px;
-    margin-bottom: 15%;
-  }
-}
-@media only screen and (max-width: 280px) {
-  .title {
-    font-size: 30px;
-    margin-bottom: 15%;
-  }
-  h3 {
-    font-size: 15px;
-  }
-  button {
-    padding: 5px 20px;
-    font-size: 20px;
-    margin-bottom: 15%;
-    font-size: 15px;
+    font-size: 50px;
+    margin-bottom: 5%;
   }
 }
 </style>

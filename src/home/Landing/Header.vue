@@ -1,23 +1,22 @@
 <template>
   <div class="container my-container">
-      <div class="navbar navbar-expand-lg fixed-top bg-light row ">
+      <div class="navbar navbar-expand-lg fixed-top bg-gradient row ">
         <div class="header-section" >
-            
-          <span class="brand  col-6"  >
+          <span class="brand col-6"  >
             <a class="navbar-brand" v-on:click="redirect('/')">
               <img
-                src="../../assets/img/logo.png"
+                src="../../assets/img/logo_white.png"
                 style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
               />
-              <label class="headerName">
-                <b class="increment-purple">INCREMENT</b>
+              <label class="headerName" @click="redirect('/')">
+                <b class="increment-white">INCREMENT</b>
                 <br />
-                <b style="color: #00b89f">TECHNOLOGIES</b>
+                <b class="increment-white">TECHNOLOGIES</b>
               </label>
             </a>
           </span>
         
-          <span class="menu ">
+          <span class="menu">
             <span class="navbar-menu-toggler-md">
               <i
                 class="fa fa-bars"
@@ -46,7 +45,7 @@
                         href="/#who-we-are"
                         @click="headerScrollTo('#who-we-are')"
                       >
-                        <b class="increment-limegreen-light">{{ item.title }}</b>
+                        <b class="increment-white">{{ item.title }}</b>
                       </a>
                       <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                         <span class="sr-only" >Toggle Dropdown</span>
@@ -63,7 +62,7 @@
                           href="/#our-values"
                           @click="headerScrollTo('#our-values')"
                         >
-                          <b class="increment-limegreen-light">Our Values</b>
+                          <b class="increment-purple">Our Values</b>
                         </a>
                         <a
                           data-target=".hide.show"
@@ -71,7 +70,7 @@
                           href="/#testimonials"
                           @click="headerScrollTo('#testimonials')"
                         >
-                          <b class="increment-limegreen-light">What They Say About Us</b>
+                          <b class="increment-purple">What They Say About Us</b>
                         </a>
                       </div>
 
@@ -88,7 +87,7 @@
                         href="/#our-services"
                         @click="headerScrollTo('#our-services')"
                       >
-                        <b class="increment-limegreen-light">{{ item.title }}</b>
+                        <b class="increment-white">{{ item.title }}</b>
                       </a>
                       <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                         <span class="sr-only" >Toggle Dropdown</span>
@@ -107,7 +106,7 @@
                             href="/#how-we-work"
                             @click="headerScrollTo('#how-we-work')"
                           >
-                            <b class="increment-limegreen-light">How We Work</b>
+                            <b class="increment-purple">How We Work</b>
                           </a>
                         </div>
                     
@@ -116,7 +115,7 @@
                     <div v-else-if="item.type === 'regular'">
                       <div v-if="item.title === 'Send Request'">
                         <a class="nav-link" href="/send-request">
-                          <b class="increment-limegreen-light">{{ item.title }}</b>
+                          <b class="increment-white">{{ item.title }}</b>
                         </a>
                       </div>
                       <div v-else-if="item.title !== 'Send Request'">
@@ -125,7 +124,7 @@
                           :href="item.redirect"
                           @click="headerScrollTo(item.redirect)"
                         >
-                          <b class="increment-limegreen-light">{{ item.title }}</b>
+                          <b class="increment-white">{{ item.title }}</b>
                         </a>
                       </div>
                     </div>
@@ -156,7 +155,7 @@
                   href="/#who-we-are"
                   @click="headerScrollTo('#who-we-are')"
                 >
-                  <b class="increment-limegreen-light">{{ item.title }}</b>
+                  <b class="increment-white">{{ item.title }}</b>
                 </a>
                 <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
@@ -174,7 +173,7 @@
                     href="/#our-values"
                     @click="headerScrollTo('#our-values')"
                   >
-                    <b class="increment-limegreen-light">Our Values</b>
+                    <b class="increment-purple">Our Values</b>
                   </a>
                   <a
                     data-target=".hide.show"
@@ -225,7 +224,7 @@
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
                   <a data-target=".hide.show" class="nav-link" href="/send-request">
-                    <b class="increment-limegreen-light">{{ item.title }}</b>
+                    <b class="increment-purple">{{ item.title }}</b>
                   </a>
                 </div>
                 <div v-else-if="item.title !== 'Send Request'">
@@ -235,7 +234,7 @@
                     :href="item.redirect"
                     @click="headerScrollTo(item.redirect)"
                   >
-                    <b class="increment-limegreen-light">{{ item.title }}</b>
+                    <b class="increment-white">{{ item.title }}</b>
                   </a>
                 </div>
               </div>
@@ -248,6 +247,9 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.bg-gradient{
+  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
+}
 .navbar-menu-toggler-md {
   text-align: right;
   float: left;
@@ -257,7 +259,8 @@
 .header-section {
   float: left;
   width: 90%;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
+  background: transparent;
 }
 .navbar-nav {
   margin-top: -69px;
@@ -267,6 +270,9 @@
 }
 .increment-purple {
   color: $primary;
+}
+.increment-white{
+  color: white
 }
 
 .increment-limegreen-light {
@@ -298,7 +304,7 @@ label {
 .navbar { //icon
   padding-left: -20%;
   padding-right: 0%;
-  padding-top: 2%;
+  // padding-top: 2%;
   display: block;
   background-color: none;
 }
@@ -353,7 +359,8 @@ img {
 }
 
 .dropdown-toggle-split{
-    color: $secondary;
+    color: white;
+    padding-top:6%
   }
 @media screen and (min-width: 992px){
     #navbarSupportedContent{
@@ -509,22 +516,22 @@ export default {
         },
         {
           title: "Our Projects",
-          redirect: "/#our-projects",
+          redirect: "#our-projects",
           type: "regular",
         },
         {
           title: "Case Studies",
-          redirect: "/#case-studies",
+          redirect: "#case-studies",
           type: "regular",
         },
         {
           title: "Technologies",
-          redirect: "/#technologies",
+          redirect: "#technologies",
           type: "regular",
         },
         {
           title: "Send Request",
-          redirect: "/send-request",
+          redirect: "send-request",
           type: "regular",
         },
       ],
