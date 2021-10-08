@@ -1,29 +1,32 @@
 <template>
   <div class="incre-row">
     <br><br><br>
-    <div class="cw-banner bg-primary"></div>
+    <div class="cw-banner bg-primary" id="home-banner"></div>
     <div class="item-holder bg-gradient">
-      <h1 class="title">
-      <b>WE WANT YOU TO SUCCEED</b>
-      </h1>
-      <p>
-        We create beautiful and secured websites, and mobile applications.<br />
-        Just relax and we will give solutions to your needs. Got something<br />
-        awesome for us to work on?
-      </p>
-      <a
-        href="https://calendly.com/incrementtech2020/services-offered"
-        target="_blank"
-        ><button>Contact Us</button></a
-      >
+      <div class="title-holder">
+        <h1 class="title">
+          <b>WE WANT YOU TO SUCCEED</b>
+        </h1>
+        <h3>
+          We create beautiful and secured websites, and mobile applications.<br />
+          Just relax and we will give solutions to your needs. Got something<br />
+          awesome for us to work on?
+        </h3>
+        <a
+          href="https://calendly.com/incrementtech2020/services-offered"
+          target="_blank"
+          ><button>Contact Us</button></a
+        >
+      </div>
     </div>
-    <div class="white-box"></div>
+    <div class="white-box">
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 button {
-  margin-top: 5%;
+  margin-top: 3%;
   border-radius: 50px;
   border: 1px solid;
   box-shadow: 0px 0px 1px #FFFFFF;
@@ -34,7 +37,6 @@ button {
   margin-bottom: 50px;
   font-weight: bold;
   font-size: 20px;
-  line-height: 27px;
 }
 button:hover {
   background: #00E68A;
@@ -48,32 +50,62 @@ a button:hover{
 }
 .item-holder {
   float:left;
-  width: 1111px;
-  height: 1080px;
-  top: 65%;
-  padding: 5%;
+  width: 58%;
+  height: 100vh;
+  padding-left: 8vh;
+  padding-right: 5vh;
 }
+h3{
+  margin-top: 2vh;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27.24px;
+  color: #FFFFFF;
+
+}
+.title {
+  margin-top: 45vh;
+  color: #FFFFFF;
+  font-size: 40px;
+}
+.title b{
+  color: #FFFFFF;
+  margin-top: 30%;
+  line-height: 68px;
+  font-weight: 800;
+  font-size: 50px;
+}
+// text animation //
+.title-holder{
+  position: relative;
+  animation-name: text-animation;
+  animation-duration: 1s;  
+  animation-fill-mode: forwards;
+}
+@keyframes text-animation {
+  from {left: -50px;}
+  to {left: 0px;}
+}
+// end of text animation //
+
 .bg-gradient{
   background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
   url("../../assets/img/gif-banner.gif"),
   url("../../assets/img/Increment_office.jpeg");
-  background-size: cover,634px,cover;
+  background-size: cover,70vh,cover;
   background-position: center,right,center;
   background-repeat: no-repeat,no-repeat,no-repeat;
 }
 .white-box{
   background: #FFFFFF 25%;
   position: absolute;
-  width: 1800px;
-  height: 79px;
-  left: 59px;
-  top: 1001px;
-  margin-top: 72px;
-  }
-p {
-  font-size: 20px;
-  line-height: 27.24px;
-  color: white;
+  width: 190vh;
+  height: 80px;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  left: 7.5vh;
+  margin-top: 7.5vh;
+  top: 92.5vh;
 }
 .bg-primary {
   background-image: url("../../assets/img/Banner-Meridian.png");
@@ -83,23 +115,14 @@ p {
   position: relative;
 }
 .cw-banner {
-  width: 807px;
+  width: 42%;
   float: left;
-  height: 1080px;
-}
-.title {
-  margin-top: 501px;
-  color: white;
-  font-size: 40px;
-}
-.title b{
-  margin-top: 30%;
-  line-height: 68px;
-  font-size: 50px;
+  height: 100vh;
 }
 .incre-row {
   height: 900px;
 }
+// tablet mode //
 @media only screen and (max-width: 992px) {
   .item-holder {
     width: 80%;
@@ -107,6 +130,28 @@ p {
   }
   .cw-banner {
     height: 75vh;
+  }
+  .title-holder{
+    position: relative;
+    animation-name: text-animation;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+  }
+  @keyframes text-animation {
+    from {left: -50px;}
+    to {left: 0px;}
+  }
+}
+@media only screen and (max-width: 992px){
+    .white-box{
+      background: #FFFFFF 25%;
+      position: absolute;
+      width: 190vh;
+      height: 80px;
+      margin-left: 5vh;
+      margin-right: 5vh;
+      left: 7.5vh;
+      top: 250vh;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -127,9 +172,6 @@ p {
   .bg-primary{
     display: none;
   }
-  .white-box{
-    display: none;
-  }
 }
 @media only screen and (max-width: 992px) {
   .item-holder {
@@ -138,27 +180,27 @@ p {
   .bg-gradient{
     background-position: top center;
     background-size: cover,634px,cover;
-  }
-}
-@media only screen and (max-width: 992px) {
-  p{
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
+    width: 992px;
+    height: 1190px; 
   }
 }
 @media only screen and (max-width: 992px) {
   .item-holder {
     top: 45%;
   }
-}
-
-@media only screen and (max-width: 992px) {
-  .title {
+    .title{
+    margin-top: 55%;
     font-size: 50px;
     margin-bottom: 5%;
+    color: black;
+  }
+   h3{
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
   }
 }
+// end of tablet mode //
 </style>
 <script>
 import ROUTER from "src/router";
