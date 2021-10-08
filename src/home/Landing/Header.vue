@@ -1,12 +1,12 @@
 <template>
   <div class="container my-container">
       <div class="navbar navbar-expand-lg fixed-top bg-gradient row ">
+        <!-- Desktop View Navbar -->
         <div class="header-section" >
           <span class="brand col-6"  >
             <a class="navbar-brand" v-on:click="redirect('/')">
-              <img
+              <img class="increment-logo"
                 src="../../assets/img/logo_white.png"
-                style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
               />
               <label class="headerName" @click="redirect('/')">
                 <b class="increment-white">INCREMENT</b>
@@ -134,6 +134,7 @@
             </div>
           </span>
         </div>
+        <!-- Mobile View Navbar  -->
         <div class="collapse" id="navbarSupportedContent" >
           <div class="header-separator"> </div>
           <ul class="navbar-nav ml-auto" >
@@ -155,7 +156,7 @@
                   href="/#who-we-are"
                   @click="headerScrollTo('#who-we-are')"
                 >
-                  <b class="increment-white">{{ item.title }}</b>
+                  <b class="increment-purple">{{ item.title }}</b>
                 </a>
                 <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
@@ -182,7 +183,7 @@
                     @click="headerScrollTo('#testimonials')"
                     
                   >
-                    <b class="increment-limegreen-light">What They Say About Us</b>
+                    <b class="increment-purple">What They Say About Us</b>
                   </a>
                 </div>
               </div>
@@ -199,7 +200,7 @@
                   href="/#our-services"
                   @click="headerScrollTo('#our-services')"
                 >
-                  <b class="increment-limegreen-light">{{ item.title }}</b>
+                  <b class="increment-purple">{{ item.title }}</b>
                 </a>
                 <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
@@ -216,7 +217,7 @@
                     href="/#how-we-work"
                     @click="headerScrollTo('#how-we-work')"
                   >
-                    <b class="increment-limegreen-light">How We Work</b>
+                    <b class="increment-purple">How We Work</b>
                   </a>
                 </div>
               </div>
@@ -234,7 +235,7 @@
                     :href="item.redirect"
                     @click="headerScrollTo(item.redirect)"
                   >
-                    <b class="increment-white">{{ item.title }}</b>
+                    <b class="increment-purple">{{ item.title }}</b>
                   </a>
                 </div>
               </div>
@@ -247,6 +248,9 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.increment-logo{
+  margin-bottom: 5px; margin-right: 5px; margin-top: -10%
+}
 .bg-gradient{
   background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
 }
@@ -366,6 +370,9 @@ img {
     #navbarSupportedContent{
     display: none;
   }
+  .bg-gradient{
+  background-image: white
+}
 }
 
 @media screen and (max-width: 991px) {
