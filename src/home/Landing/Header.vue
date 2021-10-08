@@ -155,7 +155,7 @@
                   href="/#who-we-are"
                   @click="headerScrollTo('#who-we-are')"
                 >
-                  <b class="increment-limegreen-light">{{ item.title }}</b>
+                  <b class="increment-white">{{ item.title }}</b>
                 </a>
                 <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
@@ -173,7 +173,7 @@
                     href="/#our-values"
                     @click="headerScrollTo('#our-values')"
                   >
-                    <b class="increment-limegreen-light">Our Values</b>
+                    <b class="increment-purple">Our Values</b>
                   </a>
                   <a
                     data-target=".hide.show"
@@ -224,7 +224,7 @@
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
                   <a data-target=".hide.show" class="nav-link" href="/send-request">
-                    <b class="increment-limegreen-light">{{ item.title }}</b>
+                    <b class="increment-purple">{{ item.title }}</b>
                   </a>
                 </div>
                 <div v-else-if="item.title !== 'Send Request'">
@@ -234,7 +234,7 @@
                     :href="item.redirect"
                     @click="headerScrollTo(item.redirect)"
                   >
-                    <b class="increment-limegreen-light">{{ item.title }}</b>
+                    <b class="increment-white">{{ item.title }}</b>
                   </a>
                 </div>
               </div>
@@ -259,7 +259,7 @@
 .header-section {
   float: left;
   width: 90%;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   background: transparent;
 }
 .navbar-nav {
@@ -304,7 +304,7 @@ label {
 .navbar { //icon
   padding-left: -20%;
   padding-right: 0%;
-  padding-top: 2%;
+  // padding-top: 2%;
   display: block;
   background-color: none;
 }
