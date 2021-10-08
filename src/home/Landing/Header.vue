@@ -5,7 +5,7 @@
           <span class="brand col-6"  >
             <a class="navbar-brand" v-on:click="redirect('/')">
               <img
-                src="../../assets/img/logo.png"
+                src="../../assets/img/logo_white.png"
                 style="margin-bottom: 5px; margin-right: 5px; margin-top: -10%"
               />
               <label class="headerName" @click="redirect('/')">
