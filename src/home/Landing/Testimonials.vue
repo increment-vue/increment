@@ -1,5 +1,6 @@
 <template>
   <div class="banner" id="testimonials">
+    <div class="sample"></div>
     <div class="container">
       <h1 class="title">What They Say About Us!</h1>
       <div class="row no-gutters">
@@ -16,7 +17,7 @@
           </center>
         </span>
       </div>
-    </div>  
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -26,6 +27,12 @@
   min-height: 70vh;
   float: left;
   width: 100%;
+  // position: absolute;
+  // left: 0%;
+  // right: 0%;
+  // top: 0%;
+  // bottom: 0%;
+  // background: linear-gradient(269.04deg, #8f00b5 1.65%, #00b89f 135.22%);
 }
 
 .title {
@@ -33,7 +40,7 @@
   font-size: 50px;
 }
 
-.row{
+.row {
   margin-top: 10vh;
   text-align: center;
 }
@@ -44,7 +51,7 @@
 }
 
 .name {
-  color: #8F00B5;
+  color: #8f00b5;
 }
 
 .single-card {
@@ -60,6 +67,17 @@
   padding-bottom: 10vh;
   text-align: center;
   color: white;
+}
+.sample {
+  height: 114.3590087890625px;
+  width: 1918.9998779296875px;
+  border-radius: 0px;
+  background: linear-gradient(269.04deg, #8f00b5 1.65%, #00b89f 135.22%);
+  height: 114.3590087890625px;
+  width: 1919px;
+  left: 0px;
+  top: 5876px;
+  border-radius: 0px;
 }
 </style>
 <script>
