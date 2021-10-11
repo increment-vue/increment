@@ -9,9 +9,9 @@
                 src="../../assets/img/logo_white.png"
               />
               <label class="headerName" @click="redirect('/')">
-                <b class="increment-white">INCREMENT</b>
+                <b class="increment-purple">INCREMENT</b>
                 <br />
-                <b class="increment-white">TECHNOLOGIES</b>
+                <b class="increment-purple">TECHNOLOGIES</b>
               </label>
             </a>
           </span>
@@ -19,7 +19,7 @@
           <span class="menu">
             <span class="navbar-menu-toggler-md">
               <i
-                class="fa fa-bars"
+                class="fa fa-bars menuBars"
                 role="button"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -248,17 +248,23 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.menuBars{
+  color:linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+}
 .increment-logo{
   margin-bottom: 5px; margin-right: 5px; margin-top: -10%
 }
 .bg-gradient{
-  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
+  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  // background-color: transparent;
+  padding-bottom: 0px;
 }
 .navbar-menu-toggler-md {
   text-align: right;
   float: left;
   display: none;
   background-color: none;
+  
 }
 .header-section {
   float: left;
@@ -371,11 +377,15 @@ img {
     display: none;
   }
   .bg-gradient{
-  background-image: white
+
 }
 }
 
 @media screen and (max-width: 991px) {
+  .bg-gradient{
+    background-color: white !important;
+    background-image: none!important;
+  }
   .my-space {
     width: 70%;
     height: 40%;
