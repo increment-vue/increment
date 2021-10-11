@@ -1,6 +1,5 @@
 <template>
   <div class="incre-row">
-    <br><br><br>
     <div class="cw-banner bg-primary" id="home-banner"></div>
     <div class="item-holder bg-gradient">
       <div class="title-holder">
@@ -8,8 +7,8 @@
           <b>WE WANT YOU TO SUCCEED</b>
         </h1>
         <h3>
-          We create beautiful and secured websites, and mobile applications.<br />
-          Just relax and we will give solutions to your needs. Got something<br />
+          We create beautiful and secured websites, and mobile applications.
+          Just relax and we will give solutions to your needs. Got something
           awesome for us to work on?
         </h3>
         <a
@@ -61,6 +60,8 @@ h3{
   font-size: 20px;
   line-height: 27.24px;
   color: #FFFFFF;
+  padding-right: 35vh;
+  // overflow-wrap: break-word;
 
 }
 .title {
@@ -99,13 +100,12 @@ h3{
 .white-box{
   background: #FFFFFF 25%;
   position: absolute;
-  width: 190vh;
-  height: 80px;
-  margin-left: 5vh;
-  margin-right: 5vh;
+  width: 92%;
+  height: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   left: 7.5vh;
-  margin-top: 7.5vh;
-  top: 92.5vh;
+  top: 90.3vh;
 }
 .bg-primary {
   background-image: url("../../assets/img/Banner-Meridian.png");
@@ -146,12 +146,12 @@ h3{
     .white-box{
       background: #FFFFFF 25%;
       position: absolute;
-      width: 190vh;
-      height: 80px;
-      margin-left: 5vh;
-      margin-right: 5vh;
+      width: 92%;
+      height: 10%;
+      margin-left: 5%;
+      margin-right: 5%;
       left: 7.5vh;
-      top: 250vh;
+      top: 352.8vh;
   }
 }
 @media only screen and (max-width: 992px) {
