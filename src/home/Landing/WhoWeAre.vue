@@ -7,7 +7,7 @@
           <div style="" class="col-4">
             <img :src="require('assets/img/who-we-are-top.gif')" alt="" id="who-we-are-top">
           </div>
-          <div style="postion:relative;left:50px;" class="col-8">
+          <div style="postion:relative;" class="col-8">
             <h3>INTRODUCTION</h3><div id="h3-after"></div>
             <p>
               Founded in 2017, Increment Technologies set itself out to be a leading
@@ -65,14 +65,18 @@
 }
 
 .container {
-  padding-top:50vh;
+  padding-top:30vh;
   padding-bottom: 20vh;
   text-align: center;
   color: black;
 }
 
+.col-8{
+  left: 50px;
+}
+
 #introduction, #vision{
-  opacity: 0;
+  opacity: 1;
   transition: opacity 500ms;
 }
 
@@ -126,7 +130,7 @@ h3 {
   transition-delay: 0.1s;
 }
 
-h3:hover{
+h3:hover, #h3-after:hover, #h3-after2:hover, #h3-after3:hover{
   animation-name: jump;
   animation-duration: 0.5s;
   cursor: pointer;
@@ -141,10 +145,69 @@ h3:hover{
 p {
   margin-top: 2vh;
 }
+
+@media only screen and (max-width: 992px) {
+
+*{
+  max-width:100%!important;
+}
+.container{
+  //display: flex;
+  padding-top:20vh;
+  margin-left: 1.5%;
+  padding-bottom:22vh;
+}
+
+.title{
+  width:100%;
+  display: block;
+}
+#who-we-are-top{
+  height: 12rem;
+  width: 16.25rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 72%;
+}
+#who-we-are-bottom{
+  height: 11rem;
+  width: 15.25rem;
+  position: absolute;
+  //bottom: 2rem;
+  //right: 72%;
+  margin-top: 20px;
+  right: 4%;
+}
+p{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.row{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#introduction, #vision{
+  width: 100%;
+}
+.col-8{
+  order: 0;
+  left: 0;
+}
+.col-5{
+  order: 1;
+}
+#h3-after, #h3-after2, #h3-after3{
+  margin-left: 42.5%!important;
+}
+
+}
+
 @media only screen and (max-width: 768px) {
 .container {
 margin-top: -20%;
-}
+  }
 }
 @media only screen and (max-width: 540px) {
 .container {
@@ -185,28 +248,28 @@ margin-top: -90%;
 
 <script>
 window.addEventListener('scroll', () => {
-  console.log(window.scrollY)
+  //console.log(window.innerWidth)
 
-  if (window.scrollY >= 2300 && window.scrollY <= 2700) {
-    document.getElementById('introduction').style.opacity = '1'
+  if (window.scrollY >= 2200 && window.scrollY <= 2700) {
+    //document.getElementById('introduction').style.opacity = '1'
     document.getElementById('h3-after').style.marginLeft = '0rem'
     //  var elem = document.getElementById('who-we-are-top')
     //  elem.classList.add('curve')
   } else {
-    document.getElementById('introduction').style.opacity = '0'
+    //document.getElementById('introduction').style.opacity = '0'
     document.getElementById('h3-after').style.marginLeft = '27rem'
     //elem.classList.remove('curve')
   }
 
 
-  if (window.scrollY >= 2700 && window.scrollY <= 3100) {
-    document.getElementById('vision').style.opacity = '1'
+  if (window.scrollY >= 2600 && window.scrollY <= 3400) {
+    //document.getElementById('vision').style.opacity = '1'
     document.getElementById('h3-after2').style.marginLeft = '0rem'
     document.getElementById('h3-after3').style.marginLeft = '0rem'
     var elem = document.getElementById('who-we-are-bottom')
     elem.classList.add('curve-bottom')
   } else {
-    document.getElementById('vision').style.opacity = '0'
+    //document.getElementById('vision').style.opacity = '0'
     document.getElementById('h3-after2').style.marginLeft = '27rem'
     document.getElementById('h3-after3').style.marginLeft = '27rem'
    elem.classList.remove('curve-bottom')
