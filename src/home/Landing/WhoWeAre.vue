@@ -248,9 +248,9 @@ margin-top: -90%;
 
 <script>
 window.addEventListener('scroll', () => {
-  //console.log(window.innerWidth)
+  console.log(window.scrollY)
 
-  if (window.scrollY >= 2200 && window.scrollY <= 2700) {
+  if (window.scrollY >= 600 && window.scrollY <= 1300) {
     //document.getElementById('introduction').style.opacity = '1'
     document.getElementById('h3-after').style.marginLeft = '0rem'
     //  var elem = document.getElementById('who-we-are-top')
@@ -262,7 +262,7 @@ window.addEventListener('scroll', () => {
   }
 
 
-  if (window.scrollY >= 2600 && window.scrollY <= 3400) {
+  if (window.scrollY >= 1200 && window.scrollY <= 1750) {
     //document.getElementById('vision').style.opacity = '1'
     document.getElementById('h3-after2').style.marginLeft = '0rem'
     document.getElementById('h3-after3').style.marginLeft = '0rem'
