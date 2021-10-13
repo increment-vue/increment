@@ -1,35 +1,44 @@
 <template>
   <div class="cw-banner" id="our-projects">
+    <!-- <div class="curve top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114"><path fill="#8F00B5" fill-opacity="1" d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"></path></svg> 
+    </div> -->
     <div class="container">
-      <h1 class="entitle"><b>Our Projects</b></h1>
-      <div class="row no-gutters">
+      <h1 class="entitle"><b>OUR PROJECTS</b></h1>
+      <h6>For the past years and until now, Increment Technologies Inc. has been serving clients around the world</h6>
+      <div class="row">
         <span
           class="col-md-3"
           v-for="(item, i) in projects"
           :key="i"
           :index="i"
         >
-          <center>
+          <center class="icon-container">
             <div class="box">
               <img :src="item.src" />
             </div>
             <div class="description">
               <p class="p1">{{ item.title }}</p>
-              <p>{{ item.description }}</p>
+              <p style="margin-bottom: 30px; font-weight: bold">{{ item.location }}</p>
+              <p style="margin-bottom: 30px">{{ item.description }}</p>
             </div>
             <a :href="item.link" target="_blank"
-              ><button class="button1">Visit Website</button></a
-            >
+              ><button class="button1">Visit Website</button></a>
           </center>
         </span>
       </div>
       <button @click="redirect('our-projects')" class="button2">
         View More<i
-          class="fa fa-arrow-right"
-          style="margin-left: 10px; font-size: 16px"
+          class="fa fa-angle-right aright"
+          style="margin-left: 10px; font-size: 26px; padding-left: 5px"
+        ></i>
+        <i
+          class="fa fa-angle-double-right adright"
+          style="margin-left: 10px; font-size: 26px"
         ></i>
       </button>
     </div>
+    <div class="whitebox"></div>
   </div>
 </template>
 
@@ -41,28 +50,32 @@ export default {
     return {
       projects: [
         {
-          title: "Runway Express - Philippines",
+          title: "Runway Express",
+          location: "Philippines",
           description: "Website and Mobile Development",
           src: require("assets/img/project - runway.png"),
           link: "http://runwayexpress.co.uk/#/",
         },
         {
-          title: "Mezzo Hotel - Philippines",
+          title: "Mezzo Hotel",
+          location: "Philippines",
           description: "Website Development",
           src: require("assets/img/project - mezzo.png"),
           link: "https://mezzohotel.com/",
         },
         {
-          title: "Popout Poster - United Kingdom",
-          description: "Website Development",
-          src: require("assets/img/project - popoutposter.png"),
-          link: "https://popoutposter.com/",
-        },
-        {
-          title: "Meat The Sea - Hong Kong",
+          title: "Meat The Sea",
+          location: "Hong Kong",
           description: "Website Development",
           src: require("assets/img/project - meetthesea.png"),
           link: "https://www.meatthesea.com/",
+        },
+        {
+          title: "PayHiram",
+          location: "Philippines",
+          description: "Website and Mobile Development",
+          src: require("assets/img/project - payhiram.png"),
+          link: "https://www.payhiram.ph/",
         },
       ],
     };
@@ -76,75 +89,203 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+@media only screen and (max-width: 992px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding-left: 35%;
+  }
+
+  .icon-container {
+    width: 80vh;
+    margin-bottom: 10vh;
+  }
+  
+  .button1 {
+    margin-bottom: 5vh;
+  }
+}
+
+//button move to the center
+@media only screen and (max-width: 992px) {
+  button.button2 {
+    float: left;
+    margin-left: 79vh;
+  }
+
+  button.button2:hover {
+  background-color: #FFFFFF;
+  color: $primary;
+  border-radius: 50px;
+  border: 2px solid black;
+  padding: 10px 30px;
+  text-align: center;
+  margin-top: 10vh;
+  font-weight: bold;
+  outline-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
+  border-color: #8F00B5;
+  float: left;
+  }
+}
+
+.whitebox{
+  background: #FFFFFF;
+  padding: 30px;
+  margin-left: 3%;
+  margin-right: 3%;
+  top: 100px;
+  position: relative;
+}
+
 .button1 {
-  background-color: white;
+  background: linear-gradient(264.22deg, #00B89F 0%, #8F00B5 100%);
   border: none;
-  color: #bdbdbd !important;
+  color: #FFFFFF !important;
   text-align: center;
   font-size: 13px;
   cursor: pointer;
-  border-radius: 10px;
-  border: solid 1px #e5e5e5;
+  border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
-  outline-color: white;
-  padding: 8px 15px;
-  margin-bottom: 15px;
+  padding: 10px;
+  width: 120px;
+  font-size: 81%;
+  //  border: solid 1px #e5e5e5;
+  // outline-color: white;
+  // position: absolute;
+  // left: 33.93%;
+  // right: 10.48%;
+  // top: 86.25%;
+  // bottom: 5%;
+  // padding: 8px 15px;
+  // margin-bottom: 15px;
 }
 .button2 {
-  background-color: $secondary;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  padding: 15px 30px;
+  background-color: #FFFFFF;
+  color: green;
+  border-radius: 50px;
+  border: 2px solid black;
+  padding: 10px 30px;
   text-align: center;
-  margin-top: 12vh;
-  font-weight: 700;
+  margin-top: 10vh;
+  font-weight: bold;
   outline-color: white;
   box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
+  float: right;
+  border-color: green;
 }
+
+//icon-angle-right css
+.aright {
+  position: relative;
+  top: 2px;
+}
+.adright {
+  position: relative;
+  top: 2px;
+}
+
+//view more icon changed when hover
+.button2 i:nth-child(2) {
+  display: none;
+}
+.button2:hover i:nth-child(1){
+  display: none;
+}
+.button2:hover i:nth-child(2){
+  display: inline-block;
+}
+
+//view more when hovered
+.button2:hover {
+  background-color: #FFFFFF;
+  color: $primary;
+  border-radius: 50px;
+  border: 2px solid black;
+  padding: 10px 30px;
+  text-align: center;
+  margin-top: 10vh;
+  font-weight: bold;
+  outline-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
+  float: right;
+  border-color: purple;
+}
+
+button.button2 {
+  margin-right: -100px;
+}
+
 .row {
   margin-top: 10vh;
+  margin-left: -15vh;
+  margin-right: -15vh;
 }
+
+//container for project data
+.icon-container {
+  background: white;
+  height: 105%;
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+  border-radius: 10px;  
+}
+
+// .curve {
+//   width:100%;
+//   float: left;
+//   overflow: visible;
+//   background-color: white;
+// }
+
+// .top {
+//   position: relative;
+//   top: -15vh;
+  
+// }
 
 .box {
   width: 90%;
   height: auto;
   border: 1px solid white;
   background-color: white;
-  margin-top: 5%;
-  margin-bottom: 3%;
+  // margin-top: 5%;
+  // margin-bottom: 3%;
 }
 .entitle {
   text-align: center;
   font-size: 50px;
   color: white;
+  
 }
 .cw-banner {
   width: 100%;
   float: left;
-  background: $primary;
+  background: linear-gradient(180deg, #8F00B5 0%, #00B89F 100%);
+  padding-bottom: 100px;
 }
 .container {
   padding-top: 15vh;
   padding-bottom: 15vh;
   text-align: center;
-}
-.p1 {
-  font-size: 17px;
   color: white;
 }
+.p1 {
+  font-size: 100%;
+  color: $secondary;
+}
 p {
-  font-size: 14px;
-  color: #8f00b5;
+  color: #000000;
+  font-size: 81%;
 }
 img {
   width: 100%;
   height: auto;
   margin: auto;
   padding: 5%;
+  
 }
 .description {
-  height: 11vh;
-  margin-bottom: 5%;
+  line-height: 0;
+  font-size: 100%;
 }
 </style>
