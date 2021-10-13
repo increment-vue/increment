@@ -262,7 +262,7 @@ p {
 </style>
 <script>
 import ROUTER from "src/router";
-import { faMobile, faLaptopCode, faCode, faServer, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faMobile, faLaptopCode, faCode, faServer } from '@fortawesome/free-solid-svg-icons';
 export default {
   data() {
     return {
@@ -301,12 +301,6 @@ export default {
           src: faLaptopCode,
         }
       ],
-      icon: [
-        {
-          src: faAngleRight
-        }
-        
-      ]
     };
   },
   methods: {
