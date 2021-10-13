@@ -208,7 +208,7 @@ p {
     margin: 15px 170px;
     width: 280px;
     height: 324px;
-    border: double 3px transparent;
+    border: double 2px transparent;
     border-radius: 10px;
     background-image: linear-gradient(white, white), linear-gradient(132.58deg, #00B89F 0%, #8F00B5 100%);
     background-origin: border-box;
@@ -237,7 +237,8 @@ p {
   right: 100px;
     p{
       text-align: center;
-      padding-right: 335px;
+      padding-left: 9px;
+      padding-right: 340px;
     }
   }
 }
