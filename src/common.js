@@ -1,8 +1,10 @@
-import {faFacebook, faTwitter, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import {
+  faFacebookSquare, faTwitterSquare, faInstagramSquare, faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 import Jquery from 'jquery'
-export default{
-  APP_NAME: 'Increment Technologies',
-  APP_TAGLINE: 'We want you to Succeed!',
+export default {
+  APP_NAME: 'INCREMENT TECHNOLOGIES INC.',
+  APP_TAGLINE: 'WE WANT YOU TO SUCCEED!',
   APP_EMAIL: 'incrementtech2020@gmail.com',
   APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES. All Rights Reserved. ' + new Date().getFullYear(),
   APP_DEVELOPER: 'Increment Technologies',
@@ -15,19 +17,108 @@ export default{
   socialMedia: {
     facebook: 'https://www.facebook.com/incrementtechnologies'
   },
-  socialIcons: [{
-    icon: faFacebook,
-    url: 'https://www.facebook.com/incrementtechnologies'
-  }, {
-    icon: faTwitter,
-    url: 'https://twitter.com/incrementtechn1'
-  }, {
-    icon: faInstagram,
-    url: 'https://www.instagram.com/incrementtechph'
-  },{
-    icon: faLinkedin,
-    url: 'https://www.linkedin.com/company/incrementtechnologies'
+
+  footer1_contents: [{
+    name: 'ABOUT US',
+    description: '',
+    subMenu: [{
+      title: 'Increment Technologies is a team of highly motivated technopreneurs. We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthy online products.',
+      icon: null,
+      url: null,
+    }],
+  },
+  {
+    name: 'CONTACT US',
+    description: null,
+    subMenu: [{
+      title: '436-1622',
+      icon: faFacebookSquare,
+      url: null,
+    },
+    {
+      title: 'incrementtech2020@gmail.com',
+      icon: faFacebookSquare,
+      url: 'incrementtech2020@gmail.com',
+    }],
   }],
+  footer2_contents: [{
+    name: 'INFORMATION',
+    title: 'Who We Are',
+    icon: null,
+    url: '/case-studies/company-profiling',
+  },
+  {
+    title: 'Our Services',
+    icon: null,
+    url: '/#our-services',
+  },
+  {
+    title: 'How We Work',
+    icon: null,
+    url: '/#how-we-work',
+  },
+  {
+    title: 'Our Projects',
+    icon: null,
+    url: '/our-projects',
+  }, {
+    title: 'Case Studies',
+    url: '/case-studies',
+  },
+  {
+    title: 'Technologies',
+    icon: null,
+    url: '/technologies',
+  },
+  {
+    title: 'Send Request',
+    icon: null,
+    url: '/send-request',
+  }],
+  footer3_contents: [{
+    name: 'FOLLOW US',
+    description: null,
+    subMenu: [{
+      title: null,
+      icon: faFacebookSquare,
+      url: 'https://www.facebook.com/incrementtechnologies',
+    },
+    {
+      title: null,
+      icon: faTwitterSquare,
+      url: 'https://twitter.com/incrementtechn1',
+    },
+    {
+      title: null,
+      icon: faInstagramSquare,
+      url: 'https://www.instagram.com/incrementtechph',
+    },
+    {
+      title: null,
+      icon: faLinkedin,
+      url: 'https://www.linkedin.com/company/incrementtechnologies',
+    }],
+  },
+  // {
+  //   name: null,
+  //   description: null,
+  //   subMenu: [{
+  //     title: null,
+  //     icon: null,
+  //     url: null,
+  //   }],
+  // },
+  {
+    name: 'LOCATION',
+    description: null,
+    subMenu: [{
+      title: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
+      icon: faTwitterSquare,
+      url: 'https://www.facebook.com/incrementtechnologies',
+    }],
+  }
+  ],
+
   delay: 15000,
   menus: [],
   packages: null,
@@ -49,8 +140,8 @@ export default{
     faq: false,
     footer: false
   },
-  setLoad(div){
-    switch(div){
+  setLoad(div) {
+    switch (div) {
       case '#faq':
         this.load.faq = true
         this.load.gallery = true
@@ -86,16 +177,16 @@ export default{
         break
     }
   },
-  getBlog(){
+  getBlog() {
     this.blogs = []
     Jquery.get('https://spreadsheets.google.com/feeds/cells/1luFOWuvQh7PlT5Jy6xY0181qdWsJhhoQt_kQ9YnpKKk/11/public/values?alt=json', response => {
       let entries = response.feed.entry
       for (var i = 0; i < entries.length; i += 7) {
-        if(i > 6){
+        if (i > 6) {
           let object = {
             type: entries[i].content.$t,
             title: entries[i + 1].content.$t,
-            image: entries[i].content.$t === 'internal_video' ? entries[i + 2].content.$t : this.host + 'img/' + entries[i + 2].content.$t ,
+            image: entries[i].content.$t === 'internal_video' ? entries[i + 2].content.$t : this.host + 'img/' + entries[i + 2].content.$t,
             date: entries[i + 3].content.$t,
             author: entries[i + 4].content.$t,
             introduction: entries[i + 5].content.$t,
@@ -106,12 +197,12 @@ export default{
       }
     })
   },
-  getBasic(){
+  getBasic() {
     Jquery.get('https://spreadsheets.google.com/feeds/cells/1luFOWuvQh7PlT5Jy6xY0181qdWsJhhoQt_kQ9YnpKKk/3/public/values?alt=json', response => {
       let entries = response.feed.entry
       for (var i = 0; i < entries.length; i += 2) {
-        if(i > 1){
-          switch(entries[i].content.$t){
+        if (i > 1) {
+          switch (entries[i].content.$t) {
             case 'app_name':
               this.APP_NAME = entries[i + 1].content.$t
               break

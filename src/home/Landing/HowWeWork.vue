@@ -1,5 +1,5 @@
 <template>
-  <div class="app-quick-guide">
+  <div class="app-quick-guide" id="how-we-work">
     <center>
       <div class="w3-container w3-center w3-animate-left">
         <img class="gif-image" :src="require('assets/gif/how-we-work-2.gif')" />

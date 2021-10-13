@@ -1,21 +1,34 @@
 <template>
-  <div class="banner" id="testimonials">
-    <div class="container">
-      <h1 class="title">What They Say About Us!</h1>
-      <p class="pText">Our clients satisfactions expresses their testimonies</p>
-      <div class="row no-gutters">
-        <span class="col-md-6" v-for="(item, index) in list" :key="index">
-          <center class="single-card">
-            <h5 class="qoute">{{ item.quote }}</h5>
-            <h5 class="name text-white">
-              <b class="name">{{ item.name }}</b>
-            </h5>
-            <p>{{ item.position }}</p>
-            <p>
-              <b>{{ item.country }}</b>
-            </p>
-          </center>
-        </span>
+  <div>
+    <div class="curve">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#8f00b4"
+          fill-opacity="1"
+          d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"
+        ></path>
+      </svg>
+    </div>
+    <div class="banner" id="testimonials">
+      <div class="container">
+        <h1 class="title">What They Say About Us!</h1>
+        <p class="pText">
+          Our clients satisfactions expresses their testimonies
+        </p>
+        <div class="row no-gutters">
+          <span class="col-md-6" v-for="(item, index) in list" :key="index">
+            <center class="single-card">
+              <h5 class="qoute">{{ item.quote }}</h5>
+              <h5 class="name text-white">
+                <b class="name">{{ item.name }}</b>
+              </h5>
+              <p>{{ item.position }}</p>
+              <p>
+                <b>{{ item.country }}</b>
+              </p>
+            </center>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -23,11 +36,11 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .banner {
-  background-color: $primary;
   min-height: 70vh;
   float: left;
   width: 100%;
-  background: linear-gradient(252deg, #8f00b5 0%, #00b89f 100%);
+  background: linear-gradient(180deg, rgba(143, 0, 181, 0.99) 0%, #00b89f 100%);
+  margin-top: -14.5%;
 }
 
 .title {
@@ -46,7 +59,7 @@
 }
 
 .name {
-  color: $secondary;
+  color: $primary;
 }
 
 .single-card {
@@ -64,15 +77,19 @@
   text-align: center;
   color: white;
 }
+.curve {
+  width: 100%;
+  float: left;
+}
 .pText {
   margin-top: 3%;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
 }
-.bottom svg{
+.bottom svg {
   display: block;
-  margin-top: -340px;;
+  margin-top: -340px;
 }
 </style>
 <script>
