@@ -1,6 +1,6 @@
 <template>
-  <div class="cw-banner" id="our-services">
-    <div class="curve top">
+  <div id="our-services">
+    <div class="curve-top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
         <path
           fill="#00B89F"
@@ -9,20 +9,22 @@
         ></path>
       </svg>
     </div>
-    <div class="container">
-      <h1 class="title">OUR SERVICES</h1>
-      <h6>What we offer are innovative solutions</h6>
-      <div class="row">
-        <span class="col-md-3" v-for="(item, index) in services" :key="index">
-          <center class="icon-container">
-            <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
-            <h4 class="subtitle">{{ item.title }}</h4>
-            <p>{{ item.desc }}</p>
-          </center>
-        </span>
+    <div class="cw-banner">
+      <div class="container">
+        <h1 class="title">OUR SERVICES</h1>
+        <h6>What we offer are innovative solutions</h6>
+        <div class="row">
+          <span class="col-md-3" v-for="(item, index) in services" :key="index">
+            <center class="icon-container">
+              <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
+              <h4 class="subtitle">{{ item.title }}</h4>
+              <p>{{ item.desc }}</p>
+            </center>
+          </span>
+        </div>
       </div>
     </div>
-    <div class="curve bottom">
+    <div class="curve-bottom">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
         <path
           fill="#8F00B5"
@@ -139,21 +141,18 @@ export default {
   }
 }
 
-.curve {
+.curve-top {
   width: 100%;
+  height: 200px;
   float: left;
   overflow: visible;
-  background-color: white;
+  margin-bottom: -6vh;
 }
 
-.top {
-  position: relative;
-  top: -15vh;
-}
-
-.bottom {
-  position: relative;
-  top: 15vh;
+.curve-bottom {
+  top: -1vh;
+  height: 200px;
+  margin-bottom: 6vh;
 }
 
 .font-awesome-icon {
@@ -178,12 +177,12 @@ export default {
   height: 400px;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
   border-radius: 10px;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
 }
 
 .cw-banner {
   float: left;
-  background: $secondary;
+  // background: $secondary;
   width: 100%;
   background: linear-gradient(180deg, #00b89f 0%, #8f00b5 100%);
 }
@@ -191,7 +190,7 @@ export default {
 .title {
   font-weight: 700;
   font-size: 50px;
-  margin-top: 250px;
+  margin-top: 50px;
 }
 
 img {
@@ -201,8 +200,6 @@ img {
 }
 
 .container {
-  padding-top: 12vh;
-  padding-bottom: 14vh;
   text-align: center;
   color: white;
 }
@@ -221,6 +218,9 @@ p {
   margin-bottom: 10px;
   font-size: 81%;
   color: black;
+}
+#our-services{
+  height: 100vh;
 }
 </style>
 

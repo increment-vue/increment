@@ -18,8 +18,8 @@
         >
       </div>
     </div>
-    <div class="white-box">
-    </div>
+    <!-- <div class="white-box">
+    </div> -->
   </div>
 </template>
 <style scoped lang="scss">

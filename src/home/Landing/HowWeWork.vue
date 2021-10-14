@@ -1,69 +1,59 @@
 <template>
-  <div>
-    <div class="app-quick-guide" id="how-we-work">
-      <center>
-        <div class="w3-container w3-center w3-animate-left">
+  <div class="app-quick-guide" id="how-we-work">
+    <center>
+      <div>
+        <img class="gif-image" :src="require('assets/gif/how-we-work-2.gif')" />
+      </div>
+      <h1 class="titletText">HOW WE WORK</h1>
+      <div class="row">
+        <div class="col-sm-6">
+          <div></div>
           <img
-            class="gif-image"
-            :src="require('assets/gif/how-we-work-2.gif')"
+            class="gif-image2"
+            :src="require('assets/gif/how-we-work-1.gif')"
           />
         </div>
-        <h1 class="titletText">HOW WE WORK</h1>
-        <div class="row">
-          <div class="col-sm-6">
-            <div></div>
-            <img
-              class="gif-image2"
-              :src="require('assets/gif/how-we-work-1.gif')"
-            />
-          </div>
-          <div class="col-sm-6">
-            <img
-              class="gif-image3"
-              :src="require('assets/gif/how-we-work-3.gif')"
-            />
-          </div>
+        <div class="col-sm-6">
+          <img
+            class="gif-image3"
+            :src="require('assets/gif/how-we-work-3.gif')"
+          />
         </div>
-      </center>
-      <center>
-        <!-- card -->
-        <div class="row details-holder">
+      </div>
+      <div class="row details-holder text-center">
+        <div
+          v-for="(item, index) in content"
+          :key="index"
+          :class="`item-holder-click ${
+            !actives.includes(index) ? 'item-holder' : 'item-holder-click'
+          }`"
+          @click="show(index)"
+        >
+          <div v-if="actives.includes(index) == false">
+            <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
+            <p class="title">{{ item.title }}</p>
+          </div>
           <div
-            v-for="(item, index) in content"
-            :key="index"
-            :class="`item-holder-click ${
-              !actives.includes(index) ? 'item-holder' : 'item-holder-click'
-            }`"
-            @click="show(index)"
+            v-if="actives.length > 0 && actives.includes(index)"
+            class="row item-clicked"
           >
-            <div v-if="actives.includes(index) == false">
-              <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
-              <p class="title">{{ item.title }}</p>
+            <div class="col-sm-4">
+              <p class="text">
+                <font-awesome-icon
+                  :icon="item.icon"
+                  class="font-awesome-icon-clicked"
+                />
+              </p>
             </div>
-            <div
-              v-if="actives.length > 0 && actives.includes(index)"
-              class="row"
-            >
-              <div class="col-sm-4">
-                <p class="text">
-                  <font-awesome-icon
-                    :icon="item.icon"
-                    class="font-awesome-icon-clicked"
-                  />
-                </p>
-              </div>
-              <div class="col-sm-8">
-                <h3 class="text-click">{{ item.title }}</h3>
-                <hr class="line1" />
-                <p class="pText">{{ item.text }}</p>
-              </div>
+            <div class="col-sm-8">
+              <h3 class="text-click">{{ item.title }}</h3>
+              <hr class="line1" />
+              <p class="pText">{{ item.text }}</p>
             </div>
           </div>
         </div>
-        <!-- content -->
-        <!-- end of content -->
-      </center>
-      <div class="row">
+      </div>
+      <div class="row mt-5">
         <div class="col-sm">
           <img
             class="gif-image4"
@@ -89,7 +79,9 @@
           />
         </div>
       </div>
-    </div>
+    </center>
+    <!-- content -->
+    <!-- end of content -->
   </div>
 </template>
 
@@ -97,7 +89,6 @@
 @import "~assets/style/colors.scss";
 .app-quick-guide {
   min-height: 100vh;
-  margin-top: 10%;
   width: 100%;
   background-color: $white;
   padding: 50px;
@@ -123,12 +114,7 @@
   );
 }
 .details-holder-click {
-  margin-left: 10%;
-  margin-right: 10%;
   display: flex;
-}
-.w3-container {
-  margin-top: 20%;
 }
 .line1 {
   width: 96.25px;
@@ -199,24 +185,30 @@
   text-align: justify;
 }
 .gif-image {
-  height: 20%;
-  width: 20%;
+  height: 250px;
+  width: 350px;
   border-radius: 0px;
+  animation-name: animateImage;
+  animation-duration: 3s;
+  position: relative;
 }
 .gif-image2 {
-  height: 75%;
-  width: 45%;
+  height: 250px;
+  width: 350px;
   top: 18px;
   border-radius: 0px;
-  // margin-top: -130px;
-  // padding-right: 10px;
+  animation-name: animateImage2;
+  animation-duration: 3s;
+  position: relative;
 }
 .gif-image3 {
-  height: 75%;
-  width: 45%;
+  height: 250px;
+  width: 350px;
   top: 18px;
   border-radius: 0px;
-  // padding-right: 10px;
+  animation-name: animateImage3;
+  animation-duration: 3s;
+  position: relative;
 }
 .gif-image4 {
   height: 80%;
@@ -227,37 +219,87 @@
 }
 .gif-image5 {
   height: 80%;
-  width: 80%;
+  width: 75%;
   top: 18px;
   border-radius: 0px;
-  margin-top: 80px;
+}
+@keyframes animateImage {
+  100% {
+    transform: translate(0px, 15px) rotate(0deg);
+  }
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+@keyframes animateImage2 {
+  80% {
+    transform: translate(-200px, 0px) rotate(0deg);
+  }
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+@keyframes animateImage3 {
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  0% {
+    transform: translate(-200px, 0px) rotate(0deg);
+  }
 }
 @media only screen and (max-width: 992px) {
   .details-holder {
     display: block;
-    width: 100%;
-    margin: unset;
+    width: 105%;
     overflow-y: hidden;
     margin-bottom: 100px;
+    text-align: center;
   }
   .item-holder-click {
-    min-height: 220px;
-    width: 40%;
+    min-height: 200px;
+    width: 100%;
     border-radius: 10px;
-    animation-duration: 0ms;
-    margin-top: 50px;
-    padding-top: 30px;
-    margin-right: 2%;
+  }
+  .item-clicked {
+    justify-content: center;
+    text-align: center;
   }
   .item-holder {
-    width: 90%;
+    width: 100%;
     margin-left: 5%;
     margin-right: 5%;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .gif-image {
+    height: 200px;
+    width: 300px;
+    border-radius: 0px;
+  }
+  .gif-image2 {
+    height: 200px;
+    width: 300px;
+    border-radius: 0px;
+  }
+  .gif-image3 {
+    height: 200px;
+    width: 300px;
+    border-radius: 0px;
   }
 }
 </style>
 
 <script>
+// window.addEventListener('scroll', () => {
+//   console.log(window.scrollY)
+
+//   if (window.scrollY >= 600 && window.scrollY <= 1300) {
+//     document.getElementById('h3-after').style.marginLeft = '0rem'
+//   } else {
+//     document.getElementById('h3-after').style.marginLeft = '27rem'
+//   }
+// })
 import {
   faHandshake,
   faRocket,

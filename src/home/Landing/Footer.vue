@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="curve" style="background: black">
+    <div class="curve">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#00B89F"
+          fill="white"
           fill-opacity="1"
           d="M1919 0H0V43.2333C0 43.2333 99.234 79.8683 165.681 90.3369C316.558 114.108 422.004 30.1656 553.944 43.2333C678.534 55.5728 741.733 95.7704 866.339 107.944C1005.3 121.52 1083.76 110.657 1222.8 97.9025C1382.48 83.2545 1469.45 47.1908 1629.76 43.2333C1742.83 40.4416 1859.81 58.2952 1919 58.2952V0Z"
         ></path>
@@ -187,13 +187,13 @@ li {
 }
 @media screen and (max-width: 992px) {
   .container-handler {
-    width: 105%;
+    width: 100%;
     text-align: center;
     justify-content: center;
     align-content: center;
   }
   .description {
-    width: 105%;
+    width: 100%;
   }
   .logo-handler {
     text-align: center;
