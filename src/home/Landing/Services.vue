@@ -78,44 +78,59 @@ export default {
 @media only screen and (max-width: 992px) {
   .row {
     display: flex;
-    flex-direction: column;
-    padding-left: 32%;
+    flex-direction: column; 
+    
   }
-
   .icon-container {
-    width: 80vh;
+    margin-bottom: 10vh;
+    width: 69vh;
+    position: relative;
+    left: 75%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .row {
+    display: flex;
+    flex-direction: column; 
+  }
+  .icon-container {
+    margin-bottom: 10vh;
+    width: 100%;
+    left: 4%;
   }
 }
 
 //animation scroll into view
-@keyframes animateService {
-    0%   { left:0px; top:500px;}
-    25%  { left:0px; top:0px;}
-    50%  { left:0px; top:0px;}
-    75%  { left:0px; top:0px;}
-    100% { left:0px; top:0px;}
-} 
-@media only screen and (max-width: 992px) {
-  h1.title {
-    animation-name: animateService;
-    animation-duration: 3s;
-    position: relative;
-  }
-}
-@media only screen and (max-width: 992px) {
-  h6 {
-    animation-name: animateService;
-    animation-duration: 3s;
-    position: relative;
-  }
-}
-@media only screen and (max-width: 992px) {
-  center.icon-container {
-    animation-name: animateService;
-    animation-duration: 3s;
-    position: relative;
-  }
-}
+// @keyframes animateService {
+//     0%   { left:0px; top:500px;}
+//     25%  { left:0px; top:0px;}
+//     50%  { left:0px; top:0px;}
+//     75%  { left:0px; top:0px;}
+//     100% { left:0px; top:0px;}
+// } 
+// @media only screen and (max-width: 992px) {
+//   h1.title {
+//     animation-name: animateService;
+//     animation-duration: 3s;
+//     position: relative;
+//   }
+// }
+// @media only screen and (max-width: 992px) {
+//   h6 {
+//     animation-name: animateService;
+//     animation-duration: 3s;
+//     position: relative;
+//   }
+// }
+// @media only screen and (max-width: 992px) {
+//   center.icon-container {
+//     animation-name: animateService;
+//     animation-duration: 3s;
+//     position: relative;
+//   }
+// }
+
 
 .curve {
   width:100%;
@@ -147,16 +162,15 @@ export default {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-  color: #3F0050;
+  color: #3F0050; 
 }
 
 //container for the services
 .icon-container {
   background: white;
-  height: 400px;
+  height: 340px;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
-  border-radius: 10px;  
-  margin-bottom: 10vh;
+  border-radius: 10px;    
 }
 
 .cw-banner {
@@ -164,13 +178,12 @@ export default {
   background: $secondary;
   width: 100%;
   background: linear-gradient(180deg, #00B89F 0%, #8F00B5 100%);
-  
+
 }
 
 .title {
   font-weight: 700;
   font-size: 50px;
-  margin-top: 250px;
 }
 
 img {
@@ -180,16 +193,12 @@ img {
 }
 
 .container {
-  padding-top: 12vh;
-  padding-bottom: 14vh;
   text-align: center;
   color: white;
 }
 .row {
-  margin-top: 10vh;
+  margin-top: 8vh;
   text-align: center;
-  margin-left: -15vh;
-  margin-right: -15vh;
 }
 
 p {
@@ -198,7 +207,7 @@ p {
   margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 81%;
+  font-size: 70%;
   color: black;
 }
 </style>
