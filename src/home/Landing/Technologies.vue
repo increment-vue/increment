@@ -6,7 +6,7 @@
       <div class="row no-gutters">
         <!-- list for Systems admin & UI/UX -->
         <span class="col-md-4" v-for="(item, index) in list1" :key="index">  
-          <center class="single-card">
+          <center class="single-card sys-ui">
             <font-awesome-icon :icon="item.src"  class="font-awesome-icon"/>
             <h3 class="head-title">{{ item.title }}</h3>
             <p>{{ item.desc }}</p>
@@ -22,7 +22,7 @@
           </center>
         </span>
         <!-- End of Lower Level Programming -->
-     <div class="softdev-gif"></div>
+        <div class="softdev-gif"></div>
         <!-- Mobile Development-->
         <span class="col-md-1" v-for="(item, index) in list3" :key="index">    
           <center class="single-card mob-dev">
@@ -197,56 +197,64 @@ p {
     font-size: 100px;
     color: #00B89F;
     display: block;
-    background: -webkit-linear-gradient(132.58deg, #00B89F, #8F00B5);
+    background: linear-gradient(132.58deg, #00B89F, #8F00B5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
-// boxes
-@media only screen and (max-width: 992px){
-  .single-card{
-    margin: 15px 170px;
-    width: 280px;
-    height: 324px;
-    border: double 2px transparent;
-    border-radius: 10px;
-    background-image: linear-gradient(white, white), linear-gradient(132.58deg, #00B89F 0%, #8F00B5 100%);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
- }
- p{
-   text-align: center;
-   padding-right: 35px;
- }
- .softdev-gif{
-   background-size: cover;
-   right: 170px;
-   width: 380px;
-   height: 300px
- }
- .low-lev{
-   right: 190px;
- }
- .mob-dev{
-   right: 380px;
- }
- .web-dev{
-  position: relative;
-  width: 800px;
-  height: 324px;
-  right: 100px;
-    p{
-      text-align: center;
-      padding-left: 9px;
-      padding-right: 340px;
-    }
+//title and background
+@media only screen and (max-width: 992px) {
+  .title{
+    color: #3F0050;
+  }
+  .desc{
+    color: #000000;
   }
 }
-// button
+// boxes
+@media only screen and (max-width: 992px) {
+  .row {
+    display: block;
+    width: 100%;
+    margin: unset;
+    margin-top: 90px;
+  }
+  .sys-ui{
+    position: relative;
+    left: 105px;
+  }
+  .softdev-gif{
+    display: none;
+  }
+  .low-lev{
+    position: relative;
+    left: 10px;
+  }
+  .mob-dev{
+    position: relative;
+    margin-top: 20px;
+    left: 10px;
+  }
+  .web-dev{
+    position: relative;
+    width: 338px;
+    height: 520px;
+    left: 105px;
+    p{
+      width: 300px;
+    }
+  }
+  .font-awesome-icon {
+  font-size: 100px;
+  color: #00B89F;
+  display: block;
+  }
+}
 @media only screen and (max-width: 992px){
   #btn{
     position: relative;
-    left: 80px;
+    left: -300px;
+    top: -20px;
   }
   #btn i:nth-child(2) {
     display: none;
@@ -258,8 +266,179 @@ p {
     display: inline-block;
   }
 }
-// end of tablet mode //
+@media only screen and (max-width: 900px) {
+  .sys-ui{
+    position: relative;
+    left: -15px;
+  }
+  .web-dev{
+    left: -15px;
+  }
+   #btn{
+    left: -275px;
+    top: -10px;
+  }
+}
+//boxes ipad
+@media only screen and (max-width: 768px) {
 
+  .sys-ui{
+    position: relative;
+    left: -15px;
+  }
+  .softdev-gif{
+    display: none;
+  }
+  .web-dev{
+    position: relative;
+    width: 338px;
+    height: 520px;
+    left: -15px;
+    p{
+      width: 300px;
+    }
+  }
+  // button
+  #btn{
+    left: -230px;
+    top: -10px;
+  }
+}
+// end of ipad
+//boxes phone
+@media only screen and (max-width: 540px) {
+  .title{
+    font-size: 43px;
+  }
+  .desc{
+    font-size: 16px;
+    padding-right: 30px;
+  }
+  .sys-ui{
+    left: -105px;
+  }
+  .web-dev{
+    left: -105px;
+  }
+  // button
+  #btn{
+    top: -20px;
+    left: -140px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .title{
+    font-size: 43px;
+  }
+  .desc{
+    font-size: 15px;
+  }
+  .sys-ui{
+    position: relative;
+    left: -180px;
+  }
+  .softdev-gif{
+    display: none;
+  }
+  .low-lev{
+    position: relative;
+    left: -3px;
+  }
+  .mob-dev{
+    position: relative;
+    left: -3px;
+  }
+  .web-dev{
+    position: relative;
+    left: -180px;
+  }
+  // button
+  #btn{
+    position: relative;
+    left: -90px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .title{
+    font-size: 38px;
+  }
+  .desc{
+    font-size: 13px;
+  }
+  p{
+    font-size: 15px;
+    padding-right: 15px;
+  }
+  .sys-ui{
+    width: 290px;
+    position: relative;
+    left: -170px;
+  }
+  .low-lev{
+    width: 290px;
+    left: 0px;
+  }
+  .mob-dev{
+    width: 290px;
+    left: 0px;
+  }
+  .web-dev{
+    width: 290px;
+    position: relative;
+    left: -170px;
+  }
+  // button
+  #btn{
+    top: -20px;
+    left: -70px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .sys-ui{
+    position: relative;
+    left: -180px;
+  }
+  .web-dev{
+    left: -180px;
+  }
+  // button
+  #btn{
+    left: -65px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .title{
+    font-size: 33px;
+  }
+  .desc{
+    font-size: 13px;
+  }
+  .sys-ui{
+    width: 280px;
+    left: -195px;
+    p{
+      padding-right: 25px;
+      font-size: 12px;
+    }
+  }
+  .low-lev{
+    left: 0px;
+  }
+  .mob-dev{
+    left: 0px;
+  }
+  .web-dev{
+    left: -200px;
+  }
+
+  // button
+  #btn{
+    top: -20px;
+    left: -50px;
+  }
+}
+//end of phone
+// end of responsiveness mode //
 </style>
 <script>
 import ROUTER from "src/router";
