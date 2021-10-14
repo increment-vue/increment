@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <footer>
     <div class="curve">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
@@ -80,6 +80,7 @@
 .curve {
   width: 100%;
   float: left;
+  background-color: $white;
 }
 .pText {
   margin-top: 3%;

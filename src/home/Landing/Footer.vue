@@ -9,54 +9,91 @@
         ></path>
       </svg>
     </div>
-    <div class="row">
-      <div class="col-sm">
-        <div v-for="(item, index) in common.footer1_contents" :key="index">
-          <label class="title-name"><b>{{ item.name }}</b></label>
-          <p>
-            <a class="font-url" :href="item.url">{{ item.title }}</a>
-          </p>
-          <ul v-if="item.subMenu.length > 0" class="sub-menu">
-            <li v-for="(sItem, sIndex) in item.subMenu" :key="sIndex">
-              <font-awesome-icon class="fontawesome-icon" :icon="sItem.icon" />&nbsp;&nbsp;&nbsp; {{ sItem.title }}
-            </li>
-          </ul>
+    <div class="logo-handler">
+      <a class="navbar-brand">
+        <img class="logo" src="../../assets/img/logo.png" />
+        <label class="site-name">
+          <b class="increment-white"> &nbsp;INCREMENT</b>
+          <br />
+          <b class="increment-white">&nbsp; TECHNOLOGIES INC.</b>
+        </label>
+        <br />
+        <label class="mt-3">{{ common.APP_TAGLINE }}</label>
+      </a>
+    </div>
+    <div clas="footer-holder">
+      <div class="row container-handler">
+        <div class="col-sm-6">
+          <div v-for="(item, index) in common.footer1_contents" :key="index">
+            <label class="title-name"
+              ><b>{{ item.name }}</b></label
+            >
+            <p class="description">{{ item.description }}</p>
+            <div
+              v-for="(sItem, sIndex) in item.subMenu"
+              :key="sIndex"
+              class="row submenu"
+            >
+              <div class="col-sm-1">
+                <font-awesome-icon
+                  class="fontawesome-icon"
+                  :icon="sItem.icon"
+                />
+              </div>
+              <div class="col-sm-11">
+                <label style="color: white; margin-left: -2%">{{
+                  sItem.title
+                }}</label>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-sm">
-        <div v-for="(item, index) in common.footer2_contents" :key="index">
-          <b class="title-name">{{ item.name }}</b>
-          <p><a class="font-url" :href="item.url">{{ item.title }}</a></p>
+        <div class="col-sm">
+          <div v-for="(item, index) in common.footer2_contents" :key="index">
+            <b class="title-name">{{ item.name }}</b>
+            <p>
+              <a class="font-url" :href="item.url">{{ item.title }}</a>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="col-sm">
-        <div v-for="(item, index) in common.footer3_contents" :key="index">
-          <label class="title-name"><b>{{ item.name }}</b></label>
-          <p>
-            <a class="font-url" :href="item.url">{{ item.title }}</a>
-          </p>
-          <ul v-if="item.subMenu.length > 0" class="sub-menu">
-            <li v-for="(sItem, sIndex) in item.subMenu" :key="sIndex">
-              <font-awesome-icon class="fontawesome-icon" :icon="sItem.icon" />&nbsp; {{ sItem.title }}
-            </li>
-          </ul>
+        <div class="col-sm-3">
+          <div v-for="(item, index) in common.footer3_contents" :key="index">
+            <label class="title-name">
+              <b>{{ item.name }}</b></label
+            >
+            <br />
+            <span v-for="(sItem, sIndex) in item.subMenu" :key="sIndex">
+              <a :href="sItem.url" target="_blank"
+                ><font-awesome-icon
+                  class="fontawesome-icon2"
+                  :icon="sItem.icon"
+              /></a>
+              <label>{{ sItem.title }}</label>
+            </span>
+            <div class="row">
+              <div class="col-sm-1">
+                <font-awesome-icon class="fontawesome-icon" :icon="item.icon" />
+              </div>
+              <div class="col-sm-11">
+                <label class="mt-2">{{ item.description }}</label>
+              </div>
+            </div>
+          </div>
         </div>
+        <hr class="line" />
+        <p class="copyright">Copyright @{{ common.APP_COPYRIGHT }}</p>
       </div>
     </div>
   </div>
-
-  <!-- <p class="copyright">
-          Copyright @{{ common.APP_COPYRIGHT }}. A proud product of
-          <b class="action-link">{{ common.APP_DEVELOPER }}</b
-          >.
-        </p> -->
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.row {
+.container-handler {
   padding-left: 10%;
   padding-right: 10%;
   background-color: $black;
+  padding-top: 2%;
+  align-content: left;
 }
 .curve {
   width: 100%;
@@ -72,75 +109,117 @@
   color: $white;
   margin-top: 2%;
 }
-.fontawesome-icon{
+.fontawesome-icon {
+  font-size: 25px;
+  color: $secondary;
+  text-align: left;
+  margin-right: 20px;
+}
+.fontawesome-icon2 {
   font-size: 30px;
   color: $white;
+  text-align: left;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
 }
-.title-name{
+.fontawesome-icon2:hover {
+  color: $secondary;
+}
+.title-name {
   font-size: 20px;
   color: $white;
+  justify-content: left;
+  margin: 0 auto;
 }
-li{
+.description {
+  color: white;
+  width: 60%;
+}
+li {
   list-style: none;
   color: $white;
 }
-// @media screen and (max-width: 992px) {
-//   .footer-content {
-//     width: 90%;
-//     margin-left: 5%;
-//     margin-right: 5%;
-//     margin-top: 0%;
-//   }
-// }
+
+.icon-holder {
+  width: 80%;
+  align-items: left;
+  justify-content: left;
+}
+
+.col-sm-6{
+  margin-right: -3%;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  color: $white;
+  font-size: 13px;
+  // margin-top: 5vh;
+}
+.line {
+  margin-top: 5%;
+  background-color: $secondary;
+  width: 1500px;
+  height: 1px;
+}
+.mt-3 {
+  color: $white;
+  font-size: 17px;
+}
+.mt-2 {
+  color: white;
+  margin-left: 15px;
+}
+.logo {
+  width: 53px;
+  height: 48px;
+  margin-top: -12%;
+  padding-right: 2px;
+}
+.logo-handler {
+  background-color: $black;
+  padding-left: 10%;
+}
+.increment-white {
+  color: $secondary;
+  font-size: 18px;
+}
+@media screen and (max-width: 992px) {
+  .container-handler {
+    width: 105%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .description {
+    width: 105%;
+  }
+  .logo-handler {
+    text-align: center;
+  }
+  .site-name {
+    text-align: left;
+  }
+  .submenu {
+    text-align: center;
+  }
+  .fontawesome-icon2:hover {
+    color: $secondary;
+  }
+  .fontawesome-icon2 {
+  margin-bottom: 10px;
+}
+}
 </style>
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
-import {
-  faCopyright,
-  faEnvelope,
-  faMapMarker,
-  faPhoneAlt,
-} from "@fortawesome/free-solid-svg-icons";
 
 export default {
   data() {
     return {
       common: COMMON,
-      faCopyright: faCopyright,
-      faEnvelope: faEnvelope,
-      faMapMarker: faMapMarker,
-      faPhoneAlt: faPhoneAlt,
-      information: [
-        {
-          name: "Who We Are",
-          directory: "/case-studies/company-profiling",
-        },
-        {
-          name: "Our Services",
-          directory: "/our-services",
-        },
-        {
-          name: "How We Work",
-          directory: "/how-we-work",
-        },
-        {
-          name: "Our Projects",
-          directory: "/our-projects",
-        },
-        {
-          name: "Case Studies",
-          directory: "/case-studies",
-        },
-        {
-          name: "Technologies",
-          directory: "/technologies",
-        },
-        {
-          name: "Send Request",
-          directory: "/send-request",
-        },
-      ],
     };
   },
   methods: {

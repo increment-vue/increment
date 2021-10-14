@@ -1,85 +1,93 @@
 <template>
-  <div class="app-quick-guide" id="how-we-work">
-    <center>
-      <div class="w3-container w3-center w3-animate-left">
-        <img class="gif-image" :src="require('assets/gif/how-we-work-2.gif')" />
-      </div>
-      <h1 class="titletText">HOW WE WORK</h1>
+  <div>
+    <div class="app-quick-guide" id="how-we-work">
+      <center>
+        <div class="w3-container w3-center w3-animate-left">
+          <img
+            class="gif-image"
+            :src="require('assets/gif/how-we-work-2.gif')"
+          />
+        </div>
+        <h1 class="titletText">HOW WE WORK</h1>
+        <div class="row">
+          <div class="col-sm-6">
+            <div></div>
+            <img
+              class="gif-image2"
+              :src="require('assets/gif/how-we-work-1.gif')"
+            />
+          </div>
+          <div class="col-sm-6">
+            <img
+              class="gif-image3"
+              :src="require('assets/gif/how-we-work-3.gif')"
+            />
+          </div>
+        </div>
+      </center>
+      <center>
+        <!-- card -->
+        <div class="row details-holder">
+          <div
+            v-for="(item, index) in content"
+            :key="index"
+            :class="`item-holder-click ${
+              !actives.includes(index) ? 'item-holder' : 'item-holder-click'
+            }`"
+            @click="show(index)"
+          >
+            <div v-if="actives.includes(index) == false">
+              <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
+              <p class="title">{{ item.title }}</p>
+            </div>
+            <div
+              v-if="actives.length > 0 && actives.includes(index)"
+              class="row"
+            >
+              <div class="col-sm-4">
+                <p class="text">
+                  <font-awesome-icon
+                    :icon="item.icon"
+                    class="font-awesome-icon-clicked"
+                  />
+                </p>
+              </div>
+              <div class="col-sm-8">
+                <h3 class="text-click">{{ item.title }}</h3>
+                <hr class="line1" />
+                <p class="pText">{{ item.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content -->
+        <!-- end of content -->
+      </center>
       <div class="row">
-        <div class="col-sm-6">
-          <div></div>
+        <div class="col-sm">
           <img
-            class="gif-image2"
-            :src="require('assets/gif/how-we-work-1.gif')"
+            class="gif-image4"
+            :src="require('assets/gif/how-we-work-4.gif')"
           />
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm">
           <img
-            class="gif-image3"
-            :src="require('assets/gif/how-we-work-3.gif')"
+            class="gif-image5"
+            :src="require('assets/gif/how-we-work-5.gif')"
           />
         </div>
-      </div>
-    </center>
-    <center>
-      <!-- card -->
-      <div class="row details-holder">
-        <div
-          v-for="(item, index) in content"
-          :key="index"
-          :class="`item-holder-click ${
-            !actives.includes(index) ? 'item-holder' : 'item-holder-click'
-          }`"
-          @click="show(index)"
-        >
-          <div v-if="actives.includes(index) == false">
-            <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
-            <p class="title">{{ item.title }}</p>
-          </div>
-          <div v-if="actives.length > 0 && actives.includes(index)" class="row">
-            <div class="col-sm-4">
-              <p class="text">
-                <font-awesome-icon
-                  :icon="item.icon"
-                  class="font-awesome-icon-clicked"
-                />
-              </p>
-            </div>
-            <div class="col-sm-8">
-              <h3 class="text-click">{{ item.title }}</h3>
-              <hr class="line1" />
-              <p class="pText">{{ item.text }}</p>
-            </div>
-          </div>
+        <div class="col-sm">
+          <img
+            class="gif-image4"
+            :src="require('assets/gif/how-we-work-6.gif')"
+          />
         </div>
-      </div>
-      <!-- content -->
-      <!-- end of content -->
-    </center>
-    <div class="row">
-      <div class="col-sm">
-        <img
-          class="gif-image4"
-          :src="require('assets/gif/how-we-work-4.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image5"
-          :src="require('assets/gif/how-we-work-5.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image4"
-          :src="require('assets/gif/how-we-work-6.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image5"
-          :src="require('assets/gif/how-we-work-7.gif')"
-        />
+        <div class="col-sm">
+          <img
+            class="gif-image5"
+            :src="require('assets/gif/how-we-work-7.gif')"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -89,6 +97,7 @@
 @import "~assets/style/colors.scss";
 .app-quick-guide {
   min-height: 100vh;
+  margin-top: 10%;
   width: 100%;
   background-color: $white;
   padding: 50px;
@@ -106,12 +115,20 @@
 }
 .details-holder .item-holder:hover {
   cursor: pointer;
-  background-image: linear-gradient(50.90deg, $gradientSecondary, $gradientPrimary, $gradientSecondary,);
+  background-image: linear-gradient(
+    50.9deg,
+    $gradientSecondary,
+    $gradientPrimary,
+    $gradientSecondary
+  );
 }
 .details-holder-click {
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
+}
+.w3-container {
+  margin-top: 20%;
 }
 .line1 {
   width: 96.25px;
@@ -182,37 +199,35 @@
   text-align: justify;
 }
 .gif-image {
-  height: 250px;
-  width: 349.629638671875px;
-  top: 18px;
+  height: 20%;
+  width: 20%;
   border-radius: 0px;
 }
 .gif-image2 {
-  height: 250px;
-  width: 349.629638671875px;
+  height: 75%;
+  width: 45%;
   top: 18px;
   border-radius: 0px;
-  margin-top: -130px;
-  margin-right: 400px;
+  // margin-top: -130px;
+  // padding-right: 10px;
 }
 .gif-image3 {
-  height: 250px;
-  width: 349.629638671875px;
+  height: 75%;
+  width: 45%;
   top: 18px;
   border-radius: 0px;
-  margin-top: -130px;
-  margin-left: 400px;
+  // padding-right: 10px;
 }
 .gif-image4 {
-  height: 250px;
-  width: 349.629638671875px;
+  height: 80%;
+  width: 80%;
   top: 18px;
   border-radius: 0px;
   margin-top: 30px;
 }
 .gif-image5 {
-  height: 250px;
-  width: 349.629638671875px;
+  height: 80%;
+  width: 80%;
   top: 18px;
   border-radius: 0px;
   margin-top: 80px;

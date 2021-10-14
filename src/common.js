@@ -1,12 +1,17 @@
 import {
-  faFacebookSquare, faTwitterSquare, faInstagramSquare, faLinkedin,
+  faFacebookSquare, faTwitterSquare, faInstagramSquare, faLinkedin
 } from '@fortawesome/free-brands-svg-icons'
+import {
+  faPhoneSquare,
+  faEnvelopeSquare,
+  faMapMarked
+} from "@fortawesome/free-solid-svg-icons";
 import Jquery from 'jquery'
 export default {
   APP_NAME: 'INCREMENT TECHNOLOGIES INC.',
   APP_TAGLINE: 'WE WANT YOU TO SUCCEED!',
   APP_EMAIL: 'incrementtech2020@gmail.com',
-  APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES. All Rights Reserved. ' + new Date().getFullYear(),
+  APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES. All Rights Reserved. ',
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'https://incrementtechnologies.com',
   APP_PHONE_NUMBER: '436-1622',
@@ -20,9 +25,9 @@ export default {
 
   footer1_contents: [{
     name: 'ABOUT US',
-    description: '',
+    description: 'Increment Technologies is a team of highly motivated technopreneurs. We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthy online products.',
     subMenu: [{
-      title: 'Increment Technologies is a team of highly motivated technopreneurs. We do projects with a focus on quality and customer satisfaction. Our experience over the years let us create worthy online products.',
+      title: null,
       icon: null,
       url: null,
     }],
@@ -32,12 +37,12 @@ export default {
     description: null,
     subMenu: [{
       title: '436-1622',
-      icon: faFacebookSquare,
+      icon: faPhoneSquare,
       url: null,
     },
     {
       title: 'incrementtech2020@gmail.com',
-      icon: faFacebookSquare,
+      icon: faEnvelopeSquare,
       url: 'incrementtech2020@gmail.com',
     }],
   }],
@@ -99,22 +104,15 @@ export default {
       url: 'https://www.linkedin.com/company/incrementtechnologies',
     }],
   },
-  // {
-  //   name: null,
-  //   description: null,
-  //   subMenu: [{
-  //     title: null,
-  //     icon: null,
-  //     url: null,
-  //   }],
-  // },
   {
     name: 'LOCATION',
-    description: null,
+    description: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
+    icon: faMapMarked,
+    url: 'https://www.facebook.com/incrementtechnologies',
     subMenu: [{
-      title: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
-      icon: faTwitterSquare,
-      url: 'https://www.facebook.com/incrementtechnologies',
+      title: null,
+      icon: null,
+      url: null,
     }],
   }
   ],
