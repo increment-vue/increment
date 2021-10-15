@@ -1,6 +1,6 @@
 <template>
-  <div class="incre-row">
-    <div class="cw-banner bg-primary" id="home-banner"></div>
+  <div class="incre-row" id="home-banner">
+    <div class="cw-banner bg-primary" ></div>
     <div class="item-holder bg-gradient">
       <div class="title-holder">
         <h1 class="title">
@@ -18,9 +18,9 @@
         >
       </div>
     </div>
-    <!-- <div class="white-box">
-    </div> -->
+    <div class="whitebox"></div>
   </div>
+  
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
@@ -65,7 +65,7 @@ h3{
 
 }
 .title {
-  margin-top: 45vh;
+  margin-top: 40%;
   color: #FFFFFF;
   font-size: 40px;
 }
@@ -97,15 +97,16 @@ h3{
   background-position: center,right,center;
   background-repeat: no-repeat,no-repeat,no-repeat;
 }
-.white-box{
-  background: #FFFFFF 25%;
-  position: absolute;
-  width: 92%;
-  height: 10%;
+.whitebox{
+  background: #FFFFFF;
+  padding: 30px;
   margin-left: 5%;
   margin-right: 5%;
-  left: 7.5vh;
-  top: 90.3vh;
+  position: absolute;
+  width: 90%;
+  top: 93.6%;
+  // bottom: -85.9%;
+  
 }
 .bg-primary {
   background-image: url("../../assets/img/Banner-Meridian.png");
@@ -139,22 +140,18 @@ h3{
   }
   @keyframes text-animation {
     from {left: -50px;}
-    to {left: 0px;}
+    to {left: -20px;}
   }
-}
-@media only screen and (max-width: 992px){
-    .white-box{
-      background: #FFFFFF 25%;
-      position: absolute;
-      width: 92%;
-      height: 10%;
-      margin-left: 5%;
-      margin-right: 5%;
-      left: 7.5vh;
-      top: 352.8vh;
+  .whitebox{
+    background: white ;
+    position: absolute;
+    width: 92%;
+    height: 10%;
+    margin-left: 4%;
+    margin-right: 4%;
+    top: 1130px;
   }
-}
-@media only screen and (max-width: 992px) {
+  //buttons
   button {
     padding: 10px 30px;
     font-size: 20px;
@@ -172,8 +169,7 @@ h3{
   .bg-primary{
     display: none;
   }
-}
-@media only screen and (max-width: 992px) {
+  //boxes
   .item-holder {
     top: 30%;
   }
@@ -183,8 +179,6 @@ h3{
     width: 992px;
     height: 1190px; 
   }
-}
-@media only screen and (max-width: 992px) {
   .item-holder {
     top: 45%;
   }
@@ -196,8 +190,122 @@ h3{
   }
    h3{
     font-size: 20px;
-    line-height: 27px;
-    text-align: center;
+    line-height: 27px; 
+    padding-right: 130px;
+    padding-left: 130px; 
+  }
+}
+//ipad mode
+@media only screen and (max-width: 768px) {
+  .bg-gradient{
+    background-position: top center;
+    background-size: cover,634px,cover;
+    width: 768px;
+    height: 1190px; 
+  }
+    .title{
+    margin-top: 55%;
+    font-size: 50px;
+    margin-bottom: 5%;
+    color: black;
+  }
+   h3{
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 27px; 
+    padding-right: 10px;
+    padding-left: 10px; 
+  }
+  button{
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .bg-gradient{
+    background-position: top center;
+    background-size: cover,634px,cover;
+    width: 540px;
+    height: 1190px; 
+  }
+}
+//phone mode
+@media only screen and (max-width: 375px) {
+  .bg-gradient{
+    background-position: top center;
+    background-size: cover,500px,cover;
+    width: 375px;
+    height: 1190px; 
+  }
+    .title{
+    margin-top: 150%;
+    font-size: 50px;
+    margin-bottom: 5%;
+    color: black;
+  }
+   h3{
+    font-size: 20px;
+    line-height: 27px; 
+    padding-right: 5px;
+    padding-left: 5px; 
+  }
+}
+@media only screen and (max-width: 414px) {
+  .bg-gradient{
+    background-position: top center;
+    background-size: cover,500px,cover;
+    width: 414px;
+    height: 1190px; 
+  }
+    .title{
+    margin-top: 130%;
+    font-size: 50px;
+    margin-bottom: 5%;
+    color: black;
+  }
+   h3{
+    font-size: 20px;
+    line-height: 27px; 
+    padding-right: 5px;
+    padding-left: 5px; 
+  }
+    .whitebox{
+    top: 1117.5px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .bg-gradient{
+    background-position: top center;
+    background-size: cover,500px,cover;
+    width: 375px;
+    height: 1190px; 
+  }
+    .title{
+    margin-top: 130%;
+    font-size: 30px;
+    margin-bottom: 5%;
+    color: black;
+  }
+   h3{
+    font-size: 20px;
+    line-height: 27px; 
+  }
+  .whitebox{
+    position: relative;
+    top: 122.2%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .bg-gradient{
+    background-position: top center;
+    background-size: cover,500px,cover;
+    width: 320px;
+    height: 1190px; 
+  }
+  .title{
+    margin-top: 140%;
+    b{
+      font-size: 40px;
+    }
   }
 }
 // end of tablet mode //
