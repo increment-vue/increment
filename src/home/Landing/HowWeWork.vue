@@ -1,7 +1,7 @@
 <template>
-  <div class="app-quick-guide">
+  <div class="app-quick-guide" id="how-we-work">
     <center>
-      <div class="w3-container w3-center w3-animate-left">
+      <div>
         <img class="gif-image" :src="require('assets/gif/how-we-work-2.gif')" />
       </div>
       <h1 class="titletText">HOW WE WORK</h1>
@@ -20,10 +20,7 @@
           />
         </div>
       </div>
-    </center>
-    <center>
-      <!-- card -->
-      <div class="row details-holder">
+      <div class="row details-holder text-center">
         <div
           v-for="(item, index) in content"
           :key="index"
@@ -36,7 +33,10 @@
             <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
             <p class="title">{{ item.title }}</p>
           </div>
-          <div v-if="actives.length > 0 && actives.includes(index)" class="row">
+          <div
+            v-if="actives.length > 0 && actives.includes(index)"
+            class="row item-clicked"
+          >
             <div class="col-sm-4">
               <p class="text">
                 <font-awesome-icon
@@ -53,35 +53,35 @@
           </div>
         </div>
       </div>
-      <!-- content -->
-      <!-- end of content -->
+      <div class="row mt-5">
+        <div class="col-sm">
+          <img
+            class="gif-image4"
+            :src="require('assets/gif/how-we-work-4.gif')"
+          />
+        </div>
+        <div class="col-sm">
+          <img
+            class="gif-image5"
+            :src="require('assets/gif/how-we-work-5.gif')"
+          />
+        </div>
+        <div class="col-sm">
+          <img
+            class="gif-image4"
+            :src="require('assets/gif/how-we-work-6.gif')"
+          />
+        </div>
+        <div class="col-sm">
+          <img
+            class="gif-image5"
+            :src="require('assets/gif/how-we-work-7.gif')"
+          />
+        </div>
+      </div>
     </center>
-    <div class="row">
-      <div class="col-sm">
-        <img
-          class="gif-image4"
-          :src="require('assets/gif/how-we-work-4.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image5"
-          :src="require('assets/gif/how-we-work-5.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image4"
-          :src="require('assets/gif/how-we-work-6.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image5"
-          :src="require('assets/gif/how-we-work-7.gif')"
-        />
-      </div>
-    </div>
+    <!-- content -->
+    <!-- end of content -->
   </div>
 </template>
 
@@ -106,11 +106,14 @@
 }
 .details-holder .item-holder:hover {
   cursor: pointer;
-  background-image: linear-gradient(50.90deg, $gradientSecondary, $gradientPrimary, $gradientSecondary,);
+  background-image: linear-gradient(
+    50.9deg,
+    $gradientSecondary,
+    $gradientPrimary,
+    $gradientSecondary
+  );
 }
 .details-holder-click {
-  margin-left: 10%;
-  margin-right: 10%;
   display: flex;
 }
 .line1 {
@@ -183,66 +186,120 @@
 }
 .gif-image {
   height: 250px;
-  width: 349.629638671875px;
-  top: 18px;
+  width: 350px;
   border-radius: 0px;
+  animation-name: animateImage;
+  animation-duration: 3s;
+  position: relative;
 }
 .gif-image2 {
   height: 250px;
-  width: 349.629638671875px;
+  width: 350px;
   top: 18px;
   border-radius: 0px;
-  margin-top: -130px;
-  margin-right: 400px;
+  animation-name: animateImage2;
+  animation-duration: 3s;
+  position: relative;
 }
 .gif-image3 {
   height: 250px;
-  width: 349.629638671875px;
+  width: 350px;
   top: 18px;
   border-radius: 0px;
-  margin-top: -130px;
-  margin-left: 400px;
+  animation-name: animateImage3;
+  animation-duration: 3s;
+  position: relative;
 }
 .gif-image4 {
-  height: 250px;
-  width: 349.629638671875px;
+  height: 80%;
+  width: 80%;
   top: 18px;
   border-radius: 0px;
   margin-top: 30px;
 }
 .gif-image5 {
-  height: 250px;
-  width: 349.629638671875px;
+  height: 80%;
+  width: 75%;
   top: 18px;
   border-radius: 0px;
-  margin-top: 80px;
+}
+@keyframes animateImage {
+  100% {
+    transform: translate(0px, 15px) rotate(0deg);
+  }
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+@keyframes animateImage2 {
+  80% {
+    transform: translate(-200px, 0px) rotate(0deg);
+  }
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+@keyframes animateImage3 {
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  0% {
+    transform: translate(-200px, 0px) rotate(0deg);
+  }
 }
 @media only screen and (max-width: 992px) {
   .details-holder {
     display: block;
-    width: 100%;
-    margin: unset;
+    width: 105%;
     overflow-y: hidden;
     margin-bottom: 100px;
+    text-align: center;
   }
   .item-holder-click {
-    min-height: 220px;
-    width: 40%;
+    min-height: 200px;
+    width: 100%;
     border-radius: 10px;
-    animation-duration: 0ms;
-    margin-top: 50px;
-    padding-top: 30px;
-    margin-right: 2%;
+  }
+  .item-clicked {
+    justify-content: center;
+    text-align: center;
   }
   .item-holder {
-    width: 90%;
+    width: 100%;
     margin-left: 5%;
     margin-right: 5%;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .gif-image {
+    height: 200px;
+    width: 300px;
+    border-radius: 0px;
+  }
+  .gif-image2 {
+    height: 200px;
+    width: 300px;
+    border-radius: 0px;
+  }
+  .gif-image3 {
+    height: 200px;
+    width: 300px;
+    border-radius: 0px;
   }
 }
 </style>
 
 <script>
+// window.addEventListener('scroll', () => {
+//   console.log(window.scrollY)
+
+//   if (window.scrollY >= 600 && window.scrollY <= 1300) {
+//     document.getElementById('h3-after').style.marginLeft = '0rem'
+//   } else {
+//     document.getElementById('h3-after').style.marginLeft = '27rem'
+//   }
+// })
 import {
   faHandshake,
   faRocket,

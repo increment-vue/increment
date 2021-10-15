@@ -407,7 +407,7 @@ img {
   }
   .header-section { //white space
     float: left;
-    width: 105%;
+    width: 100%;
     margin-top: -5px;
   }
   .nav-item {
