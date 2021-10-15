@@ -20,33 +20,52 @@
     </div>
     <div class="whitebox"></div>
   </div>
-  
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.incre-row {
+  height: 100vh;
+  width: 100%;
+}
 button {
   margin-top: 3%;
   border-radius: 50px;
   border: 1px solid;
-  box-shadow: 0px 0px 1px #FFFFFF;
-  width: 250px;
-  height: 80px;
-  color: #028170;
-  background-color: white;
-  margin-bottom: 50px;
+  box-shadow: 0px 0px 1px $white;
+  width: 28vh;
+  height: 9vh;
+  color: $green;
+  background-color: $white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2.5vh;
 }
 button:hover {
-  background: #00E68A;
-  border: 1px solid #FFFFFF;
+  background: $success;
+  border: 1px solid $white;
   box-sizing: border-box;
-  box-shadow: 0px 0px 1px #FFFFFF;
+  box-shadow: 0px 0px 1px $white;
   border-radius: 50px;
 }
 a button:hover{
-  color: white;
+  color: $white;
 }
+//left side container
+.cw-banner {
+  width: 42%;
+  float: left;
+  height: 100vh;
+}
+// end of left side container
+//leftside side background
+.bg-primary {
+  background-image: url("../../assets/img/Banner-Meridian.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+//end of left side background
+//right side container
 .item-holder {
   float:left;
   width: 58%;
@@ -54,24 +73,30 @@ a button:hover{
   padding-left: 8vh;
   padding-right: 5vh;
 }
+// end of right side container
+//right side background
+.bg-gradient{
+  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
+  url("../../assets/img/gif-banner.gif"),
+  url("../../assets/img/Increment_office.jpeg");
+  background-size: cover,75vh,cover;
+  background-position: center,right,center;
+  background-repeat: no-repeat,no-repeat,no-repeat;
+}
+//end of right side background
 h3{
-  margin-top: 2vh;
   font-weight: normal;
   font-size: 20px;
-  line-height: 27.24px;
-  color: #FFFFFF;
+  line-height: 4.26vh;
+  color: $white;
   padding-right: 35vh;
-  // overflow-wrap: break-word;
-
 }
 .title {
-  margin-top: 40%;
-  color: #FFFFFF;
-  font-size: 40px;
+  margin-top: 45vh;
+  color: $white;
 }
 .title b{
-  color: #FFFFFF;
-  margin-top: 30%;
+  color: $white;
   line-height: 68px;
   font-weight: 800;
   font-size: 50px;
@@ -88,79 +113,36 @@ h3{
   to {left: 0px;}
 }
 // end of text animation //
-
-.bg-gradient{
-  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
-  url("../../assets/img/gif-banner.gif"),
-  url("../../assets/img/Increment_office.jpeg");
-  background-size: cover,70vh,cover;
-  background-position: center,right,center;
-  background-repeat: no-repeat,no-repeat,no-repeat;
-}
 .whitebox{
-  background: #FFFFFF;
-  padding: 30px;
+  background: $white;
   margin-left: 5%;
-  margin-right: 5%;
-  position: absolute;
+  margin-right: 3%;
+  top: 93%;
   width: 90%;
-  top: 93.6%;
-  // bottom: -85.9%;
-  
+  height: 7%;
+  position: absolute;
 }
-.bg-primary {
-  background-image: url("../../assets/img/Banner-Meridian.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.cw-banner {
-  width: 42%;
-  float: left;
-  height: 100vh;
-}
-.incre-row {
-  height: 900px;
-}
+
 // tablet mode //
 @media only screen and (max-width: 992px) {
-  .item-holder {
+ .item-holder {
     width: 80%;
     top: 60%;
   }
   .cw-banner {
     height: 75vh;
   }
-  .title-holder{
-    position: relative;
-    animation-name: text-animation;
-    animation-duration: 1s;  
-    animation-fill-mode: forwards;
-  }
-  @keyframes text-animation {
-    from {left: -50px;}
-    to {left: -20px;}
-  }
-  .whitebox{
-    background: white ;
+  .whitebox{    
     position: absolute;
     width: 92%;
     height: 10%;
     margin-left: 4%;
     margin-right: 4%;
-    top: 1130px;
+    top: 1143px;
   }
   //buttons
   button {
-    padding: 10px 30px;
-    font-size: 20px;
-    margin-bottom: 15%;
-    background: #FFFFFF;
-    border: 1px solid #028170;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 1px #FFFFFF;
-    border-radius: 50px;
+    font-size: 15px;
   }
   .item-holder {
     text-align: center !important;
@@ -170,23 +152,16 @@ h3{
     display: none;
   }
   //boxes
-  .item-holder {
-    top: 30%;
-  }
   .bg-gradient{
     background-position: top center;
     background-size: cover,634px,cover;
     width: 992px;
     height: 1190px; 
   }
-  .item-holder {
-    top: 45%;
-  }
-    .title{
+  .title{
     margin-top: 55%;
     font-size: 50px;
     margin-bottom: 5%;
-    color: black;
   }
    h3{
     font-size: 20px;
@@ -203,11 +178,8 @@ h3{
     width: 768px;
     height: 1190px; 
   }
-    .title{
-    margin-top: 55%;
-    font-size: 50px;
-    margin-bottom: 5%;
-    color: black;
+  .title b{
+    font-size: 40px;
   }
    h3{
     margin-top: 30px;
@@ -230,24 +202,10 @@ h3{
 }
 //phone mode
 @media only screen and (max-width: 375px) {
-  .bg-gradient{
-    background-position: top center;
-    background-size: cover,500px,cover;
-    width: 375px;
-    height: 1190px; 
+  .whitebox{
+    top: 1110.5px !important;
   }
-    .title{
-    margin-top: 150%;
-    font-size: 50px;
-    margin-bottom: 5%;
-    color: black;
-  }
-   h3{
-    font-size: 20px;
-    line-height: 27px; 
-    padding-right: 5px;
-    padding-left: 5px; 
-  }
+
 }
 @media only screen and (max-width: 414px) {
   .bg-gradient{
@@ -260,7 +218,7 @@ h3{
     margin-top: 130%;
     font-size: 50px;
     margin-bottom: 5%;
-    color: black;
+    color: $black;
   }
    h3{
     font-size: 20px;
@@ -279,19 +237,8 @@ h3{
     width: 375px;
     height: 1190px; 
   }
-    .title{
-    margin-top: 130%;
-    font-size: 30px;
-    margin-bottom: 5%;
-    color: black;
-  }
-   h3{
-    font-size: 20px;
-    line-height: 27px; 
-  }
   .whitebox{
-    position: relative;
-    top: 122.2%;
+    top: 1124px !important;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -301,11 +248,8 @@ h3{
     width: 320px;
     height: 1190px; 
   }
-  .title{
-    margin-top: 140%;
-    b{
-      font-size: 40px;
-    }
+  .whitebox{
+    top: 1133.8px !important;
   }
 }
 // end of tablet mode //
