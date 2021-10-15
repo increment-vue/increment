@@ -92,40 +92,39 @@ export default {
 @media only screen and (max-width: 992px) {
   .row {
     display: flex;
-    flex-direction: column;
-    padding-left: 35%;
+    flex-direction: column; 
+    
   }
-
   .icon-container {
-    width: 80vh;
     margin-bottom: 10vh;
+    width: 69vh;
+    position: relative;
+    left: 75%;
   }
-  
   .button1 {
-    margin-bottom: 5vh;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .row {
+    display: flex;
+    flex-direction: column; 
+  }
+  .icon-container {
+    margin-bottom: 10vh;
+    width: 100%;
+    left: 4%;
   }
 }
 
 //button move to the center
 @media only screen and (max-width: 992px) {
   button.button2 {
-    float: left;
-    margin-left: 79vh;
+    float: right;
   }
-
   button.button2:hover {
-  background-color: #FFFFFF;
-  color: $primary;
-  border-radius: 50px;
-  border: 2px solid black;
-  padding: 10px 30px;
-  text-align: center;
-  margin-top: 10vh;
-  font-weight: bold;
-  outline-color: white;
-  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
-  border-color: #8F00B5;
-  float: left;
+    float: right;
   }
 }
 
@@ -148,7 +147,7 @@ export default {
   border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
   padding: 10px;
-  width: 120px;
+  width: 40%;
   font-size: 81%;
   //  border: solid 1px #e5e5e5;
   // outline-color: white;
@@ -167,7 +166,7 @@ export default {
   border: 2px solid black;
   padding: 10px 30px;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 6%;
   font-weight: bold;
   outline-color: white;
   box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
@@ -204,7 +203,7 @@ export default {
   border: 2px solid black;
   padding: 10px 30px;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 6%;
   font-weight: bold;
   outline-color: white;
   box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
@@ -212,14 +211,11 @@ export default {
   border-color: purple;
 }
 
-button.button2 {
-  margin-right: -100px;
-}
+
 
 .row {
-  margin-top: 10vh;
-  margin-left: -15vh;
-  margin-right: -15vh;
+  margin-top: 8vh;
+  text-align: center; 
 }
 
 //container for project data
@@ -262,6 +258,7 @@ button.button2 {
   float: left;
   background: linear-gradient(180deg, #8F00B5 0%, #00B89F 100%);
   padding-bottom: 100px;
+  min-height: 100vh;
 }
 .container {
   padding-top: 15vh;
