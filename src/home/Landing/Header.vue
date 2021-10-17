@@ -367,8 +367,11 @@ img {
     padding-top:6%
   }
 @media screen and (min-width: 992px){
-    #navbarSupportedContent{
+  #navbarSupportedContent{
     display: none;
+  }
+  .headerName {
+    color: $primary;
   }
   .bg-gradient{
   background-image: white

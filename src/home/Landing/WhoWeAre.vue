@@ -93,21 +93,21 @@
   position:relative;
 }
 
-.curve-bottom{
-  animation-name: curveBtm;
-  animation-duration: 2s;
-  transition: 500ms;
-}
+// .curve-bottom{
+//   animation-name: curveBtm;
+//   animation-duration: 2s;
+//   transition: 500ms;
+// }
 
-@keyframes curve {
-  0% {transform: translate(-200px,200px) rotate(180deg); }
-  100% {transform: translate(0px, 0px) rotate(0deg);}
-}
+// @keyframes curve {
+//   0% {transform: translate(-200px,200px) rotate(180deg); }
+//   100% {transform: translate(0px, 0px) rotate(0deg);}
+// }
 
-@keyframes curveBtm {
-  0% {transform: translate(0px,200px) rotate(0deg); }
-  100% {transform: translate(0px, 0px) rotate(0deg);}
-}
+// @keyframes curveBtm {
+//   0% {transform: translate(0px,200px) rotate(0deg); }
+//   100% {transform: translate(0px, 0px) rotate(0deg);}
+// }
 
 
 h3 {
@@ -194,6 +194,7 @@ p{
 .col-8{
   order: 0;
   left: 0;
+  margin-top:-100px;
 }
 .col-5{
   order: 1;
@@ -201,7 +202,6 @@ p{
 #h3-after, #h3-after2, #h3-after3{
   margin-left: 42.5%!important;
 }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -248,7 +248,7 @@ margin-top: -90%;
 
 <script>
 window.addEventListener('scroll', () => {
-  console.log(window.scrollY)
+  //console.log(window.scrollY)
 
   if (window.scrollY >= 600 && window.scrollY <= 1300) {
     //document.getElementById('introduction').style.opacity = '1'
@@ -266,13 +266,13 @@ window.addEventListener('scroll', () => {
     //document.getElementById('vision').style.opacity = '1'
     document.getElementById('h3-after2').style.marginLeft = '0rem'
     document.getElementById('h3-after3').style.marginLeft = '0rem'
-    var elem = document.getElementById('who-we-are-bottom')
-    elem.classList.add('curve-bottom')
+    //var elem = document.getElementById('who-we-are-bottom')
+    //.classList.add('curve-bottom')
   } else {
     //document.getElementById('vision').style.opacity = '0'
     document.getElementById('h3-after2').style.marginLeft = '27rem'
     document.getElementById('h3-after3').style.marginLeft = '27rem'
-   elem.classList.remove('curve-bottom')
+   //elem.classList.remove('curve-bottom')
   }
 })
 
