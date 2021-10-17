@@ -15,9 +15,8 @@
       </div>
       <div class="row ">
         <span class="col-md-4" v-for="(item, index) in values" :key="index">
-          <div class="single-card d-flex align-items-center" 
+          <div class="single-card d-flex align-items-center mid-row" 
                v-if="item.num === '2' || item.num === '5'"
-               style="position: absolute; bottom:35px; background:white;"
                >
                 <b class="paragraph"> <i>{{ item.desc }}</i> </b>
           </div>
@@ -29,12 +28,11 @@
           </div>
         </span>
       </div>
-      <div style="margin-top:-77px;margin-bottom:-100px;">
+      <div class="bottom-wave">
         <svg style="background:#8f00b5;width:102%;position:absolute;right:0px;margin-bottom:50px;opacity:1;z-index:-2;"
              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="#FFFFFF" fill-opacity="1" d="M0,64L48,64C96,64,192,64,288,96C384,128,480,192,576,208C672,224,768,192,864,165.3C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
           </svg>
-      
       </div>
     </div>
   </div>
@@ -78,10 +76,6 @@ h2 {
   margin: 24px;
   height: 180px;
   width: 92%;
-  //width: 400px; <--for uniform width
-  //height: 10%;
-  //margin-left: 5%;
-  //margin-right: 5%;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -91,11 +85,34 @@ h2 {
 .paragraph {
   font-size: 25px;
   color: #028170;
-  // margin-top: -25%;
 }
-// .rows{
-//   margin-top:-10%;
-// }
+.mid-row{
+  position: absolute; bottom:35px; background:white; 
+}
+.bottom-wave{
+  margin-top:-77px;margin-bottom:-100px;
+}
+@media (max-width: 992px) {
+  .row{
+    //all:none;
+    margin-top: -150px;
+    display: flex;
+    position:none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .single-card{
+    width:300%;
+  }
+  .mid-row{
+    position:relative;
+    bottom:0; background:white; 
+  }
+  .bottom-wave{
+    margin-top:0px;
+  }
+}
 
 @media (max-width: 280px) {
   .cw-banner {
@@ -201,4 +218,7 @@ export default {
     },
   },
 };
+
+console.log(window.scrollY) 
+
 </script>
