@@ -46,7 +46,7 @@
       <div class="button" style="margin-bottom: 100px;">
         <button @click="redirect('technologies')" id="btn">
           View More 
-          <i class="fa fa-angle-right right" style=""></i>
+          <i class="fa fa-angle-right right" style="padding-left: 5px;"></i>
           <i class="fa fa-angle-double-right right"></i>
         </button>
       </div>
@@ -55,19 +55,19 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .banner {
-  background-color: #ffff;
+  background-color: $white;
   float: left;
   width: 100%;
 }
 .title {
   font-weight: 800;
   font-size: 50px;
-  color: #3F0050;
+  color: $primary;
 }
 .desc{
   margin-top: 3vh;
   font-size: 16px;
-  color: #000000;
+  color: $black;
   font-weight: normal;
   text-align: center;
 }
@@ -78,10 +78,10 @@ h3{
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-  color: #3F0050;
+  color: $primary;
 }
 p {
-  color: #000000;
+  color: $black;
   margin-top: 20px;
   width: 300px;
   font-size: 16px;
@@ -98,21 +98,21 @@ p {
   height: 324px;
   border: double 2px transparent;
   border-radius: 10px;
-  background-image: linear-gradient(white, white), linear-gradient(132.58deg, #00B89F 0%, #8F00B5 100%);
+  background-image: linear-gradient($white, $white), linear-gradient(132.58deg, $gradientPrimary 0%, $gradientSecondary 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
 .single-card:hover{
-  background-image: linear-gradient(132.58deg, #00B89F, #8F00B5);
+  background-image: linear-gradient(132.58deg, $gradientPrimary, $gradientSecondary);
   border-radius: 10px;
   p{
-    color: #FFFFFF;
+    color: $white;
   }
   h3{
-    color: #FFFFFF;
+    color: $white;
   }
   .font-awesome-icon{
-    color: #FFFFFF;
+    color: $white;
   }
 }
 .softdev-gif{
@@ -147,27 +147,26 @@ p {
   padding-top: 10vh;
   padding-bottom: 10vh;
   text-align: center;
-  color: white;
+  color: $white;
 }
 .font-awesome-icon{
   margin-top: 40px;
   font-size: 100px;
-  color: #00B89F;
+  color: $secondary;
 }
 #btn {
-  background-color: #FFFFFF;
-  color: #028170;
+  background-color: $white;
+  color: $green;
   border-radius: 50px;
   padding: 10px 30px;
-  text-align: center;
   font-weight: 700;
-  border: 1px solid #028170;
+  border: 1px solid $green;
   position: relative;
   float: right;
   margin-right: 10%;
   margin-left: 10px;
   font-size: 16px;
-  .right{
+    .right{
     font-size: 26px;
     font-weight: 700;
     position: relative;
@@ -176,10 +175,9 @@ p {
   }
 }
 #btn:hover{
-  color: #8F00B5;
-  background: #FFFFFF;
-  border-radius: 50px;
-  border: 1px solid#8F00B5;
+  color: $purple;
+  background: $white;
+  border: 1px solid $purple;
 }
 #btn i:nth-child(2) {
   display: none;
@@ -195,9 +193,9 @@ p {
   .font-awesome-icon{
     margin-top: 5vh;
     font-size: 100px;
-    color: #00B89F;
+    color: $secondary;
     display: block;
-    background: linear-gradient(132.58deg, #00B89F, #8F00B5);
+    background: linear-gradient(132.58deg, $gradientPrimary, $gradientSecondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -205,10 +203,10 @@ p {
 //title and background
 @media only screen and (max-width: 992px) {
   .title{
-    color: #3F0050;
+    color: $primary;
   }
   .desc{
-    color: #000000;
+    color: $black;
   }
 }
 // boxes
@@ -246,7 +244,7 @@ p {
   }
   .font-awesome-icon {
   font-size: 100px;
-  color: #00B89F;
+  color: $secondary;
   display: block;
   }
 }
@@ -266,7 +264,7 @@ p {
     display: inline-block;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
   .sys-ui{
     position: relative;
     left: -15px;
@@ -275,7 +273,7 @@ p {
     left: -15px;
   }
    #btn{
-    left: -275px;
+    left: -310px;
     top: -10px;
   }
 }
@@ -442,7 +440,7 @@ p {
 </style>
 <script>
 import ROUTER from "src/router";
-import { faMobile, faLaptopCode, faCode, faServer } from '@fortawesome/free-solid-svg-icons';
+import { faMobile, faLaptopCode, faCode, faServer, faObjectGroup } from '@fortawesome/free-solid-svg-icons';
 export default {
   data() {
     return {
@@ -456,7 +454,7 @@ export default {
         {
           title: "UI/UX Designs",
           desc: "Adobe Tools (PS, Indesign, After Effects, XD), Figma",
-          src: faLaptopCode,
+          src: faObjectGroup,
         }    
       ],
       list2: [
