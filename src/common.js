@@ -1,5 +1,5 @@
 import {
-  faFacebookSquare, faTwitterSquare, faInstagramSquare, faLinkedin
+  faFacebookSquare, faTwitterSquare, faInstagramSquare, faLinkedin, faYoutubeSquare
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faPhoneSquare,
@@ -102,6 +102,11 @@ export default {
       title: null,
       icon: faLinkedin,
       url: 'https://www.linkedin.com/company/incrementtechnologies',
+    },
+    {
+      title: null,
+      icon: faYoutubeSquare,
+      url: 'https://www.youtube.com/channel/UCHrXkUkrKD--S7W2e5b4LsA',
     }],
   },
   {
