@@ -2,7 +2,7 @@
   <div class="incre-row" id="home-banner">
     <div class="cw-banner bg-primary" ></div>
     <div class="item-holder bg-gradient">
-      <div class="title-holder">
+      <div class="title-holder" id="title-animate">
         <h1 class="title">
           <b>WE WANT YOU TO SUCCEED</b>
         </h1>
@@ -86,7 +86,7 @@ a button:hover{
 //end of right side background
 h3{
   font-weight: normal;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 4.26vh;
   color: $white;
   padding-right: 35vh;
@@ -99,14 +99,16 @@ h3{
   color: $white;
   line-height: 68px;
   font-weight: 800;
-  font-size: 50px;
+  font-size: 40px;
 }
 // text animation //
-.title-holder{
+#title-animate{
   position: relative;
+  margin-left: 0px;
+  transition: 1s;
+  transition-delay: 0.1s;
   animation-name: text-animation;
-  animation-duration: 1s;  
-  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
 @keyframes text-animation {
   from {left: -50px;}
@@ -117,9 +119,9 @@ h3{
   background: $white;
   margin-left: 5%;
   margin-right: 3%;
-  top: 93%;
+  top: 93vh;
   width: 90%;
-  height: 7%;
+  height: 7vh;
   position: absolute;
 }
 
@@ -269,5 +271,14 @@ export default {
       window.open(url, "_blank");
     },
   },
-};
+}
+window.addEventListener('scroll', () => {
+  console.log(window.scrollY)
+
+  if (window.scrollY >= 400) {
+    document.getElementById('title-animate').style.marginLeft = '-35px'
+  } else {
+    document.getElementById('title-animate').style.marginLeft = '0'
+  }
+})
 </script>
