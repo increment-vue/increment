@@ -302,6 +302,30 @@ p {
     top: -10px;
   }
 }
+@media only screen and (max-width: 760px) {
+
+  .sys-ui{
+    position: relative;
+    left: -105px;
+  }
+  .softdev-gif{
+    display: none;
+  }
+  .web-dev{
+    position: relative;
+    width: 338px;
+    height: 520px;
+    left: -105px;
+    p{
+      width: 300px;
+    }
+  }
+  // button
+  #btn{
+    left: -230px;
+    top: -10px;
+  }
+}
 // end of ipad
 //boxes phone
 @media only screen and (max-width: 540px) {
@@ -322,6 +346,38 @@ p {
   #btn{
     top: -20px;
     left: -140px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .title{
+    font-size: 43px;
+  }
+  .desc{
+    font-size: 15px;
+  }
+  .sys-ui{
+    position: relative;
+    left: -180px;
+  }
+  .softdev-gif{
+    display: none;
+  }
+  .low-lev{
+    position: relative;
+    left: -7px;
+  }
+  .mob-dev{
+    position: relative;
+    left: -7px;
+  }
+  .web-dev{
+    position: relative;
+    left: -180px;
+  }
+  // button
+  #btn{
+    position: relative;
+    left: -90px;
   }
 }
 @media only screen and (max-width: 414px) {
