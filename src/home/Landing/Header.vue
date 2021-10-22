@@ -249,25 +249,16 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-<<<<<<< HEAD
 .menuBars{
   color:linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
 }
-=======
-
-
->>>>>>> 690151adfd9d2bf608a5283979ebefebcf507ca1
 .increment-logo{
   margin-bottom: 5px; margin-right: 5px; margin-top: -10%
 }
 .bg-gradient{
-<<<<<<< HEAD
   // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   background-color: transparent;
   padding-bottom: 0px;
-=======
-  // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
->>>>>>> 690151adfd9d2bf608a5283979ebefebcf507ca1
 }
 .navbar-menu-toggler-md {
   text-align: right;
