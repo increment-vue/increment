@@ -86,28 +86,25 @@ export default {
 
 @media only screen and (max-width: 992px) {
   .row {
-    display: flex;
-    flex-direction: column; 
-    
-  }
-  .icon-container {
-    margin-bottom: 10vh;
-    width: 69vh;
+    display: inline-block;
+    flex-direction: column;
     position: relative;
-    left: 75%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .row {
-    display: flex;
-    flex-direction: column; 
+    width: 100%;
   }
   .icon-container {
     margin-bottom: 10vh;
     width: 100%;
-    left: 4%;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    all: unset;
+  }
+  .cw-banner {
+    margin-top: 50px;
+  }
+
 }
 
 //animation scroll into view
@@ -144,6 +141,15 @@ export default {
 .curve {
   width:100%;
   float: left;
+  background-color: $white;
+}
+.top {
+  position: relative;
+  top: -8vh;
+}
+.bottom {
+  position: relative;
+  bottom: -8vh;
   overflow: visible;
   margin-bottom: -6vh;
 }
@@ -167,12 +173,12 @@ export default {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-  color: #3F0050; 
+  color: $primary; 
 }
 
 //container for the services
 .icon-container {
-  background: white;
+  background: $white;
   height: 340px;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
   border-radius: 10px;    
@@ -182,8 +188,11 @@ export default {
   float: left;
   // background: $secondary;
   width: 100%;
-  background: linear-gradient(180deg, #00B89F 0%, #8F00B5 100%);
-
+  background: linear-gradient(180deg, #00B89F 25%, #8F00B5 75%);
+  margin: 15vh 0;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  position: relative;
 }
 
 .title {
@@ -198,8 +207,10 @@ img {
 }
 
 .container {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   text-align: center;
-  color: white;
+  color: $white;
 }
 .row {
   margin-top: 8vh;
@@ -213,7 +224,7 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 70%;
-  color: black;
+  color: $black;
 }
 #our-services{
   height: 100vh;
