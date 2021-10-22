@@ -58,7 +58,7 @@
   // white-space: pre-line;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 30vh;
+  height: 15vh;
 }
 .font-awesome-icon {
   height: 100px;
@@ -108,7 +108,7 @@ h6 {
   border-image-source: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   border-radius: 10px;
   // margin: 10px;
-  min-height: 100vh;
+  min-height: 70vh;
   min-width: 350px;
   padding-top: 50px;
   margin-right: 25px;
