@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-container">
+  <div class="body">
       <div class="navbar navbar-expand-lg fixed-top bg-gradient row ">
         <!-- Desktop View Navbar -->
         <div class="header-section" >
@@ -242,17 +242,20 @@
             </li> 
           </ul>
         </div>
+        <!-- end mobile -->
       </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+
+
 .increment-logo{
   margin-bottom: 5px; margin-right: 5px; margin-top: -10%
 }
 .bg-gradient{
-  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
+  // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
 }
 .navbar-menu-toggler-md {
   text-align: right;
