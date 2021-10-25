@@ -23,6 +23,10 @@
         <div class="bottomImage">
           <img :src="require('assets/gif/case-study-bottom.gif')" alt="bottomGIF">
         </div>
+        <div class="bottomFormatter">
+          <!-- Formatter -->
+          <span></span>
+        </div>
         <div class="bottomButton" @mouseover="isHovered = true" @mouseleave="isHovered = false">
           <button @click="redirect('case-studies')" id="btn">
         View More
@@ -39,6 +43,9 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.bottomFormatter{
+  width: 68%;
+}
 .bottomButton{
   justify-content: end;
 }
@@ -48,7 +55,7 @@
 .bottomImage{
   display: flex;
   height: 60vh;
-  width: 350px;
+  width: 400px;
 }
 .container{
   min-width: 100%;
@@ -58,7 +65,7 @@
   // white-space: pre-line;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 15vh;
+  height: 30vh;
 }
 .font-awesome-icon {
   height: 100px;
@@ -108,7 +115,7 @@ h6 {
   border-image-source: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   border-radius: 10px;
   // margin: 10px;
-  min-height: 70vh;
+  min-height: 100vh;
   min-width: 350px;
   padding-top: 50px;
   margin-right: 25px;
