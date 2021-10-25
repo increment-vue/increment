@@ -1,258 +1,232 @@
 <template>
-  <footer>
-    <div class="footer row">
-      <div class="col-md-5 col-sm-12">
-        <h5 style="margin-top: 10%; font-weight: bold">ABOUT US</h5>
-        <br />
-        <div>
-          <p>
-            Increment Technologies is a team of highly motivated technopreneurs.
-            We do projects with a focus on quality and customer satisfaction.
-            Our experience over the years let us create worthly online products.
-          </p>
-        </div>
-        <span
-          v-for="(item, index) in common.socialIcons"
-          :key="index"
-          class="social-icons-holder"
-          style="padding-right: 25px"
-        >
-          <font-awesome-icon
-            :icon="item.icon"
-            class="social-icon fa-lg"
-            @click="openWindow(item.url)"
-          ></font-awesome-icon>
-        </span>
-      </div>
-      <div class="col-md-5 col-sm-12" id="div2">
-        <h5 style="margin-top: 10%; font-weight: bold">CONTACT US</h5>
-        <br />
-        <ul>
-          <li>
-            <a :href="'tel: (+63 31) '+common.APP_PHONE_NUMBER" style="color: black">
-              <font-awesome-icon
-                :icon="faPhoneAlt"
-                class="social-icons fa-lg"
-              ></font-awesome-icon>
-              <span style="padding: 25px">{{ common.APP_PHONE_NUMBER }}</span>
-            </a>
-          </li>
-          <br />
-          <li>
-            <a
-              :href="'mailto:' + common.APP_EMAIL + '?Subject=INQUIRE'"
-              target="_top"
-              style="color: black"
-              @click="contact('Click email')"
-            >
-              <font-awesome-icon
-                :icon="faEnvelope"
-                class="social-icons fa-lg"
-              ></font-awesome-icon>
-              <span style="padding: 25px">{{ common.APP_EMAIL }}</span>
-            </a>
-          </li>
-          <br />
-          <li id="map-li">
-            <font-awesome-icon
-              :icon="faMapMarker"
-              class="social-icons fa-lg"
-              style="color: black"
-              id="map"
-            ></font-awesome-icon>
-            <a
-              href="https://www.google.com/maps/dir//8WF6%2BH29+The+Meridian,+Cebu+City,+Cebu/@10.323872,123.9098575,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x33a999b33c3e8073:0x6e53cbaa3015872d!2m2!1d123.9101128!2d10.3239233"
-              target="_blank"
-              style="color: black"
-              ><p class="px-lg-5 px-sm-0" style="margin-top: -25px">
-                {{ common.address }}
-              </p></a
-            >
-          </li>
-        </ul>
-      </div>
-      <hr />
-      <span class="copyright">
-        <p>Copyright &copy; {{ common.APP_COPYRIGHT }}.</p>
-      </span>
+  <div>
+    <div class="curve">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="white"
+          fill-opacity="1"
+          d="M1919 0H0V43.2333C0 43.2333 99.234 79.8683 165.681 90.3369C316.558 114.108 422.004 30.1656 553.944 43.2333C678.534 55.5728 741.733 95.7704 866.339 107.944C1005.3 121.52 1083.76 110.657 1222.8 97.9025C1382.48 83.2545 1469.45 47.1908 1629.76 43.2333C1742.83 40.4416 1859.81 58.2952 1919 58.2952V0Z"
+        ></path>
+      </svg>
     </div>
-  </footer>
+    <div class="logo-handler">
+      <a class="navbar-brand">
+        <img class="logo" src="../../assets/img/logo.png" />
+        <label class="site-name">
+          <b class="increment-white"> &nbsp;INCREMENT</b>
+          <br />
+          <b class="increment-white">&nbsp; TECHNOLOGIES INC.</b>
+        </label>
+        <br />
+        <label class="mt-3">{{ common.APP_TAGLINE }}</label>
+      </a>
+    </div>
+    <div clas="footer-holder">
+      <div class="row container-handler">
+        <div class="col-sm-6">
+          <div v-for="(item, index) in common.footer1_contents" :key="index">
+            <label class="title-name"
+              ><b>{{ item.name }}</b></label
+            >
+            <p class="description">{{ item.description }}</p>
+            <div
+              v-for="(sItem, sIndex) in item.subMenu"
+              :key="sIndex"
+              class="row submenu"
+            >
+              <div class="col-sm-1">
+                <font-awesome-icon
+                  class="fontawesome-icon"
+                  :icon="sItem.icon"
+                />
+              </div>
+              <div class="col-sm-11">
+                <label style="color: white; margin-left: -2%">{{
+                  sItem.title
+                }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div v-for="(item, index) in common.footer2_contents" :key="index">
+            <b class="title-name">{{ item.name }}</b>
+            <p>
+              <a class="font-url" :href="item.url">{{ item.title }}</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div v-for="(item, index) in common.footer3_contents" :key="index">
+            <label class="title-name">
+              <b>{{ item.name }}</b></label
+            >
+            <br />
+            <span v-for="(sItem, sIndex) in item.subMenu" :key="sIndex">
+              <a :href="sItem.url" target="_blank"
+                ><font-awesome-icon
+                  class="fontawesome-icon2"
+                  :icon="sItem.icon"
+              /></a>
+              <label>{{ sItem.title }}</label>
+            </span>
+            <div class="row">
+              <div class="col-sm-1">
+                <font-awesome-icon class="fontawesome-icon" :icon="item.icon" />
+              </div>
+              <div class="col-sm-11">
+                <label class="mt-2">{{ item.description }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="line" />
+        <p class="copyright">Copyright @{{ common.APP_COPYRIGHT }}</p>
+      </div>
+    </div>
+  </div>
 </template>
-
-<style scoped>
-footer {
-  width: 100%;
-  min-height: 200px;
-  float: left;
-  overflow-y: hidden;
-  background: #e9e9e9;
+<style scoped lang="scss">
+@import "~assets/style/colors.scss";
+.container-handler {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: $black;
+  padding-top: 2%;
+  align-content: left;
 }
-.footer {
-  width: 90%;
-  float: left;
-  min-height: 50px;
-  margin-left: 5%;
-  margin-right: 5%;
-  overflow-y: hidden;
-}
-.footer-widget {
-  width: 25%;
-  float: left;
-  margin-top: 50px;
-  list-style: none;
-  padding: 0px;
-  margin-bottom: 0px;
-}
-
-.footer-widget li {
-  list-style: none;
-  padding: 5px 10px 5px 10px;
-  float: left;
-  width: 100%;
-  color: #6f6f6f !important;
-}
-.footer-widget,
-.footer-widget li a {
-  color: #6f6f6f !important;
-}
-.footer-widget .title {
-  color: #4c4c4c;
-}
-.footer-widget li a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-footer-widget .title:hover {
-  cursor: default;
-}
-.community .title {
+.curve {
   width: 100%;
   float: left;
-  height: 40px;
+  height: 200px;
+}
+.font-url {
+  line-height: 0px;
+  color: $white;
+}
+.font-url1 {
+  line-height: 0px;
+  color: $white;
+  margin-top: 2%;
+}
+.fontawesome-icon {
+  font-size: 25px;
+  color: $secondary;
   text-align: left;
-  padding-top: 5px;
+  margin-right: 20px;
 }
-.community .links {
-  width: 100%;
-  float: left;
+.fontawesome-icon2 {
+  font-size: 30px;
+  color: $white;
+  text-align: left;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+.fontawesome-icon2:hover {
+  color: $secondary;
+}
+.title-name {
+  font-size: 20px;
+  color: $white;
+  justify-content: left;
+  margin: 0 auto;
+}
+.description {
+  color: white;
+  width: 60%;
 }
 li {
-  position: flex;
+  list-style: none;
+  color: $white;
 }
-ul {
-  list-style-type: none;
+
+.icon-holder {
+  width: 80%;
+  align-items: left;
+  justify-content: left;
 }
-.community .link i {
-  font-size: 24px;
-  padding: 0 10px 0 10px;
-  width: 20%;
-}
-.community .link i:hover {
-  color: #1caceb;
-  cursor: pointer;
-}
-.text-gray {
-  color: #212529;
-}
-.contact-us li i {
-  padding-right: 10px;
-}
-.contact-us li .fa-phone {
-  padding-right: 9px;
-}
-.contact-us li .fa-mobile-alt {
-  padding-right: 12px;
+
+.col-sm-6{
+  margin-right: -3%;
 }
 .copyright {
   width: 100%;
-  float: left;
-  padding-top: 15px;
-  padding-bottom: 5px;
-  font-size: 12px;
   text-align: center;
-  margin-top: 5px;
-  color: #6f6f6f !important;
+  color: $white;
+  font-size: 13px;
+  // margin-top: 5vh;
+}
+.line {
+  margin-top: 5%;
+  background-color: $secondary;
+  width: 1500px;
+  height: 1px;
+}
+.mt-3 {
+  color: $white;
+  font-size: 17px;
+}
+.mt-2 {
+  color: white;
+  margin-left: 15px;
+}
+.logo {
+  width: 53px;
+  height: 48px;
+  margin-top: -12%;
+  padding-right: 2px;
+}
+.logo-handler {
+  background-color: $black;
+  padding-left: 10%;
+}
+.increment-white {
+  color: $secondary;
+  font-size: 18px;
 }
 @media screen and (max-width: 992px) {
-  .footer-widget {
+  .container-handler {
     width: 100%;
     text-align: center;
-    margin-right: 0%;
-    padding: 0px;
+    justify-content: center;
+    align-content: center;
   }
-  .community .title {
+  .description {
+    width: 100%;
+  }
+  .logo-handler {
     text-align: center;
   }
-  .community i {
-    width: 20%;
+  .site-name {
+    text-align: left;
   }
-  .social-icons-holder {
-    width: 10%;
-    margin-top: 2vh;
-  }
-  .social-icons {
-    color: black;
-    margin-left: -40px;
-  }
-  .social-icon {
-    color: black;
-  }
-}
-hr {
-  height: 2px;
-  color: white;
-  background-color: white;
-  width: 100%;
-}
-.action-link:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  color: #00b89f;
-}
-
-@media screen and (max-width: 640px) {
-  .footer {
+  .submenu {
     text-align: center;
   }
-
-  #map {
-    float: left;
-    margin-left: 3px;
+  .fontawesome-icon2:hover {
+    color: $secondary;
   }
-
-  #map-li {
-    margin-top: 15px;
-  }
-
-  #div2 {
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
+  .fontawesome-icon2 {
+  margin-bottom: 10px;
+}
 }
 </style>
 <script>
-import ROUTER from 'src/router'
-import COMMON from 'src/common.js'
-import { faCopyright, faEnvelope, faMapMarker, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
-// import {faFacebook, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import ROUTER from "src/router";
+import COMMON from "src/common.js";
+
 export default {
-  mounted() {},
   data() {
     return {
       common: COMMON,
-      faCopyright: faCopyright,
-      faEnvelope: faEnvelope,
-      faMapMarker: faMapMarker,
-      faPhoneAlt: faPhoneAlt,
     };
   },
   methods: {
     redirect(parameter) {
       ROUTER.push(parameter);
     },
-    openWindow(url) {
-      window.open(url, "_BLANK");
-    },
   },
 };
 </script>
+

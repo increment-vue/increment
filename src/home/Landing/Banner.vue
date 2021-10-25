@@ -1,221 +1,126 @@
 <template>
-  <div class="incre-row">
-    <div class="cw-banner bg-primary" id="home-banner"></div>
-    <div class="item-holder bg-gradient">
-      <div class="title-holder">
-        <h1 class="title">
-          <b>WE WANT YOU TO SUCCEED</b>
-        </h1>
-        <h3>
-          We create beautiful and secured websites, and mobile applications.
-          Just relax and we will give solutions to your needs. Got something
-          awesome for us to work on?
-        </h3>
-        <a
-          href="https://calendly.com/incrementtech2020/services-offered"
-          target="_blank"
-          ><button>Contact Us</button></a
-        >
-      </div>
+  <div class="body" id="banner">
+    <div class="meridian"></div>
+    <div class="banner-content">
+      <h1>WE WANT YOU TO SUCCEED</h1>
+      <h4>
+        We create beautiful and secured websites, and mobile applications. Just
+        relax and we will give solutions to your needs. Got something awesome
+        for us to work on?
+      </h4>
+      <roundBtn
+        :text="'Contact Us'"
+        :target="'_blank'"
+        :route="'https://calendly.com/incrementtech2020/services-offered'"
+        :styles="{
+          backgroundColor: colors.white,
+          color: colors.green,
+          borderColor: colors.green,
+        }"
+        :hoverStyles="{
+          backgroundColor: colors.success,
+          color: colors.white,
+          borderColor: colors.white,
+        }"
+      />
     </div>
-    <div class="white-box">
-    </div>
+    <div class="white-box"></div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-button {
-  margin-top: 3%;
-  border-radius: 50px;
-  border: 1px solid;
-  box-shadow: 0px 0px 1px #FFFFFF;
-  width: 250px;
-  height: 80px;
-  color: #028170;
-  background-color: white;
-  margin-bottom: 50px;
-  font-weight: bold;
-  font-size: 20px;
-}
-button:hover {
-  background: #00E68A;
-  border: 1px solid #FFFFFF;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 1px #FFFFFF;
-  border-radius: 50px;
-}
-a button:hover{
-  color: white;
-}
-.item-holder {
-  float:left;
-  width: 58%;
+.meridian {
+  display: block;
+  width: 40%;
   height: 100vh;
-  padding-left: 8vh;
-  padding-right: 5vh;
-}
-h3{
-  margin-top: 2vh;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 27.24px;
-  color: #FFFFFF;
-  padding-right: 35vh;
-  // overflow-wrap: break-word;
-
-}
-.title {
-  margin-top: 45vh;
-  color: #FFFFFF;
-  font-size: 40px;
-}
-.title b{
-  color: #FFFFFF;
-  margin-top: 30%;
-  line-height: 68px;
-  font-weight: 800;
-  font-size: 50px;
-}
-// text animation //
-.title-holder{
-  position: relative;
-  animation-name: text-animation;
-  animation-duration: 1s;  
-  animation-fill-mode: forwards;
-}
-@keyframes text-animation {
-  from {left: -50px;}
-  to {left: 0px;}
-}
-// end of text animation //
-
-.bg-gradient{
-  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%),
-  url("../../assets/img/gif-banner.gif"),
-  url("../../assets/img/Increment_office.jpeg");
-  background-size: cover,70vh,cover;
-  background-position: center,right,center;
-  background-repeat: no-repeat,no-repeat,no-repeat;
-}
-.white-box{
-  background: #FFFFFF 25%;
-  position: absolute;
-  width: 92%;
-  height: 10%;
-  margin-left: 5%;
-  margin-right: 5%;
-  left: 7.5vh;
-  top: 90.3vh;
-}
-.bg-primary {
+  float: left;
   background-image: url("../../assets/img/Banner-Meridian.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-.cw-banner {
-  width: 42%;
-  float: left;
+
+.banner-content {
+  width: 60%;
   height: 100vh;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: linear-gradient(
+      228.21deg,
+      rgba(143, 0, 181, 0.9) -0.03%,
+      rgba(0, 184, 159, 0.93) 100%
+    ),
+    url("../../assets/img/gif-banner.gif"),
+    url("../../assets/img/Increment_office.jpeg");
+  background-size: cover, 60vh, cover;
+  background-position: center, right, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  padding-top: 45vh;
+  padding-bottom: 30vh;
 }
-.incre-row {
-  height: 900px;
+
+.white-box {
+  display: block;
+  background-color: $white;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+  top: 93vh;
+  height: 7vh;
+  width: 90%;
 }
-// tablet mode //
-@media only screen and (max-width: 992px) {
-  .item-holder {
-    width: 80%;
-    top: 60%;
-  }
-  .cw-banner {
-    height: 75vh;
-  }
-  .title-holder{
-    position: relative;
-    animation-name: text-animation;
-    animation-duration: 1s;  
-    animation-fill-mode: forwards;
-  }
-  @keyframes text-animation {
-    from {left: -50px;}
-    to {left: 0px;}
-  }
+
+h1 {
+  color: $white;
 }
-@media only screen and (max-width: 992px){
-    .white-box{
-      background: #FFFFFF 25%;
-      position: absolute;
-      width: 92%;
-      height: 10%;
-      margin-left: 5%;
-      margin-right: 5%;
-      left: 7.5vh;
-      top: 352.8vh;
-  }
+
+h4 {
+  color: $white;
+  padding-right: 20%;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
 }
-@media only screen and (max-width: 992px) {
-  button {
-    padding: 10px 30px;
-    font-size: 20px;
-    margin-bottom: 15%;
-    background: #FFFFFF;
-    border: 1px solid #028170;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 1px #FFFFFF;
-    border-radius: 50px;
+
+@media screen and (max-width: 992px) {
+  .meridian,
+  .white-box {
+    display: none !important;
   }
-  .item-holder {
+
+  .banner-content {
+    width: 100% !important;
     text-align: center !important;
-    width: 100%;
+    padding-top: 35vh !important;
+    background-image: linear-gradient(
+        228.21deg,
+        rgba(143, 0, 181, 0.9) -0.03%,
+        rgba(0, 184, 159, 0.93) 100%
+      ),
+      url("../../assets/img/gif-banner.gif"),
+      url("../../assets/img/Increment_office.jpeg");
+    background-size: cover, 50vh, cover;
+    background-position: center, center top, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
   }
-  .bg-primary{
-    display: none;
-  }
-}
-@media only screen and (max-width: 992px) {
-  .item-holder {
-    top: 30%;
-  }
-  .bg-gradient{
-    background-position: top center;
-    background-size: cover,634px,cover;
-    width: 992px;
-    height: 1190px; 
-  }
-}
-@media only screen and (max-width: 992px) {
-  .item-holder {
-    top: 45%;
-  }
-    .title{
-    margin-top: 55%;
-    font-size: 50px;
-    margin-bottom: 5%;
-    color: black;
-  }
-   h3{
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
+
+  h4 {
+    padding-right: 0% !important;
   }
 }
-// end of tablet mode //
 </style>
 <script>
-import ROUTER from "src/router";
+import roundBtn from "src/home/generic/roundBtn.vue";
+import COLORS from "src/assets/style/colors.js";
 export default {
-  mounted() {},
-  data() {
-    return {};
+  components: {
+    roundBtn,
   },
-  methods: {
-    redirect(parameter) {
-      ROUTER.push(parameter);
-    },
-    externalLink(url) {
-      window.open(url, "_blank");
-    },
+  data() {
+    return {
+      colors: COLORS,
+    };
   },
 };
 </script>
