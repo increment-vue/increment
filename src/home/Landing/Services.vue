@@ -1,17 +1,17 @@
 <template>
   <div id="our-services">
-    <div class="curve-top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
-        <path
-          fill="#00B89F"
-          fill-opacity="1"
-          d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"
-        ></path>
-      </svg>
-    </div>
     <div class="cw-banner">
+      <div class="curve-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
+        <path
+            fill="#00B89F"
+            fill-opacity="1"
+           d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"
+          ></path>
+        </svg>
+      </div>
       <div class="container">
-        <h1 class="title">OUR SERVICES</h1>
+        <h2>OUR SERVICES</h2>
         <h6>What we offer are innovative solutions</h6>
         <div class="row">
           <span class="col-md-3" v-for="(item, index) in services" :key="index">
@@ -22,9 +22,7 @@
             </center>
           </span>
         </div>
-      </div>
-    </div>
-    <div class="curve-bottom">
+      </div><div class="curve-bottom">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
         <path
           fill="#8F00B5"
@@ -33,6 +31,8 @@
         ></path>
       </svg>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -95,16 +95,25 @@ export default {
     margin-bottom: 10vh;
     width: 100%;
   }
+  .cw-banner {
+    margin-top: 20vh;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .row {
     all: unset;
   }
-  .cw-banner {
-    margin-top: 50px;
-  }
+}
 
+@media only screen and (max-width: 1200px) {
+  .row {
+    all: unset;
+  }
+  .icon-container {
+    margin-bottom: 10vh;
+    width: 100%;
+  }
 }
 
 //animation scroll into view
@@ -121,7 +130,7 @@ export default {
 //     animation-duration: 3s;
 //     position: relative;
 //   }
-// }
+// }  
 // @media only screen and (max-width: 992px) {
 //   h6 {
 //     animation-name: animateService;
@@ -137,27 +146,15 @@ export default {
 //   }
 // }
 
-
-.curve {
-  width:100%;
-  float: left;
-  background-color: $white;
-}
-.top {
+.curve-top {
   position: relative;
+  background-color: $white;
   top: -8vh;
 }
-.bottom {
-  position: relative;
-  bottom: -8vh;
-  overflow: visible;
-  margin-bottom: -6vh;
-}
-
 .curve-bottom {
-  top: -1vh;
-  height: 200px;
-  margin-bottom: 6vh;
+  position: relative; 
+  background-color: $white;
+  top: 8vh;
 }
 
 .font-awesome-icon {
@@ -179,25 +176,18 @@ export default {
 //container for the services
 .icon-container {
   background: $white;
-  height: 340px;
+  height: 450px;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
-  border-radius: 10px;    
+  border-radius: 10px;
 }
 
 .cw-banner {
   float: left;
-  // background: $secondary;
   width: 100%;
   background: linear-gradient(180deg, #00B89F 25%, #8F00B5 75%);
-  margin: 15vh 0;
   padding-top: 8vh;
   padding-bottom: 8vh;
   position: relative;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 50px;
 }
 
 img {
@@ -213,21 +203,17 @@ img {
   color: $white;
 }
 .row {
-  margin-top: 8vh;
   text-align: center;
+  margin-top: 8vh;
 }
 
 p {
-  text-align: center;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 70%;
   color: $black;
 }
 #our-services{
   height: 100vh;
+  
 }
 </style>
-

@@ -10,8 +10,9 @@
       </h4>
       <roundBtn
         :text="'Contact Us'"
-        :target="'_blank'"
-        :route="'https://calendly.com/incrementtech2020/services-offered'"
+        :changeIcon="'fa fa-angle-double-right'"
+        :icon ="'fa fa-angle-right'"
+        :route="'/technologies'"
         :styles="{
           backgroundColor: colors.white,
           color: colors.green,
