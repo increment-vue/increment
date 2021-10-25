@@ -1,6 +1,6 @@
 <template>
-  <div class="body">
-      <div class="navbar navbar-expand-lg fixed-top bg-gradient row ">
+  <div class="container my-container">
+      <div class="navbar navbar-expand-lg fixed-top row " :class="this.scrollPosition > 500 ? 'bg-gradient':'bg-transparent'">
         <!-- Desktop View Navbar -->
         <div class="header-section" >
           <span class="brand col-6"  >
@@ -242,7 +242,6 @@
             </li> 
           </ul>
         </div>
-        <!-- end mobile -->
       </div>
   </div>
 </template>
@@ -255,9 +254,12 @@
 .increment-logo{
   margin-bottom: 5px; margin-right: 5px; margin-top: -10%
 }
-.bg-gradient{
-  // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+.bg-transparent{
   background-color: transparent;
+  padding-bottom: 0px;
+}
+.bg-gradient{
+  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   padding-bottom: 0px;
 }
 .navbar-menu-toggler-md {
@@ -514,6 +516,10 @@ import $ from "jquery";
 export default {
   mounted() {
     console.log(this.$route);
+    window.addEventListener("scroll", this.upadateScroll)
+  },
+  beforeDestroy(){
+    window.removeEventListener("scroll", this.upadateScroll)
   },
   openNav(){
 
@@ -553,9 +559,13 @@ export default {
           type: "regular",
         },
       ],
+      scrollPosition: null
     };
   },
   methods: {
+    upadateScroll(){
+      this.scrollPosition = window.scrollY
+    },
     redirect(parameter) {
       ROUTER.push(parameter);
     },
