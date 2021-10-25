@@ -177,7 +177,7 @@ export default {
 //view more when hovered
 .button2:hover {
   background-color: $white;
-  color: $primary;
+  color: $purple;
   border-radius: 50px;
   border: 2px solid black;
   padding: 10px 30px;
@@ -186,7 +186,7 @@ export default {
   outline-color: $white;
   box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
   float: right;
-  border-color: $primary;
+  border-color: $purple;
 }
 
 .row {
