@@ -91,51 +91,39 @@ export default {
 @import "~assets/style/colors.scss";
 @media only screen and (max-width: 992px) {
   .row {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
-    padding-left: 35%;
+    position: relative;
+    width: 100%;
+  }
+  .icon-container {
+    margin-bottom: 10vh;
+    width: 100%;
+  }
+  .button1 {
+    margin-bottom: 15px;
   }
 
-  .icon-container {
-    width: 80vh;
-    margin-bottom: 10vh;
-  }
-  
-  .button1 {
-    margin-bottom: 5vh;
+  .button2 {
+    position: relative;
+    left: -250px;
   }
 }
 
-//button move to the center
-@media only screen and (max-width: 992px) {
-  button.button2 {
-    float: left;
-    margin-left: 79vh;
+@media only screen and (max-width: 768px) {
+  .row {
+    all: unset; 
   }
-
-  button.button2:hover {
-  background-color: #FFFFFF;
-  color: $primary;
-  border-radius: 50px;
-  border: 2px solid black;
-  padding: 10px 30px;
-  text-align: center;
-  margin-top: 10vh;
-  font-weight: bold;
-  outline-color: white;
-  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
-  border-color: #8F00B5;
-  float: left;
+  .button2 {
+    position: relative;
   }
 }
 
 .whitebox{
-  background: #FFFFFF;
-  padding: 30px;
-  margin-left: 3%;
-  margin-right: 3%;
-  top: 100px;
-  position: relative;
+  background: $white;
+  width: 90%;
+  height: 5vh;
+  margin: 0 5%;
 }
 
 .button1 {
@@ -148,31 +136,21 @@ export default {
   border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
   padding: 10px;
-  width: 120px;
+  width: 40%;
   font-size: 81%;
-  //  border: solid 1px #e5e5e5;
-  // outline-color: white;
-  // position: absolute;
-  // left: 33.93%;
-  // right: 10.48%;
-  // top: 86.25%;
-  // bottom: 5%;
-  // padding: 8px 15px;
-  // margin-bottom: 15px;
 }
 .button2 {
-  background-color: #FFFFFF;
-  color: green;
+  background-color: $white;
+  color: $secondary;
   border-radius: 50px;
-  border: 2px solid black;
+  border: 2px solid $black;
   padding: 10px 30px;
   text-align: center;
-  margin-top: 10vh;
   font-weight: bold;
   outline-color: white;
   box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
   float: right;
-  border-color: green;
+  border-color: $green;
 }
 
 //icon-angle-right css
@@ -198,56 +176,39 @@ export default {
 
 //view more when hovered
 .button2:hover {
-  background-color: #FFFFFF;
+  background-color: $white;
   color: $primary;
   border-radius: 50px;
   border: 2px solid black;
   padding: 10px 30px;
   text-align: center;
-  margin-top: 10vh;
   font-weight: bold;
-  outline-color: white;
+  outline-color: $white;
   box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
   float: right;
-  border-color: purple;
-}
-
-button.button2 {
-  margin-right: -100px;
+  border-color: $primary;
 }
 
 .row {
-  margin-top: 10vh;
-  margin-left: -15vh;
-  margin-right: -15vh;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  text-align: center; 
 }
 
 //container for project data
 .icon-container {
-  background: white;
-  height: 105%;
+  background: $white;
+  min-height: 360px;
+  width: 100%;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
   border-radius: 10px;  
 }
-
-// .curve {
-//   width:100%;
-//   float: left;
-//   overflow: visible;
-//   background-color: white;
-// }
-
-// .top {
-//   position: relative;
-//   top: -15vh;
-  
-// }
 
 .box {
   width: 90%;
   height: auto;
   border: 1px solid white;
-  background-color: white;
+  background-color: $white;
   // margin-top: 5%;
   // margin-bottom: 3%;
 }
@@ -261,7 +222,7 @@ button.button2 {
   width: 100%;
   float: left;
   background: linear-gradient(180deg, #8F00B5 0%, #00B89F 100%);
-  padding-bottom: 100px;
+  min-height: 50vh;
 }
 .container {
   padding-top: 15vh;
@@ -274,7 +235,7 @@ button.button2 {
   color: $secondary;
 }
 p {
-  color: #000000;
+  color: $black;
   font-size: 81%;
 }
 img {
