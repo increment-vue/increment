@@ -1,6 +1,6 @@
 <template>
     <div class="title-holder">
-        <h1 class="title" :style="stylecss"><b>{{title}}</b></h1>
+        <h2 class="title" :style="stylecss"><b>{{title}}</b></h2>
         <p class="decription">{{description}}</p>
     </div>
 </template>

@@ -13,18 +13,18 @@
     <div class="row component-header text-center">
       <div class="col-sm">
         <img
-          class="gif-image2"
+          class="gif-image2 mr-5"
           :src="require('assets/gif/how-we-work-1.gif')"
         />
       </div>
       <div class="col-sm">
         <img
-          class="gif-image2"
+          class="gif-image2 ml-5"
           :src="require('assets/gif/how-we-work-3.gif')"
         />
       </div>
     </div>
-    <div class="row details-holder text-center">
+    <div class="row details-holder text-center ml-1">
       <div
         v-for="(item, index) in content"
         :key="index"
@@ -35,7 +35,7 @@
       >
         <div v-if="actives.includes(index) == false">
           <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
-          <p class="item-title">{{ item.title }}</p>
+          <h3 class="item-title">{{ item.title }}</h3>
         </div>
         <div
           v-if="actives.length > 0 && actives.includes(index)"
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <div class="row component-footer mt-5">
+    <div class="row component-footer mt-5 ml-5">
       <div class="col-sm mt-5">
         <img
           class="gif-image2"
@@ -96,6 +96,7 @@
 }
 .details-holder {
   justify-content: center;
+  width: 100%;
 }
 .item-holder {
   background: linear-gradient(
@@ -108,10 +109,6 @@
   min-height: 220px;
   width: 40%;
   border-radius: 10px;
-  margin-top: 50px;
-  padding-top: 30px;
-  margin-left: 2%;
-  margin-right: 2%;
 }
 .item-holder:hover {
   cursor: pointer;
@@ -149,7 +146,7 @@
   letter-spacing: 0em;
 }
 .item-title {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 38px;
   letter-spacing: 0em;
@@ -177,24 +174,27 @@
 .second-column {
   text-align: left;
 }
-.gif-image3 {
+.gif-image3,
+.gif-image2 {
   height: 250px;
   width: 350px;
-  top: 18px;
-}
-.gif-image2 {
-  height: 225px;
-  width: 380px;
   top: 18px;
 }
 @media only screen and (max-width: 992px) {
   .details-holder {
     width: 100%;
     margin-bottom: 100px;
+  }
+  .item-holder,
+  .item-holder-click {
+    width: 100%;
+  }
+  .second-column {
     text-align: center;
   }
-  .item-holder, .item-holder-click  {
-    width: 100%;
+  .line1 {
+    margin-left: 30%;
+    margin-right: 30%;
   }
   .component-header {
     display: none;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="footer-holder">
     <div class="curve">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -9,7 +9,7 @@
         ></path>
       </svg>
     </div>
-    <div class="logo-handler">
+    <div class="container-handler">
       <a class="navbar-brand">
         <img class="logo" src="../../assets/img/logo.png" />
         <label class="site-name">
@@ -18,16 +18,14 @@
           <b class="increment-white">&nbsp; TECHNOLOGIES INC.</b>
         </label>
         <br />
-        <label class="mt-3">{{ common.APP_TAGLINE }}</label>
+        <h4 class="mt-3 mb-4">{{ common.APP_TAGLINE }}</h4>
       </a>
-    </div>
-    <div clas="footer-holder">
-      <div class="row container-handler">
+      <div class="row">
         <div class="col-sm-6">
           <div v-for="(item, index) in common.footer1_contents" :key="index">
-            <label class="title-name"
-              ><b>{{ item.name }}</b></label
-            >
+            <h4 class="title-name">
+              <b>{{ item.name }}</b>
+            </h4>
             <p class="description">{{ item.description }}</p>
             <div
               v-for="(sItem, sIndex) in item.subMenu"
@@ -50,7 +48,9 @@
         </div>
         <div class="col-sm">
           <div v-for="(item, index) in common.footer2_contents" :key="index">
-            <b class="title-name">{{ item.name }}</b>
+            <h4 class="title-name">
+              <b>{{ item.name }}</b>
+            </h4>
             <p>
               <a class="font-url" :href="item.url">{{ item.title }}</a>
             </p>
@@ -58,10 +58,9 @@
         </div>
         <div class="col-sm-3">
           <div v-for="(item, index) in common.footer3_contents" :key="index">
-            <label class="title-name">
-              <b>{{ item.name }}</b></label
-            >
-            <br />
+            <h4 class="title-name">
+              <b>{{ item.name }}</b>
+            </h4>
             <span v-for="(sItem, sIndex) in item.subMenu" :key="sIndex">
               <a :href="sItem.url" target="_blank"
                 ><font-awesome-icon
@@ -75,12 +74,12 @@
                 <font-awesome-icon class="fontawesome-icon" :icon="item.icon" />
               </div>
               <div class="col-sm-11">
-                <label class="mt-2">{{ item.description }}</label>
+                <p class="mt-2">{{ item.description }}</p>
               </div>
             </div>
           </div>
         </div>
-        <hr class="line" />
+        <hr class="line mt-5" />
         <p class="copyright">Copyright @{{ common.APP_COPYRIGHT }}</p>
       </div>
     </div>
@@ -88,6 +87,9 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.footer-holder {
+  width: 100%;
+}
 .container-handler {
   padding-left: 10%;
   padding-right: 10%;
@@ -100,14 +102,9 @@
   float: left;
   height: 200px;
 }
-.font-url {
+.font-url, .mt-3{
   line-height: 0px;
   color: $white;
-}
-.font-url1 {
-  line-height: 0px;
-  color: $white;
-  margin-top: 2%;
 }
 .fontawesome-icon {
   font-size: 25px;
@@ -119,7 +116,6 @@
   font-size: 30px;
   color: $white;
   text-align: left;
-  margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 50px;
 }
@@ -127,18 +123,12 @@
   color: $secondary;
 }
 .title-name {
-  font-size: 20px;
   color: $white;
   justify-content: left;
-  margin: 0 auto;
 }
 .description {
   color: white;
   width: 60%;
-}
-li {
-  list-style: none;
-  color: $white;
 }
 
 .icon-holder {
@@ -147,7 +137,7 @@ li {
   justify-content: left;
 }
 
-.col-sm-6{
+.col-sm-6 {
   margin-right: -3%;
 }
 .copyright {
@@ -155,17 +145,10 @@ li {
   text-align: center;
   color: $white;
   font-size: 13px;
-  // margin-top: 5vh;
 }
 .line {
-  margin-top: 5%;
   background-color: $secondary;
   width: 1500px;
-  height: 1px;
-}
-.mt-3 {
-  color: $white;
-  font-size: 17px;
 }
 .mt-2 {
   color: white;
@@ -177,10 +160,6 @@ li {
   margin-top: -12%;
   padding-right: 2px;
 }
-.logo-handler {
-  background-color: $black;
-  padding-left: 10%;
-}
 .increment-white {
   color: $secondary;
   font-size: 18px;
@@ -189,27 +168,25 @@ li {
   .container-handler {
     width: 100%;
     text-align: center;
-    justify-content: center;
-    align-content: center;
+  }
+  .curve {
+    height: 60px;
   }
   .description {
     width: 100%;
   }
-  .logo-handler {
+  .submenu {
     text-align: center;
   }
   .site-name {
     text-align: left;
   }
-  .submenu {
-    text-align: center;
-  }
   .fontawesome-icon2:hover {
     color: $secondary;
   }
   .fontawesome-icon2 {
-  margin-bottom: 10px;
-}
+    margin-bottom: 10px;
+  }
 }
 </style>
 <script>
