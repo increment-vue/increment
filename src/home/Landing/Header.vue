@@ -565,7 +565,6 @@ export default {
   methods: {
     upadateScroll(){
       this.scrollPosition = window.scrollY
-      console.log('pos', this.scrollPosition)
     },
     redirect(parameter) {
       ROUTER.push(parameter);
