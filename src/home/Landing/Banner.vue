@@ -18,13 +18,13 @@
         >
       </div>
     </div>
-    <div class="whitebox"></div>
+    <!-- <div class="whitebox"></div> -->
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .incre-row {
-  height: 100vh;
+  // height: 100vh;
   width: 100%;
 }
 button {
@@ -211,7 +211,7 @@ h3{
   .bg-gradient{
     background-position: top center;
     background-size: cover,500px,cover;
-    width: 414px;
+    width: 100%;
     height: 1190px; 
   }
     .title{
@@ -245,7 +245,7 @@ h3{
   .bg-gradient{
     background-position: top center;
     background-size: cover,500px,cover;
-    width: 320px;
+    width: 100%;
     height: 1190px; 
   }
   .whitebox{

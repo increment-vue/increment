@@ -1,32 +1,15 @@
 <template>
-  <div class="app-quick-guide" id="how-we-work">
-    <div class="component-header text-center">
-      <img class="gif-image2" :src="require('assets/gif/how-we-work-2.gif')" />
-    </div>
-    <div>
+  <div class="whole-container">
+    <div style="margin-top: 10%">
       <SectionHeader
-        :title="'How We Work'"
-        :style="style"
+        :title="'HOW WE WORK'"
         :description="null"
+        :stylecss="style"
       ></SectionHeader>
     </div>
-    <div class="row component-header text-center">
-      <div class="col-sm">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-1.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-3.gif')"
-        />
-      </div>
-    </div>
-    <div class="row details-holder text-center">
+    <div class="row details-holder">
       <div
-        v-for="(item, index) in content"
+        v-for="(item, index) in data"
         :key="index"
         :class="`item-holder-click ${
           !actives.includes(index) ? 'item-holder' : 'item-holder-click'
@@ -38,58 +21,61 @@
           <p class="item-title">{{ item.title }}</p>
         </div>
         <div
-          v-if="actives.length > 0 && actives.includes(index)"
           class="row item-clicked"
+          v-if="actives.length > 0 && actives.includes(index)"
         >
-          <div class="col-sm-3 first-column">
-            <font-awesome-icon
-              :icon="item.icon"
-              class="font-awesome-icon-clicked"
-            />
+          <div>
+            <p class="text">
+              <font-awesome-icon
+                :icon="item.icon"
+                class="font-awesome-icon-clicked"
+              />
+            </p>
           </div>
-          <div class="col-sm second-column">
-            <h3>
-              <b>{{ item.title }}</b>
-            </h3>
+          <div class="col-sm-8">
+            <h3 class="text-click">{{ item.title }}</h3>
             <hr class="line1" />
-            <p>{{ item.text }}</p>
+            <p class="pText">{{ item.text }}</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row component-footer mt-5">
-      <div class="col-sm mt-5">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-4.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-5.gif')"
-        />
-      </div>
-      <div class="col-sm mt-5">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-6.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-7.gif')"
-        />
-      </div>
+      <!-- <div
+        v-for="(item, index) in data"
+        :key="index"
+        :class="`item-holder-click ${
+          !actives.includes(index) ? 'item-holder' : 'item-holder-click'
+        }`"
+      >
+        <div v-if="actives.includes(index) == false">
+          <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
+          <p class="title">{{ item.title }}</p>
+        </div>
+        <div
+          v-if="actives.length > 0 && actives.includes(index)"
+          class="row item-clicked"
+        >
+          <div class="col-sm-4">
+            <p class="text">
+              <font-awesome-icon
+                :icon="item.icon"
+                class="font-awesome-icon-clicked"
+              />
+            </p>
+          </div>
+          <div class="col-sm-8">
+            <h3 class="text-click">{{ item.title }}</h3>
+            <hr class="line1" />
+            <p class="pText">{{ item.text }}</p>
+          </div>
+        </div>
+      </div> -->
     </div>
   </div>
 </template>
-
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 @import "~assets/style/theme.css";
-.app-quick-guide {
+.whole-container {
   width: 100%;
   background-color: $white;
   padding: 50px;
@@ -122,12 +108,6 @@
     $gradientTertiary 51.04%
   );
 }
-.line1 {
-  width: 96.25px;
-  height: 2px;
-  background: $secondary;
-  margin-left: -0px;
-}
 .item-holder-click {
   min-height: 220px;
   width: 40%;
@@ -156,58 +136,20 @@
   color: $white;
   margin-top: 10px;
 }
-.item-holder-click {
-  min-height: 220px;
-  width: 40%;
-  border-radius: 10px;
-  animation-duration: 0ms;
-  margin-top: 50px;
-  padding-top: 30px;
-  margin-left: 2%;
-  margin-right: 2%;
+.component-footer {
+  display: block;
 }
-.font-awesome-icon-clicked {
-  height: 100px;
-  width: 150px;
-  letter-spacing: 0em;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  color: $secondary;
+.card-container {
+  width: 35%;
+  margin-left: 10%;
 }
-.second-column {
-  text-align: left;
-}
-.gif-image3 {
-  height: 250px;
-  width: 350px;
-  top: 18px;
-}
-.gif-image2 {
-  height: 225px;
-  width: 380px;
-  top: 18px;
-}
-@media only screen and (max-width: 992px) {
-  .details-holder {
-    width: 100%;
-    margin-bottom: 100px;
-    text-align: center;
-  }
-  .item-holder, .item-holder-click  {
-    width: 100%;
-  }
-  .component-header {
-    display: none;
-  }
+@media (max-width: 992px) {
   .component-footer {
     display: none;
   }
 }
 </style>
-
 <script>
-import SectionHeader from "src/home/generic/sectionHeader.vue";
-import ColorsJS from "src/assets/style/colors.js";
 import {
   faHandshake,
   faRocket,
@@ -220,7 +162,11 @@ import {
   faChalkboardTeacher,
   faObjectGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import SectionHeader from "src/home/generic/sectionHeader.vue";
+// import ROUTER from "src/router";
+import ColorsJS from "src/assets/style/colors.js";
 export default {
+  mounted() {},
   components: {
     SectionHeader,
   },
@@ -230,8 +176,8 @@ export default {
         color: ColorsJS.primary,
       },
       active: null,
-      show_content: true,
-      content: [
+      actives: [],
+      data: [
         {
           title: "MEET AND GREET",
           text: "To get a new project underway we like to meet our clients face-to-face for a chat. Our initial meeting will identify your objectives and decipher exactly how we can help. Think of this as a fact find with us asking you the important questions.",
@@ -293,7 +239,6 @@ export default {
           flag: false,
         },
       ],
-      actives: [],
     };
   },
   methods: {
