@@ -10,18 +10,21 @@
       </svg>
     </div>
     <div class="banner" id="testimonials">
+      <div>
+        <SectionHeader
+          :title="'What They Say About Us'"
+          :style="style"
+          :description="'For the past years and until now, Increment Technologies Inc. has been serving clients around the world.'"
+        ></SectionHeader>
+      </div>
       <div class="container">
-        <h1 class="title">What They Say About Us!</h1>
-        <p class="pText">
-          Our clients satisfactions expresses their testimonies
-        </p>
         <div class="row no-gutters">
           <span class="col-md-6" v-for="(item, index) in list" :key="index">
             <center class="single-card">
-              <h5 class="qoute">{{ item.quote }}</h5>
-              <h5 class="name text-white">
+              <h4 class="qoute">{{ item.quote }}</h4>
+              <h4 class="name text-white">
                 <b class="name">{{ item.name }}</b>
-              </h5>
+              </h4>
               <p>{{ item.position }}</p>
               <p>
                 <b>{{ item.country }}</b>
@@ -94,9 +97,17 @@
 }
 </style>
 <script>
+import SectionHeader from "src/home/generic/sectionHeader.vue";
+import ColorsJS from "src/assets/style/colors.js";
 export default {
+  components: {
+    SectionHeader,
+  },
   data() {
     return {
+      style: {
+        color: ColorsJS.white,
+      },
       list: [
         {
           quote:
