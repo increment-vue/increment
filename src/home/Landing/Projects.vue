@@ -4,7 +4,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114"><path fill="#8F00B5" fill-opacity="1" d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"></path></svg> 
     </div> -->
     <div class="container">
-      <h1 class="entitle"><b>OUR PROJECTS</b></h1>
+      <h2><b>OUR PROJECTS</b></h2>
       <h6>For the past years and until now, Increment Technologies Inc. has been serving clients around the world</h6>
       <div class="row">
         <span
@@ -27,16 +27,23 @@
           </center>
         </span>
       </div>
-      <button @click="redirect('our-projects')" class="button2">
-        View More<i
-          class="fa fa-angle-right aright"
-          style="margin-left: 10px; font-size: 26px; padding-left: 5px"
-        ></i>
-        <i
-          class="fa fa-angle-double-right adright"
-          style="margin-left: 10px; font-size: 26px"
-        ></i>
-      </button>
+      <roundBtn
+        :text="'View more'"
+        :changeIcon="'fa fa-angle-double-right'"
+        :icon ="'fa fa-angle-right'"
+        :route="'/our-projects'"
+        :styles="{
+          backgroundColor: colors.white,
+          color: colors.green,
+          borderColor: colors.green,
+        }"
+        :hoverStyles="{
+          backgroundColor: colors.white,
+          color: colors.purple,
+          borderColor: colors.purple,
+        }"
+      />
+
     </div>
     <div class="whitebox"></div>
   </div>
@@ -44,10 +51,16 @@
 
 <script>
 import ROUTER from "src/router";
+import roundBtn from "src/home/generic/roundBtn.vue";
+import COLORS from "src/assets/style/colors.js";
 export default {
+  components: {
+    roundBtn,
+  },
   mounted() {},
   data() {
     return {
+      colors: COLORS,
       projects: [
         {
           title: "Runway Express",
@@ -126,6 +139,7 @@ export default {
   margin: 0 5%;
 }
 
+
 .button1 {
   background: linear-gradient(264.22deg, #00B89F 0%, #8F00B5 100%);
   border: none;
@@ -139,19 +153,7 @@ export default {
   width: 40%;
   font-size: 81%;
 }
-.button2 {
-  background-color: $white;
-  color: $secondary;
-  border-radius: 50px;
-  border: 2px solid $black;
-  padding: 10px 30px;
-  text-align: center;
-  font-weight: bold;
-  outline-color: white;
-  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
-  float: right;
-  border-color: $green;
-}
+
 
 //icon-angle-right css
 .aright {
@@ -161,32 +163,6 @@ export default {
 .adright {
   position: relative;
   top: 2px;
-}
-
-//view more icon changed when hover
-.button2 i:nth-child(2) {
-  display: none;
-}
-.button2:hover i:nth-child(1){
-  display: none;
-}
-.button2:hover i:nth-child(2){
-  display: inline-block;
-}
-
-//view more when hovered
-.button2:hover {
-  background-color: $white;
-  color: $primary;
-  border-radius: 50px;
-  border: 2px solid black;
-  padding: 10px 30px;
-  text-align: center;
-  font-weight: bold;
-  outline-color: $white;
-  box-shadow: 0px 0px 15px rgba(0, 184, 159, 0.25);
-  float: right;
-  border-color: $primary;
 }
 
 .row {
