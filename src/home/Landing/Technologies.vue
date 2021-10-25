@@ -5,8 +5,8 @@
       <h3 class="desc">Innovating your business and integrating it with these technologies will create opportunities for the organization to grow.</h3>
       <div class="row no-gutters">
         <!-- list for Systems admin & UI/UX -->
-        <span class="col-md-4" v-for="(item, index) in list1" :key="index">  
-          <center class="single-card sys-ui">
+        <span class="first-row" v-for="(item, index) in list1" :key="index">  
+          <center class="single-card ">
             <font-awesome-icon :icon="item.src"  class="font-awesome-icon"/>
             <h3 class="head-title">{{ item.title }}</h3>
             <p>{{ item.desc }}</p>
@@ -14,32 +14,32 @@
         </span>
         <!-- End list for Systems admin & UI/UX -->
         <!-- Lower Level Programming -->
-        <span class="col-md-5" v-for="(item, index) in list2" :key="index">    
+        <!-- <span class="col-md-5" v-for="(item, index) in list2" :key="index">    
           <center class="single-card low-lev">
             <font-awesome-icon :icon="item.src"  class="font-awesome-icon"/>
             <h3 class="head-title">{{ item.title }}</h3>
             <p>{{ item.desc }}</p>
           </center>
-        </span>
+        </span> -->
         <!-- End of Lower Level Programming -->
         <div class="softdev-gif"></div>
         <!-- Mobile Development-->
-        <span class="col-md-1" v-for="(item, index) in list3" :key="index">    
+        <!-- <span class="col-md-1" v-for="(item, index) in list3" :key="index">    
           <center class="single-card mob-dev">
             <font-awesome-icon :icon="item.src"  class="font-awesome-icon"/>
             <h3 class="head-title">{{ item.title }}</h3>
             <p>{{ item.desc }}</p>
           </center>
-        </span>
+        </span> -->
         <!-- End of Mobile Development -->
         <!-- Web Development -->
-        <span class="col-md-4" v-for="(item, index) in list4" :key="index">    
+        <!-- <span class="col-md-4" v-for="(item, index) in list4" :key="index">    
           <center class="single-card web-dev">
             <font-awesome-icon :icon="item.src"  class="font-awesome-icon"/>
             <h3 class="head-title">{{ item.title }}</h3>
             <p>{{ item.desc }}</p>
           </center>
-        </span>
+        </span> -->
         <!-- End of Web Development -->
       </div>
     </div>  
@@ -93,8 +93,8 @@ p {
   text-align: center;
 }
 .single-card{
-  margin: 20px 200px;
-  width: 338px;
+  margin: 20px 20px 0 50px;
+  width: 320px;
   height: 324px;
   border: double 2px transparent;
   border-radius: 10px;
@@ -124,16 +124,16 @@ p {
   width: 400px;
   height: 300px;
 }
-.low-lev{
-  position: relative;
-  margin: auto;
-  right: 230px;
-}
-.mob-dev{
-  position: relative;
-  margin: auto;
-  right: 80px;
-}
+// .low-lev{
+//   position: relative;
+//   margin: auto;
+//   right: 230px;
+// }
+// .mob-dev{
+//   position: relative;
+//   margin: auto;
+//   right: 80px;
+// }
 .web-dev{
   position: relative;
   width: 1162px;
@@ -500,6 +500,29 @@ import { faMobile, faLaptopCode, faCode, faServer, faObjectGroup } from '@fortaw
 export default {
   data() {
     return {
+        list: [
+        {
+          title: "SYSTEM ADMINISTRATOR",
+          desc:
+            "CentOS, Linux, AWS, CPANEL, Google Cloud, GoDaddy, SiteGround, Dedicated Server and Related Task",
+          src: faServer,
+        },
+        {
+          title: "UI/UX Designs",
+          desc: "Adobe Tools (PS, Indesign, After Effects, XD), Figma",
+          src: faObjectGroup,
+        },
+        {
+          title: "LOWER LEVEL PROGRAMMING",
+          desc: "Assembly, C-Language, C++, and IVHDL",
+          src: faCode,
+        },
+        {
+          title: "MOBILE DEVELOPMENT",
+          desc: "Java, Objective-C, React-Native, Android Development",
+          src: faMobile,
+        }
+      ],
       list1: [
         {
           title: "SYSTEM ADMINISTRATOR",
@@ -526,7 +549,6 @@ export default {
           desc: "Java, Objective-C, React-Native, Android Development",
           src: faMobile,
         }
-        
       ],
       list4: [
           {

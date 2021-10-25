@@ -275,10 +275,11 @@ export default {
 window.addEventListener('scroll', () => {
   console.log(window.scrollY)
 
-  if (window.scrollY >= 400) {
-    document.getElementById('title-animate').style.marginLeft = '-35px'
-  } else {
-    document.getElementById('title-animate').style.marginLeft = '0'
+  if (window.scrollY >= 600 && window.scrollY <= 1700) {
+    document.getElementById('title-animate').style.marginLeft = '-40px'
+  } 
+  else {
+    document.getElementById('title-animate').style.marginLeft = '0px'
   }
 })
 </script>
