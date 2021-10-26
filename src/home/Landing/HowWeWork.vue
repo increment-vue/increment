@@ -5,7 +5,7 @@
     </div>
     <div>
       <SectionHeader
-        :title="'How We Work'"
+        :title="'HOW WE WORK'"
         :style="style"
         :description="null"
       ></SectionHeader>
@@ -13,18 +13,18 @@
     <div class="row component-header text-center">
       <div class="col-sm">
         <img
-          class="gif-image2 mr-5"
+          class="gif-image2"
           :src="require('assets/gif/how-we-work-1.gif')"
         />
       </div>
       <div class="col-sm">
         <img
-          class="gif-image2 ml-5"
+          class="gif-image2"
           :src="require('assets/gif/how-we-work-3.gif')"
         />
       </div>
     </div>
-    <div class="row details-holder text-center ml-1">
+    <div class="row details-holder text-center">
       <div
         v-for="(item, index) in content"
         :key="index"
@@ -57,30 +57,9 @@
         </div>
       </div>
     </div>
-    <div class="row component-footer mt-5 ml-5">
-      <div class="col-sm mt-5">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-4.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-5.gif')"
-        />
-      </div>
-      <div class="col-sm mt-5">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-6.gif')"
-        />
-      </div>
-      <div class="col-sm">
-        <img
-          class="gif-image2"
-          :src="require('assets/gif/how-we-work-7.gif')"
-        />
+    <div class="row component-footer">
+      <div v-for="(item, index) in gifFooter" :key="index">
+        <img class="gif-imageFooter" :src="item" />
       </div>
     </div>
   </div>
@@ -97,6 +76,7 @@
 .details-holder {
   justify-content: center;
   width: 100%;
+  margin-left: 10px;
 }
 .item-holder {
   background: linear-gradient(
@@ -125,16 +105,6 @@
   background: $secondary;
   margin-left: -0px;
 }
-.item-holder-click {
-  min-height: 220px;
-  width: 40%;
-  border-radius: 10px;
-  animation-duration: 0ms;
-  margin-top: 50px;
-  padding-top: 30px;
-  margin-left: 2%;
-  margin-right: 2%;
-}
 .font-awesome-icon {
   height: 100px;
   width: 150px;
@@ -156,12 +126,9 @@
 .item-holder-click {
   min-height: 220px;
   width: 40%;
-  border-radius: 10px;
   animation-duration: 0ms;
-  margin-top: 50px;
+  margin: 50px 20px 0 20px;
   padding-top: 30px;
-  margin-left: 2%;
-  margin-right: 2%;
 }
 .font-awesome-icon-clicked {
   height: 100px;
@@ -174,11 +141,20 @@
 .second-column {
   text-align: left;
 }
-.gif-image3,
 .gif-image2 {
   height: 250px;
   width: 350px;
   top: 18px;
+}
+.gif-imageFooter{
+  margin-right: 80px;
+  height: 250px;
+  width: 350px;
+  top: 18px;
+}
+.component-footer{
+  margin: 50px 0 0 80px;
+  justify-content: center;
 }
 @media only screen and (max-width: 992px) {
   .details-holder {
@@ -201,6 +177,7 @@
   }
   .component-footer {
     display: none;
+    margin: 0 50px -0 50px;
   }
 }
 </style>
@@ -294,6 +271,7 @@ export default {
         },
       ],
       actives: [],
+      gifFooter: [require("assets/gif/how-we-work-4.gif"), require("assets/gif/how-we-work-5.gif"), require("assets/gif/how-we-work-6.gif"), require("assets/gif/how-we-work-7.gif")]
     };
   },
   methods: {

@@ -1,14 +1,6 @@
 <template>
   <div class="footer-holder">
-    <div class="curve">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#00B89F"
-          fill-opacity="1"
-          d="M1919 0H0V43.2333C0 43.2333 99.234 79.8683 165.681 90.3369C316.558 114.108 422.004 30.1656 553.944 43.2333C678.534 55.5728 741.733 95.7704 866.339 107.944C1005.3 121.52 1083.76 110.657 1222.8 97.9025C1382.48 83.2545 1469.45 47.1908 1629.76 43.2333C1742.83 40.4416 1859.81 58.2952 1919 58.2952V0Z"
-        ></path>
-      </svg>
-    </div>
+    <Curve :color="curveStyle" :use="false" :stylecss="{backgroundColor: 'black'}"></Curve>
     <div class="container-handler">
       <a class="navbar-brand">
         <img class="logo" src="../../assets/img/logo.png" />
@@ -94,8 +86,9 @@
   padding-left: 10%;
   padding-right: 10%;
   background-color: $black;
-  padding-top: 2%;
+  // padding-top: -2%;
   align-content: left;
+  margin-top: -220px;
 }
 .curve {
   width: 100%;
@@ -168,6 +161,7 @@
   .container-handler {
     width: 100%;
     text-align: center;
+    margin-top: -1px;
   }
   .curve {
     height: 60px;
@@ -192,11 +186,17 @@
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
+import Curve from "src/home/generic/svgCurve.vue";
+import ColorsJS from "src/assets/style/colors.js";
 
 export default {
+  components: {
+    Curve
+  },
   data() {
     return {
       common: COMMON,
+      curveStyle: ColorsJS.secondary,
     };
   },
   methods: {
