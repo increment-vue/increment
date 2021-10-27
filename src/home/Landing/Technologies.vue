@@ -1,5 +1,5 @@
 <template>
-  <div class="banner" id="testimonials">
+  <div class="banner" id="technologies">
     <div class="container">
       <h2>TECHNOLOGIES</h2>
       <p>Innovating your business and integrating it with these technologies will create opportunities for the organization to grow.</p>
@@ -26,6 +26,7 @@
         :styles="{
           float: 'right',
           marginTop: '430px',
+          marginBottom: '40px',
           backgroundColor: colors.white,
           color: colors.green,
           borderColor: colors.green,
@@ -33,6 +34,7 @@
         :hoverStyles="{
           float: 'right',
           marginTop: '430px',
+          marginBottom: '40px',
           backgroundColor: colors.white + '!important',
           color: colors.purple,
           borderColor: colors.purple,
@@ -46,7 +48,7 @@
 .banner {
   background-color: $white;
   float: left;
-  width: 100%;
+  max-width: 100%;
 }
 .container {
   padding-right: 0;
@@ -71,6 +73,7 @@ p {
 }
 .single-card{
   width: 24%;
+  // min-height: 325px !important;
   height: 325px;
   float: left;
   border: double 2px transparent;
@@ -115,10 +118,26 @@ p {
 .hide{
   visibility: hidden;
 }
-@media screen and (max-width: 992px) {
-  .container{
-    width: 100%;
+@media screen and (max-width: 1024px) {
+  .list-item{
+    margin-right: 7px;
   }
+  .single-card{
+    height: 350px;
+  }
+  .softdev-gif{
+    top: 380px;
+    left: 230px;
+    width: 45%;
+  }
+  .web-item{
+    left: 80px;
+  }
+}
+@media screen and (max-width: 992px) {
+  // .banner, .container{
+  //   width: 100%;
+  // }
   .single-card{
     float: unset;
     width: 40%;
@@ -128,17 +147,55 @@ p {
   }
   .web-item{
     left: 0px;
-    min-height: 520px !important;
+    height: 540px !important;
   }
-  .softdev-gif{
-    display: none;
-  }
-  .hide{
+  .softdev-gif, .hide{ 
     display: none;
   }
   button.btn{
     float: unset !important;
-    margin-top: 50px !important,
+    margin-top: 40px !important;
+  }
+}
+@media screen and (max-width: 730px){
+  .web-item{
+    height: 580px !important;
+  }
+}
+@media screen and (max-width: 698px){
+  .single-card{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 560px){
+  .single-card{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 470px){
+  .single-card{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px){
+  .single-card{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px){
+  .single-card{
+    height: 350px;
+  }
+  h2{
+    font-size: 35px !important;
+  }
+}
+@media screen and (max-width: 320px){
+  h2{
+    font-size: 32px !important;
+  }
+  .web-item{
+    height: 700px !important;
   }
 }
 </style>
