@@ -28,14 +28,28 @@
           <span></span>
         </div>
         <div class="bottomButton" @mouseover="isHovered = true" @mouseleave="isHovered = false">
-          <button @click="redirect('case-studies')" id="btn">
-        View More
+          <!-- <roundedButton 
+          id="btn" 
+          :route="'/case-studies'"
+          :icon=" 'fas fa-angle-right'"
+          :changeIcon="'fas fa-angle-double-right'" 
+          :text="'View More'"
+          /> -->
+          <roundBtn
+          id="btn"
+          :text="'View More'"
+          :changeIcon="'fa fa-angle-double-right'"
+          :icon ="'fa fa-angle-right'"
+          :route="'/case-studies'"
+          />
+          <!-- <button @click="redirect('case-studies')" id="btn">
+        View More -->
         <!-- <i
           :class="isHovered ? 'fas fa-angle-right' : 'fas fa-angle-double-right'"
           style="margin-left: 10px; font-size: 16px"
         ></i> -->
-        <font-awesome-icon :icon="isHovered ? this.angle1 : this.angle2" class="bottomIcon" />
-        </button>
+        <!-- <font-awesome-icon :icon="isHovered ? this.angle1 : this.angle2" class="bottomIcon" /> -->
+        <!-- </button> -->
         </div>
       </div>
     </div>
@@ -115,7 +129,7 @@ h6 {
   border-image-source: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   border-radius: 10px;
   // margin: 10px;
-  min-height: 100vh;
+  min-height: 75vh;
   min-width: 350px;
   padding-top: 50px;
   margin-right: 25px;
@@ -194,6 +208,7 @@ h4 {
 </style>
 <script>
 import ROUTER from "src/router";
+import roundBtn from "src/home/generic/roundBtn.vue"
 import {
   faCalendarDay,
   faRobot,
@@ -243,6 +258,9 @@ export default {
     angle1: faAngleRight,
     angle2: faAngleDoubleRight
     };
+  },
+  components: {
+    roundBtn
   },
   methods: {
     redirect(parameter) {
