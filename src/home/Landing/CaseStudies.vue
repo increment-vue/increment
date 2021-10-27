@@ -28,13 +28,6 @@
           <span></span>
         </div>
         <div class="bottomButton" @mouseover="isHovered = true" @mouseleave="isHovered = false">
-          <!-- <roundedButton 
-          id="btn" 
-          :route="'/case-studies'"
-          :icon=" 'fas fa-angle-right'"
-          :changeIcon="'fas fa-angle-double-right'" 
-          :text="'View More'"
-          /> -->
           <roundBtn
           id="btn"
           :text="'View More'"
@@ -42,14 +35,6 @@
           :icon ="'fa fa-angle-right'"
           :route="'/case-studies'"
           />
-          <!-- <button @click="redirect('case-studies')" id="btn">
-        View More -->
-        <!-- <i
-          :class="isHovered ? 'fas fa-angle-right' : 'fas fa-angle-double-right'"
-          style="margin-left: 10px; font-size: 16px"
-        ></i> -->
-        <!-- <font-awesome-icon :icon="isHovered ? this.angle1 : this.angle2" class="bottomIcon" /> -->
-        <!-- </button> -->
         </div>
       </div>
     </div>
@@ -213,9 +198,7 @@ import {
   faCalendarDay,
   faRobot,
   faBuilding,
-  faGifts,
-  faAngleDoubleRight,
-  faAngleRight
+  faGifts
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   data() {
@@ -255,8 +238,6 @@ export default {
         },
       ],
     isHovered: false,
-    angle1: faAngleRight,
-    angle2: faAngleDoubleRight
     };
   },
   components: {
