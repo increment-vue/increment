@@ -1,30 +1,35 @@
 <template>
   <div id="our-services">
-    <div class="curve-top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
-        <path
-          fill="#00B89F"
-          fill-opacity="1"
-          d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"
-        ></path>
-      </svg>
-    </div>
     <div class="cw-banner">
+      <Curve :color="curveStyle" :use="false" :stylecss="{
+        backgroundColor: '#00B89F',
+        }"></Curve>
+      <!-- <div class="curve-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
+        <path
+            fill="#00B89F"
+            fill-opacity="1"
+           d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"
+          ></path>
+        </svg>
+      </div> -->
       <div class="container">
-        <h1 class="title">OUR SERVICES</h1>
-        <h6>What we offer are innovative solutions</h6>
+        <h2>OUR SERVICES</h2>
+        <p>What we offer are innovative solutions</p>
         <div class="row">
-          <span class="col-md-3" v-for="(item, index) in services" :key="index">
-            <center class="icon-container">
-              <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
-              <h4 class="subtitle">{{ item.title }}</h4>
-              <p>{{ item.desc }}</p>
-            </center>
+          <span class="card" v-for="(item, index) in services" :key="index">
+            <center>
+              <font-awesome-icon :icon="item.class" class="font-awesome-icon" /></center>
+              <b><p class="subtitle">{{ item.title }}</p></b>
+              <span style="font-size: 13px; color: black;">{{ item.desc }}</span>
           </span>
         </div>
       </div>
-    </div>
-    <div class="curve-bottom">
+      <Curve :color="curveStyle" :use="false" :stylecss="{
+        transform: 'rotateZ(180deg)',
+        backgroundColor: '#8F00B5',
+        }"></Curve>
+      <!-- <div class="curve-bottom">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
         <path
           fill="#8F00B5"
@@ -32,13 +37,17 @@
           d="M1919 0H0V43.2333C0 43.2333 99.234 79.8683 165.681 90.3369C316.558 114.108 422.004 30.1656 553.944 43.2333C678.534 55.5728 741.733 95.7704 866.339 107.944C1005.3 121.52 1083.76 110.657 1222.8 97.9025C1382.48 83.2545 1469.45 47.1908 1629.76 43.2333C1742.83 40.4416 1859.81 58.2952 1919 58.2952V0Z"
         ></path>
       </svg>
+    </div> -->
     </div>
+    
   </div>
 </template>
 
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
+import Curve from "src/home/generic/svgCurve.vue";
+import ColorsJS from "src/assets/style/colors.js";
 import {
   faPalette,
   faMobileAlt,
@@ -46,8 +55,13 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 export default {
+  components: {
+    Curve
+  },
   data() {
+    
     return {
+      curveStyle: ColorsJS.white,
       services: [
         {
           title: "Design",
@@ -84,80 +98,12 @@ export default {
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 
-@media only screen and (max-width: 992px) {
-  .row {
-    display: inline-block;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-  }
-  .icon-container {
-    margin-bottom: 10vh;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .row {
-    all: unset;
-  }
-  .cw-banner {
-    margin-top: 50px;
-  }
-
-}
-
-//animation scroll into view
-// @keyframes animateService {
-//     0%   { left:0px; top:500px;}
-//     25%  { left:0px; top:0px;}
-//     50%  { left:0px; top:0px;}
-//     75%  { left:0px; top:0px;}
-//     100% { left:0px; top:0px;}
-// } 
-// @media only screen and (max-width: 992px) {
-//   h1.title {
-//     animation-name: animateService;
-//     animation-duration: 3s;
-//     position: relative;
-//   }
-// }
-// @media only screen and (max-width: 992px) {
-//   h6 {
-//     animation-name: animateService;
-//     animation-duration: 3s;
-//     position: relative;
-//   }
-// }
-// @media only screen and (max-width: 992px) {
-//   center.icon-container {
-//     animation-name: animateService;
-//     animation-duration: 3s;
-//     position: relative;
-//   }
-// }
-
-
-.curve {
-  width:100%;
-  float: left;
-  background-color: $white;
-}
-.top {
-  position: relative;
-  top: -8vh;
-}
-.bottom {
-  position: relative;
-  bottom: -8vh;
-  overflow: visible;
-  margin-bottom: -6vh;
-}
-
-.curve-bottom {
-  top: -1vh;
-  height: 200px;
-  margin-bottom: 6vh;
+.card {
+  width: 23%;
+  height: 400px;
+  margin: 1%;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .font-awesome-icon {
@@ -176,28 +122,11 @@ export default {
   color: $primary; 
 }
 
-//container for the services
-.icon-container {
-  background: $white;
-  height: 340px;
-  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
-  border-radius: 10px;    
-}
-
 .cw-banner {
   float: left;
-  // background: $secondary;
   width: 100%;
-  background: linear-gradient(180deg, #00B89F 25%, #8F00B5 75%);
-  margin: 15vh 0;
-  padding-top: 8vh;
-  padding-bottom: 8vh;
+  background: linear-gradient(180deg, #00B89F 30%, #8F00B5 70%);
   position: relative;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 50px;
 }
 
 img {
@@ -207,27 +136,49 @@ img {
 }
 
 .container {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
   text-align: center;
   color: $white;
 }
+
 .row {
-  margin-top: 8vh;
   text-align: center;
+  margin-top: 8vh;
 }
 
-p {
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 70%;
-  color: $black;
-}
 #our-services{
   height: 100vh;
+  
+}
+
+@media only screen and (max-width: 1200px){
+  .card {
+    width: 40% !important;
+    height: 370px;
+    margin: 5% !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    width: 60% !important;
+    height: 340px;
+    margin: 5% 20% !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    width: 60% !important;
+    height: 360px;
+    margin: 5% 20% !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 60% !important;
+    height: 450px;
+    margin: 5% 20% !important;
+  }
 }
 </style>
-
