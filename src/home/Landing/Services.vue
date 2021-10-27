@@ -1,7 +1,10 @@
 <template>
   <div id="our-services">
     <div class="cw-banner">
-      <div class="curve-top">
+      <Curve :color="curveStyle" :use="false" :stylecss="{
+        backgroundColor: '#00B89F',
+        }"></Curve>
+      <!-- <div class="curve-top">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
         <path
             fill="#00B89F"
@@ -9,10 +12,10 @@
            d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"
           ></path>
         </svg>
-      </div>
+      </div> -->
       <div class="container">
         <h2>OUR SERVICES</h2>
-        <h6>What we offer are innovative solutions</h6>
+        <p>What we offer are innovative solutions</p>
         <div class="row">
           <span class="card" v-for="(item, index) in services" :key="index">
             <center>
@@ -21,7 +24,12 @@
               <span style="font-size: 13px; color: black;">{{ item.desc }}</span>
           </span>
         </div>
-      </div><div class="curve-bottom">
+      </div>
+      <Curve :color="curveStyle" :use="false" :stylecss="{
+        transform: 'rotateZ(180deg)',
+        backgroundColor: '#8F00B5',
+        }"></Curve>
+      <!-- <div class="curve-bottom">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
         <path
           fill="#8F00B5"
@@ -29,7 +37,7 @@
           d="M1919 0H0V43.2333C0 43.2333 99.234 79.8683 165.681 90.3369C316.558 114.108 422.004 30.1656 553.944 43.2333C678.534 55.5728 741.733 95.7704 866.339 107.944C1005.3 121.52 1083.76 110.657 1222.8 97.9025C1382.48 83.2545 1469.45 47.1908 1629.76 43.2333C1742.83 40.4416 1859.81 58.2952 1919 58.2952V0Z"
         ></path>
       </svg>
-    </div>
+    </div> -->
     </div>
     
   </div>
@@ -38,6 +46,8 @@
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
+import Curve from "src/home/generic/svgCurve.vue";
+import ColorsJS from "src/assets/style/colors.js";
 import {
   faPalette,
   faMobileAlt,
@@ -45,8 +55,13 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 export default {
+  components: {
+    Curve
+  },
   data() {
+    
     return {
+      curveStyle: ColorsJS.white,
       services: [
         {
           title: "Design",
@@ -84,21 +99,11 @@ export default {
 @import "~assets/style/colors.scss";
 
 .card {
-  width: 20%;
+  width: 23%;
   height: 400px;
-  margin: 2.5%;
+  margin: 1%;
   padding: 15px;
-}
-
-.curve-top {
-  position: relative;
-  background-color: $white;
-  top: -8vh;
-}
-.curve-bottom {
-  position: relative; 
-  background-color: $white;
-  top: 8vh;
+  border-radius: 15px;
 }
 
 .font-awesome-icon {
@@ -117,16 +122,10 @@ export default {
   color: $primary; 
 }
 
-//container for the services
-
-
-
 .cw-banner {
   float: left;
   width: 100%;
-  background: linear-gradient(180deg, #00B89F 25%, #8F00B5 75%);
-  padding-top: 8vh;
-  padding-bottom: 8vh;
+  background: linear-gradient(180deg, #00B89F 30%, #8F00B5 70%);
   position: relative;
 }
 
@@ -137,19 +136,14 @@ img {
 }
 
 .container {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
   text-align: center;
   color: $white;
 }
-
-
 
 .row {
   text-align: center;
   margin-top: 8vh;
 }
-
 
 #our-services{
   height: 100vh;
@@ -159,19 +153,32 @@ img {
 @media only screen and (max-width: 1200px){
   .card {
     width: 40% !important;
-  height: 380px;
-  margin: 5% !important;
+    height: 370px;
+    margin: 5% !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    width: 60% !important;
+    height: 340px;
+    margin: 5% 20% !important;
   }
 }
 
 @media only screen and (max-width: 770px) {
   .card {
     width: 60% !important;
-  height: 380px;
-  margin-left: 20% !important;
-  margin-right: 20% !important;
-  margin-bottom: 5% !important;
-  margin-top: 5% !important;
+    height: 360px;
+    margin: 5% 20% !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 60% !important;
+    height: 450px;
+    margin: 5% 20% !important;
   }
 }
 </style>
