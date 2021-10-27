@@ -3,8 +3,8 @@
     <div class="container">
       <h1 class="title">Case Studies</h1>
       <p class="sub-title">With over 5 years of experience, Increment Technologies Inc. provides innovative productsand services from various categories in accordance to the client's needs</p>
-      <div class="row no-gutters">
-        <span class="col-md-3" v-for="(item, index) in cases" :key="index">
+      <div class="row no-gutters card-collection justify-content-center">
+        <span class="my-col" v-for="(item, index) in cases" :key="index">
           <center class="single-card">
             <span class="image-holder"><font-awesome-icon :icon="item.src" class="font-awesome-icon" /></span>
             <h6>{{ item.title }}</h6>
@@ -42,6 +42,10 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.my-col{
+  width: 400px;
+  margin-bottom: 10px;
+}
 .bottomFormatter{
   width: 68%;
 }
@@ -117,8 +121,8 @@ h6 {
   min-height: 75vh;
   min-width: 350px;
   padding-top: 50px;
-  margin-right: 25px;
-  margin-left: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .container {
   padding-top: 20vh;
@@ -172,6 +176,7 @@ h4 {
   font-size: 30px;
   text-align: center;
   color: white;
+  margin-top: 5px;
 }
 #btn {
   background-color: white;
@@ -189,6 +194,32 @@ h4 {
 #btn:hover{
   color: $gradientSecondary;
   border: 1px solid $gradientSecondary;
+}
+@media screen and (min-width: 993px){
+
+}
+@media screen and (max-width: 992px){
+  .single-card{
+    justify-content: center;
+    width: 500px;
+  }
+  .bottomImage{
+    display: none;
+  }
+  .bottomFormatter{
+    display: none;
+  }
+  .bottomContainer{
+    justify-content: center;
+  }
+  .card-collection{
+    display: flex;
+    justify-content: center;
+  }
+  .my-col{
+    margin-bottom: 10px;
+    width: 500px;
+  }
 }
 </style>
 <script>
