@@ -101,14 +101,12 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
 .whitebox{
   background: $white;
   width: 90%;
   height: 7vh;
   margin: 0 5%;
 }
-
 .button1 {
   background: linear-gradient(264.22deg, #00B89F 0%, #8F00B5 100%);
   border: none;
@@ -122,13 +120,11 @@ export default {
   width: 50%;
   font-size: 81%;
 }
-
 .row {
   margin-top: 8vh;
   margin-bottom: 8vh;
   text-align: center; 
 }
-
 //container for project data
 .card {
   width: 23%;
@@ -137,7 +133,6 @@ export default {
   padding: 5px;
   border-radius: 15px;
 }
-
 .box img{
   padding: 10%;
   width: 90%;
@@ -150,21 +145,18 @@ export default {
   font-size: 50px;
   color: white;
 }
-
 .cw-banner {
   width: 100%;
   float: left;
   background: linear-gradient(180deg, #8F00B5 0%, #00B89F 100%);
   min-height: 50vh;
 }
-
 .container {
   padding-top: 15vh;
   padding-bottom: 15vh;
   text-align: center;
   color: white;
 }
-
 .description {
   position: relative;
   top: -20px;
@@ -185,14 +177,12 @@ export default {
   position: relative;
   top: -20px;
 }
-
 img {
   width: 100%;
   height: auto;
   margin: auto;
   padding: 5%;
 }
-
 @media only screen and (max-width: 1200px) {
   .card {
     width: 40% !important;
@@ -207,7 +197,6 @@ img {
     left: -5px;
   }
 }
-
 @media only screen and (max-width: 992px) {
   .card {
     width: 60% !important;
@@ -215,7 +204,6 @@ img {
     margin: 5% 20% !important;
   }
 }
-
 @media only screen and (max-width: 767px) {
   .card {
     width: 60% !important;
@@ -223,7 +211,6 @@ img {
     margin: 5% 20% !important;
   }
 }
-
 @media only screen and (max-width: 415px) {
   .card {
     width: 60% !important;
@@ -231,5 +218,4 @@ img {
     margin: 5% 20% !important;
   }
 }
-
 </style>
