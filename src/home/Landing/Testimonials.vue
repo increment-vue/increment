@@ -19,7 +19,6 @@
               <p>
                 {{ item.position }}
                 <br />
-                <!-- <p> -->
                 <b>{{ item.country }}</b>
               </p>
             </center>

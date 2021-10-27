@@ -31,9 +31,9 @@
                 />
               </div>
               <div class="col-sm-11">
-                <label style="color: white; margin-left: -2%">{{
+                <label style=" margin-left: -20px;"><a :href="sItem.payload + sItem.url" style="color: white;">{{
                   sItem.title
-                }}</label>
+                }}</a></label>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@
                 <font-awesome-icon class="fontawesome-icon" :icon="item.icon" />
               </div>
               <div class="col-sm-11">
-                <p class="mt-2">{{ item.description }}</p>
+                <p class="mt-2"><a target="blank" :href="item.url" style="color:white">{{ item.description }}</a></p>
               </div>
             </div>
           </div>
@@ -146,6 +146,7 @@
 .mt-2 {
   color: white;
   margin-left: 15px;
+  cursor: pointer;
 }
 .logo {
   width: 53px;
