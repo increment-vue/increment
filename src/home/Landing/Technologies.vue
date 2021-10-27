@@ -86,7 +86,7 @@ p {
   text-align: center;
 }
 .single-card{
-  width: 280px;
+  width: 35%;
   min-height: 290px;
   border: double 2px transparent;
   border-radius: 10px;

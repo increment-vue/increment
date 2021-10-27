@@ -116,13 +116,11 @@ export default {
   .button1 {
     margin-bottom: 15px;
   }
-
   .button2 {
     position: relative;
     left: -250px;
   }
 }
-
 @media only screen and (max-width: 768px) {
   .row {
     all: unset; 
@@ -131,15 +129,12 @@ export default {
     position: relative;
   }
 }
-
 .whitebox{
   background: $white;
   width: 90%;
   height: 5vh;
   margin: 0 5%;
 }
-
-
 .button1 {
   background: linear-gradient(264.22deg, #00B89F 0%, #8F00B5 100%);
   border: none;
@@ -153,8 +148,6 @@ export default {
   width: 40%;
   font-size: 81%;
 }
-
-
 //icon-angle-right css
 .aright {
   position: relative;
@@ -164,13 +157,11 @@ export default {
   position: relative;
   top: 2px;
 }
-
 .row {
   margin-top: 8vh;
   margin-bottom: 8vh;
   text-align: center; 
 }
-
 //container for project data
 .icon-container {
   background: $white;
@@ -179,7 +170,6 @@ export default {
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
   border-radius: 10px;  
 }
-
 .box {
   width: 90%;
   height: auto;

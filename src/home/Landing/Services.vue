@@ -14,12 +14,11 @@
         <h2>OUR SERVICES</h2>
         <h6>What we offer are innovative solutions</h6>
         <div class="row">
-          <span class="col-md-3" v-for="(item, index) in services" :key="index">
-            <center class="icon-container">
-              <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
-              <h4 class="subtitle">{{ item.title }}</h4>
-              <p>{{ item.desc }}</p>
-            </center>
+          <span class="card" v-for="(item, index) in services" :key="index">
+            <center>
+              <font-awesome-icon :icon="item.class" class="font-awesome-icon" /></center>
+              <b><p class="subtitle">{{ item.title }}</p></b>
+              <span style="font-size: 13px; color: black;">{{ item.desc }}</span>
           </span>
         </div>
       </div><div class="curve-bottom">
@@ -84,67 +83,12 @@ export default {
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 
-@media only screen and (max-width: 992px) {
-  .row {
-    display: inline-block;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-  }
-  .icon-container {
-    margin-bottom: 10vh;
-    width: 100%;
-  }
-  .cw-banner {
-    margin-top: 20vh;
-  }
+.card {
+  width: 20%;
+  height: 400px;
+  margin: 2.5%;
+  padding: 15px;
 }
-
-@media only screen and (max-width: 768px) {
-  .row {
-    all: unset;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .row {
-    all: unset;
-  }
-  .icon-container {
-    margin-bottom: 10vh;
-    width: 100%;
-  }
-}
-
-//animation scroll into view
-// @keyframes animateService {
-//     0%   { left:0px; top:500px;}
-//     25%  { left:0px; top:0px;}
-//     50%  { left:0px; top:0px;}
-//     75%  { left:0px; top:0px;}
-//     100% { left:0px; top:0px;}
-// } 
-// @media only screen and (max-width: 992px) {
-//   h1.title {
-//     animation-name: animateService;
-//     animation-duration: 3s;
-//     position: relative;
-//   }
-// }  
-// @media only screen and (max-width: 992px) {
-//   h6 {
-//     animation-name: animateService;
-//     animation-duration: 3s;
-//     position: relative;
-//   }
-// }
-// @media only screen and (max-width: 992px) {
-//   center.icon-container {
-//     animation-name: animateService;
-//     animation-duration: 3s;
-//     position: relative;
-//   }
-// }
 
 .curve-top {
   position: relative;
@@ -174,12 +118,8 @@ export default {
 }
 
 //container for the services
-.icon-container {
-  background: $white;
-  height: 450px;
-  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-}
+
+
 
 .cw-banner {
   float: left;
@@ -202,18 +142,36 @@ img {
   text-align: center;
   color: $white;
 }
+
+
+
 .row {
   text-align: center;
   margin-top: 8vh;
 }
 
-p {
-  margin-left: 10px;
-  margin-right: 10px;
-  color: $black;
-}
+
 #our-services{
   height: 100vh;
   
+}
+
+@media only screen and (max-width: 1200px){
+  .card {
+    width: 40% !important;
+  height: 380px;
+  margin: 5% !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    width: 60% !important;
+  height: 380px;
+  margin-left: 20% !important;
+  margin-right: 20% !important;
+  margin-bottom: 5% !important;
+  margin-top: 5% !important;
+  }
 }
 </style>
