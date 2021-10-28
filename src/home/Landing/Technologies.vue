@@ -1,201 +1,177 @@
 <template>
-  <div class="banner" id="technologies">
-    <div class="container">
+  <div class="body" id="technologies">
+    <div class="section-container">
       <h2>TECHNOLOGIES</h2>
-      <p>Innovating your business and integrating it with these technologies will create opportunities for the organization to grow.</p>
-      <span v-for="(item, index) in list" :key="index" :class="{ hide: !item.displayFlag }">  
-        <center class="single-card list-item"> 
-          <font-awesome-icon :icon="item.icon"  class="font-awesome-icon"/>
-          <p class="head-title">{{ item.title }}</p>
-          <p>{{ item.description }}</p>          
-        </center> 
-      </span>
-      <div class="softdev-gif"></div>
-      <span v-for="(item, index) in web" :key="index">  
-        <center class="single-card web-item">
-          <font-awesome-icon :icon="item.icon"  class="font-awesome-icon"/>
+      <p>
+        Innovating your business and integrating it with these technologies will
+        create opportunities for the organization to grow.
+      </p>
+      <span
+        class="card"
+        v-for="(item, index) in list"
+        :key="index"
+        :class="{ hide: !item.displayFlag }"
+      >
+        <span class="content">
+          <center style="padding: 25px">
+            <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
+          </center>
           <p class="head-title">{{ item.title }}</p>
           <p>{{ item.description }}</p>
-        </center>
+        </span>
       </span>
+      <div class="image-container">
+        <img
+          src="../../assets/img/software-development-gif.gif"
+          class="softdev-gif"
+        />
+      </div>
+      <span class="card web-card" v-for="(item, index) in web" :key="index">
+        <span class="content">
+          <center style="padding: 25px">
+            <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
+          </center>
+          <p class="head-title">{{ item.title }}</p>
+          <p>{{ item.description }}</p>
+        </span>
+      </span>
+
       <roundBtn
         :text="'View More'"
         :changeIcon="'fa fa-angle-double-right'"
-        :icon ="'fa fa-angle-right'"
+        :icon="'fa fa-angle-right'"
         :route="'/technologies'"
         :styles="{
           float: 'right',
-          marginTop: '430px',
-          marginBottom: '40px',
           backgroundColor: colors.white,
           color: colors.green,
           borderColor: colors.green,
         }"
         :hoverStyles="{
           float: 'right',
-          marginTop: '430px',
-          marginBottom: '40px',
           backgroundColor: colors.white + '!important',
           color: colors.purple,
           borderColor: colors.purple,
         }"
       />
     </div>
-  </div> 
+  </div>
 </template>
+
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.banner {
-  background-color: $white;
-  float: left;
-  max-width: 100%;
+
+.body {
+  background-color: $white !important;
+  float: left !important;
+  max-width: 100% !important;
 }
-.container {
-  padding-right: 0;
-  padding-left: 10px;
+
+.section-container {
+  width: 90% !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  min-height: 100vh !important;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
   text-align: center;
-  max-width: 90%;
-  color: $white;
 }
+
 h2 {
   color: $primary;
 }
-.head-title{
-  margin: 25px;
-  font-size: 18px !important;
-  line-height: 20px;
-  color: $primary;
-  font-weight: 700;
-}
-p {
-  color: $black;
-  margin-bottom: 80px;
-}
-.single-card{
-  width: 24%;
-  // min-height: 325px !important;
+
+.card {
+  width: 20%;
+  margin: 2.5%;
   height: 325px;
   float: left;
   border: double 2px transparent;
   border-radius: 10px;
-  background-image: linear-gradient($white, $white), linear-gradient(132.58deg, $gradientPrimary 0%, $gradientSecondary 100%);
+  background-image: linear-gradient($white, $white),
+    linear-gradient(132.58deg, $gradientPrimary 0%, $gradientSecondary 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
-.single-card:hover{
-  background-image: linear-gradient(132.58deg, $gradientPrimary, $gradientSecondary);
+
+.card:hover,
+.web-card:hover {
+  background-image: linear-gradient(
+    132.58deg,
+    $gradientPrimary,
+    $gradientSecondary
+  );
   border-radius: 10px;
-  p, .font-awesome-icon{
+  p,
+  .font-awesome-icon {
     color: $white;
   }
 }
-.list-item{
-  margin-right: 12px;
-}
-//gif
-.softdev-gif{
-  position: relative;
-  top: 350px;
-  left: 360px;
-  background-image: url("../../assets/img/software-development-gif.gif");
-  background-size: cover;
-  width: 38%;
-  min-height: 330px;
-}
-.web-item{
-  margin-top: 50px;
-  position: relative;
-  left: 110px;
-  width: 80%;
-  height: 324px;
-}
-.font-awesome-icon{
-  margin-top: 40px;
-  font-size: 90px;
+
+// .content {
+//   padding: 10px;
+// }
+
+.font-awesome-icon {
+  font-size: 80px;
   color: $secondary;
 }
-//hides items if displayFlag = false
-.hide{
+
+.hide {
   visibility: hidden;
 }
-@media screen and (max-width: 1024px) {
-  .list-item{
-    margin-right: 7px;
-  }
-  .single-card{
-    height: 350px;
-  }
-  .softdev-gif{
-    top: 380px;
-    left: 230px;
-    width: 45%;
-  }
-  .web-item{
-    left: 80px;
-  }
+
+.head-title {
+  color: $primary;
+  font-weight: 700;
+}
+
+.image-container{
+  width: 100%;
+}
+
+.softdev-gif {
+  margin-top: -340px;
+  // width: 50%;
+  height: 380px;
+}
+.web-card {
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: auto;
 }
 @media screen and (max-width: 992px) {
-  // .banner, .container{
-  //   width: 100%;
-  // }
-  .single-card{
+  .section-container {
+    min-height: 90vh;
+  }
+  .hide,
+  .softdev-gif {
+    display: none;
+  }
+  .card {
     float: unset;
-    width: 40%;
-    margin-top: 30px;
+    width: 50%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
   }
-  .web-item{
-    left: 0px;
-    height: 540px !important;
+  .content {
+    padding: 10px;
   }
-  .softdev-gif, .hide{ 
-    display: none;
+  .web-card {
+    height: auto;
   }
-  button.btn{
+  button.btn {
     float: unset !important;
-    margin-top: 40px !important;
+    // margin-top: 30px !important;
+    margin-bottom: -100px !important;
   }
 }
-@media screen and (max-width: 730px){
-  .web-item{
-    height: 580px !important;
-  }
-}
-@media screen and (max-width: 698px){
-  .single-card{
-    width: 50%;
-  }
-}
-@media screen and (max-width: 560px){
-  .single-card{
-    width: 60%;
-  }
-}
-@media screen and (max-width: 470px){
-  .single-card{
-    width: 80%;
-  }
-}
-@media screen and (max-width: 425px){
-  .single-card{
-    width: 80%;
-  }
-}
-@media screen and (max-width: 375px){
-  .single-card{
-    height: 350px;
-  }
-  h2{
-    font-size: 35px !important;
-  }
-}
-@media screen and (max-width: 320px){
-  h2{
-    font-size: 32px !important;
-  }
-  .web-item{
-    height: 700px !important;
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 30px !important;
   }
 }
 </style>
@@ -203,87 +179,96 @@ p {
 import ROUTER from "src/router";
 import roundBtn from "src/home/generic/roundBtn.vue";
 import COLORS from "src/assets/style/colors.js";
-import { faMobile, faLaptopCode, faCode, faServer, faObjectGroup } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMobile,
+  faLaptopCode,
+  faCode,
+  faServer,
+  faObjectGroup,
+} from "@fortawesome/free-solid-svg-icons";
 export default {
-   components: {
+  components: {
     roundBtn,
   },
   data() {
     return {
       colors: COLORS,
       list: [
-      {
-        block: 1,
-        title: "",
-        description: "",
-        icon: "",
-        mobileClass: 'show',
-        displayFlag: false
-      },
-      {
-        block: 1,
-        title: "SYSTEM ADMINISTRATOR",
-        description: "CentOS, Linux, AWS, CPANEL, Google Cloud, GoDaddy, SiteGround, Dedicated Server and Related Task",
-        icon: faServer,
-        mobileClass: 'show',
-        displayFlag: true
-      },
-      {
-        block: 1,
-        title: "UI/UX Designs",
-        description: "Adobe Tools (PS, Indesign, After Effects, XD), Figma",
-        icon: faObjectGroup,
-        mobileClass: 'show',
-        displayFlag: true
-      },
-      {
-        block: 1,
-        title: "",
-        description: "",
-        icon: "",
-        mobileClass: 'show',
-        displayFlag: false
-      },
-      {
-        block: 1,
-        title: "LOWER LEVEL PROGRAMMING",
-        description: "Assembly, C-Language, C++, and IVHDL",
-        icon: faCode,
-        mobileClass: 'show',
-        displayFlag: true
-      },
-      {
-        block: 1,
-        title: "",
-        description: "",
-        icon: "",
-        mobileClass: 'show',
-        displayFlag: false
-      },  {
-        block: 1,
-        title: "",
-        description: "",
-        icon: "",
-        mobileClass: 'show',
-        displayFlag: false
-      },
-      {
-        block: 1,
-        title: "MOBILE DEVELOPMENT",
-        description: "Java, Objective-C, React-Native, Android Development",
-        icon: faMobile,
-        mobileClass: 'show',
-        displayFlag: true
-      },
+        {
+          block: 1,
+          title: "",
+          description: "",
+          icon: "",
+          mobileClass: "show",
+          displayFlag: false,
+        },
+        {
+          block: 1,
+          title: "SYSTEM ADMINISTRATOR",
+          description:
+            "CentOS, Linux, AWS, CPANEL, Google Cloud, GoDaddy, SiteGround, Dedicated Server and Related Task",
+          icon: faServer,
+          mobileClass: "show",
+          displayFlag: true,
+        },
+        {
+          block: 1,
+          title: "UI/UX Designs",
+          description: "Adobe Tools (PS, Indesign, After Effects, XD), Figma",
+          icon: faObjectGroup,
+          mobileClass: "show",
+          displayFlag: true,
+        },
+        {
+          block: 1,
+          title: "",
+          description: "",
+          icon: "",
+          mobileClass: "show",
+          displayFlag: false,
+        },
+        {
+          block: 1,
+          title: "LOWER LEVEL PROGRAMMING",
+          description: "Assembly, C-Language, C++, and IVHDL",
+          icon: faCode,
+          mobileClass: "show",
+          displayFlag: true,
+        },
+        {
+          block: 1,
+          title: "",
+          description: "",
+          icon: "",
+          mobileClass: "show",
+          displayFlag: false,
+        },
+        {
+          block: 1,
+          title: "",
+          description: "",
+          icon: "",
+          mobileClass: "show",
+          displayFlag: false,
+        },
+        {
+          block: 1,
+          title: "MOBILE DEVELOPMENT",
+          description: "Java, Objective-C, React-Native, Android Development",
+          icon: faMobile,
+          mobileClass: "show",
+          displayFlag: true,
+        },
       ],
       web: [
-          {
+        {
           block: 1,
           title: "WEB DEVELOPMENT",
-          description: "Laravel, Vuejs, Javascript, Nodejs, ReactJS, React Native, API Integrations, Bootstrap, Android Development, iOS Development, Java, Wordpress, Shopify Storefront + API, PHP, CodeIgniter, HTML5, CSS3, Xampp, Wampp, MySQL, Woocommerce Integration, Alibaba Dropshipping, Amazon Dropshipping, Shopify, Paypal API Integration, Stripe API Integration, Instagram API Integration, Google API Integration, Facebook API Integration, Messaging  ",
+          description:
+            "Laravel, Vuejs, Javascript, Nodejs, ReactJS, React Native, API Integrations, Bootstrap, Android Development, iOS Development, Java, Wordpress, Shopify Storefront + API, PHP, CodeIgniter, HTML5, CSS3, Xampp, Wampp, MySQL, Woocommerce Integration, Alibaba Dropshipping, Amazon Dropshipping, Shopify, Paypal API Integration, Stripe API Integration, Instagram API Integration, Google API Integration, Facebook API Integration, Messaging  ",
           icon: faLaptopCode,
-          displayFlag: true
-        }
+          displayFlag: true,
+        },
       ],
     };
   },
