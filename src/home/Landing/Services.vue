@@ -1,35 +1,131 @@
 <template>
   <div id="our-services">
+    <Curve
+      :color="curveStyle1"
+      :use="true"
+      :stylecss="{
+        backgroundColor: 'white',
+      }"
+    ></Curve>
     <div class="cw-banner">
-      <Curve :color="curveStyle" :use="false" :stylecss="{
-        backgroundColor: '#00B89F',
-        }"></Curve>
+      <SectionHeader
+        :title="'OUR SERVICES'"
+        :style="style"
+        :description="'What we offer are innovative solutions'"
+      ></SectionHeader>
       <div class="container">
-        <h2>OUR SERVICES</h2>
-        <p>What we offer are innovative solutions</p>
         <div class="row">
           <span class="card" v-for="(item, index) in services" :key="index">
             <center>
-              <font-awesome-icon :icon="item.class" class="font-awesome-icon" /></center>
-              <b><p class="subtitle">{{ item.title }}</p></b>
-              <span style="font-size: 13px; color: black;">{{ item.desc }}</span>
+              <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
+            </center>
+            <b
+              ><p class="subtitle">{{ item.title }}</p></b
+            >
+            <span style="font-size: 13px; color: black">{{ item.desc }}</span>
           </span>
         </div>
       </div>
-      <Curve :color="curveStyle" :use="false" :stylecss="{
-        transform: 'rotateZ(180deg)',
-        backgroundColor: '#8F00B5',
-        }"></Curve>
     </div>
-    
+    <Curve
+      :color="curveStyle2"
+      :use="false"
+      :stylecss="{
+        backgroundColor: 'white',
+      }"
+    ></Curve>
   </div>
 </template>
 
+  <style scoped lang="scss">
+@import "~assets/style/colors.scss";
+.cw-banner {
+  float: left;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    $gradientPrimary 0%,
+    $gradientSecondary 100%
+  );
+  margin-top: -275px;
+  padding: 50px 0 50px 0;
+}
+.container {
+  text-align: center;
+  color: $white;
+}
+.card {
+  width: 23%;
+  height: 400px;
+  margin: 1%;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.font-awesome-icon {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: $secondary;
+  font-size: 80px;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: $primary;
+}
+
+img {
+  margin-top: 1vh;
+  width: 150px;
+  height: 150px;
+}
+
+.row {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 40% !important;
+    height: 370px;
+    margin: 5% !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    width: 60% !important;
+    height: 340px;
+    margin: 5% 20% !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    width: 60% !important;
+    height: 360px;
+    margin: 5% 20% !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 60% !important;
+    height: 450px;
+    margin: 5% 20% !important;
+  }
+}
+</style>
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
 import Curve from "src/home/generic/svgCurve.vue";
 import ColorsJS from "src/assets/style/colors.js";
+import SectionHeader from "src/home/generic/sectionHeader.vue";
 import {
   faPalette,
   faMobileAlt,
@@ -38,12 +134,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
-    Curve
+    Curve,
+    SectionHeader,
   },
   data() {
-    
     return {
-      curveStyle: ColorsJS.white,
+      curveStyle1: ColorsJS.gradientPrimary,
+      curveStyle2: ColorsJS.gradientSecondary,
+      style: {
+        color: ColorsJS.white,
+      },
       services: [
         {
           title: "Design",
@@ -76,91 +176,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-@import "~assets/style/colors.scss";
-
-.card {
-  width: 23%;
-  height: 400px;
-  margin: 1%;
-  padding: 15px;
-  border-radius: 15px;
-}
-
-.font-awesome-icon {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: $secondary;
-  font-size: 80px;
-}
-
-.subtitle {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  color: $primary; 
-}
-
-.cw-banner {
-  float: left;
-  width: 100%;
-  background: linear-gradient(180deg, #00B89F 30%, #8F00B5 70%);
-  position: relative;
-}
-
-img {
-  margin-top: 1vh;
-  width: 150px;
-  height: 150px;
-}
-
-.container {
-  text-align: center;
-  color: $white;
-}
-
-.row {
-  text-align: center;
-  margin-top: 8vh;
-}
-
-#our-services{
-  height: 100vh;
-  
-}
-
-@media only screen and (max-width: 1200px){
-  .card {
-    width: 40% !important;
-    height: 370px;
-    margin: 5% !important;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .card {
-    width: 60% !important;
-    height: 340px;
-    margin: 5% 20% !important;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  .card {
-    width: 60% !important;
-    height: 360px;
-    margin: 5% 20% !important;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .card {
-    width: 60% !important;
-    height: 450px;
-    margin: 5% 20% !important;
-  }
-}
-</style>
