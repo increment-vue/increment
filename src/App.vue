@@ -46,19 +46,6 @@ p {
   font-size: 16px !important;
 }
 
-.section-container {
-  width: 90% !important;
-  margin-left: 5% !important;
-  margin-right: 5% !important;
-  min-height: 100vh !important;
-  padding-top: 20vh;
-  padding-bottom: 20vh;
-}
-.body {
-  margin: 0px !important;
-  width: 100% !important;
-}
-
  @media screen and (max-width: 1570px) {
   h1{
     font-size: 150% !important;
@@ -67,9 +54,12 @@ p {
     font-size: 100% !important;
   }
 }
-// @media screen and (max-width: 992px) {
-//   h1{
-//     font-size: 30px !important;
-//   }
-// }
+@media screen and (max-width: 992px) {
+  h2{
+    font-size: 150% !important;
+  }
+  h3{
+    font-size: 120% !important;
+  }
+}
 </style>
