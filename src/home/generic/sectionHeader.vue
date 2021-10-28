@@ -15,14 +15,11 @@
 .title-holder {
   width: 100%;
   min-height: 50%;
+  margin: 20px 0 100px 0;
+  padding: 0 30px 0 30px;
 }
 
-.title {
-  font-weight: 800;
-  text-align: center;
-}
-
-.decription {
+.title, .decription {
   text-align: center;
 }
 </style>
