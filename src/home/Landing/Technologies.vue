@@ -44,11 +44,13 @@
         :styles="{
           float: 'right',
           backgroundColor: colors.white,
+          marginBottom: '50px !important' ,
           color: colors.green,
           borderColor: colors.green,
         }"
         :hoverStyles="{
           float: 'right',
+          marginBottom: '50px !important',
           backgroundColor: colors.white + '!important',
           color: colors.purple,
           borderColor: colors.purple,
@@ -128,12 +130,13 @@ h2 {
 
 .image-container{
   width: 100%;
+  // margin: auto;
 }
 
 .softdev-gif {
   margin-top: -340px;
-  // width: 50%;
-  height: 380px;
+  width: 40% !important;
+  height: auto;
 }
 .web-card {
   margin-top: 10px;
@@ -165,13 +168,17 @@ h2 {
   }
   button.btn {
     float: unset !important;
-    // margin-top: 30px !important;
-    margin-bottom: -100px !important;
+    margin-top: 30px !important;
   }
 }
 @media screen and (max-width: 400px) {
   h2 {
     font-size: 30px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .card{
+    width: 60%;
   }
 }
 </style>
