@@ -145,6 +145,7 @@
               :key="index"
               class="nav-item "
             >
+            <!-- Who We Are -->
               <div class="btn-group dropdown col headerClass" v-if="item.title === 'Who We Are'" @click="isToggled1 = !isToggled1">
                 <!-- button title -->
                 <a
@@ -204,6 +205,8 @@
                   </span>
                 </div>
               </div>
+              
+              <!-- Our Services -->
               
               <div class="btn-group dropdown col headerClass" v-if="item.title === 'Our Services'" @click="isToggled2 = !isToggled2">
                 <!-- button title -->
