@@ -176,6 +176,11 @@ h2 {
     font-size: 30px !important;
   }
 }
+@media screen and (max-width: 320px) {
+  .card{
+    width: 60%;
+  }
+}
 </style>
 <script>
 import ROUTER from "src/router";
