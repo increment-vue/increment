@@ -146,9 +146,6 @@ h2 {
   height: auto;
 }
 @media screen and (max-width: 992px) {
-  .section-container {
-    min-height: 90vh;
-  }
   .hide,
   .softdev-gif {
     display: none;
