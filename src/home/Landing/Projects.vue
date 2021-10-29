@@ -135,7 +135,7 @@ export default {
 }
 .box img{
   padding: 10%;
-  width: 90%;
+  width: 80%;
   height: auto;
   border: 1px solid white;
   background-color: $white;

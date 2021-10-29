@@ -72,6 +72,7 @@
   width: 100%;
   background-color: $white;
   padding: 50px;
+  margin-bottom: 10vh;
 }
 .details-holder {
   justify-content: center;

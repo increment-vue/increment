@@ -7,28 +7,29 @@
         :description="'What we at Increment Technologies Inc. believe and stand for.'"
       ></SectionHeader>
     </div>
-    <center>
-      <div class="container">
-        <div class="row">
-          <div class="card-holder" v-for="(item, index) in values" :key="index">
-            <div
-              :class="
-                index === 1 || index === 4 ? 'single-cardUp' : 'single-card'
-              "
-            >
-              <h3 class="content">
-                <b>{{ item.desc }}</b>
-              </h3>
-            </div>
+    <div class="container">
+      <div class="row">
+        <span
+          class="card-holder"
+          v-for="(item, index) in values"
+          :key="index"
+        >
+          <div
+            :class="index === 1 || index === 4? 'single-cardUp' : 'single-card'"
+          >
+            <b class="paragraph">
+              <i>{{ item.desc }}</i>
+            </b>
           </div>
-        </div>
+        </span>
       </div>
-    </center>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .cw-banner {
+  text-align: center;
   float: left;
   width: 100%;
   padding: 50px 0 50px 0;
@@ -38,29 +39,30 @@
     $gradientSecondary 100%
   );
 }
-.card-holder {
+.card-holder{
   width: 31%;
   margin: 1%;
 }
-.single-card,
-.single-cardUp {
-  background: $white;
+.single-card, .single-cardUp {
+  background: #e5e5e5;
   padding: 30px;
-  margin: 20px;
+  margin: 30px;
   height: 180px;
   width: 100%;
   border-radius: 10px;
   display: flex;
+  text-align: center;
   align-items: center;
 }
-.single-cardUp {
+.single-cardUp{
   margin-top: -10px;
 }
-.content {
-  font-style: italic;
-  color: $secondary;
+.paragraph {
+  font-size: 25px;
+  color: #028170;
+  text-align: center;
 }
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .cw-banner {
     width: 100%;
     padding: 50px 0 50px 0;
@@ -68,15 +70,15 @@
   .container {
     margin-top: 50px;
   }
-  .single-card,
-  .single-cardUp {
-    margin-top: 20px;
-    float: unset;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+  .single-card, .single-cardUp{
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    background-color: white;
+    margin-top: 0px;
+    text-align: center !important;
   }
-  .card-holder {
+  .card-holder{
     width: 100%;
   }
 }
@@ -134,6 +136,6 @@ export default {
     return {
       common: COMMON,
     };
-  },
+  }
 };
 </script>
