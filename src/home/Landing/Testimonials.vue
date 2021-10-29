@@ -19,7 +19,6 @@
               <p>
                 {{ item.position }}
                 <br />
-                <!-- <p> -->
                 <b>{{ item.country }}</b>
               </p>
             </center>
@@ -53,7 +52,7 @@
   font-style: italic;
 }
 .name {
-  color: $primary;
+  color: $success;
   margin-top: 100px;
 }
 
@@ -77,6 +76,9 @@
   .row{
     margin-top: 50px;
   }
+  .name {
+  margin-top: 35px;
+}
 }
 </style>
 <script>

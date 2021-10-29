@@ -152,7 +152,7 @@ h2 {
   }
   .card {
     float: unset;
-    width: 50%;
+    width: 80%;
     height: auto;
     margin-left: auto;
     margin-right: auto;

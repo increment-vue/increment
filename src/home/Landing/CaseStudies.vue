@@ -195,6 +195,32 @@ position: relative;
         left: -20px !important;
     }
 }
+@media screen and (min-width: 993px){
+
+}
+@media screen and (max-width: 992px){
+  .single-card{
+    justify-content: center;
+    width: 500px;
+  }
+  .bottomImage{
+    display: none;
+  }
+  .bottomFormatter{
+    display: none;
+  }
+  .bottomContainer{
+    justify-content: center;
+  }
+  .card-collection{
+    display: flex;
+    justify-content: center;
+  }
+  .my-col{
+    margin-bottom: 10px;
+    width: 500px;
+  }
+}
 </style>
 <script>
 import ROUTER from "src/router";

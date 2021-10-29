@@ -1,53 +1,131 @@
 <template>
   <div id="our-services">
+    <Curve
+      :color="curveStyle1"
+      :use="true"
+      :stylecss="{
+        backgroundColor: 'white',
+      }"
+    ></Curve>
     <div class="cw-banner">
-      <Curve :color="curveStyle" :use="false" :stylecss="{
-        backgroundColor: '#00B89F',
-        }"></Curve>
-      <!-- <div class="curve-top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
-        <path
-            fill="#00B89F"
-            fill-opacity="1"
-           d="M0 114.359H1919V72.1293C1919 72.1293 1818.31 6.27769e-05 1627.8 0C1437.3 -6.27764e-05 1257.73 110.599 1072.05 110.599C999.157 110.599 927.457 94.1749 858.089 72.9421C765.056 44.4665 654.178 0 557.849 0C461.521 0 409.984 67.5828 308.769 72.9421C185.042 79.4935 0 0 0 0V114.359Z"
-          ></path>
-        </svg>
-      </div> -->
+      <SectionHeader
+        :title="'OUR SERVICES'"
+        :style="style"
+        :description="'What we offer are innovative solutions'"
+      ></SectionHeader>
       <div class="container">
-        <h2>OUR SERVICES</h2>
-        <p>What we offer are innovative solutions</p>
         <div class="row">
           <span class="card" v-for="(item, index) in services" :key="index">
             <center>
-              <font-awesome-icon :icon="item.class" class="font-awesome-icon" /></center>
-              <b><p class="subtitle">{{ item.title }}</p></b>
-              <span style="font-size: 13px; color: black;">{{ item.desc }}</span>
+              <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
+            </center>
+            <b
+              ><p class="subtitle">{{ item.title }}</p></b
+            >
+            <span style="font-size: 13px; color: black">{{ item.desc }}</span>
           </span>
         </div>
       </div>
-      <Curve :color="curveStyle" :use="false" :stylecss="{
-        transform: 'rotateZ(180deg)',
-        backgroundColor: '#8F00B5',
-        }"></Curve>
-      <!-- <div class="curve-bottom">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 114">
-        <path
-          fill="#8F00B5"
-          fill-opacity="1"
-          d="M1919 0H0V43.2333C0 43.2333 99.234 79.8683 165.681 90.3369C316.558 114.108 422.004 30.1656 553.944 43.2333C678.534 55.5728 741.733 95.7704 866.339 107.944C1005.3 121.52 1083.76 110.657 1222.8 97.9025C1382.48 83.2545 1469.45 47.1908 1629.76 43.2333C1742.83 40.4416 1859.81 58.2952 1919 58.2952V0Z"
-        ></path>
-      </svg>
-    </div> -->
     </div>
-    
+    <Curve
+      :color="curveStyle2"
+      :use="false"
+      :stylecss="{
+        backgroundColor: 'white',
+      }"
+    ></Curve>
   </div>
 </template>
 
+  <style scoped lang="scss">
+@import "~assets/style/colors.scss";
+.cw-banner {
+  float: left;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    $gradientPrimary 0%,
+    $gradientSecondary 100%
+  );
+  margin-top: -14.5%;
+  padding: 50px 0 50px 0;
+}
+.container {
+  text-align: center;
+  color: $white;
+}
+.card {
+  width: 23%;
+  height: 400px;
+  margin: 1%;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.font-awesome-icon {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: $secondary;
+  font-size: 80px;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: $primary;
+}
+
+img {
+  margin-top: 1vh;
+  width: 150px;
+  height: 150px;
+}
+
+.row {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 40% !important;
+    height: 370px;
+    margin: 5% !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    width: 60% !important;
+    height: 340px;
+    margin: 5% 20% !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    width: 60% !important;
+    height: 360px;
+    margin: 5% 20% !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 60% !important;
+    height: 450px;
+    margin: 5% 20% !important;
+  }
+}
+</style>
 <script>
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
 import Curve from "src/home/generic/svgCurve.vue";
 import ColorsJS from "src/assets/style/colors.js";
+import SectionHeader from "src/home/generic/sectionHeader.vue";
 import {
   faPalette,
   faMobileAlt,
@@ -56,12 +134,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
-    Curve
+    Curve,
+    SectionHeader,
   },
   data() {
-    
     return {
-      curveStyle: ColorsJS.white,
+      curveStyle1: ColorsJS.gradientPrimary,
+      curveStyle2: ColorsJS.gradientSecondary,
+      style: {
+        color: ColorsJS.white,
+      },
       services: [
         {
           title: "Design",
@@ -94,91 +176,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-@import "~assets/style/colors.scss";
-
-.card {
-  width: 23%;
-  height: 400px;
-  margin: 1%;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-.font-awesome-icon {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: $secondary;
-  font-size: 80px;
-}
-
-.subtitle {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  color: $primary; 
-}
-
-.cw-banner {
-  float: left;
-  width: 100%;
-  background: linear-gradient(180deg, #00B89F 30%, #8F00B5 70%);
-  position: relative;
-}
-
-img {
-  margin-top: 1vh;
-  width: 150px;
-  height: 150px;
-}
-
-.container {
-  text-align: center;
-  color: $white;
-}
-
-.row {
-  text-align: center;
-  margin-top: 8vh;
-}
-
-#our-services{
-  height: 100vh;
-  
-}
-
-@media only screen and (max-width: 1200px){
-  .card {
-    width: 40% !important;
-    height: 370px;
-    margin: 5% !important;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .card {
-    width: 60% !important;
-    height: 340px;
-    margin: 5% 20% !important;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  .card {
-    width: 60% !important;
-    height: 360px;
-    margin: 5% 20% !important;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .card {
-    width: 60% !important;
-    height: 450px;
-    margin: 5% 20% !important;
-  }
-}
-</style>
