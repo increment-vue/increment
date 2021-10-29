@@ -1,17 +1,18 @@
 <template>
   <div class="container my-container">
-      <div class="navbar navbar-expand-lg fixed-top row " :class="this.scrollPosition > 500 ? 'bg-gradient':'bg-transparent'">
+      <div class="navbar navbar-expand-lg fixed-top row " 
+      :class="this.scrollPosition > 500 ? 'bg-gradient':'bg-transparent'">
         <!-- Desktop View Navbar -->
         <div class="header-section" >
-          <span class="brand col-6"  >
+          <span class="brand col-6 "  >
             <a class="navbar-brand" v-on:click="redirect('/')">
               <img class="increment-logo"
                 src="../../assets/img/logo_white.png"
               />
               <label class="headerName" @click="redirect('/')">
-                <b class="increment-purple">INCREMENT</b>
+                <b :class="this.scrollPosition > 500 ? 'increment-white':'increment-purple'">INCREMENT</b>
                 <br />
-                <b class="increment-purple">TECHNOLOGIES</b>
+                <b :class="this.scrollPosition > 500 ? 'increment-white':'increment-purple'">TECHNOLOGIES</b>
               </label>
             </a>
           </span>
@@ -137,14 +138,15 @@
         <!-- Mobile View Navbar  -->
         <div class="collapse" id="navbarSupportedContent" >
           <div class="header-separator"> </div>
-          <ul class="navbar-nav ml-auto" >
+          <ul class="navbar-nav ml-auto headerElement" >
             <li
               data-target=".hide.show"
               v-for="(item, index) in menu"
               :key="index"
               class="nav-item "
             >
-              <div class="btn-group dropdown" v-if="item.title === 'Who We Are'" >
+            <!-- Who We Are -->
+              <div class="btn-group dropdown col headerClass" v-if="item.title === 'Who We Are'" @click="isToggled1 = !isToggled1">
                 <!-- button title -->
                 <a
                   class="nav-link  " 
@@ -158,16 +160,18 @@
                 >
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
-                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <span class="formatter"></span>
+                <span>
+                  <font-awesome-icon :icon="isToggled1 ? angleUp : angleDown" size="lg" />
+                </span>
+                <!-- <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
                 </a>
-                <!-- button menu -->
                 <div
                   class="dropdown-menu who-menu"
                   v-if="item.title === 'Who We Are'"
                   style="position: relative;"
                 >
-                  <!-- button content -->
                   <a
                     data-target=".hide.show"
                     class="dropdown-item"
@@ -185,10 +189,26 @@
                   >
                     <b class="increment-purple">What They Say About Us</b>
                   </a>
+                </div> -->
+              </div>
+              <div class="container classContainer" v-if="isToggled1">
+                <div v-if="item.title === 'Who We Are'" class="row">
+                  <span class="col-5 fullCol">
+                    <a href="/#our-values" @click="headerScrollTo('#our-values')">
+                      <b class="increment-purple">Our Values</b>
+                    </a>
+                  </span>
+                  <span class="col">
+                    <a href="/#testimonials" @click="headerScrollTo('#testimonials')">
+                      <b class="increment-purple">What They Say About Us</b>
+                    </a>
+                  </span>
                 </div>
               </div>
               
-              <div class="btn-group dropdown" v-if="item.title === 'Our Services'">
+              <!-- Our Services -->
+              
+              <div class="btn-group dropdown col headerClass" v-if="item.title === 'Our Services'" @click="isToggled2 = !isToggled2">
                 <!-- button title -->
                 <a
                   class="nav-link " 
@@ -202,10 +222,14 @@
                 >
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
-                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <span class="formatter"></span>
+                <span>
+                  <font-awesome-icon :icon="isToggled2 ? angleUp : angleDown" size="lg" />
+                </span>
+                <!-- <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
                 </a>
-                <!-- button menu -->
+                button menu
                 <div
                   class="dropdown-menu serve-menu"
                   v-if="item.title === 'Our Services'"
@@ -219,9 +243,18 @@
                   >
                     <b class="increment-purple">How We Work</b>
                   </a>
+                </div> -->
+              </div>
+              <div class="container classContainer" v-if="isToggled2">
+                <div v-if="item.title === 'Our Services'" class="row">
+                  <span class="col-5 fullCol">
+                    <a href="/#how-we-work" @click="headerScrollTo('#how-we-work')">
+                      <b class="increment-purple">How We Work</b>
+                    </a>
+                  </span>
                 </div>
               </div>
-
+              
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
                   <a data-target=".hide.show" class="nav-link" href="/send-request">
@@ -248,11 +281,41 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.nav-link{
+  width: 100px;
+}
+.classContainer{
+  margin-left: 0px;
+  padding-left: 30px;
+}
+.items{
+  display: flex;
+  flex-wrap: wrap;
+}
+.fullCol{
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.headerClass {
+  padding-left: 0px;
+}
+.formatter{
+  width: 80%;
+}
+.headerName{
+  cursor: pointer;
+}
 .menuBars{
-  color:linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  // color:linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  color: #00B89F;
 }
 .increment-logo{
   margin-bottom: 5px; margin-right: 5px; margin-top: -10%
+}
+.bg-white{
+  background-color: white;
+  padding-bottom: 0px;
 }
 .bg-transparent{
   background-color: transparent;
@@ -261,6 +324,7 @@
 .bg-gradient{
   background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   padding-bottom: 0px;
+  opacity: 2;
 }
 .navbar-menu-toggler-md {
   text-align: right;
@@ -273,7 +337,7 @@
   float: left;
   width: 90%;
   // padding-bottom: 10px;
-  background: transparent;
+  // background: transparent;
 }
 .navbar-nav {
   margin-top: -69px;
@@ -302,6 +366,9 @@
 }
 .brand {
   margin-top: 0.5%;
+}
+.brand:hover{
+  cursor: pointer;
 }
 
 label {
@@ -381,13 +448,24 @@ img {
   }
   .bg-gradient{
     padding-bottom: 0px!important;
-}
+  }
 }
 
 @media screen and (max-width: 991px) {
+  .headerElement{
+    width: 100%;
+  }
+  // Color elements inversed to their original to take into account mobile view
+  .bg-transparent{
+    background-color: white!important;;
+  }
   .bg-gradient{
     background-color: white !important;
     background-image: none!important;
+    // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  }
+  .increment-white{
+    color: $primary;
   }
   .my-space {
     width: 70%;
@@ -512,7 +590,10 @@ img {
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
 import $ from "jquery";
-
+import {
+  faAngleDown,
+  faAngleUp
+} from "@fortawesome/free-solid-svg-icons";
 export default {
   mounted() {
     console.log(this.$route);
@@ -559,12 +640,17 @@ export default {
           type: "regular",
         },
       ],
-      scrollPosition: null
+      scrollPosition: null,
+      angleDown: faAngleDown,
+      angleUp: faAngleUp,
+      isToggled1: false,
+      isToggled2: false
     };
   },
   methods: {
     upadateScroll(){
       this.scrollPosition = window.scrollY
+      console.log(this.scrollPosition)
     },
     redirect(parameter) {
       ROUTER.push(parameter);
