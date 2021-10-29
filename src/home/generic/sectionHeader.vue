@@ -8,9 +8,6 @@
 </template>
 
 <style scoped lang="scss">
-.decription{
-  margin-top: 20px
-}
 @import "~assets/style/colors.scss";
 .title-holder {
   width: 100%;
