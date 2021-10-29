@@ -20,7 +20,7 @@
               <p class="p3">{{ item.description }}</p>
             </div>
             <a :href="item.link" target="_blank"
-              ><button class="button1">Visit Website</button></a>
+              ><button class="button1">Visit</button></a>
           </center>
         </span>
       </div>
