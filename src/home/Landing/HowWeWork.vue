@@ -76,7 +76,8 @@
 .details-holder {
   justify-content: center;
   width: 100%;
-  margin-left: 10px;
+  margin: 10px;
+
 }
 .item-holder {
   background: linear-gradient(
@@ -152,6 +153,9 @@
   width: 350px;
   top: 18px;
 }
+.component-header{
+  margin-top: -220px;
+}
 .component-footer{
   margin: 50px 0 0 80px;
   justify-content: center;
@@ -159,11 +163,12 @@
 @media only screen and (max-width: 992px) {
   .details-holder {
     width: 100%;
-    margin-bottom: 100px;
+    margin: -80px 0 10px 0;
   }
   .item-holder,
   .item-holder-click {
     width: 100%;
+    // margin-top: 20px;
   }
   .second-column {
     text-align: center;
