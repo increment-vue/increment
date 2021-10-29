@@ -44,13 +44,13 @@
         :styles="{
           float: 'right',
           backgroundColor: colors.white,
-          marginBottom: '50px !important' ,
+          marginBottom: '100px !important',
           color: colors.green,
           borderColor: colors.green,
         }"
         :hoverStyles="{
           float: 'right',
-          marginBottom: '50px !important',
+          marginBottom: '100px !important',
           backgroundColor: colors.white + '!important',
           color: colors.purple,
           borderColor: colors.purple,
