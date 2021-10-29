@@ -76,6 +76,9 @@
   .row{
     margin-top: 50px;
   }
+  .name {
+  margin-top: 35px;
+}
 }
 </style>
 <script>

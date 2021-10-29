@@ -77,6 +77,15 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 1200px) {
+  .single-card, .single-cardUp{
+    width: 85%;
+    background-color: white;
+    margin-top: 0px;
+    justify-content: center;
+    text-align: center;
+  }
+}
 </style>
 <script>
 import COMMON from "src/common.js";
