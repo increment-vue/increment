@@ -58,7 +58,7 @@
   width: 23%;
   height: 400px;
   margin: 1%;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
 }
 
