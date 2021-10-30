@@ -11,7 +11,7 @@ export default {
   APP_NAME: 'INCREMENT TECHNOLOGIES INC.',
   APP_TAGLINE: 'WE WANT YOU TO SUCCEED!',
   APP_EMAIL: 'incrementtech2020@gmail.com',
-  APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES. All Rights Reserved. ',
+  APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES 2022. All Rights Reserved. ',
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'https://incrementtechnologies.com',
   APP_PHONE_NUMBER: '+63-032-436-1622',
