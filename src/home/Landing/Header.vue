@@ -7,12 +7,12 @@
           <span class="brand col-6 "  >
             <a class="navbar-brand" v-on:click="redirect('/')">
               <img class="increment-logo"
-                src="../../assets/img/logo_white.png"
+                src="../../assets/img/logo.png"
               />
               <label class="headerName" @click="redirect('/')">
                 <b :class="this.scrollPosition > 500 ? 'increment-white':'increment-purple'">INCREMENT</b>
                 <br />
-                <b :class="this.scrollPosition > 500 ? 'increment-white':'increment-purple'">TECHNOLOGIES</b>
+                <b :class="this.scrollPosition > 500 ? 'increment-white':'increment-purple'">TECHNOLOGIES INC.</b>
               </label>
             </a>
           </span>
