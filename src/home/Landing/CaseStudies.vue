@@ -34,7 +34,7 @@
         :text="'View More'"
         :changeIcon="'fa fa-angle-double-right'"
         :icon="'fa fa-angle-right'"
-        :route="'/technologies'"
+        :route="'/case-studies'"
         :styles="{
           float: 'right',
           backgroundColor: colors.white,
