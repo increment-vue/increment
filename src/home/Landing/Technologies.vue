@@ -146,16 +146,13 @@ h2 {
   height: auto;
 }
 @media screen and (max-width: 992px) {
-  .section-container {
-    min-height: 90vh;
-  }
   .hide,
   .softdev-gif {
     display: none;
   }
   .card {
     float: unset;
-    width: 50%;
+    width: 80%;
     height: auto;
     margin-left: auto;
     margin-right: auto;

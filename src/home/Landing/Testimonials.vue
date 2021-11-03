@@ -52,7 +52,7 @@
   font-style: italic;
 }
 .name {
-  color: $primary;
+  color: $success;
   margin-top: 100px;
 }
 

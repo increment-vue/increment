@@ -87,7 +87,7 @@ export default {
           location: "Philippines",
           description: "Website and Mobile Development",
           src: require("assets/img/project - payhiram.png"),
-          link: "https://www.payhiram.ph/",
+          link: "https://payhiram.ph/",
         },
       ],
     };
@@ -135,7 +135,7 @@ export default {
 }
 .box img{
   padding: 10%;
-  width: 90%;
+  width: 80%;
   height: auto;
   border: 1px solid white;
   background-color: $white;

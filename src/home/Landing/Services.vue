@@ -47,7 +47,7 @@
     $gradientPrimary 0%,
     $gradientSecondary 100%
   );
-  margin-top: -275px;
+  margin-top: -14.5%;
   padding: 50px 0 50px 0;
 }
 .container {
@@ -58,7 +58,7 @@
   width: 23%;
   height: 400px;
   margin: 1%;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
 }
 
