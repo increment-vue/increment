@@ -207,7 +207,7 @@
               </div>
               
               <!-- Our Services -->
-              
+
               <div class="btn-group dropdown col headerClass" v-if="item.title === 'Our Services'" @click="isToggled2 = !isToggled2">
                 <!-- button title -->
                 <a
@@ -257,14 +257,12 @@
               
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
-                  <a data-target=".hide.show" class="nav-link" href="/send-request">
+                  <a data-target=".show" class="nav-link" href="/send-request">
                     <b class="increment-purple">{{ item.title }}</b>
                   </a>
                 </div>
                 <div v-else-if="item.title !== 'Send Request'">
                   <a
-                    data-target=".hide.show"
-                    class="nav-link"
                     :href="item.redirect"
                     @click="headerScrollTo(item.redirect)"
                   >
@@ -281,6 +279,7 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+
 .nav-link{
   width: 100px;
 }
@@ -449,9 +448,13 @@ img {
   .bg-gradient{
     padding-bottom: 0px!important;
   }
+
 }
 
 @media screen and (max-width: 991px) {
+  .navbar-expand .navbar-collapse {
+    display: flex !important;
+  }  
   .headerElement{
     width: 100%;
   }
