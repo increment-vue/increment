@@ -1,7 +1,7 @@
 <template>
   <div class="container my-container">
-      <div class="navbar navbar-expand-lg fixed-top row " 
-      :class="this.scrollPosition > 500 ? 'bg-gradient':'bg-transparent'">
+      <div class="navbar navbar-expand-lg fixed-top row " id="headerColor" 
+      :class="this.scrollPosition > 500 || this.atSendReq ? 'bg-gradient':'bg-transparent'">
         <!-- Desktop View Navbar -->
         <div class="header-section" >
           <span class="brand col-6 "  >
@@ -10,9 +10,9 @@
                 src="../../assets/img/logo.png"
               />
               <label class="headerName" @click="redirect('/')">
-                <b :class="this.scrollPosition > 500 ? 'increment-white':'increment-purple'">INCREMENT</b>
+                <b :class="this.scrollPosition > 500 || this.atSendReq ? 'increment-white':'increment-purple'">INCREMENT</b>
                 <br />
-                <b :class="this.scrollPosition > 500 ? 'increment-white':'increment-purple'">TECHNOLOGIES INC.</b>
+                <b :class="this.scrollPosition > 500 || this.atSendReq ? 'increment-white':'increment-purple'">TECHNOLOGIES INC.</b>
               </label>
             </a>
           </span>
@@ -136,14 +136,14 @@
           </span>
         </div>
         <!-- Mobile View Navbar  -->
-        <div class="collapse" id="navbarSupportedContent" >
+        <div :class="showMobileNav ? 'collapse' : ''" id="navbarSupportedContent" >
           <div class="header-separator"> </div>
           <ul class="navbar-nav ml-auto headerElement" >
             <li
-              data-target=".hide.show"
+              data-target=".hide .show"
               v-for="(item, index) in menu"
               :key="index"
-              class="nav-item "
+              class="nav-item col headerClass"
             >
             <!-- Who We Are -->
               <div class="btn-group dropdown col headerClass" v-if="item.title === 'Who We Are'" @click="isToggled1 = !isToggled1">
@@ -246,7 +246,7 @@
                 </div> -->
               </div>
               <div class="container classContainer" v-if="isToggled2">
-                <div v-if="item.title === 'Our Services'" class="row">
+                <div v-if="item.title === 'Our Services'" >
                   <span class="col-5 fullCol">
                     <a href="/#how-we-work" @click="headerScrollTo('#how-we-work')">
                       <b class="increment-purple">How We Work</b>
@@ -608,6 +608,14 @@ export default {
   openNav(){
 
   },
+  watch: {
+    '$route' (to) {
+      if(to.path.includes('send-request')){
+        this.atSendReq = true
+        console.log('Send req', this.atSendReq)
+      }
+    }
+  },
   data() {
     return {
       common: COMMON,
@@ -647,13 +655,14 @@ export default {
       angleDown: faAngleDown,
       angleUp: faAngleUp,
       isToggled1: false,
-      isToggled2: false
+      isToggled2: false,
+      atSendReq: false,
+      showMobileNav: true
     };
   },
   methods: {
     upadateScroll(){
       this.scrollPosition = window.scrollY
-      console.log(this.scrollPosition)
     },
     redirect(parameter) {
       ROUTER.push(parameter);
@@ -661,6 +670,7 @@ export default {
     headerScrollTo(id) {
       //this.redirect('/' + id);
       //window.location.reload();
+      this.showMobileNav = false
       let height = $(window).height();
       $("html, body").animate(
         {
