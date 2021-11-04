@@ -22,6 +22,7 @@
           backgroundColor: colors.success,
           color: colors.white,
           borderColor: colors.white,
+          cursor: 'pointer'
         }"
       />
     </div>
