@@ -5,14 +5,13 @@
     </div>
 
     <div class="container">
-      <p style="margin-top: 20px;">
+      <p>
         With over 5 years of experience, Increment Technologies Inc. specializes
         in Website Development, Web App Development, Mobile App Development, Web
         Design, and Web Hosting to clients sourced locally and internationally.
         The following case studies where the kind of systems our developer’s can
         work to provide solutions to every client’s needs.
       </p>
-
       <span v-for="(item, index) in cases" :key="index">
         <Cards
           :icon="item.icon"
@@ -30,7 +29,6 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
 
 .return-to-top {
   position: fixed;
@@ -51,6 +49,8 @@
 .return-to-top:hover {
   cursor: pointer;
   color: $primary;
+}
+@media screen and (max-width: 992px) {
 }
 </style>
 <script>

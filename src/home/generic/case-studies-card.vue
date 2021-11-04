@@ -1,5 +1,5 @@
 <template>
-  <span class="card" style="margin-top: 40px">
+  <span class="card" style="margin-top: 40px;">
     <span class="content">
       <center>
         <font-awesome-icon :icon="icon" class="font-awesome-icon" />
@@ -61,6 +61,18 @@
 .font-awesome-icon {
   font-size: 80px;
   color: $purple;
+}
+.card:hover {
+  border: double 5px transparent;
+  .button1 {
+    color: $purple;
+  }
+  .price {
+    background-color: $purple;
+  }
+  .font-awesome-icon {
+    color: $secondary;
+  }
 }
 </style>
 <script>
