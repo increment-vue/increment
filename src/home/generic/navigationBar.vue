@@ -6,7 +6,7 @@
       </li>
     </ul>
   </span> -->
-      <button class="navbox" @click="redirect()">{{ status }}</button>
+      <button class="navbox" >{{ status }}</button>
 </template>
 <script>
 export default {
