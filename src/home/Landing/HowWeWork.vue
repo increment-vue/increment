@@ -72,11 +72,12 @@
   width: 100%;
   background-color: $white;
   padding: 50px;
+  margin-bottom: 10vh;
 }
 .details-holder {
   justify-content: center;
   width: 100%;
-  margin-left: 10px;
+  margin: 10px;
 }
 .item-holder {
   background: linear-gradient(
@@ -146,24 +147,28 @@
   width: 350px;
   top: 18px;
 }
-.gif-imageFooter{
+.gif-imageFooter {
   margin-right: 80px;
   height: 250px;
   width: 350px;
   top: 18px;
 }
-.component-footer{
+.component-header {
+  margin-top: -220px;
+}
+.component-footer {
   margin: 50px 0 0 80px;
   justify-content: center;
 }
 @media only screen and (max-width: 992px) {
   .details-holder {
     width: 100%;
-    margin-bottom: 100px;
+    margin: -80px 0 10px 0;
   }
   .item-holder,
   .item-holder-click {
     width: 100%;
+    // margin-top: 20px;
   }
   .second-column {
     text-align: center;
@@ -172,6 +177,33 @@
     margin-left: 30%;
     margin-right: 30%;
   }
+  .component-header {
+    display: none;
+  }
+  .component-footer {
+    display: none;
+    margin: 0 50px -0 50px;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .component-header {
+    display: none;
+  }
+  .component-footer {
+    display: none;
+    margin: 0 50px -0 50px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .component-header {
+    display: none;
+  }
+  .component-footer {
+    display: none;
+    margin: 0 50px -0 50px;
+  }
+}
+@media only screen and (max-width: 450px) {
   .component-header {
     display: none;
   }
@@ -271,7 +303,12 @@ export default {
         },
       ],
       actives: [],
-      gifFooter: [require("assets/gif/how-we-work-4.gif"), require("assets/gif/how-we-work-5.gif"), require("assets/gif/how-we-work-6.gif"), require("assets/gif/how-we-work-7.gif")]
+      gifFooter: [
+        require("assets/gif/how-we-work-4.gif"),
+        require("assets/gif/how-we-work-5.gif"),
+        require("assets/gif/how-we-work-6.gif"),
+        require("assets/gif/how-we-work-7.gif"),
+      ],
     };
   },
   methods: {

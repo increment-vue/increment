@@ -1,17 +1,18 @@
 <template>
   <div class="container my-container">
-      <div class="navbar navbar-expand-lg fixed-top row " :class="this.scrollPosition > 500 ? 'bg-gradient':'bg-transparent'">
+      <div class="navbar navbar-expand-lg fixed-top row " id="headerColor" 
+      :class="this.scrollPosition > 500 || this.atSendReq ? 'bg-gradient':'bg-transparent'">
         <!-- Desktop View Navbar -->
         <div class="header-section" >
-          <span class="brand col-6"  >
+          <span class="brand col-6 "  >
             <a class="navbar-brand" v-on:click="redirect('/')">
               <img class="increment-logo"
-                src="../../assets/img/logo_white.png"
+                src="../../assets/img/logo.png"
               />
               <label class="headerName" @click="redirect('/')">
-                <b class="increment-purple">INCREMENT</b>
+                <b :class="this.scrollPosition > 500 || this.atSendReq ? 'increment-white':'increment-purple'">INCREMENT</b>
                 <br />
-                <b class="increment-purple">TECHNOLOGIES</b>
+                <b :class="this.scrollPosition > 500 || this.atSendReq ? 'increment-white':'increment-purple'">TECHNOLOGIES INC.</b>
               </label>
             </a>
           </span>
@@ -32,7 +33,9 @@
             <div class="collapse navbar-collapse" >
               <form class="form-inline my-2 my-lg-0 ml-auto">
                 <ul class="navbar-nav">
-                  <li class="nav-item header-right" v-for="(item, index) in menu" :key="index">
+                  <li class="nav-item header-right"
+                  v-for="(item, index) in menu" :key="index"
+                  >
                     <div class="btn-group dropdown" v-if="item.title === 'Who We Are'">
                       <!-- button title -->
                       <a
@@ -137,14 +140,15 @@
         <!-- Mobile View Navbar  -->
         <div class="collapse" id="navbarSupportedContent" >
           <div class="header-separator"> </div>
-          <ul class="navbar-nav ml-auto" >
+          <ul class="navbar-nav ml-auto headerElement" >
             <li
-              data-target=".hide.show"
+              data-target=".hide .show"
               v-for="(item, index) in menu"
               :key="index"
-              class="nav-item "
+              class="nav-item  headerClass"
             >
-              <div class="btn-group dropdown" v-if="item.title === 'Who We Are'" >
+            <!-- Who We Are -->
+              <div class="btn-group dropdown col headerClass" v-if="item.title === 'Who We Are'" @click="isToggled1 = !isToggled1">
                 <!-- button title -->
                 <a
                   class="nav-link  " 
@@ -154,20 +158,26 @@
                   style="color: #20c1ab"
                   type="button"
                   href="/#who-we-are"
-                  @click="headerScrollTo('#who-we-are')"
+                  @click="atSendReq ? redirectAndScroll('/', '#who-we-are') : headerScrollTo('#who-we-are')"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-label="Toggle navigation"
                 >
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
-                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <span class="formatter"></span>
+                <span>
+                  <font-awesome-icon :icon="isToggled1 ? angleUp : angleDown" size="lg" />
+                </span>
+                <!-- <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
                 </a>
-                <!-- button menu -->
                 <div
                   class="dropdown-menu who-menu"
                   v-if="item.title === 'Who We Are'"
                   style="position: relative;"
                 >
-                  <!-- button content -->
                   <a
                     data-target=".hide.show"
                     class="dropdown-item"
@@ -185,10 +195,44 @@
                   >
                     <b class="increment-purple">What They Say About Us</b>
                   </a>
+                </div> -->
+              </div>
+              <div class="container classContainer" v-if="isToggled1">
+                <div v-if="item.title === 'Who We Are'" class="row">
+                  <span class="col-5 fullCol">
+                    <a 
+                    href="/#our-values" 
+                    @click="atSendReq ? redirectAndScroll('/', '#our-values') : headerScrollTo('#our-values')" 
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
+                      <b class="increment-purple">Our Values</b>
+                    </a>
+                  </span>
+                  <span class="col">
+                    <a 
+                    href="/#testimonials" 
+                    @click="atSendReq ? redirectAndScroll('/', '#testimonials') : headerScrollTo('#testimonials')"
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
+                      <b class="increment-purple">What They Say About Us</b>
+                    </a>
+                  </span>
                 </div>
               </div>
               
-              <div class="btn-group dropdown" v-if="item.title === 'Our Services'">
+              <!-- Our Services -->
+
+              <div class="btn-group dropdown col headerClass" v-if="item.title === 'Our Services'" @click="isToggled2 = !isToggled2">
                 <!-- button title -->
                 <a
                   class="nav-link " 
@@ -198,14 +242,22 @@
                   style="color: #20c1ab"
                   type="button"
                   href="/#our-services"
-                  @click="headerScrollTo('#our-services')"
+                  @click="atSendReq ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-label="Toggle navigation"
                 >
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
-                <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <span class="formatter"></span>
+                <span>
+                  <font-awesome-icon :icon="isToggled2 ? angleUp : angleDown" size="lg" />
+                </span>
+                <!-- <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <span class="sr-only">Toggle Dropdown</span>
                 </a>
-                <!-- button menu -->
+                button menu
                 <div
                   class="dropdown-menu serve-menu"
                   v-if="item.title === 'Our Services'"
@@ -219,21 +271,43 @@
                   >
                     <b class="increment-purple">How We Work</b>
                   </a>
+                </div> -->
+              </div>
+              <div class="container classContainer" v-if="isToggled2">
+                <div v-if="item.title === 'Our Services'" class="row">
+                  <span class="col-5 fullCol">
+                    <a 
+                    href="/#how-we-work" 
+                    @click="atSendReq ? redirectAndScroll('/', '#how-we-work') : headerScrollTo('#how-we-work')"
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
+                      <b class="increment-purple">How We Work</b>
+                    </a>
+                  </span>
                 </div>
               </div>
-
+              
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
-                  <a data-target=".hide.show" class="nav-link" href="/send-request">
+                  <a data-target=".show.hide" class="nav-link" href="/send-request">
                     <b class="increment-purple">{{ item.title }}</b>
                   </a>
                 </div>
                 <div v-else-if="item.title !== 'Send Request'">
                   <a
-                    data-target=".hide.show"
-                    class="nav-link"
                     :href="item.redirect"
-                    @click="headerScrollTo(item.redirect)"
+                    @click="atSendReq ? redirectAndScroll('/', item.redirect) : headerScrollTo(item.redirect)"
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                   >
                     <b class="increment-purple">{{ item.title }}</b>
                   </a>
@@ -248,11 +322,42 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+
+.nav-link{
+  width: 100px;
+}
+.classContainer{
+  margin-left: 0px;
+  padding-left: 30px;
+}
+.items{
+  display: flex;
+  flex-wrap: wrap;
+}
+.fullCol{
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.headerClass {
+  padding-left: 0px;
+}
+.formatter{
+  width: 80%;
+}
+.headerName{
+  cursor: pointer;
+}
 .menuBars{
-  color:linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  // color:linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  color: #00B89F;
 }
 .increment-logo{
   margin-bottom: 5px; margin-right: 5px; margin-top: -10%
+}
+.bg-white{
+  background-color: white;
+  padding-bottom: 0px;
 }
 .bg-transparent{
   background-color: transparent;
@@ -261,6 +366,7 @@
 .bg-gradient{
   background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   padding-bottom: 0px;
+  opacity: 2;
 }
 .navbar-menu-toggler-md {
   text-align: right;
@@ -273,7 +379,7 @@
   float: left;
   width: 90%;
   // padding-bottom: 10px;
-  background: transparent;
+  // background: transparent;
 }
 .navbar-nav {
   margin-top: -69px;
@@ -302,6 +408,9 @@
 }
 .brand {
   margin-top: 0.5%;
+}
+.brand:hover{
+  cursor: pointer;
 }
 
 label {
@@ -381,13 +490,28 @@ img {
   }
   .bg-gradient{
     padding-bottom: 0px!important;
-}
+  }
+
 }
 
 @media screen and (max-width: 991px) {
+    .navbar-expand .navbar-collapse {
+      display: flex !important;
+    } 
+  .headerElement{
+    width: 100%;
+  }
+  // Color elements inversed to their original to take into account mobile view
+  .bg-transparent{
+    background-color: white!important;;
+  }
   .bg-gradient{
     background-color: white !important;
     background-image: none!important;
+    // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  }
+  .increment-white{
+    color: $primary;
   }
   .my-space {
     width: 70%;
@@ -456,6 +580,7 @@ img {
     margin-top: 4.5rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .navbar-menu-toggler-md {
     width: 100%;
@@ -512,7 +637,10 @@ img {
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
 import $ from "jquery";
-
+import {
+  faAngleDown,
+  faAngleUp
+} from "@fortawesome/free-solid-svg-icons";
 export default {
   mounted() {
     console.log(this.$route);
@@ -523,6 +651,16 @@ export default {
   },
   openNav(){
 
+  },
+  watch: {
+    '$route' (to) {
+      if(to.path.includes('send-request')){
+        this.atSendReq = true
+        console.log('Send req', this.atSendReq)
+      }else{
+        this.atSendReq = false
+      }
+    }
   },
   data() {
     return {
@@ -559,10 +697,22 @@ export default {
           type: "regular",
         },
       ],
-      scrollPosition: null
+      scrollPosition: null,
+      angleDown: faAngleDown,
+      angleUp: faAngleUp,
+      isToggled1: false,
+      isToggled2: false,
+      atSendReq: false,
+      showMobileNav: true
     };
   },
   methods: {
+    redirectAndScroll(page, section){
+      this.redirect(page)
+      // this.headerScrollTo(section)
+      setTimeout(()=> {this.headerScrollTo(section)}, 1000);
+      
+    },
     upadateScroll(){
       this.scrollPosition = window.scrollY
     },
@@ -572,6 +722,7 @@ export default {
     headerScrollTo(id) {
       //this.redirect('/' + id);
       //window.location.reload();
+      this.showMobileNav = false
       let height = $(window).height();
       $("html, body").animate(
         {

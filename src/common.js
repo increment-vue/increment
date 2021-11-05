@@ -11,10 +11,10 @@ export default {
   APP_NAME: 'INCREMENT TECHNOLOGIES INC.',
   APP_TAGLINE: 'WE WANT YOU TO SUCCEED!',
   APP_EMAIL: 'incrementtech2020@gmail.com',
-  APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES. All Rights Reserved. ',
+  APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES 2022. All Rights Reserved. ',
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'https://incrementtechnologies.com',
-  APP_PHONE_NUMBER: '436-1622',
+  APP_PHONE_NUMBER: '+63-032-436-1622',
   address: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
   api: 'https://mezzohotel.com/img/',
   host: 'https://mezzohotel.com/',
@@ -36,21 +36,23 @@ export default {
     name: 'CONTACT US',
     description: null,
     subMenu: [{
-      title: '436-1622',
+      title: '+63-032-436-1622',
       icon: faPhoneSquare,
       url: null,
+      payload: 'tel:'
     },
     {
       title: 'incrementtech2020@gmail.com',
       icon: faEnvelopeSquare,
       url: 'incrementtech2020@gmail.com',
+      payload: 'mailto:'
     }],
   }],
   footer2_contents: [{
     name: 'INFORMATION',
     title: 'Who We Are',
     icon: null,
-    url: '/case-studies/company-profiling',
+    url: '/#who-we-are',
   },
   {
     title: 'Our Services',
@@ -68,12 +70,12 @@ export default {
     url: '/our-projects',
   }, {
     title: 'Case Studies',
-    url: '/case-studies',
+    url: '/#case-studies',
   },
   {
     title: 'Technologies',
     icon: null,
-    url: '/technologies',
+    url: '/#technologies',
   },
   {
     title: 'Send Request',
@@ -113,7 +115,7 @@ export default {
     name: 'LOCATION',
     description: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
     icon: faMapMarked,
-    url: 'https://www.facebook.com/incrementtechnologies',
+    url: 'https://www.google.com/maps/place/The+Meridian/@10.3239246,123.9095656,19z/data=!3m1!4b1!4m5!3m4!1s0x33a999b33c3e8073:0x6e53cbaa3015872d!8m2!3d10.3239233!4d123.9101128',
     subMenu: [{
       title: null,
       icon: null,

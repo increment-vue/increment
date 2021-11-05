@@ -1,177 +1,102 @@
 <template>
   <div class="cw-banner" id="our-values">
+    <div>
+      <SectionHeader
+        :title="'OUR VALUES'"
+        :style="style"
+        :description="'What we at Increment Technologies Inc. believe and stand for.'"
+      ></SectionHeader>
+    </div>
     <div class="container">
-      <div class="text-center">
-        <h1
-          class="title"
-          style="color: white; font-size: 50px; font-weight: 700; margin-top: 10vh;"
+      <div class="row">
+        <span
+          class="card-holder"
+          v-for="(item, index) in values"
+          :key="index"
         >
-          Our Values
-        </h1>
-        <p
-          style="color: white; margin-bottom: 10vh; margin-top: 3vh; margin-bottom: 20vh;"
-        >
-          What we at Increment Technologies Inc. believe and stand for</p>
-      </div>
-      <div class="row ">
-        <span class="col-md-4" v-for="(item, index) in values" :key="index">
-          <div class="single-card d-flex align-items-center mid-row" 
-               v-if="item.num === '2' || item.num === '5'"
-               >
-                <b class="paragraph"> <i>{{ item.desc }}</i> </b>
-          </div>
-          <div class="single-card d-flex align-items-center" 
-               v-else
-               style="background:white;"
-               >
-                <b class="paragraph"> <i>{{ item.desc }}</i> </b>
+          <div
+            :class="index === 1 || index === 4? 'single-cardUp' : 'single-card'"
+          >
+            <b class="paragraph">
+              <i>{{ item.desc }}</i>
+            </b>
           </div>
         </span>
-      </div>
-      <div class="bottom-wave">
-        <svg style="background:#8f00b5;width:102%;position:absolute;right:0px;margin-bottom:50px;opacity:1;z-index:-2;"
-             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#FFFFFF" fill-opacity="1" d="M0,64L48,64C96,64,192,64,288,96C384,128,480,192,576,208C672,224,768,192,864,165.3C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
       </div>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.container{
-  max-width: 80%;
-}
-
 .cw-banner {
-  width: 100%;
+  text-align: center;
   float: left;
-  background: $secondary;
-  padding-bottom: 10vh;
-  padding-top: 10vh;
-  min-height: 90vh;
+  width: 100%;
+  padding: 50px 0 50px 0;
   background: linear-gradient(
-      #00b89f 0%,
-      #495aaa 51.04%,
-      #8f00b5 100%
-    );
-  margin-bottom: 238px;
+    180deg,
+    $gradientPrimary 0%,
+    $gradientSecondary 100%
+  );
 }
-
-#col {
-  border: 4px solid white;
-  border-radius: 15px;
-  height: 150px;
-  width: 320px;
+.card-holder{
+  width: 31%;
+  margin: 1%;
 }
-
-h2 {
-  font-size: 23px;
-  color: #00B89F;
-}
-.single-card {
-  //border: 5px solid white;
-  background: #E5E5E5;
-  padding: 22px 25px 22px 22px;
-  margin: 24px;
+.single-card, .single-cardUp {
+  background: #e5e5e5;
+  padding: 30px;
+  margin: 30px;
   height: 180px;
-  width: 92%;
+  width: 100%;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
   text-align: center;
-  line-height: 200%
+  align-items: center;
+}
+.single-cardUp{
+  margin-top: -10px;
 }
 .paragraph {
   font-size: 25px;
   color: #028170;
+  text-align: center;
 }
-.mid-row{
-  position: absolute; bottom:35px; background:white; 
-}
-.bottom-wave{
-  margin-top:-77px;margin-bottom:-100px;
-}
-@media (max-width: 992px) {
-  .row{
-    //all:none;
-    margin-top: -150px;
-    display: flex;
-    position:none;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .single-card{
-    width:300%;
-  }
-  .mid-row{
-    position:relative;
-    bottom:0; background:white; 
-  }
-  .bottom-wave{
-    margin-top:0px;
-  }
-}
-
-@media (max-width: 280px) {
+@media only screen and (max-width: 992px) {
   .cw-banner {
     width: 100%;
+    padding: 50px 0 50px 0;
   }
-  .paragraph i {
-    font-size: 22px;
-    line-height: 0rem;
-    width: 30%;
+  .container {
+    margin-top: 50px;
   }
-  .pad {
-    margin-right: -70%;
+  .single-card, .single-cardUp{
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    background-color: white;
+    margin-top: 0px;
+    text-align: center !important;
   }
-}
-@media (max-width: 375px) {
-  .pad {
-    margin-right: -100%;
-  }
-}
-@media (max-width: 540px) {
-  .pad {
-    margin-right: -70%;
-  }
-  .cw-banner {
-    min-height: 50vh;
-  }
-}
-
-@media (max-width: 1024px) {
-  .cw-banner {
-    min-height: 50vh;
-  }
-  .paragraph i {
-    font-size: 25px;
-    // line-height: 0rem;
-    // width: 30%;
-  }
-}
-
-@media (min-width: 768px) {
-  .cw-banner {
-    min-height: 50vh;
-  }
-  .paragraph i {
-    font-size: 25px;
-    // line-height: 0rem;
-    // width: 30%;
-  }
-  .pad {
-    margin-right: 10%;
+  .card-holder{
+    width: 100%;
   }
 }
 </style>
 <script>
-import ROUTER from "src/router";
 import COMMON from "src/common.js";
+import SectionHeader from "src/home/generic/sectionHeader.vue";
+import ColorsJS from "src/assets/style/colors.js";
 export default {
+  components: {
+    SectionHeader,
+  },
   data() {
     return {
+      curveStyle: ColorsJS.secondary,
+      style: {
+        color: ColorsJS.white,
+      },
       values: [
         {
           num: "1",
@@ -211,14 +136,6 @@ export default {
     return {
       common: COMMON,
     };
-  },
-  methods: {
-    redirect(parameter) {
-      ROUTER.push(parameter);
-    },
-  },
+  }
 };
-
-console.log(window.scrollY) 
-
 </script>

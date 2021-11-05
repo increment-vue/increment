@@ -1,6 +1,10 @@
 <template>
   <div class="footer-holder">
-    <Curve :color="curveStyle" :use="false" :stylecss="{backgroundColor: 'black'}"></Curve>
+    <Curve
+      :color="curveStyle"
+      :use="false"
+      :stylecss="{ backgroundColor: 'black', height: '50%' }"
+    ></Curve>
     <div class="container-handler">
       <a class="navbar-brand">
         <img class="logo" src="../../assets/img/logo.png" />
@@ -31,9 +35,11 @@
                 />
               </div>
               <div class="col-sm-11">
-                <label style="color: white; margin-left: -2%">{{
-                  sItem.title
-                }}</label>
+                <label class="contactUs"
+                  ><a :href="sItem.payload + sItem.url" style="color: white">{{
+                    sItem.title
+                  }}</a></label
+                >
               </div>
             </div>
           </div>
@@ -66,7 +72,11 @@
                 <font-awesome-icon class="fontawesome-icon" :icon="item.icon" />
               </div>
               <div class="col-sm-11">
-                <p class="mt-2">{{ item.description }}</p>
+                <p class="mt-2">
+                  <a target="blank" :href="item.url" style="color: white">{{
+                    item.description
+                  }}</a>
+                </p>
               </div>
             </div>
           </div>
@@ -86,16 +96,16 @@
   padding-left: 10%;
   padding-right: 10%;
   background-color: $black;
-  // padding-top: -2%;
   align-content: left;
-  margin-top: -220px;
+  margin-top: -150px;
 }
 .curve {
   width: 100%;
   float: left;
   height: 200px;
 }
-.font-url, .mt-3{
+.font-url,
+.mt-3 {
   line-height: 0px;
   color: $white;
 }
@@ -123,6 +133,9 @@
   color: white;
   width: 60%;
 }
+.contactUs {
+  margin-left: -20px;
+}
 
 .icon-holder {
   width: 80%;
@@ -146,6 +159,7 @@
 .mt-2 {
   color: white;
   margin-left: 15px;
+  cursor: pointer;
 }
 .logo {
   width: 53px;
@@ -157,7 +171,10 @@
   color: $secondary;
   font-size: 18px;
 }
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px){
   .container-handler {
     width: 100%;
     text-align: center;
@@ -182,6 +199,10 @@
     margin-bottom: 10px;
   }
 }
+@media only screen and (max-width: 770px) {
+}
+@media only screen and (max-width: 450px) {
+}
 </style>
 <script>
 import ROUTER from "src/router";
@@ -191,7 +212,7 @@ import ColorsJS from "src/assets/style/colors.js";
 
 export default {
   components: {
-    Curve
+    Curve,
   },
   data() {
     return {
