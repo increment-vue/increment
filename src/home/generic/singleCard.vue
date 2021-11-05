@@ -1,36 +1,38 @@
 <template>
-    <div class="row no-gutters">
-      <div class="card">
-              <center>
-                <div class="box">
-                  <img :src="src"/>
-                </div>
-                <span class="p1">{{ title }}</span>
-                <p class="p2">{{ location }}</p>
-                <p class="p3">{{ description }}</p>
-              </center>
-              <a :href="link" target="_blank"
-              ><button class="button1">Visit</button></a>
-      </div> 
+  <div class="row no-gutters">
+    <div class="card">
+      <center>
+        <div class="box">
+          <img :src="src" />
+        </div>
+        <span class="p1">{{ title }}</span>
+        <p class="p2">{{ location }}</p>
+        <p class="p3">{{ description }}</p>
+      </center>
+      <div v-if="status == true">
+        <a :href="link" target="_blank"
+          ><button class="button1">Visit</button></a
+        >
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-  export default {
-    components: {},
-    mounted() {},
-    props: ["src","title","location","description","link"],
-    data() {
-      return {};
-    }
-  };
+export default {
+  components: {},
+  mounted() {},
+  props: ["src", "title", "location", "description", "link", "status"],
+  data() {
+    return {};
+  },
+};
 </script>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .row {
   display: inline-block; //changes
   margin: 1% 2%;
-
 }
 .p1 {
   color: $green;
@@ -40,7 +42,7 @@
   font-size: 14px !important;
 }
 .card {
-  width: 100%;  //changes
+  width: 100%; //changes
   height: 390px;
   margin: 1%;
   padding: 5px;
@@ -52,7 +54,7 @@ img {
   padding: 15%;
 }
 .button1 {
-  background: linear-gradient(264.22deg, #00B89F 0%, #8F00B5 100%);
+  background: linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
   border: none;
   color: $white !important;
   text-align: center;
@@ -63,6 +65,7 @@ img {
   padding: 10px;
   width: 50%;
   font-size: 81%;
+  outline: none;
 }
 
 .title {
@@ -80,5 +83,4 @@ img {
     padding-left: 10%;
   }
 }
-
 </style>
