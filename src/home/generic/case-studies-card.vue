@@ -4,12 +4,12 @@
       <center>
         <font-awesome-icon :icon="icon" class="font-awesome-icon" />
         <p class="head-title">{{ title }}</p>
-        <label style="font-size: 10px">Starting Price:</label>
+        <label style="font-size: 12px">Starting Price:</label>
         <p class="price">
           <b>{{ price }}</b>
         </p>
-        <p>{{ description }}</p>
-        <p  @click="redirect(links)" class="button1">
+        <p style="height: auto;">{{ description }}</p>
+        <p  @click="redirect(links)" class="button1" >
           Read More
         </p>
       </center>
@@ -22,7 +22,7 @@
 .card {
   width: 24%; //20%
   margin: 0.5%; //2.5%
-  height: 490px;
+  height: 500px;
   float: left;
   border: double 2px transparent;
   border-radius: 10px;
@@ -33,26 +33,25 @@
 }
 .content {
   margin-top: 20px;
-  padding: 18px;
-  display: inline-block;
+  padding: 8px;
 }
 .head-title {
   margin-top: 20px;
+  height: 30px;
   color: $primary;
   font-weight: 700;
 }
-
 .price {
   border: 0.5px solid;
   border-radius: 100px;
   background-color: $secondary;
-  width: 150px;
-  height: auto;
+  width: 70%; //150px
+  // height: auto;
   padding: 10px;
   color: $white;
 }
 .button1 {
-  height: 20px;
+  height: 30px;
   color: $green;
   font-weight: 600;
   text-decoration: underline;
@@ -84,8 +83,8 @@ export default {
     "price",
     "description",
     "links",
-    "styles",
-    "hoverStyles",
+    // "styles",
+    // "hoverStyles",
   ],
   data() {
     return {};

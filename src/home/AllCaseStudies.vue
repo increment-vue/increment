@@ -1,10 +1,10 @@
 <template>
-  <div id="header">
+  <div>
     <div class="banner" id="header">
       <breadCrumbs :title="'CASE STUDIES'" />
     </div>
 
-    <div class="container">
+    <div class="section-container">
       <p>
         With over 5 years of experience, Increment Technologies Inc. specializes
         in Website Development, Web App Development, Mobile App Development, Web
@@ -30,6 +30,24 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 
+.banner {
+  height: 35vh;
+  width: 100%;
+  float: left;
+  color: white;
+}
+
+p {
+  text-align: justify;
+}
+.section-container {
+  width: 90% !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  min-height: 100vh !important;
+  padding-top: 35vh;
+  padding-bottom: 450vh !important;
+}
 .return-to-top {
   position: fixed;
   bottom: 10px;
@@ -50,7 +68,40 @@
   cursor: pointer;
   color: $primary;
 }
+@media screen and (max-width: 1024px) {
+  .card {
+    height: 570px !important;
+  }
+  p {
+    height: 200px;
+  }
+}
 @media screen and (max-width: 992px) {
+  .card {
+    height: 550px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    height: 640px !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card {
+    width: 45%;
+    // height: 600px !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card{
+    height: 630px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .card{
+    width: 46%;
+    height: 680px !important;
+  }
 }
 </style>
 <script>
