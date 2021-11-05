@@ -33,7 +33,9 @@
             <div class="collapse navbar-collapse" >
               <form class="form-inline my-2 my-lg-0 ml-auto">
                 <ul class="navbar-nav">
-                  <li class="nav-item header-right" v-for="(item, index) in menu" :key="index">
+                  <li class="nav-item header-right"
+                  v-for="(item, index) in menu" :key="index"
+                  >
                     <div class="btn-group dropdown" v-if="item.title === 'Who We Are'">
                       <!-- button title -->
                       <a
@@ -136,14 +138,14 @@
           </span>
         </div>
         <!-- Mobile View Navbar  -->
-        <div :class="showMobileNav ? 'collapse' : ''" id="navbarSupportedContent" >
+        <div class="collapse" id="navbarSupportedContent" >
           <div class="header-separator"> </div>
           <ul class="navbar-nav ml-auto headerElement" >
             <li
               data-target=".hide .show"
               v-for="(item, index) in menu"
               :key="index"
-              class="nav-item col headerClass"
+              class="nav-item  headerClass"
             >
             <!-- Who We Are -->
               <div class="btn-group dropdown col headerClass" v-if="item.title === 'Who We Are'" @click="isToggled1 = !isToggled1">
@@ -156,7 +158,11 @@
                   style="color: #20c1ab"
                   type="button"
                   href="/#who-we-are"
-                  @click="headerScrollTo('#who-we-are')"
+                  @click="atSendReq ? redirectAndScroll('/', '#who-we-are') : headerScrollTo('#who-we-are')"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-label="Toggle navigation"
                 >
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
@@ -194,12 +200,30 @@
               <div class="container classContainer" v-if="isToggled1">
                 <div v-if="item.title === 'Who We Are'" class="row">
                   <span class="col-5 fullCol">
-                    <a href="/#our-values" @click="headerScrollTo('#our-values')">
+                    <a 
+                    href="/#our-values" 
+                    @click="atSendReq ? redirectAndScroll('/', '#our-values') : headerScrollTo('#our-values')" 
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
                       <b class="increment-purple">Our Values</b>
                     </a>
                   </span>
                   <span class="col">
-                    <a href="/#testimonials" @click="headerScrollTo('#testimonials')">
+                    <a 
+                    href="/#testimonials" 
+                    @click="atSendReq ? redirectAndScroll('/', '#testimonials') : headerScrollTo('#testimonials')"
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
                       <b class="increment-purple">What They Say About Us</b>
                     </a>
                   </span>
@@ -218,7 +242,7 @@
                   style="color: #20c1ab"
                   type="button"
                   href="/#our-services"
-                  @click="headerScrollTo('#our-services')"
+                  @click="atSendReq ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
                 >
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
@@ -248,7 +272,16 @@
               <div class="container classContainer" v-if="isToggled2">
                 <div v-if="item.title === 'Our Services'" >
                   <span class="col-5 fullCol">
-                    <a href="/#how-we-work" @click="headerScrollTo('#how-we-work')">
+                    <a 
+                    href="/#how-we-work" 
+                    @click="atSendReq ? redirectAndScroll('/', '#how-we-work') : headerScrollTo('#how-we-work')"
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
                       <b class="increment-purple">How We Work</b>
                     </a>
                   </span>
@@ -257,14 +290,20 @@
               
               <div v-else-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
-                  <a data-target=".show" class="nav-link" href="/send-request">
+                  <a data-target=".show.hide" class="nav-link" href="/send-request">
                     <b class="increment-purple">{{ item.title }}</b>
                   </a>
                 </div>
                 <div v-else-if="item.title !== 'Send Request'">
                   <a
                     :href="item.redirect"
-                    @click="headerScrollTo(item.redirect)"
+                    @click="atSendReq ? redirectAndScroll('/', item.redirect) : headerScrollTo(item.redirect)"
+                    role="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                   >
                     <b class="increment-purple">{{ item.title }}</b>
                   </a>
@@ -613,6 +652,8 @@ export default {
       if(to.path.includes('send-request')){
         this.atSendReq = true
         console.log('Send req', this.atSendReq)
+      }else{
+        this.atSendReq = false
       }
     }
   },
@@ -661,6 +702,12 @@ export default {
     };
   },
   methods: {
+    redirectAndScroll(page, section){
+      this.redirect(page)
+      // this.headerScrollTo(section)
+      setTimeout(()=> {this.headerScrollTo(section)}, 1000);
+      
+    },
     upadateScroll(){
       this.scrollPosition = window.scrollY
     },
