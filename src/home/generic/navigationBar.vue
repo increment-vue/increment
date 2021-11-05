@@ -6,7 +6,7 @@
       </li>
     </ul>
   </span> -->
-      <button class="navbox" >{{ status }}</button>
+      <button class="navbox" v-on:click="actived">{{ status }}</button>
 </template>
 <script>
 export default {
