@@ -243,6 +243,10 @@
                   type="button"
                   href="/#our-services"
                   @click="atSendReq ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-label="Toggle navigation"
                 >
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
@@ -270,7 +274,7 @@
                 </div> -->
               </div>
               <div class="container classContainer" v-if="isToggled2">
-                <div v-if="item.title === 'Our Services'" >
+                <div v-if="item.title === 'Our Services'" class="row">
                   <span class="col-5 fullCol">
                     <a 
                     href="/#how-we-work" 
@@ -491,9 +495,9 @@ img {
 }
 
 @media screen and (max-width: 991px) {
-  .navbar-expand .navbar-collapse {
-    display: flex !important;
-  }  
+    .navbar-expand .navbar-collapse {
+      display: flex !important;
+    } 
   .headerElement{
     width: 100%;
   }
@@ -576,6 +580,7 @@ img {
     margin-top: 4.5rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .navbar-menu-toggler-md {
     width: 100%;
