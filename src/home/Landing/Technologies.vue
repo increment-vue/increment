@@ -22,7 +22,7 @@
       </span>
       <div class="image-container">
         <img
-          src="../../assets/img/software-development-gif.gif"
+          src="../../assets/gif/software-development-gif.gif"
           class="softdev-gif"
         />
       </div>
