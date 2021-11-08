@@ -6,7 +6,7 @@
         <!-- first component -->
         <div class="row">
           <div class="div-gif1">
-            <img :src="require('assets/img/who-we-are-top.gif')" />
+            <img :src="require('assets/gif/who-we-are-top.gif')" />
           </div>
           <div class="content1">
             <h3>INTRODUCTION</h3>
@@ -49,7 +49,7 @@
             </p>
           </div>
           <div class="div-gif2">
-            <img :src="require('assets/img/who-we-are-bottom.gif')" />
+            <img :src="require('assets/gif/who-we-are-bottom.gif')" />
           </div>
         </div>
       </div>

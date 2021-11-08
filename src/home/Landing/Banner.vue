@@ -12,7 +12,8 @@
         :text="'Contact Us'"
         :changeIcon="'fa fa-angle-double-right'"
         :icon ="'fa fa-angle-right'"
-        :route="'/send-request'"
+        :target="'_blank'"
+        :route="'https://calendly.com/incrementtech2020/services-offered'"
         :styles="{
           backgroundColor: colors.white,
           color: colors.green,
