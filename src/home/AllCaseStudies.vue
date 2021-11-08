@@ -12,14 +12,9 @@
         The following case studies where the kind of systems our developer’s can
         work to provide solutions to every client’s needs.
       </p>
-      <span v-for="(item, index) in cases" :key="index">
-        <Cards
-          :icon="item.icon"
-          :title="item.title"
-          :price="item.price"
-          :description="item.description"
-          :links="item.links"
-        />
+      <span>
+        <!-- generic case studies card -->
+        <Cards :cases="cases" />
       </span>
     </div>
     <span class="return-to-top" @click="scrollTo()">
@@ -68,39 +63,6 @@ p {
   cursor: pointer;
   color: $primary;
 }
-// @media screen and (max-width: 1024px) {
-//   .card {
-//     height: 570px !important;
-//   }
-
-// }
-// @media screen and (max-width: 992px) {
-//   .card {
-//     height: 550px !important;
-//   }
-// }
-// @media screen and (max-width: 768px) {
-//   .card {
-//     height: 640px !important;
-//   }
-// }
-// @media screen and (max-width: 425px) {
-//   .card {
-//     width: 45%;
-//     // height: 600px !important;
-//   }
-// }
-// @media screen and (max-width: 375px) {
-//   .card{
-//     height: 630px !important;
-//   }
-// }
-// @media screen and (max-width: 320px) {
-//   .card{
-//     width: 49%;
-//     height: 680px !important;
-//   }
-// }
 </style>
 <script>
 import ROUTER from "src/router";
