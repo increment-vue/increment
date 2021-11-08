@@ -1,5 +1,5 @@
 <template>
-  <span class="card" style="margin-top: 40px;">
+  <span class="card" style="margin-top: 40px">
     <span class="content">
       <center>
         <font-awesome-icon :icon="icon" class="font-awesome-icon" />
@@ -8,10 +8,8 @@
         <p class="price">
           <b>{{ price }}</b>
         </p>
-        <p style="height: auto;">{{ description }}</p>
-        <p  @click="redirect(links)" class="button1" >
-          Read More
-        </p>
+        <p class="description">{{ description }}</p>
+        <p @click="redirect(links)" class="button1">Read More</p>
       </center>
     </span>
   </span>
@@ -20,8 +18,8 @@
 @import "~assets/style/colors.scss";
 
 .card {
-  width: 24%; //20%
-  margin: 0.5%; //2.5%
+  width: 22%; //24% // 20%
+  margin: 1.5%; //0.5% // 2.5%
   height: 500px;
   float: left;
   border: double 2px transparent;
@@ -33,13 +31,17 @@
 }
 .content {
   margin-top: 20px;
-  padding: 8px;
+  padding: 18px;
+  width: 100%;
 }
 .head-title {
   margin-top: 20px;
   height: 30px;
   color: $primary;
   font-weight: 700;
+}
+.description {
+  height: auto;
 }
 .price {
   border: 0.5px solid;
@@ -51,11 +53,11 @@
   color: $white;
 }
 .button1 {
-  height: 30px;
-  color: $green;
-  font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
+  height: 30px !important;
+  color: $green !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
 }
 .font-awesome-icon {
   font-size: 80px;
@@ -72,6 +74,55 @@
   .font-awesome-icon {
     color: $secondary;
   }
+}
+@media screen and (max-width: 1024px) {
+  .card {
+    height: 570px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content {
+    padding: 15px;
+  }
+  .description {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    height: 660px !important;
+  }
+  .description {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card {
+    width: 45%;
+  }
+  .description {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    height: 630px !important;
+  }
+  .description {
+    height: 290px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .card{
+    width: 80%;
+    height: auto !important;
+    margin: auto;
+    float: unset;
+  }
+  .description{
+    height: auto;
+  }
+  
 }
 </style>
 <script>
@@ -91,8 +142,8 @@ export default {
   },
   methods: {
     redirect(parameter) {
-        ROUTER.push(parameter);
+      ROUTER.push(parameter);
     },
-  }
+  },
 };
 </script>
