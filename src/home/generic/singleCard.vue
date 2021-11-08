@@ -1,30 +1,34 @@
 <template>
-  <div class="row no-gutters">
+<div>
+  <div class="row" v-for="(item, index) in data" :key="index">
     <div class="card">
       <center>
         <div class="box">
-          <img :src="src" />
+          <img :src="item.src" />
         </div>
-        <span class="p1">{{ title }}</span>
-        <p class="p2">{{ location }}</p>
-        <p class="p3">{{ description }}</p>
+        <span class="p1">{{ item.title }}</span>
+        <p class="p2">{{ item.location }}</p>
+        <p class="p3">{{ item.description }}</p>
       </center>
-      <div v-if="status == true">
-        <a :href="link" target="_blank"
+      <div v-if="item.withButton == true">
+        <a :href="item.link" target="_blank"
           ><button class="button1">Visit</button></a
         >
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
 export default {
   components: {},
   mounted() {},
-  props: ["src", "title", "location", "description", "link", "status"],
+  props: ["projects"],
   data() {
-    return {};
+    return {
+      data: this.projects
+    };
   },
 };
 </script>
@@ -33,6 +37,7 @@ export default {
 .row {
   display: inline-block; //changes
   margin: 1% 2%;
+  width: 21%;
 }
 .p1 {
   color: $green;
