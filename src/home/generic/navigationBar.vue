@@ -1,12 +1,5 @@
 <template>
-  <!-- <span>
-    <ul class="nav">
-      <li class="navbox">
-        <a href="#">{{ title }}</a>
-      </li>
-    </ul>
-  </span> -->
-      <button class="navbox" v-on:click="actived">{{ status }}</button>
+      <button class="navbox">{{ status }}</button>
 </template>
 <script>
 export default {

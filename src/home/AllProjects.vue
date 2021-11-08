@@ -61,7 +61,7 @@
 .title {
   font-size: 50px;
   font-weight: 800;
-  padding-right: 10%;
+  padding-right: 10%; 
   padding-left: 10%;
 }
 
