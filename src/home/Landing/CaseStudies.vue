@@ -113,7 +113,7 @@ position: relative;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    // width: 50%;
     height: auto;
   }
   button.btn {
