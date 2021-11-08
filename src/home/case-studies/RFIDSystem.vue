@@ -38,14 +38,7 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.banner {
-  background-image: url("../../assets/img/bg-rfid.jpg");
-  background-size: 100% 70vh;
-  min-height: 70vh;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
+
 
 .title {
   font-size: 50px;
