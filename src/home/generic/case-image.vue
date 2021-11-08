@@ -69,14 +69,27 @@ h3 {
   text-align: right;
 }
 
-// @media screen and (max-width: 992px) {
-//   .holder {
-//     width: 90% !important;
-//     margin-right: 5% !important;
-//     margin-left: 5% !important;
-//     height: 50vh !important;
-//   }
-// }
+@media screen and (max-width: 991px) {
+  .holder {
+    height: 55vh !important;
+  }
+
+  .left {
+    width: 50% !important;
+  }
+
+  .right {
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .left, .right{
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+}
 </style>
 <script>
 import roundBtn from "src/home/generic/roundBtn.vue";
