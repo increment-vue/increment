@@ -61,14 +61,13 @@
 .title {
   font-size: 50px;
   font-weight: 800;
-  padding-right: 10%;
+  padding-right: 10%; 
   padding-left: 10%;
 }
 
 .container {
   padding-top: 20vh;
   padding-bottom: 20vh;
-  text-align: center;
   color: black;
 }
 
