@@ -9,15 +9,13 @@
   width: 100%;
   float: left;
   background-image: linear-gradient(90deg, $secondary, $purple);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   height: 35vh;
   color: $white;
 }
 
 h1{
-  margin-top: 120px;
+  margin-top: 20vh;
   font-weight: 700 !important;
 }
 </style>
