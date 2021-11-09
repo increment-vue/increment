@@ -16,22 +16,10 @@
           company have handled:
         </p>
         <div class="bar">
-          <span v-for="(item, index) in navbar" :key="index">
-            <navigationBar :status="item.status" />
-          </span>
+          <navigationBar :navbar="navbar" />
         </div>
         <div>
-
-          <span v-for="(item, index) in projects" :key="index">
-            <singleCard
-              :src="item.src"
-              :title="item.title"
-              :location="item.location"
-              :description="item.description"
-              :link="item.link"
-              :status="item.withButton"
-            />
-          </span>
+          <singleCard :projects="projects" />
         </div>
       </div>
     </div>
@@ -61,7 +49,7 @@
 .title {
   font-size: 50px;
   font-weight: 800;
-  padding-right: 10%; 
+  padding-right: 10%;
   padding-left: 10%;
 }
 
