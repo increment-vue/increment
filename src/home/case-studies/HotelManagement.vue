@@ -1,15 +1,6 @@
 <template>
   <div>
-    <div class="banner">
-      <h1 class="title">HOTEL MANAGEMENT</h1>
-      <h3 id="start-price">Starting Price : $7,000</h3>
-      <a
-        href="https://calendly.com/incrementtech2020/services-offered"
-        id="btn"
-        type="button"
-        >Inquire Now!</a
-      >
-    </div>
+    <BreadCrumbs :title="'HOTEL MANAGEMENT'" />
     <div class="container">
       <p>
         Hotel Management is about overseeing every operation such as
@@ -34,12 +25,13 @@
         account management down to financial management making it a hassle-free
         system.
       </p>
+      <CaseImage :price="'7000'" :bg="'hotel.jpg'" />
       <p>
         The right hotel management system will definitely put you in control of
         your business whether it may be for your small boutique hotel, bed and
         breakfast, or hostel having a few rooms.
       </p>
-      <h5>What we can offer</h5>
+      <p class="offer">What we can offer</p>
       <p>
         A good hotel management system gives you the support you need to be
         flawless in the operational areas that matter most especially to your
@@ -47,7 +39,7 @@
         expectations by providing:
       </p>
       <p>
-        <b>An online booking engine. </b>. Guests can book their reservations on
+        <b>An online booking engine.</b> Guests can book their reservations on
         your website rather than calling. An online booking system empowers
         guests and gives staff more time away from the phone to handle other
         priorities.
@@ -64,20 +56,15 @@
         a central pool, it’s always up-to-date. No more double bookings!
       </p>
       <p>
-        <b>Localization.</b>.In order to attract more guests, you need to
+        <b>Localization.</b> In order to attract more guests, you need to
         consider international visitors and make the booking process easier for
         speakers of other languages. Offering a booking path in multiple
         languages gives your property a global appeal that broadens your
         demographics.
       </p>
       <p>
-        <b>Flexible payment options.</b> You can set up a subscription or
-        donation model or allow customers to make multiple payments. Retaining
-        subscriptions is a quick automation with our dunning process feature.
-      </p>
-      <p>
-        <b>An intuitive interface that’s user-friendly.</b>It just makes sense –
-        and works in the way that you would expect. For example, having a
+        <b>An intuitive interface that’s user-friendly.</b> It just makes sense
+        – and works in the way that you would expect. For example, having a
         unified calendar view with drag-and-drop functionality that allows staff
         to easily assign rooms.
       </p>
@@ -89,7 +76,7 @@
         identify trends and make action plans.
       </p>
       <p>
-        <b>Housekeeping management.</b>. The front desk should be able to view
+        <b>Housekeeping management.</b> The front desk should be able to view
         the status of each room right in the HMS dashboard and have the ability
         to assign housekeepers to prioritize cleaning. This visibility reduces
         communication lapses and helps staff be more efficient.
@@ -101,113 +88,53 @@
         memorable lasting impression to your guests and at the same time
         providing a greater work and life balance.
       </p>
+      <p class="back-return" @click="redirect('/case-studies')">
+        &lt;&lt;Back to Case Studies
+      </p>
     </div>
-    <span class="return-to-top" @click="scrollTo()">
-      <i class="fa fa-angle-up" style="font-size: 35px"></i>
-    </span>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
-
-.title {
-  font-size: 50px;
-  font-weight: 800;
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-bottom: 10px;
-  padding-top: 35vh;
-}
-#start-price {
-  font-size: 30px;
-  font-weight: 600;
-  padding-bottom: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-  .title {
-    font-size: 35px;
-    font-weight: 800;
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #start-price {
-    font-size: 23px;
-    font-weight: 600;
-    padding-bottom: 10px;
-  }
-}
-
-#btn {
-  background-color: $secondary;
-  color: white;
-  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  cursor: pointer;
-}
-
 .container {
-  margin-top: 10vh;
-  margin-bottom: 30vh;
-  color: black;
-}
-
-p {
   text-align: justify;
-  margin-bottom: 30px;
+  min-height: 100vh;
+  background-color: $white;
+  padding-top: 40vh;
+  padding-bottom: 10vh;
 }
 
-h5 {
-  font-weight: 600;
-  font-style: italic;
-  margin-bottom: 30px;
-}
-
-.return-to-top {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: $primary;
-  color: $white;
-  height: 50px;
-  width: 50px;
-  border-radius: 5px;
-  line-height: 62px;
-  text-align: center;
-}
-
-.fa-angle-up {
-  color: $white !important;
-}
-.return-to-top:hover {
-  cursor: pointer;
+.back-return {
+  font-weight: bold;
   color: $primary;
+  margin-top: 5vh;
+}
+
+.back-return:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.offer {
+  font-weight: 800;
+  font-size: 20px;
 }
 </style>
 <script>
-import Jquery from "jquery";
+import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
+import CaseImage from "src/home/generic/case-image.vue";
+import ROUTER from "src/router";
 export default {
   mounted() {
-    this.scrollTop();
+    window.scrollTo(0, 0);
+  },
+  components: {
+    BreadCrumbs,
+    CaseImage,
   },
   methods: {
-    scrollTo() {
-      Jquery("html, body").animate(
-        {
-          scrollTop: Jquery(".banner").offset().top,
-        },
-        500
-      );
-    },
-    scrollTop(){
-      window.scrollTo(0, 0);
+    redirect(param) {
+      ROUTER.push(param);
     },
   },
 };

@@ -1,8 +1,8 @@
 <template>
-  <div class="holder">
+  <div class="holder" :style="bgImg">
     <div class="btm-content">
       <span class="left">
-        <h3>Starting price is $1000.</h3>
+        <h3>Starting price is ${{ price }}.</h3>
       </span>
       <span class="right">
         <roundBtn
@@ -34,9 +34,8 @@
   width: 100%;
   height: 70vh;
   border: 1px solid #e0e0e0;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
-  background-image: url("../../assets/img/case_studies/booking_bot.jpg");
+  margin-bottom: 3vh;
+  margin-top: 3vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
@@ -69,25 +68,64 @@ h3 {
   text-align: right;
 }
 
-// @media screen and (max-width: 992px) {
-//   .holder {
-//     width: 90% !important;
-//     margin-right: 5% !important;
-//     margin-left: 5% !important;
-//     height: 50vh !important;
-//   }
-// }
+@media screen and (max-width: 992px) {
+  .holder {
+    height: 60vh !important;
+  }
+
+  .left {
+    width: 50% !important;
+    margin-top: 23px !important;
+  }
+
+  .right {
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .holder {
+    height: 50vh !important;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .holder {
+    margin-bottom: 6vh !important;
+  }
+
+  .holder {
+    height: 40vh !important;
+  }
+
+  .btm-content {
+    height: 80px !important;
+  }
+  .left {
+    margin: unset !important;
+  }
+
+  .left,
+  .right {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
 </style>
 <script>
 import roundBtn from "src/home/generic/roundBtn.vue";
 import COLORS from "src/assets/style/colors.js";
 export default {
+  props: ["price", "bg"],
   components: {
     roundBtn,
   },
   data() {
     return {
       colors: COLORS,
+      bgImg: {
+        backgroundImage: `url(${require('@/assets/img/case_studies/'+this.bg)})`
+      }
     };
   },
 };
