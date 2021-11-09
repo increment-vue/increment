@@ -10,7 +10,7 @@
         they are one of the most powerful marketing tools for start-up
         businesses.
       </p>
-      <CaseImage />
+      <CaseImage :price="'1000'" :bg="'booking_bot.jpg'"/>
       <p>
         Start-up businesses always create facebook pages for updates on their
         services and products, that’s why Increment Technologies develop an
@@ -20,12 +20,12 @@
         plenty of customer inquiries. This is an advantage to business owners of
         not losing their potential customers just because of neglected orders.
       </p>
+      <p class="back-return" @click="redirect('/case-studies')">&lt;&lt;Back to Case Studies</p>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
 .container {
   text-align: justify;
   min-height: 100vh;
@@ -33,10 +33,22 @@
   padding-top: 40vh;
   padding-bottom: 10vh;
 }
+
+.back-return {
+  font-weight: bold;
+  color: $primary;
+  margin-top: 5vh;
+}
+
+.back-return:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 </style>
 <script>
 import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
 import CaseImage from "src/home/generic/case-image.vue";
+import ROUTER from "src/router";
 export default {
   mounted() {
     window.scrollTo(0, 0);
@@ -45,5 +57,10 @@ export default {
     BreadCrumbs,
     CaseImage,
   },
+  methods: {
+    redirect(param){
+      ROUTER.push(param)
+    }
+  }
 };
 </script>

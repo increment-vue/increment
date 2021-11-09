@@ -1,15 +1,6 @@
 <template>
   <div>
-    <div class="banner">
-      <h1 class="title">EMPLOYEE MANAGEMENT</h1>
-      <h3 id="start-price">Starting Price : $7,000</h3>
-      <a
-        href="https://calendly.com/incrementtech2020/services-offered"
-        id="btn"
-        type="button"
-        >Inquire Now!</a
-      >
-    </div>
+    <BreadCrumbs :title="'EMPLOYEE MANAGEMENT'" />
     <div class="container">
       <p>
         The Employee Management System maintains the professional and personal
@@ -21,6 +12,7 @@
         workforce; since start-up business needs to be taken care and monitored
         in order for it to expand.
       </p>
+      <CaseImage :price="'7000'" :bg="'employee.jpg'" />
       <p>
         Increment Technologies, exclusively develops a software for Employee
         Management that would benefit the company in terms of the following:
@@ -30,112 +22,48 @@
         they are properly managed especially when they are increasing, having a
         proper software or system would definitely ease the stress.
       </p>
+      <p class="back-return" @click="redirect('/case-studies')">
+        &lt;&lt;Back to Case Studies
+      </p>
     </div>
-    <span class="return-to-top" @click="scrollTo()">
-      <i class="fa fa-angle-up" style="font-size: 35px"></i>
-    </span>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
-.title {
-  font-size: 50px;
-  font-weight: 800;
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-bottom: 10px;
-  padding-top: 35vh;
-}
-#start-price {
-  font-size: 30px;
-  font-weight: 600;
-  padding-bottom: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-  .title {
-    font-size: 35px;
-    font-weight: 800;
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #start-price {
-    font-size: 23px;
-    font-weight: 600;
-    padding-bottom: 10px;
-  }
-}
-
-#btn {
-  background-color: $secondary;
-  color: white;
-  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  cursor: pointer;
-}
-
 .container {
-  margin-top: 10vh;
-  margin-bottom: 30vh;
-  color: black;
-}
-
-p {
   text-align: justify;
-  margin-bottom: 30px;
+  min-height: 100vh;
+  background-color: $white;
+  padding-top: 40vh;
+  padding-bottom: 10vh;
 }
 
-h5 {
-  font-weight: 600;
-  font-style: italic;
-  margin-bottom: 30px;
-}
-
-.return-to-top {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: $primary;
-  color: $white;
-  height: 50px;
-  width: 50px;
-  border-radius: 5px;
-  line-height: 62px;
-  text-align: center;
-}
-
-.fa-angle-up {
-  color: $white !important;
-}
-.return-to-top:hover {
-  cursor: pointer;
+.back-return {
+  font-weight: bold;
   color: $primary;
+  margin-top: 5vh;
+}
+
+.back-return:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 </style>
 <script>
-import Jquery from "jquery";
+import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
+import CaseImage from "src/home/generic/case-image.vue";
+import ROUTER from "src/router";
 export default {
   mounted() {
-    this.scrollTop();
+    window.scrollTo(0, 0);
+  },
+  components: {
+    BreadCrumbs,
+    CaseImage,
   },
   methods: {
-    scrollTo() {
-      Jquery("html, body").animate(
-        {
-          scrollTop: Jquery(".banner").offset().top,
-        },
-        500
-      );
-    },
-    scrollTop(){
-      window.scrollTo(0, 0);
+    redirect(param) {
+      ROUTER.push(param);
     },
   },
 };
