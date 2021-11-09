@@ -48,6 +48,7 @@
 .body {
   background-color: $white !important;
   max-width: 100% !important;
+  float: left !important;
 }
 
 .section-container {
@@ -87,57 +88,57 @@ h2 {
   width: 20%;
   height: auto !important;
 }
-@media only screen and (max-width: 1200px) {
-  .card {
-    width: 40%;
-    height: 500px;
-    margin: 5%;
-  }
-  button.btn {
-    float: unset;
-    position: relative;
-    left: -390px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .card {
-    float: unset;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    // width: 50%;
-    height: auto !important;
-  }
-  button.btn {
-    float: unset !important;
-    position: relative;
-    left: -90px;
-  }
-  .bottom-image {
-    margin-left: 10px;
-  }
-}
-@media screen and (max-width: 768px) {
-  button.btn {
-    left: -70px !important;
-  }
-}
-@media screen and (max-width: 425px) {
-  .card {
-    width: 70%;
-  }
-  button.btn {
-    left: -40px !important;
-  }
-}
-@media screen and (max-width: 375px) {
-  .card {
-    width: 80%;
-  }
-  button.btn {
-    left: -20px !important;
-  }
-}
+// @media only screen and (max-width: 1200px) {
+//   .card {
+//     width: 40%;
+//     height: 500px;
+//     margin: 5%;
+//   }
+//   button.btn {
+//     float: unset;
+//     position: relative;
+//     left: -390px;
+//   }
+// }
+// @media screen and (max-width: 992px) {
+//   .card {
+//     float: unset;
+//     margin-top: 20px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     // width: 50%;
+//     height: auto !important;
+//   }
+//   button.btn {
+//     float: unset !important;
+//     position: relative;
+//     left: -90px;
+//   }
+//   .bottom-image {
+//     margin-left: 10px;
+//   }
+// }
+// @media screen and (max-width: 768px) {
+//   button.btn {
+//     left: -70px !important;
+//   }
+// }
+// @media screen and (max-width: 425px) {
+//   .card {
+//     width: 70%;
+//   }
+//   button.btn {
+//     left: -40px !important;
+//   }
+// }
+// @media screen and (max-width: 375px) {
+//   .card {
+//     width: 80%;
+//   }
+//   button.btn {
+//     left: -20px !important;
+//   }
+// }
 </style>
 <script>
 import ROUTER from "src/router";

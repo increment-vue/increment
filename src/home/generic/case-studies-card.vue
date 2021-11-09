@@ -1,20 +1,25 @@
 <template>
-<div>
-  <span class="card" style="margin-top: 40px" v-for="(item, index) in data" :key="index">
-    <span class="content">
-      <center >
-        <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
-        <p class="head-title">{{ item.title }}</p>
-        <label style="font-size: 12px">Starting Price:</label>
-        <p class="price">
-          <b>{{ item.price }}</b>
-        </p>
-        <p class="description">{{ item.description }}</p>
-        <p @click="redirect(item.links)" class="button1">Read More</p>
-      </center>
+  <div>
+    <span
+      class="card"
+      style="margin-top: 40px"
+      v-for="(item, index) in data"
+      :key="index"
+    >
+      <span class="content">
+        <center>
+          <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
+          <p class="head-title">{{ item.title }}</p>
+          <label style="font-size: 12px">Starting Price:</label>
+          <p class="price">
+            <b>{{ item.price }}</b>
+          </p>
+          <p class="description">{{ item.description }}</p>
+          <p @click="redirect(item.links)" class="button1">Read More</p>
+        </center>
+      </span>
     </span>
-  </span>
-</div>
+  </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
@@ -46,7 +51,7 @@
   height: auto;
   padding: unset;
   width: 100%;
-  border: 2px solid red;
+  // border: 2px solid red;
   margin: unset;
   // padding: 10px;
 }
@@ -58,7 +63,7 @@
   padding: 10px;
   color: $white;
 }
-.button1 {  
+.button1 {
   color: $green !important;
   font-weight: 600 !important;
   text-decoration: underline !important;
@@ -84,61 +89,30 @@
   .card {
     height: 570px !important;
   }
+
 }
 @media screen and (max-width: 992px) {
-  .description{
-    // padding-bottom: 10px;
-    // font-size: 15px !important;
-    height: auto;
+  .card {
+    width: 35%;
+    height: 400px;
+    margin: 7.5%;
   }
 }
-// @media screen and (max-width: 768px) {
-//   .card {
-//     height: 660px !important;
-//   }
-//   .description {
-//     height: 320px;
-//   }
-// }
-// @media screen and (max-width: 425px) {
-//   .card {
-//     width: 45%;
-//   }
-//   .description {
-//     height: 280px;
-//   }
-// }
-// @media screen and (max-width: 375px) {
-//   .card {
-//     height: 630px !important;
-//   }
-//   .description {
-//     height: 290px;
-//   }
-// }
-// @media screen and (max-width: 320px) {
-//   .card{
-//     width: 80%;
-//     height: auto !important;
-//     margin: auto;
-//     float: unset;
-//   }
-//   .description{
-//     height: auto;
-//   }
-// }
+@media screen and (max-width: 425px) {
+  .card {
+    width: 70%;
+    margin: auto;
+    float: unset;
+  }
+}
 </style>
 <script>
 import ROUTER from "src/router";
 export default {
-  props: [
-    "cases",
-    // "styles",
-    // "hoverStyles",
-  ],
+  props: ["cases"],
   data() {
     return {
-      data: this.cases
+      data: this.cases,
     };
   },
   methods: {
