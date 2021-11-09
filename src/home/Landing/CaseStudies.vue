@@ -11,15 +11,8 @@
           class="gif-image top-image"
         /> -->
       </p>
-       <span v-for="(item, index) in cases" :key="index">
-        <Cards
-          :icon="item.icon"
-          :title="item.title"
-          :price="item.price"
-          :description="item.description"
-          :links="item.links"
-        />
-      </span>
+      <!-- generic case studies cards -->
+      <Cards :cases="cases" />
       <roundBtn
         :text="'View More'"
         :changeIcon="'fa fa-angle-double-right'"
@@ -54,7 +47,6 @@
 @import "~assets/style/colors.scss";
 .body {
   background-color: $white !important;
-  float: left !important;
   max-width: 100% !important;
 }
 
@@ -90,9 +82,9 @@ h2 {
 }
 
 .gif-image {
-z-index: 20;
-position: relative;
-  width: 20% ;
+  z-index: 20;
+  position: relative;
+  width: 20%;
   height: auto !important;
 }
 @media only screen and (max-width: 1200px) {
@@ -114,7 +106,7 @@ position: relative;
     margin-left: auto;
     margin-right: auto;
     // width: 50%;
-    height: auto;
+    height: auto !important;
   }
   button.btn {
     float: unset !important;
@@ -126,27 +118,26 @@ position: relative;
   }
 }
 @media screen and (max-width: 768px) {
-    button.btn{
-        left: -70px !important;
-    }
+  button.btn {
+    left: -70px !important;
+  }
 }
 @media screen and (max-width: 425px) {
-  .card{
+  .card {
     width: 70%;
   }
-    button.btn{
-        left: -40px !important;
-    }
+  button.btn {
+    left: -40px !important;
+  }
 }
 @media screen and (max-width: 375px) {
-  .card{
+  .card {
     width: 80%;
   }
-    button.btn{
-        left: -20px !important;
-    }
+  button.btn {
+    left: -20px !important;
+  }
 }
-
 </style>
 <script>
 import ROUTER from "src/router";
