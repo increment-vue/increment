@@ -170,32 +170,6 @@
                 <span>
                   <font-awesome-icon :icon="isToggled1 ? angleUp : angleDown" size="lg" />
                 </span>
-                <!-- <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  <span class="sr-only">Toggle Dropdown</span>
-                </a>
-                <div
-                  class="dropdown-menu who-menu"
-                  v-if="item.title === 'Who We Are'"
-                  style="position: relative;"
-                >
-                  <a
-                    data-target=".hide.show"
-                    class="dropdown-item"
-                    href="/#our-values"
-                    @click="headerScrollTo('#our-values')"
-                  >
-                    <b class="increment-purple">Our Values</b>
-                  </a>
-                  <a
-                    data-target=".hide.show"
-                    class="dropdown-item"
-                    href="/#testimonials"
-                    @click="headerScrollTo('#testimonials')"
-                    
-                  >
-                    <b class="increment-purple">What They Say About Us</b>
-                  </a>
-                </div> -->
               </div>
               <div class="container classContainer" v-if="isToggled1">
                 <div v-if="item.title === 'Who We Are'" class="row">
@@ -254,24 +228,6 @@
                 <span>
                   <font-awesome-icon :icon="isToggled2 ? angleUp : angleDown" size="lg" />
                 </span>
-                <!-- <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  <span class="sr-only">Toggle Dropdown</span>
-                </a>
-                button menu
-                <div
-                  class="dropdown-menu serve-menu"
-                  v-if="item.title === 'Our Services'"
-                  style="position: relative;"
-                >
-                  <a
-                    data-target=".hide.show"
-                    class="dropdown-item"
-                    href="/#how-we-work"
-                    @click="headerScrollTo('#how-we-work')"
-                  >
-                    <b class="increment-purple">How We Work</b>
-                  </a>
-                </div> -->
               </div>
               <div class="container classContainer" v-if="isToggled2">
                 <div v-if="item.title === 'Our Services'" class="row">
@@ -703,14 +659,12 @@ export default {
       isToggled1: false,
       isToggled2: false,
       outsideLanding: false,
-      atSendReq: false,
       showMobileNav: true
     };
   },
   methods: {
     redirectAndScroll(page, section){
       this.redirect(page)
-      // this.headerScrollTo(section)
       setTimeout(()=> {this.headerScrollTo(section)}, 1000);
       
     },
