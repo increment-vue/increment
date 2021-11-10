@@ -1,7 +1,7 @@
 <template>
   <div class="container my-container">
       <div class="navbar navbar-expand-lg fixed-top row " id="headerColor" 
-      :class="this.scrollPosition > 500 || this.atSendReq ? 'bg-gradient':'bg-transparent'">
+      :class="this.scrollPosition > 500 || this.outsideLanding ? 'bg-gradient':'bg-transparent'">
         <!-- Desktop View Navbar -->
         <div class="header-section" >
           <span class="brand col-6 "  >
@@ -10,9 +10,9 @@
                 src="../../assets/img/logo.png"
               />
               <label class="headerName" @click="redirect('/')">
-                <b :class="this.scrollPosition > 500 || this.atSendReq ? 'increment-white':'increment-purple'">INCREMENT</b>
+                <b :class="this.scrollPosition > 500 || this.outsideLanding ? 'increment-white':'increment-purple'">INCREMENT</b>
                 <br />
-                <b :class="this.scrollPosition > 500 || this.atSendReq ? 'increment-white':'increment-purple'">TECHNOLOGIES INC.</b>
+                <b :class="this.scrollPosition > 500 || this.outsideLanding ? 'increment-white':'increment-purple'">TECHNOLOGIES INC.</b>
               </label>
             </a>
           </span>
@@ -46,7 +46,7 @@
                         style="color: #20c1ab"
                         type="button"
                         href="/#who-we-are"
-                        @click="headerScrollTo('#who-we-are')"
+                        @click="outsideLanding ? redirectAndScroll('/', '#who-we-are') : headerScrollTo('#who-we-are')"
                       >
                         <b class="increment-white">{{ item.title }}</b>
                       </a>
@@ -63,7 +63,7 @@
                           data-target=".hide.show"
                           class="dropdown-item"
                           href="/#our-values"
-                          @click="headerScrollTo('#our-values')"
+                          @click="outsideLanding ? redirectAndScroll('/', '#our-values') : headerScrollTo('#our-values')" 
                         >
                           <b class="increment-purple">Our Values</b>
                         </a>
@@ -71,7 +71,7 @@
                           data-target=".hide.show"
                           class="dropdown-item"
                           href="/#testimonials"
-                          @click="headerScrollTo('#testimonials')"
+                          @click="outsideLanding ? redirectAndScroll('/', '#testimonials') : headerScrollTo('#testimonials')"
                         >
                           <b class="increment-purple">What They Say About Us</b>
                         </a>
@@ -88,7 +88,7 @@
                         style="color: #20c1ab"
                         type="button"
                         href="/#our-services"
-                        @click="headerScrollTo('#our-services')"
+                        @click="outsideLanding ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
                       >
                         <b class="increment-white">{{ item.title }}</b>
                       </a>
@@ -107,7 +107,7 @@
                           <a
                             class="dropdown-item"
                             href="/#how-we-work"
-                            @click="headerScrollTo('#how-we-work')"
+                            @click="outsideLanding ? redirectAndScroll('/', '#how-we-work') : headerScrollTo('#how-we-work')"
                           >
                             <b class="increment-purple">How We Work</b>
                           </a>
@@ -124,8 +124,8 @@
                       <div v-else-if="item.title !== 'Send Request'">
                         <a
                           class="nav-link"
-                          :href="item.redirect"
-                          @click="headerScrollTo(item.redirect)"
+                          
+                          @click="outsideLanding ? redirectAndScroll('/', item.redirect) : headerScrollTo(item.redirect)"
                         >
                           <b class="increment-white">{{ item.title }}</b>
                         </a>
@@ -158,7 +158,7 @@
                   style="color: #20c1ab"
                   type="button"
                   href="/#who-we-are"
-                  @click="atSendReq ? redirectAndScroll('/', '#who-we-are') : headerScrollTo('#who-we-are')"
+                  @click="outsideLanding ? redirectAndScroll('/', '#who-we-are') : headerScrollTo('#who-we-are')"
                   data-toggle="collapse"
                   data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent"
@@ -202,7 +202,7 @@
                   <span class="col-5 fullCol">
                     <a 
                     href="/#our-values" 
-                    @click="atSendReq ? redirectAndScroll('/', '#our-values') : headerScrollTo('#our-values')" 
+                    @click="outsideLanding ? redirectAndScroll('/', '#our-values') : headerScrollTo('#our-values')" 
                     role="button"
                     data-toggle="collapse"
                     data-target="#navbarSupportedContent"
@@ -216,7 +216,7 @@
                   <span class="col">
                     <a 
                     href="/#testimonials" 
-                    @click="atSendReq ? redirectAndScroll('/', '#testimonials') : headerScrollTo('#testimonials')"
+                    @click="outsideLanding ? redirectAndScroll('/', '#testimonials') : headerScrollTo('#testimonials')"
                     role="button"
                     data-toggle="collapse"
                     data-target="#navbarSupportedContent"
@@ -242,7 +242,7 @@
                   style="color: #20c1ab"
                   type="button"
                   href="/#our-services"
-                  @click="atSendReq ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
+                  @click="outsideLanding ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
                   data-toggle="collapse"
                   data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent"
@@ -278,7 +278,7 @@
                   <span class="col-5 fullCol">
                     <a 
                     href="/#how-we-work" 
-                    @click="atSendReq ? redirectAndScroll('/', '#how-we-work') : headerScrollTo('#how-we-work')"
+                    @click="outsideLanding ? redirectAndScroll('/', '#how-we-work') : headerScrollTo('#how-we-work')"
                     role="button"
                     data-toggle="collapse"
                     data-target="#navbarSupportedContent"
@@ -292,7 +292,7 @@
                 </div>
               </div>
               
-              <div v-else-if="item.type === 'regular'">
+              <div v-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
                   <a data-target=".show.hide" class="nav-link" href="/send-request">
                     <b class="increment-purple">{{ item.title }}</b>
@@ -301,7 +301,7 @@
                 <div v-else-if="item.title !== 'Send Request'">
                   <a
                     :href="item.redirect"
-                    @click="atSendReq ? redirectAndScroll('/', item.redirect) : headerScrollTo(item.redirect)"
+                    @click="outsideLanding ? redirectAndScroll('/', item.redirect) : headerScrollTo(item.redirect)"
                     role="button"
                     data-toggle="collapse"
                     data-target="#navbarSupportedContent"
@@ -325,6 +325,7 @@
 
 .nav-link{
   width: 100px;
+  cursor: pointer;
 }
 .classContainer{
   margin-left: 0px;
@@ -654,11 +655,10 @@ export default {
   },
   watch: {
     '$route' (to) {
-      if(to.path.includes('send-request')){
-        this.atSendReq = true
-        console.log('Send req', this.atSendReq)
+      if(to.path.includes('send-request') || to.path.includes('technologies') || to.path.includes('our-projects') || to.path.includes('case-studies')){
+        this.outsideLanding = true
       }else{
-        this.atSendReq = false
+        this.outsideLanding = false
       }
     }
   },
@@ -702,6 +702,7 @@ export default {
       angleUp: faAngleUp,
       isToggled1: false,
       isToggled2: false,
+      outsideLanding: false,
       atSendReq: false,
       showMobileNav: true
     };
