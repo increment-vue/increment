@@ -40,10 +40,5 @@
 <script>
 export default {
   props: ["color", "use", "stylecss"],
-  data() {
-    return {
-      // use: true
-    };
-  },
 };
 </script>

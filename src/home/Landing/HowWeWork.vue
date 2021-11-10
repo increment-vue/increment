@@ -3,13 +3,7 @@
     <div class="component-header text-center">
       <img class="gif-image2" :src="require('assets/gif/how-we-work-2.gif')" />
     </div>
-    <div>
-      <SectionHeader
-        :title="'HOW WE WORK'"
-        :style="style"
-        :description="null"
-      ></SectionHeader>
-    </div>
+    <h2>HOW WE WORK</h2>
     <div class="row component-header text-center">
       <div class="col-sm">
         <img
@@ -74,6 +68,13 @@
   padding: 50px;
   margin-bottom: 10vh;
 }
+
+h2 {
+  text-align: center;
+  color: $primary;
+  margin-top: 50px !important;
+}
+
 .details-holder {
   justify-content: center;
   width: 100%;
@@ -215,7 +216,6 @@
 </style>
 
 <script>
-import SectionHeader from "src/home/generic/sectionHeader.vue";
 import ColorsJS from "src/assets/style/colors.js";
 import {
   faHandshake,
@@ -230,9 +230,6 @@ import {
   faObjectGroup,
 } from "@fortawesome/free-solid-svg-icons";
 export default {
-  components: {
-    SectionHeader,
-  },
   data() {
     return {
       style: {

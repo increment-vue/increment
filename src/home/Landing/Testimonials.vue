@@ -1,13 +1,6 @@
 <template>
   <div>
     <div class="banner" id="testimonials">
-      <div>
-        <SectionHeader
-          :title="'WHAT THEY SAY ABOUT US'"
-          :style="style"
-          :description="'Our clients satisfactions expresses their testimonies.'"
-        ></SectionHeader>
-      </div>
       <div class="container">
         <div class="row no-gutters">
           <span class="col-sm" v-for="(item, index) in list" :key="index">
@@ -82,12 +75,8 @@
 }
 </style>
 <script>
-import SectionHeader from "src/home/generic/sectionHeader.vue";
 import ColorsJS from "src/assets/style/colors.js";
 export default {
-  components: {
-    SectionHeader,
-  },
   data() {
     return {
       style: {

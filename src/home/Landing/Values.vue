@@ -1,12 +1,5 @@
 <template>
   <div class="cw-banner" id="our-values">
-    <div>
-      <SectionHeader
-        :title="'OUR VALUES'"
-        :style="style"
-        :description="'What we at Increment Technologies Inc. believe and stand for.'"
-      ></SectionHeader>
-    </div>
     <div class="container">
       <div class="row">
         <span
@@ -85,12 +78,8 @@
 </style>
 <script>
 import COMMON from "src/common.js";
-import SectionHeader from "src/home/generic/sectionHeader.vue";
 import ColorsJS from "src/assets/style/colors.js";
 export default {
-  components: {
-    SectionHeader,
-  },
   data() {
     return {
       curveStyle: ColorsJS.secondary,
