@@ -18,7 +18,7 @@
           </span>
         
           <span class="menu">
-            <span class="navbar-menu-toggler-md">
+            <span class="navbar-menu-toggler-md menuIcon">
               <i
                 class="fa fa-bars menuBars"
                 role="button"
@@ -87,7 +87,6 @@
                         aria-expanded="false"
                         style="color: #20c1ab"
                         type="button"
-                        href="/#our-services"
                         @click="outsideLanding ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
                       >
                         <b class="increment-white">{{ item.title }}</b>
@@ -215,7 +214,7 @@
                   aria-expanded="false"
                   style="color: #20c1ab"
                   type="button"
-                  href="/#our-services"
+                  
                   @click="outsideLanding ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
                   data-toggle="collapse"
                   data-target="#navbarSupportedContent"
@@ -278,7 +277,9 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
+.menuIcon{
+  float: right;
+}
 .nav-link{
   width: 100px;
   cursor: pointer;
@@ -557,6 +558,17 @@ img {
   }
   
 }
+@media screen and (max-width: 400px) {
+  .navbar-menu-toggler-md {
+    width: 100%;
+    text-align: right;
+    float: center;
+    display: block;
+    margin-top: -54px;
+    margin-right: 50px;
+    padding: auto;
+  }
+}
 @media screen and (max-width: 330px) {
   .navbar-menu-toggler-md {
     width: 100%;
@@ -616,6 +628,7 @@ export default {
       }else{
         this.outsideLanding = false
       }
+      console.log('ver', this.outsideLanding)
     }
   },
   data() {
@@ -677,8 +690,11 @@ export default {
     headerScrollTo(id) {
       //this.redirect('/' + id);
       //window.location.reload();
+      console.log(this.outsideLanding)
       this.showMobileNav = false
       let height = $(window).height();
+      console.log($(id).offset(), parseInt(height * 0.1))
+
       $("html, body").animate(
         {
           scrollTop: $(id).offset().top - parseInt(height * 0.1),
