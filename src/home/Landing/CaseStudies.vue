@@ -1,5 +1,5 @@
 <template>
-  <div class="body" id="case-studies">
+  <div class="row" id="case-studies">
     <div class="section-container">
       <h2>CASE STUDIES</h2>
       <p>
@@ -45,19 +45,18 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.body {
-  background-color: $white !important;
-  max-width: 100% !important;
-  float: left !important;
-}
-
+// .body {
+//   background-color: $white !important;
+//   max-width: 100% !important;
+//   // float: left !important;
+// }
 .section-container {
   width: 90% !important;
   margin-left: 5% !important;
   margin-right: 5% !important;
   min-height: 100vh !important;
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-top: 10vh; //20vh
+  padding-bottom: 5vh; //20vh
   text-align: center;
 }
 
@@ -68,7 +67,6 @@ h2 {
 //   float: right;
 //   margin-top: -45vh;
 // }
-
 .card:hover {
   border: double 5px transparent;
   .button1 {
@@ -81,64 +79,18 @@ h2 {
     color: $secondary;
   }
 }
-
 .gif-image {
-  z-index: 20;
+  z-index: 1;
   position: relative;
   width: 20%;
   height: auto !important;
 }
-// @media only screen and (max-width: 1200px) {
-//   .card {
-//     width: 40%;
-//     height: 500px;
-//     margin: 5%;
-//   }
-//   button.btn {
-//     float: unset;
-//     position: relative;
-//     left: -390px;
-//   }
-// }
-// @media screen and (max-width: 992px) {
-//   .card {
-//     float: unset;
-//     margin-top: 20px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     // width: 50%;
-//     height: auto !important;
-//   }
-//   button.btn {
-//     float: unset !important;
-//     position: relative;
-//     left: -90px;
-//   }
-//   .bottom-image {
-//     margin-left: 10px;
-//   }
-// }
-// @media screen and (max-width: 768px) {
-//   button.btn {
-//     left: -70px !important;
-//   }
-// }
-// @media screen and (max-width: 425px) {
-//   .card {
-//     width: 70%;
-//   }
-//   button.btn {
-//     left: -40px !important;
-//   }
-// }
-// @media screen and (max-width: 375px) {
-//   .card {
-//     width: 80%;
-//   }
-//   button.btn {
-//     left: -20px !important;
-//   }
-// }
+@media screen and (max-width: 1024px) {
+  button.btn {
+    margin-right: 20% !important;
+    float: unset !important;
+  }
+}
 </style>
 <script>
 import ROUTER from "src/router";

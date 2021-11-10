@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="row">
     <div class="banner" id="header">
       <breadCrumbs :title="'CASE STUDIES'" />
     </div>
 
     <div class="section-container">
-      <p>
+      <p >
         With over 5 years of experience, Increment Technologies Inc. specializes
         in Website Development, Web App Development, Mobile App Development, Web
         Design, and Web Hosting to clients sourced locally and internationally.
@@ -24,24 +24,24 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
 .banner {
   height: 35vh;
   width: 100%;
   float: left;
   color: white;
 }
-
-p {
-  text-align: justify;
-}
+// p {
+//   margin: auto;
+//   width: 86% !important;
+// }
 .section-container {
   width: 90% !important;
   margin-left: 5% !important;
   margin-right: 5% !important;
   min-height: 100vh !important;
-  padding-top: 35vh;
-  padding-bottom: 450vh !important;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+  text-align: justify;
 }
 .return-to-top {
   position: fixed;
@@ -55,7 +55,6 @@ p {
   line-height: 62px;
   text-align: center;
 }
-
 .fa-angle-up {
   color: $white !important;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <span
       class="card"
       style="margin-top: 40px"
@@ -23,7 +23,9 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-
+.container {
+  width: 100%;
+}
 .card {
   width: 22%; //24% // 20%
   margin: 1.5%; //0.5% // 2.5%
@@ -38,7 +40,7 @@
 }
 .content {
   margin-top: 20px;
-  padding: 18px;
+  padding: 8px;
 }
 .head-title {
   margin-top: 20px;
@@ -47,13 +49,10 @@
   font-weight: 700;
 }
 .description {
-  // text-align: justify;
   height: auto;
   padding: unset;
   width: 100%;
-  // border: 2px solid red;
   margin: unset;
-  // padding: 10px;
 }
 .price {
   border: 0.5px solid;
@@ -86,23 +85,29 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .card {
-    height: 570px !important;
+  .container {
+    width: 80%;
   }
-
-}
-@media screen and (max-width: 992px) {
   .card {
-    width: 35%;
-    height: 400px;
-    margin: 7.5%;
+    width: 40%;
+    margin: 5%;
+    margin-bottom: 2%;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .description {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 540px) {
   .card {
     width: 70%;
-    margin: auto;
+    height: auto;
     float: unset;
+    margin: auto;
   }
 }
 </style>
