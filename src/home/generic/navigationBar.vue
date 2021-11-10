@@ -1,20 +1,34 @@
 <template>
-<div class="databox">
-      <button v-for="(item, index) in navbar" :key="index" class="navbox">{{ item.status }}</button>
-</div>
+  <div class="databox">
+    <button
+      v-on:click="onClick()"
+      @click="activeCount = index"
+      v-for="(item, index) in navbar"
+      :key="index"
+      :class="{ active: index == activeCount }"
+      class="navbox"
+    >
+      {{ item.name }}
+    </button>
+  </div>
 </template>
 <script>
 export default {
   components: {},
   mounted() {},
-  props: ["navbar", "isStatus"],    
+  props: ["navbar"],
   data() {
     return {
-      data: this.navbar
+      activeCount: 0,
+      data: this.navbar,
     };
   },
+  methods: {
+    onClick(){
+       
+    }
+  }
 };
-
 </script>
 
 <style scoped lang="scss">
@@ -24,10 +38,11 @@ export default {
   display: flex;
   justify-content: center;
 }
-.navbox{
+.navbox {
   background: linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
   width: 22%;
   border-radius: 10px;
+  outline: none;
   display: flex;
   justify-content: center;
   margin: 40px 5px;
@@ -37,17 +52,6 @@ export default {
   border: 2px;
   white-space: nowrap;
   float: left;
-}
-.navbox:focus {
-  position: relative;
-  background: $white;
-  outline: none;
-  color: $black;
-  border: double 2px transparent;
-  background-image: linear-gradient($white, $white),
-    linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
 }
 .active {
   position: relative;
