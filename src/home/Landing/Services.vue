@@ -1,5 +1,5 @@
 <template>
-  <div id="our-services">
+  <div >
     <Curve
       :color="colors.gradientPrimary"
       :use="true"
@@ -7,7 +7,7 @@
         backgroundColor: colors.white,
       }"
     ></Curve>
-    <div class="cw-banner">
+    <div class="cw-banner" id="our-services">
       <h2>OUR SERVICES</h2>
       <p>What we offer are innovative solutions</p>
       <div class="row">
