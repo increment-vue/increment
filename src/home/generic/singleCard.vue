@@ -24,10 +24,11 @@
 export default {
   components: {},
   mounted() {},
-  props: ["projects"],
+  props: ["projects","navbar"],
   data() {
     return {
-      data: this.projects
+      data: this.projects,
+      stat: this.navbar
     };
   },
 };

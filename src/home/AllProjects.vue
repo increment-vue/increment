@@ -30,9 +30,6 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.hide {
-  visibility: hidden;
-}
 .bar {
   width: 100%;
   display: flex;
@@ -62,7 +59,7 @@
 #p1 {
   text-align: justify;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 160px;
   font-size: 16px;
 }
 
@@ -122,19 +119,24 @@ export default {
     return {
       navbar: [
         {
-          status: "ALL",
+          name: "ALL",
+          status: "all"
         },
         {
-          status: "ONGOING",
+          name: "ONGOING",
+          status: "ongoing"
         },
         {
-          status: "COMPLETED",
+          name: "COMPLETED",
+          status: "completed"
         },
         {
-          status: "QUICK FIX",
+          name: "QUICK FIX",
+          status: "quickfix"
         },
         // {
-        //   status: "WEB",
+        //   name:"WEB",
+        //   status: "web",
         // },
         // {
         //   status: "MOBILE",
