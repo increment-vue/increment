@@ -628,7 +628,6 @@ export default {
       }else{
         this.outsideLanding = false
       }
-      console.log('ver', this.outsideLanding)
     }
   },
   data() {
@@ -690,11 +689,8 @@ export default {
     headerScrollTo(id) {
       //this.redirect('/' + id);
       //window.location.reload();
-      console.log(this.outsideLanding)
       this.showMobileNav = false
       let height = $(window).height();
-      console.log($(id).offset(), parseInt(height * 0.1))
-
       $("html, body").animate(
         {
           scrollTop: $(id).offset().top - parseInt(height * 0.1),
