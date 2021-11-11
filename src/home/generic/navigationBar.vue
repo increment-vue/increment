@@ -1,9 +1,9 @@
 <template>
   <div class="databox">
     <button
-      v-on:click="onClick()"
+      v-on:click="onClick(data[index].status)"
       @click="activeCount = index"
-      v-for="(item, index) in navbar"
+      v-for="(item, index) in data"
       :key="index"
       :class="{ active: index == activeCount }"
       class="navbox"
@@ -15,19 +15,25 @@
 <script>
 export default {
   components: {},
-  mounted() {},
+  mounted() {
+    console.log('[navigation bar]', this.navbar)
+    // this.onClick(this.status);
+  },
   props: ["navbar"],
   data() {
     return {
+      status: "all",
       activeCount: 0,
       data: this.navbar,
     };
   },
   methods: {
-    onClick(){
-       
-    }
-  }
+    onClick(param) {
+      this.status = param;
+      console.log('[status]', this.status);
+      this.$emit('status', param)
+    },
+  },
 };
 </script>
 

@@ -1,14 +1,9 @@
 <template>
   <div>
     <div class="banner" id="testimonials">
-      <div>
-        <SectionHeader
-          :title="'WHAT THEY SAY ABOUT US'"
-          :style="style"
-          :description="'Our clients satisfactions expresses their testimonies.'"
-        ></SectionHeader>
-      </div>
       <div class="container">
+        <h2>WHAT THEY SAY ABOUT US!</h2>
+        <p>Our clients satisfactions expresses their testimonies</p>
         <div class="row no-gutters">
           <span class="col-sm" v-for="(item, index) in list" :key="index">
             <center class="single-card">
@@ -68,6 +63,8 @@
 .container {
   text-align: center;
   color: white;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 @media only screen and (max-width: 992px) {
   .single-card {
@@ -82,12 +79,8 @@
 }
 </style>
 <script>
-import SectionHeader from "src/home/generic/sectionHeader.vue";
 import ColorsJS from "src/assets/style/colors.js";
 export default {
-  components: {
-    SectionHeader,
-  },
   data() {
     return {
       style: {
