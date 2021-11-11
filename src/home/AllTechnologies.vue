@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="banner" id="header">
-      <h1 class="title">Technologies</h1>
-    </div>
+    <BreadCrumbs :title="'TECHNOLOGIES'" />
     <div>
       <div class="container">
         <div class="content">
@@ -116,12 +114,13 @@
 }
 
 .single-card {
-  border: 1px solid $primary;
+  border: 1px solid #e0e0e0;
   margin: 6px;
   padding: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
   min-height: 65vh;
+  border-radius: 10px;
 }
 .title {
   font-size: 50px;
@@ -146,7 +145,7 @@
 }
 
 .container {
-  padding-top: 20vh;
+  padding-top: 35vh;
   padding-bottom: 20vh;
   text-align: center;
   color: black;
@@ -155,11 +154,12 @@
 .image-holder {
   width: 100%;
   height: 50px;
+  text-align: center;
 }
 
 img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 80%;
 }
 
 #p1 {
@@ -188,9 +188,8 @@ p {
 }
 
 h4 {
-  margin-top: 10vh;
+  margin-top: 5vh;
   font-weight: 700;
-  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -220,7 +219,11 @@ h4 {
 import ROUTER from "src/router";
 import COMMON from "src/common.js";
 import Jquery from "jquery";
+import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
 export default {
+  components:{
+    BreadCrumbs
+  },
   mounted() {
     console.log(this.$route);
     this.scrollTop();

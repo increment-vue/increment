@@ -16,16 +16,16 @@
           company have handled:
         </p>
         <div class="bar">
-          <navigationBar :navbar="navbar" />
+          <!-- <navigationBar :navbar="navbar" @status="retrieve"/> -->
         </div>
         <div>
           <singleCard :projects="projects" />
+          <!-- <singleCard v-if="setStatus==='ongoing'" :projects="data" />
+          <singleCard v-if="setStatus==='completed'" :projects="data" />
+          <singleCard v-if="setStatus==='quickfix'" :projects="data" /> -->
         </div>
       </div>
     </div>
-    <span class="return-to-top" @click="scrollTo()">
-      <i class="fa fa-angle-up" style="font-size: 35px"></i>
-    </span>
   </div>
 </template>
 <style scoped lang="scss">
@@ -51,8 +51,8 @@
 }
 
 .container {
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-top: 25vh;
+  padding-bottom: 15vh;
   color: black;
 }
 
@@ -108,15 +108,16 @@ import ROUTER from "src/router";
 import Jquery from "jquery";
 import breadCrumbs from "src/home/generic/breadCrumbs.vue";
 import singleCard from "src/home/generic/singleCard.vue";
-import navigationBar from "src/home/generic/navigationBar.vue";
+// import navigationBar from "src/home/generic/navigationBar.vue";
 export default {
   components: {
     breadCrumbs,
     singleCard,
-    navigationBar,
+    // navigationBar,
   },
   data() {
     return {
+      data: [],
       navbar: [
         {
           name: "ALL",
@@ -133,24 +134,9 @@ export default {
         {
           name: "QUICK FIX",
           status: "quickfix"
-        },
-        // {
-        //   name:"WEB",
-        //   status: "web",
-        // },
-        // {
-        //   status: "MOBILE",
-        // },
-        // {
-        //   status: "DESIGN",
-        // },
-        // {
-        //   status: "ADMIN",
-        // },
-        // {
-        //   status: "LOWER LEVEL",
-        // },
+        }
       ],
+      setStatus: 'all',
       projects: [
         {
           title: "Aesha",
@@ -404,6 +390,24 @@ export default {
   methods: {
     redirect(parameter) {
       ROUTER.push(parameter);
+    },
+    retrieve(status){
+      this.setStatus = status
+      let newData = []
+      this.projects.forEach((element) => {
+      if (element.status === status) {
+        newData.push({
+          title: element.title,
+          location: element.location,
+          description: element.description,
+          src: element.src,
+          link: element.link,
+          withButton: element.withButton,
+          status: element.status
+        });
+      }
+    });
+    this.data = newData
     },
     openWindow(url) {
       window.open(url, "_BLANK");
