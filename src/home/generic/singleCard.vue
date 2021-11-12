@@ -104,51 +104,31 @@ img {
   }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   .row {
     margin: 1% !important;
     width: 48% !important;
   }
 }
-@media only screen and (max-width: 1200px) {
+
+@media only screen and (max-width: 769px) {
   .card {
     text-align: center;
+    height: 420px !important;
   }
   .row {
-    width: 26%;
-    margin: 1% 3%;
+    margin: 1% !important;
+    width: 48% !important;
   }
 }
-@media only screen and (max-width: 992px) {
-  .card {
-    text-align: center;
-  }
-  .row {
-    width: 40%;
-    margin: 1% 5%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .card {
-    text-align: center;
-    height: 400px !important;
-  }
-  .row {
-    width: 80%;
-    margin: 1% 7%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .title {
-    font-size: 40px;
-    font-weight: 800;
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-}
+
 @media only screen and (max-width: 426px) {
+  .row {
+    margin: 1% !important;
+    width: 80% !important;
+  }
   .card {
-    height: 430px !important;
+    height: 420px !important;
   }
 }
 @media only screen and (max-width: 376px) {

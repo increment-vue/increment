@@ -55,7 +55,7 @@
 #p1 {
   text-align: justify;
   margin-bottom: 30px;
-  margin-top: 160px;
+  margin-top: 30px;
   font-size: 16px;
 }
 p {
@@ -87,7 +87,7 @@ p {
   cursor: pointer;
   color: $primary;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 426px) {
   .container {
     text-align: center;
   }

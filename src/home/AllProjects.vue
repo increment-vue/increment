@@ -81,7 +81,7 @@ p {
   cursor: pointer;
   color: $primary;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 426px) {
   .container {
     text-align: center;
   }
@@ -100,12 +100,12 @@ import ROUTER from "src/router";
 import Jquery from "jquery";
 import breadCrumbs from "src/home/generic/breadCrumbs.vue";
 import singleCard from "src/home/generic/singleCard.vue";
-// import navigationBar from "src/home/generic/navigationBar.vue";
+import navigationBar from "src/home/generic/navigationBar.vue";
 export default {
   components: {
     breadCrumbs,
     singleCard,
-    // navigationBar,
+    navigationBar,
   },
   data() {
     return {
@@ -129,7 +129,6 @@ export default {
           status: "quickfix"
         },
       ],
-      setStatus: 'all',
       projects: [
         {
           title: "Aesha",
