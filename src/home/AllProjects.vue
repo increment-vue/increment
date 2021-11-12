@@ -26,9 +26,6 @@
         </div>
       </div>
     </div>
-    <span class="return-to-top" @click="scrollTo()">
-      <i class="fa fa-angle-up" style="font-size: 35px"></i>
-    </span>
   </div>
 </template>
 <style scoped lang="scss">
@@ -46,8 +43,8 @@
   color: white;
 }
 .container {
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-top: 25vh;
+  padding-bottom: 15vh;
   color: black;
 }
 #p1 {
@@ -103,12 +100,12 @@ import ROUTER from "src/router";
 import Jquery from "jquery";
 import breadCrumbs from "src/home/generic/breadCrumbs.vue";
 import singleCard from "src/home/generic/singleCard.vue";
-import navigationBar from "src/home/generic/navigationBar.vue";
+// import navigationBar from "src/home/generic/navigationBar.vue";
 export default {
   components: {
     breadCrumbs,
     singleCard,
-    navigationBar,
+    // navigationBar,
   },
   data() {
     return {
@@ -132,6 +129,7 @@ export default {
           status: "quickfix"
         },
       ],
+      setStatus: 'all',
       projects: [
         {
           title: "Aesha",

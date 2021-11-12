@@ -48,7 +48,7 @@
   color: white;
 }
 .container {
-  padding-top: 20vh;
+  padding-top: 35vh;
   padding-bottom: 20vh;
   color: black;
 }

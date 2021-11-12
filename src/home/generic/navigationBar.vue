@@ -15,10 +15,14 @@
 <script>
 export default {
   components: {},
-  mounted() {},
+  mounted() {
+    console.log('[navigation bar]', this.navbar)
+    // this.onClick(this.status);
+  },
   props: ["navbar"],
   data() {
     return {
+      status: "all",
       activeCount: 0,
       data: this.navbar,
     };

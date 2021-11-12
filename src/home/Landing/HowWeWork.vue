@@ -3,13 +3,7 @@
     <div class="component-header text-center">
       <img class="gif-image2" :src="require('assets/gif/how-we-work-2.gif')" />
     </div>
-    <div>
-      <SectionHeader
-        :title="'HOW WE WORK'"
-        :style="style"
-        :description="null"
-      ></SectionHeader>
-    </div>
+    <h2>HOW WE WORK</h2>
     <div class="row component-header text-center">
       <div class="col-sm">
         <img
@@ -41,15 +35,15 @@
           v-if="actives.length > 0 && actives.includes(index)"
           class="row item-clicked"
         >
-          <div class="col-sm-3 first-column">
+          <div class="first-column">
             <font-awesome-icon
               :icon="item.icon"
               class="font-awesome-icon-clicked"
             />
           </div>
-          <div class="col-sm second-column">
-            <h3>
-              <b>{{ item.title }}</b>
+          <div class="second-column">
+            <h3 style="font-weight: 700">
+              {{ item.title }}
             </h3>
             <hr class="line1" />
             <p>{{ item.text }}</p>
@@ -68,12 +62,29 @@
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 @import "~assets/style/theme.css";
+.first-column {
+  width: 30%;
+  float: left;
+}
+
+.second-column {
+  width: 70%;
+  float: left;
+}
+
 .app-quick-guide {
   width: 100%;
   background-color: $white;
   padding: 50px;
   margin-bottom: 10vh;
 }
+
+h2 {
+  text-align: center;
+  color: $primary;
+  margin-top: 50px !important;
+}
+
 .details-holder {
   justify-content: center;
   width: 100%;
@@ -101,10 +112,10 @@
   );
 }
 .line1 {
-  width: 96.25px;
+  width: 50%;
+  margin-right: 50%;
   height: 2px;
   background: $secondary;
-  margin-left: -0px;
 }
 .font-awesome-icon {
   height: 100px;
@@ -116,8 +127,8 @@
   line-height: 115px;
   letter-spacing: 0em;
 }
+
 .item-title {
-  font-size: 40px;
   font-weight: 700;
   line-height: 38px;
   letter-spacing: 0em;
@@ -161,6 +172,13 @@
   justify-content: center;
 }
 @media only screen and (max-width: 992px) {
+  .line1 {
+    width: 50%;
+    margin-right: 25% !important;
+    margin-left: 25% !important;
+    height: 2px;
+    background: $secondary;
+  }
   .details-holder {
     width: 100%;
     margin: -80px 0 10px 0;
@@ -170,12 +188,14 @@
     width: 100%;
     // margin-top: 20px;
   }
-  .second-column {
-    text-align: center;
-  }
-  .line1 {
-    margin-left: 30%;
-    margin-right: 30%;
+  .second-column,
+  .first-column {
+    text-align: center !important;
+    width: 90% !important;
+    margin: unset;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+    margin-bottom: 1% !important;
   }
   .component-header {
     display: none;
@@ -215,7 +235,6 @@
 </style>
 
 <script>
-import SectionHeader from "src/home/generic/sectionHeader.vue";
 import ColorsJS from "src/assets/style/colors.js";
 import {
   faHandshake,
@@ -230,9 +249,6 @@ import {
   faObjectGroup,
 } from "@fortawesome/free-solid-svg-icons";
 export default {
-  components: {
-    SectionHeader,
-  },
   data() {
     return {
       style: {

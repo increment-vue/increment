@@ -97,11 +97,18 @@ img {
   margin-bottom: 10px;
 }
 
-.title {
-  font-size: 50px;
-  font-weight: 800;
-  padding-right: 10%;
-  padding-left: 10%;
+@media only screen and (max-width: 1200px) {
+  .row {
+    margin: 1% !important;
+    width: 31.33% !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .row {
+    margin: 1% !important;
+    width: 48% !important;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .card {
