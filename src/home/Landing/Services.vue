@@ -1,37 +1,30 @@
 <template>
-  <div id="our-services">
+  <div >
     <Curve
-      :color="curveStyle1"
+      :color="colors.gradientPrimary"
       :use="true"
       :stylecss="{
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
       }"
     ></Curve>
-    <div class="cw-banner">
-      <SectionHeader
-        :title="'OUR SERVICES'"
-        :style="style"
-        :description="'What we offer are innovative solutions'"
-      ></SectionHeader>
-      <div class="container">
-        <div class="row">
-          <span class="card" v-for="(item, index) in services" :key="index">
-            <center>
-              <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
-            </center>
-            <b
-              ><p class="subtitle">{{ item.title }}</p></b
-            >
-            <span style="font-size: 13px; color: black">{{ item.desc }}</span>
-          </span>
-        </div>
+    <div class="cw-banner" id="our-services">
+      <h2>OUR SERVICES</h2>
+      <p>What we offer are innovative solutions</p>
+      <div class="row">
+        <span class="card" v-for="(item, index) in services" :key="index">
+          <center>
+            <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
+          </center>
+          <b><p class="subtitle">{{ item.title }}</p></b>
+          <span style="font-size: 13px; color: black">{{ item.desc }}</span>
+        </span>
       </div>
     </div>
     <Curve
-      :color="curveStyle2"
+      :color="colors.gradientSecondary"
       :use="false"
       :stylecss="{
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
       }"
     ></Curve>
   </div>
@@ -40,8 +33,12 @@
   <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .cw-banner {
+  padding-bottom: 15vh !important;
+  padding-top: 15vh !important;
   float: left;
   width: 100%;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
   background: linear-gradient(
     180deg,
     $gradientPrimary 0%,
@@ -49,15 +46,14 @@
   );
   margin-top: -14.5%;
   padding: 50px 0 50px 0;
-}
-.container {
-  text-align: center;
+  text-align: center !important;
   color: $white;
 }
+
 .card {
-  width: 23%;
-  height: 400px;
-  margin: 1%;
+  width: 22%;
+  height: 380px;
+  margin: 1.5%;
   padding: 20px;
   border-radius: 15px;
 }
@@ -86,46 +82,64 @@ img {
 
 .row {
   text-align: center;
+  margin-top: 70px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1500px) {
   .card {
-    width: 40% !important;
-    height: 370px;
-    margin: 5% !important;
+    width: 23% !important;
+    margin: 1% !important;
+    height: 400px !important;
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1300px) {
   .card {
-    width: 60% !important;
-    height: 340px;
-    margin: 5% 20% !important;
+    height: 420px !important;
   }
 }
 
-@media only screen and (max-width: 770px) {
+
+@media only screen and (max-width: 1230px){
   .card {
-    width: 60% !important;
-    height: 360px;
-    margin: 5% 20% !important;
+    height: 450px !important;
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1050px){
   .card {
-    width: 60% !important;
-    height: 450px;
-    margin: 5% 20% !important;
+    height: 380px !important;
+    width: 45% !important;
+    margin: 2.5% !important;
   }
 }
+
+
+
+@media only screen and (max-width: 714px) {
+  .card {
+    height: 400px !important;
+  }
+}
+
+@media only screen and (max-width: 644px) {
+  .card {
+    width: 80% !important;
+    margin: unset !important;
+    margin-top: 5% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+  }
+
+  .row {
+    margin-top: 3vh !important;
+  }
+}
+
 </style>
 <script>
-import ROUTER from "src/router";
-import COMMON from "src/common.js";
 import Curve from "src/home/generic/svgCurve.vue";
 import ColorsJS from "src/assets/style/colors.js";
-import SectionHeader from "src/home/generic/sectionHeader.vue";
 import {
   faPalette,
   faMobileAlt,
@@ -135,15 +149,10 @@ import {
 export default {
   components: {
     Curve,
-    SectionHeader,
   },
   data() {
     return {
-      curveStyle1: ColorsJS.gradientPrimary,
-      curveStyle2: ColorsJS.gradientSecondary,
-      style: {
-        color: ColorsJS.white,
-      },
+      colors: ColorsJS,
       services: [
         {
           title: "Design",
@@ -166,13 +175,7 @@ export default {
           desc: "We offer fair and affordable hosting and maintenance services. Part of our journey is to make sure that our servers are responding faster from the request of its visitors.",
         },
       ],
-      common: COMMON,
     };
-  },
-  methods: {
-    redirect(parameter) {
-      ROUTER.push(parameter);
-    },
   },
 };
 </script>

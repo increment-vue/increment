@@ -16,23 +16,20 @@
           company have handled:
         </p>
         <div class="bar">
-          <navigationBar :navbar="navbar" />
+          <navigationBar :navbar="navbar" @status="retrieve"/>
         </div>
         <div>
-          <singleCard :projects="projects" />
+          <singleCard v-once v-if="setStatus==='all'" :projects="projects" />
+          <singleCard v-once v-if="setStatus==='ongoing'" :projects="data" />
+          <singleCard v-once v-if="setStatus==='completed'" :projects="data" />
+          <singleCard v-once v-if="setStatus==='quickfix'" :projects="data" />
         </div>
       </div>
     </div>
-    <span class="return-to-top" @click="scrollTo()">
-      <i class="fa fa-angle-up" style="font-size: 35px"></i>
-    </span>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.hide {
-  visibility: hidden;
-}
 .bar {
   width: 100%;
   display: flex;
@@ -45,27 +42,17 @@
   text-align: center;
   color: white;
 }
-
-.title {
-  font-size: 50px;
-  font-weight: 800;
-  padding-right: 10%;
-  padding-left: 10%;
-}
-
 .container {
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-top: 25vh;
+  padding-bottom: 15vh;
   color: black;
 }
-
 #p1 {
   text-align: justify;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 160px;
   font-size: 16px;
 }
-
 p {
   text-align: center;
   margin-top: 10px;
@@ -74,7 +61,6 @@ p {
   margin-right: 10px;
   font-size: 14px;
 }
-
 .return-to-top {
   position: fixed;
   bottom: 10px;
@@ -88,7 +74,6 @@ p {
   text-align: center;
   float: left;
 }
-
 .fa-angle-up {
   color: $white !important;
 }
@@ -96,7 +81,11 @@ p {
   cursor: pointer;
   color: $primary;
 }
-
+@media only screen and (max-width: 426px) {
+  .container {
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 600px) {
   .title {
     font-size: 40px;
@@ -120,34 +109,25 @@ export default {
   },
   data() {
     return {
+      data: [],
+      setStatus: 'all',
       navbar: [
         {
-          status: "ALL",
+          name: "ALL",
+          status: "all"
         },
         {
-          status: "ONGOING",
+          name: "ONGOING",
+          status: "ongoing"
         },
         {
-          status: "COMPLETED",
+          name: "COMPLETED",
+          status: "completed"
         },
         {
-          status: "QUICK FIX",
+          name: "QUICK FIX",
+          status: "quickfix"
         },
-        // {
-        //   status: "WEB",
-        // },
-        // {
-        //   status: "MOBILE",
-        // },
-        // {
-        //   status: "DESIGN",
-        // },
-        // {
-        //   status: "ADMIN",
-        // },
-        // {
-        //   status: "LOWER LEVEL",
-        // },
       ],
       projects: [
         {
@@ -402,6 +382,24 @@ export default {
   methods: {
     redirect(parameter) {
       ROUTER.push(parameter);
+    },
+    retrieve(status){
+      this.setStatus = status
+      let newData = []
+      this.projects.forEach((element) => {
+      if (element.status === status) {
+        newData.push({
+          title: element.title,
+          location: element.location,
+          description: element.description,
+          src: element.src,
+          link: element.link,
+          withButton: element.withButton,
+          status: element.status
+        });
+      }
+    });
+    this.data = newData
     },
     openWindow(url) {
       window.open(url, "_BLANK");
