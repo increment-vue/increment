@@ -1,34 +1,50 @@
 <template>
-<div>
-  <div class="row" v-for="(item, index) in data" :key="index">
-    <div class="card">
-      <center>
-        <div class="box">
-          <img :src="item.src" />
+  <div>
+    <div class="row" v-for="(item, index) in data" :key="index">
+      <div class="card">
+        <center>
+          <div class="box">
+            <img :src="item.src" />
+          </div>
+          <span class="p1">{{ item.title }}</span>
+          <p class="p2">{{ item.location }}</p>
+          <p class="p3">{{ item.description }}</p>
+        </center>
+        <div v-if="item.withButton == true">
+          <a :href="item.link" target="_blank"
+            ><button class="button1">Visit</button></a
+          >
         </div>
-        <span class="p1">{{ item.title }}</span>
-        <p class="p2">{{ item.location }}</p>
-        <p class="p3">{{ item.description }}</p>
-      </center>
-      <div v-if="item.withButton == true">
-        <a :href="item.link" target="_blank"
-          ><button class="button1">Visit</button></a
-        >
+      </div>
+    </div>
+    <div class="row" v-for="(item, index) in data1" :key="index">
+      <div class="card" style="height: 480px">
+        <center>
+          <div class="box">
+            <img :src="item.src" />
+          </div>
+          <span class="p1">{{ item.name }}</span>
+          <p class="p4">{{ item.description }}</p>
+        </center>
+        <div v-if="item.withButton == true">
+          <a :href="item.link" target="_blank"
+            ><button class="button1">Visit</button></a
+          >
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
   components: {},
   mounted() {},
-  props: ["projects","navbar"],
+  props: ["projects", "navbar", "technologies"],
   data() {
     return {
       data: this.projects,
-      stat: this.navbar
+      data1: this.technologies,
     };
   },
 };
@@ -36,7 +52,7 @@ export default {
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .row {
-  display: inline-block; //changes
+  display: inline-block;
   margin: 1% 2%;
   width: 21%;
 }
@@ -47,13 +63,18 @@ export default {
 .p3 {
   font-size: 14px !important;
 }
+.p4 {
+  font-size: 14px !important;
+  padding-top: 20px;
+  margin-top: -10px;
+}
 .card {
-  width: 100%; //changes
-  height: 390px;
+  width: 100%;
+  height: 380px;
   margin: 1%;
   padding: 5px;
   border-radius: 15px;
-  text-align: center; 
+  text-align: center;
 }
 img {
   width: auto;
@@ -73,6 +94,7 @@ img {
   width: 50%;
   font-size: 81%;
   outline: none;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -81,13 +103,55 @@ img {
   padding-right: 10%;
   padding-left: 10%;
 }
-
+@media only screen and (max-width: 1200px) {
+  .card {
+    text-align: center;
+  }
+  .row {
+    width: 26%;
+    margin: 1% 3%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .card {
+    text-align: center;
+  }
+  .row {
+    width: 40%;
+    margin: 1% 5%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .card {
+    text-align: center;
+    height: 400px !important;
+  }
+  .row {
+    width: 80%;
+    margin: 1% 7%;
+  }
+}
 @media only screen and (max-width: 600px) {
   .title {
     font-size: 40px;
     font-weight: 800;
     padding-right: 10%;
     padding-left: 10%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .card {
+    height: 430px !important;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .card {
+    height: 450px !important;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .card {
+    height: 480px !important;
   }
 }
 </style>
