@@ -16,13 +16,13 @@
           company have handled:
         </p>
         <div class="bar">
-          <!-- <navigationBar :navbar="navbar" @status="retrieve"/> -->
+          <navigationBar :navbar="navbar" @status="retrieve"/>
         </div>
         <div>
-          <singleCard :projects="projects" />
-          <!-- <singleCard v-if="setStatus==='ongoing'" :projects="data" />
-          <singleCard v-if="setStatus==='completed'" :projects="data" />
-          <singleCard v-if="setStatus==='quickfix'" :projects="data" /> -->
+          <singleCard v-once v-if="setStatus==='all'" :projects="projects" />
+          <singleCard v-once v-if="setStatus==='ongoing'" :projects="data" />
+          <singleCard v-once v-if="setStatus==='completed'" :projects="data" />
+          <singleCard v-once v-if="setStatus==='quickfix'" :projects="data" />
         </div>
       </div>
     </div>
@@ -42,27 +42,17 @@
   text-align: center;
   color: white;
 }
-
-.title {
-  font-size: 50px;
-  font-weight: 800;
-  padding-right: 10%;
-  padding-left: 10%;
-}
-
 .container {
   padding-top: 25vh;
   padding-bottom: 15vh;
   color: black;
 }
-
 #p1 {
   text-align: justify;
   margin-bottom: 30px;
   margin-top: 160px;
   font-size: 16px;
 }
-
 p {
   text-align: center;
   margin-top: 10px;
@@ -71,7 +61,6 @@ p {
   margin-right: 10px;
   font-size: 14px;
 }
-
 .return-to-top {
   position: fixed;
   bottom: 10px;
@@ -85,7 +74,6 @@ p {
   text-align: center;
   float: left;
 }
-
 .fa-angle-up {
   color: $white !important;
 }
@@ -93,7 +81,11 @@ p {
   cursor: pointer;
   color: $primary;
 }
-
+@media only screen and (max-width: 426px) {
+  .container {
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 600px) {
   .title {
     font-size: 40px;
@@ -108,16 +100,17 @@ import ROUTER from "src/router";
 import Jquery from "jquery";
 import breadCrumbs from "src/home/generic/breadCrumbs.vue";
 import singleCard from "src/home/generic/singleCard.vue";
-// import navigationBar from "src/home/generic/navigationBar.vue";
+import navigationBar from "src/home/generic/navigationBar.vue";
 export default {
   components: {
     breadCrumbs,
     singleCard,
-    // navigationBar,
+    navigationBar,
   },
   data() {
     return {
       data: [],
+      setStatus: 'all',
       navbar: [
         {
           name: "ALL",
@@ -134,9 +127,8 @@ export default {
         {
           name: "QUICK FIX",
           status: "quickfix"
-        }
+        },
       ],
-      setStatus: 'all',
       projects: [
         {
           title: "Aesha",

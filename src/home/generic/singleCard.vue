@@ -17,6 +17,22 @@
         </div>
       </div>
     </div>
+    <div class="row" v-for="(item, index) in data1" :key="index">
+      <div class="card" style="height: 480px">
+        <center>
+          <div class="box">
+            <img :src="item.src" />
+          </div>
+          <span class="p1">{{ item.name }}</span>
+          <p class="p4">{{ item.description }}</p>
+        </center>
+        <div v-if="item.withButton == true">
+          <a :href="item.link" target="_blank"
+            ><button class="button1">Visit</button></a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,11 +40,11 @@
 export default {
   components: {},
   mounted() {},
-  props: ["projects", "navbar"],
+  props: ["projects", "navbar", "technologies"],
   data() {
     return {
       data: this.projects,
-      stat: this.navbar,
+      data1: this.technologies,
     };
   },
 };
@@ -36,9 +52,9 @@ export default {
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
 .row {
-  display: inline-block; //changes
-  margin: 1%;
-  width: 23%;
+  display: inline-block;
+  margin: 1% 2%;
+  width: 21%;
 }
 .p1 {
   color: $green;
@@ -47,9 +63,14 @@ export default {
 .p3 {
   font-size: 14px !important;
 }
+.p4 {
+  font-size: 14px !important;
+  padding-top: 20px;
+  margin-top: -10px;
+}
 .card {
-  width: 100%; //changes
-  height: 390px;
+  width: 100%;
+  height: 380px;
   margin: 1%;
   padding: 5px;
   border-radius: 15px;
@@ -73,6 +94,7 @@ img {
   width: 50%;
   font-size: 81%;
   outline: none;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -82,18 +104,41 @@ img {
   }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   .row {
     margin: 1% !important;
     width: 48% !important;
   }
 }
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 769px) {
+  .card {
+    text-align: center;
+    height: 420px !important;
+  }
   .row {
-    margin: 10% !important;
+    margin: 1% !important;
+    width: 48% !important;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .row {
+    margin: 1% !important;
     width: 80% !important;
-    margin-bottom: 1% !important;
+  }
+  .card {
+    height: 420px !important;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .card {
+    height: 450px !important;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .card {
+    height: 480px !important;
   }
 }
 </style>
