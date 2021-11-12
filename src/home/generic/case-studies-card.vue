@@ -110,7 +110,6 @@
     margin: auto;
   }
 }
-
 </style>
 <script>
 import ROUTER from "src/router";
