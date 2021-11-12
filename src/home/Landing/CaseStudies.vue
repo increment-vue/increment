@@ -12,7 +12,9 @@
         /> -->
       </p>
       <!-- generic case studies cards -->
-      <Cards :cases="cases" />
+      <div class="box">
+        <Cards :cases="cases" />
+      </div>
       <roundBtn
         :text="'View More'"
         :changeIcon="'fa fa-angle-double-right'"
@@ -59,6 +61,10 @@
   padding-bottom: 5vh; //20vh
   text-align: center;
 }
+p{
+  margin: auto;
+  width: 90%;
+}
 
 h2 {
   color: $primary;
@@ -91,6 +97,14 @@ h2 {
     float: unset !important;
   }
 }
+// @media screen and (max-width: 992px) {
+//   .container{
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-content: center;
+//   width: auto;
+//   }
+// }
 </style>
 <script>
 import ROUTER from "src/router";

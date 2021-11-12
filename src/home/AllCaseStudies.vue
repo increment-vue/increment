@@ -5,7 +5,7 @@
     </div>
 
     <div class="section-container">
-      <p >
+      <p>
         With over 5 years of experience, Increment Technologies Inc. specializes
         in Website Development, Web App Development, Mobile App Development, Web
         Design, and Web Hosting to clients sourced locally and internationally.
@@ -30,10 +30,10 @@
   float: left;
   color: white;
 }
-// p {
-//   margin: auto;
-//   width: 86% !important;
-// }
+p {
+  margin: auto !important;
+  width: 87% !important;
+}
 .section-container {
   width: 90% !important;
   margin-left: 5% !important;
@@ -62,6 +62,7 @@
   cursor: pointer;
   color: $primary;
 }
+
 </style>
 <script>
 import ROUTER from "src/router";
