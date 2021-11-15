@@ -4,7 +4,7 @@
       <breadCrumbs :title="'CASE STUDIES'" />
     </div>
 
-    <div class="container">
+    <div class="section-container">
       <p>
         With over 5 years of experience, Increment Technologies Inc. specializes
         in Website Development, Web App Development, Mobile App Development, Web
@@ -14,28 +14,12 @@
       </p>
       <span>
         <!-- generic case studies card -->
-        <!-- <Cards :cases="cases" /> -->
-        <span
-          class="card"
-          v-for="(item, index) in cases"
-          :key="index"
-          style="margin-top: 40px"
-        >
-          <span class="content">
-            <center>
-              <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
-              <p class="head-title">{{ item.title }}</p>
-              <label style="font-size: 10px">Starting Price:</label>
-              <p class="price">
-                <b>{{ item.price }}</b>
-              </p>
-              <p>{{ item.description }}</p>
-              <p @click="redirect(item.links)" class="button1">Read More</p>
-            </center>
-          </span>
-        </span>
+        <Cards :cases="cases" />
       </span>
     </div>
+    <span class="return-to-top" @click="scrollTo()">
+      <i class="fa fa-angle-up" style="font-size: 35px"></i>
+    </span>
   </div>
 </template>
 <style scoped lang="scss">
@@ -46,152 +30,42 @@
   float: left;
   color: white;
 }
-
-.container {
+p {
+  margin: auto !important;
+  width: 87% !important;
+}
+.section-container {
+  width: 90% !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
   min-height: 100vh !important;
+  padding-top: 10vh;
   padding-bottom: 20vh;
   text-align: justify;
-  padding-top: 5vh;
 }
-
-// all temporary for publish
-.card {
-  width: 24%; //24%
-  margin: 0.5%; //2.5%
-  height: 490px;
-  float: left;
-  border: double 2px transparent;
-  border-radius: 10px;
-  background-image: linear-gradient($white, $white),
-    linear-gradient(112.58deg, $gradientSecondary, $gradientPrimary);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-.card:hover {
-  border: double 5px transparent;
-  .button1 {
-    color: $purple;
-  }
-  .price {
-    background-color: $purple;
-  }
-  .font-awesome-icon {
-    color: $secondary;
-  }
-}
-.content {
-  margin-top: 20px;
-  padding: 10px;
-  display: inline-block;
-}
-.head-title {
-  margin-top: 20px;
-  color: $primary;
-  font-weight: 700;
-}
-.price {
-  border: 0.5px solid;
-  border-radius: 100px;
-  background-color: $secondary;
-  width: 150px;
-  height: auto;
-  padding: 10px;
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary;
   color: $white;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  line-height: 62px;
+  text-align: center;
 }
-.font-awesome-icon {
-  font-size: 80px;
-  color: $purple;
+.fa-angle-up {
+  color: $white !important;
 }
-.button1 {
-  height: 20px;
-  color: $green;
-  font-weight: 600;
-  text-decoration: underline;
+.return-to-top:hover {
   cursor: pointer;
-}
-.gif-image {
-  z-index: 20;
-  position: relative;
-  width: 20%;
-  height: auto !important;
-}
-@media only screen and (max-width: 1200px) {
-  .card {
-    width: 40%;
-    height: 500px;
-    margin: 5%;
-  }
-  button.btn {
-    float: unset;
-    position: relative;
-    left: -390px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .card {
-    float: unset;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: auto;
-  }
-  button.btn {
-    float: unset !important;
-    position: relative;
-    left: -90px;
-  }
-  .bottom-image {
-    margin-left: 10px;
-  }
-}
-@media screen and (max-width: 768px) {
-  button.btn {
-    left: -70px !important;
-  }
-}
-@media screen and (max-width: 425px) {
-  button.btn {
-    left: -40px !important;
-  }
-}
-@media screen and (max-width: 320px) {
-  .card {
-    width: 70%;
-  }
-  button.btn {
-    left: -20px !important;
-  }
-}
-@media screen and (min-width: 993px) {
-}
-@media screen and (max-width: 992px) {
-  .single-card {
-    justify-content: center;
-    width: 500px;
-  }
-  .bottomImage {
-    display: none;
-  }
-  .bottomFormatter {
-    display: none;
-  }
-  .bottomContainer {
-    justify-content: center;
-  }
-  .card-collection {
-    display: flex;
-    justify-content: center;
-  }
-  .my-col {
-    margin-bottom: 10px;
-    width: 500px;
-  }
+  color: $primary;
 }
 </style>
 <script>
 import ROUTER from "src/router";
-// import Cards from "src/home/generic/case-studies-card.vue";
+import Cards from "src/home/generic/case-studies-card.vue";
 import breadCrumbs from "src/home/generic/breadCrumbs.vue";
 import COLORS from "src/assets/style/colors.js";
 import {
@@ -217,7 +91,7 @@ import {
 import Jquery from "jquery";
 export default {
   components: {
-    // Cards,
+    Cards,
     breadCrumbs,
   },
   data() {
