@@ -1,21 +1,17 @@
 <template>
-  <div class="row">
-    <span
-      class="card"
-      style="margin-top: 40px"
-      v-for="(item, index) in data"
-      :key="index"
-    >
+  <div class="holder">
+    <span class="card" v-for="(item, index) in data" :key="index">
       <span class="content">
         <center>
           <font-awesome-icon :icon="item.icon" class="font-awesome-icon" />
           <p class="head-title">{{ item.title }}</p>
-          <label style="font-size: 12px">Starting Price:</label>
-          <p class="price">
-            <b>{{ item.price }}</b>
+          <label>Starting Price:</label>
+          <h3>{{ item.price }}</h3>
+          <p class="description">
+            {{ item.description }}<br /><u @click="redirect(item.links)"
+              >Read More</u
+            >
           </p>
-          <p class="description">{{ item.description }}</p>
-          <p @click="redirect(item.links)" class="button1">Read More</p>
         </center>
       </span>
     </span>
@@ -23,14 +19,18 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.row{
-  width: 90%;
-  margin: auto;
+.holder {
+  margin-top: 3vh;
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-bottom: 3vh;
 }
+
 .card {
-  width: 22%; //24% // 20%
-  margin: 1.5%; //0.5% // 2.5%
-  height: 500px;
+  width: 23%;
+  margin: 1%; 
+  height: 520px;
   float: left;
   border: double 2px transparent;
   border-radius: 10px;
@@ -39,78 +39,73 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
-.content {
-  margin-top: 20px;
-  padding: 8px;
-}
-.head-title {
-  margin-top: 20px;
-  height: 30px;
-  color: $primary;
-  font-weight: 700;
-}
-.description {
-  height: auto;
-  padding: unset;
-  width: 100%;
-  margin: unset;
-}
-.price {
-  border: 0.5px solid;
-  border-radius: 100px;
-  background-color: $secondary;
-  width: 70%; //150px
-  padding: 10px;
-  color: $white;
-}
-.button1 {
-  color: $green !important;
-  font-weight: 600 !important;
-  text-decoration: underline !important;
-  cursor: pointer !important;
-}
-.font-awesome-icon {
-  font-size: 80px;
-  color: $purple;
-}
+
 .card:hover {
   border: double 5px transparent;
-  .button1 {
-    color: $purple;
-  }
-  .price {
+  h3 {
     background-color: $purple;
   }
   .font-awesome-icon {
     color: $secondary;
   }
 }
-@media screen and (max-width: 1440px) {
-  .description{
-    padding: 5px;
-  }
+
+.font-awesome-icon {
+  color: $purple;
+  font-size: 100px;
+  margin: 50px;
 }
-@media screen and (max-width: 1024px) {
-  .row {
-    width: 80%;
-  }
+
+.head-title {
+  color: $primary;
+  font-weight: 750;
+  padding-left: 11px !important;
+  padding-right: 11px !important;
+}
+
+label {
+  font-size: 10px;
+}
+
+h3 {
+  font-weight: bold !important;
+  border-radius: 25px;
+  background-color: $secondary;
+  width: 200px; //150px
+  height: auto;
+  color: $white;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.description {
+  font-size: 14px !important;
+  padding: 11px !important;
+  height: 120px !important;
+}
+
+u {
+  color: $secondary;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+// 2 cards layout
+@media screen and (max-width: 1321px){
   .card {
-    width: 40%;
-    margin: 5%;
-    margin-bottom: 2%;
+     width: 48% !important;
   }
 }
-@media screen and (max-width: 768px) {
-  .row {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 540px) {
+
+//1 card layout
+@media screen and (max-width: 633px){
   .card {
-    width: 70%;
-    height: auto;
-    float: unset;
-    margin: auto;
+     width: 80% !important;
+     margin: unset;
+     margin-left: 10% !important;
+     margin-right: 10% !important;
+     margin-bottom: 3% !important;
   }
 }
 </style>

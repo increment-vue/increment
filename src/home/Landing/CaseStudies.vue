@@ -6,10 +6,6 @@
         With over 5 years of experience, Increment Technologies Inc. provides
         innovative productsand services from various categories in accordance to
         the client's needs
-        <!-- <img
-          src="../../assets/gif/case-study-top.gif"
-          class="gif-image top-image"
-        /> -->
       </p>
       <!-- generic case studies cards -->
       <Cards :cases="cases" />
@@ -38,7 +34,6 @@
       <img
         src="../../assets/gif/case-study-bottom.gif"
         class="gif-image"
-        style="float: left"
       />
     </div>
   </div>
@@ -50,26 +45,24 @@
   width: 100% !important;
   float: left !important;
 }
+
+.holder {
+  margin-top: 7vh !important;
+}
+
 .section-container {
-  width: 90% !important;
-  margin-left: 5% !important;
-  margin-right: 5% !important;
+  width: 80% !important;
+  margin-left: 10% !important;
+  margin-right: 10% !important;
   min-height: 100vh !important;
   padding-top: 10vh; //20vh
   padding-bottom: 5vh; //20vh
   text-align: center;
 }
-p{
-  margin: auto;
-  width: 90%;
-}
 h2 {
   color: $primary;
 }
-// .top-image {
-//   float: right;
-//   margin-top: -45vh;
-// }
+
 .card:hover {
   border: double 5px transparent;
   .button1 {
@@ -83,20 +76,24 @@ h2 {
   }
 }
 .gif-image {
-  // z-index: 1;
-  // position: relative;
   width: 20%;
   height: auto !important;
+  margin-bottom: 10vh;
+  float: left;
 }
 
-// button.btn{
-//   margin: 100px !important;;
-// }
 @media screen and (max-width: 1024px) {
   button.btn {
-    margin-right: 20% !important;
+    align-self: center;
     float: unset !important;
   }
+}
+
+@media screen and (max-width: 991px) {
+  .gif-image{
+    display: none !important;
+  }
+  
 }
 </style>
 <script>
