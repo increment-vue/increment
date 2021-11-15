@@ -1,5 +1,5 @@
 <template>
-  <div class="row" id="case-studies">
+  <div class="body" id="case-studies">
     <div class="section-container">
       <h2>CASE STUDIES</h2>
       <p>
@@ -45,11 +45,11 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-// .body {
-//   background-color: $white !important;
-//   max-width: 100% !important;
-//   // float: left !important;
-// }
+.body {
+  background-color: $white !important;
+  width: 100% !important;
+  float: left !important;
+}
 .section-container {
   width: 90% !important;
   margin-left: 5% !important;
@@ -83,11 +83,15 @@ h2 {
   }
 }
 .gif-image {
-  z-index: 1;
-  position: relative;
+  // z-index: 1;
+  // position: relative;
   width: 20%;
   height: auto !important;
 }
+
+// button.btn{
+//   margin: 100px !important;;
+// }
 @media screen and (max-width: 1024px) {
   button.btn {
     margin-right: 20% !important;
