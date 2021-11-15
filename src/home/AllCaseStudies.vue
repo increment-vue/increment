@@ -1,10 +1,7 @@
 <template>
-  <div class="row">
-    <div class="banner" id="header">
-      <breadCrumbs :title="'CASE STUDIES'" />
-    </div>
-
-    <div class="section-container">
+  <div>
+    <BreadCrumbs :title="'CASE STUDIES'" />
+    <div class="container">
       <p>
         With over 5 years of experience, Increment Technologies Inc. specializes
         in Website Development, Web App Development, Mobile App Development, Web
@@ -12,62 +9,26 @@
         The following case studies where the kind of systems our developer’s can
         work to provide solutions to every client’s needs.
       </p>
-      <span>
-        <!-- generic case studies card -->
-        <Cards :cases="cases" />
-      </span>
+      <Cases :cases="data" />
     </div>
-    <span class="return-to-top" @click="scrollTo()">
-      <i class="fa fa-angle-up" style="font-size: 35px"></i>
-    </span>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.banner {
-  height: 35vh;
-  width: 100%;
-  float: left;
-  color: white;
-}
-p {
-  margin: auto !important;
-  width: 87% !important;
-}
-.section-container {
-  width: 90% !important;
-  margin-left: 5% !important;
-  margin-right: 5% !important;
-  min-height: 100vh !important;
-  padding-top: 10vh;
-  padding-bottom: 20vh;
+.container {
   text-align: justify;
+  min-height: 100vh;
+  background-color: $white;
+  padding-top: 40vh;
 }
-.return-to-top {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: $primary;
-  color: $white;
-  height: 50px;
-  width: 50px;
-  border-radius: 5px;
-  line-height: 62px;
-  text-align: center;
-}
-.fa-angle-up {
-  color: $white !important;
-}
-.return-to-top:hover {
-  cursor: pointer;
-  color: $primary;
+
+.holder {
+  margin-bottom: 15vh !important;
 }
 </style>
 <script>
-import ROUTER from "src/router";
-import Cards from "src/home/generic/case-studies-card.vue";
-import breadCrumbs from "src/home/generic/breadCrumbs.vue";
-import COLORS from "src/assets/style/colors.js";
+import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
+import Cases from "src/home/generic/case-studies-card.vue";
 import {
   faCalendarDay,
   faRobot,
@@ -88,16 +49,13 @@ import {
   faLanguage,
   faTasks,
 } from "@fortawesome/free-solid-svg-icons";
-import Jquery from "jquery";
 export default {
-  components: {
-    Cards,
-    breadCrumbs,
+  mounted() {
+    window.scrollTo(0, 0);
   },
   data() {
     return {
-      colors: COLORS,
-      cases: [
+      data: [
         {
           icon: faCalendarDay,
           title: "Bookings and Appointments",
@@ -245,24 +203,9 @@ export default {
       ],
     };
   },
-  mounted() {
-    this.scrollTop();
-  },
-  methods: {
-    redirect(parameter) {
-      ROUTER.push(parameter);
-    },
-    scrollTo() {
-      Jquery("html, body").animate(
-        {
-          scrollTop: Jquery("#header").offset().top,
-        },
-        500
-      );
-    },
-    scrollTop() {
-      window.scrollTo(0, 0);
-    },
-  },
+  components: {
+    BreadCrumbs,
+    Cases,
+  }
 };
 </script>
