@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="row">
     <span
       class="card"
       style="margin-top: 40px"
@@ -23,8 +23,9 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.container {
-  width: 100%;
+.row{
+  width: 90%;
+  margin: auto;
 }
 .card {
   width: 22%; //24% // 20%
@@ -84,8 +85,13 @@
     color: $secondary;
   }
 }
+@media screen and (max-width: 1440px) {
+  .description{
+    padding: 5px;
+  }
+}
 @media screen and (max-width: 1024px) {
-  .container {
+  .row {
     width: 80%;
   }
   .card {
@@ -95,11 +101,8 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .container {
+  .row {
     width: 100%;
-  }
-  .description {
-    padding: 10px;
   }
 }
 @media screen and (max-width: 540px) {
