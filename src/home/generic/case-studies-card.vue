@@ -42,11 +42,19 @@
 
 .card:hover {
   border: double 5px transparent;
+  background-image: linear-gradient($white, $white),
+    linear-gradient(112.58deg, $gradientPrimary, $gradientSecondary);
+  .head-title {
+    color: $green;
+  }
   h3 {
     background-color: $purple;
   }
   .font-awesome-icon {
     color: $secondary;
+  }
+  u {
+    color: $primary;
   }
 }
 
@@ -64,7 +72,7 @@
 }
 
 label {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 h3 {
@@ -101,10 +109,10 @@ u {
 //1 card layout
 @media screen and (max-width: 633px){
   .card {
-     width: 80% !important;
+     width: 90% !important;
      margin: unset;
-     margin-left: 10% !important;
-     margin-right: 10% !important;
+     margin-left: 5% !important;
+     margin-right: 5% !important;
      margin-bottom: 3% !important;
   }
 }
