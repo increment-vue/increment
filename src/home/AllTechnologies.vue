@@ -37,9 +37,7 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.navSize {
-  transform: scaleX(0.84);
-}
+
 .banner {
   height: 35vh;
   width: 100%;
