@@ -13,11 +13,15 @@
   </div>
 </template>
 <script>
+import $ from "jquery";
 export default {
   components: {},
   mounted() {
-    console.log('[navigation bar]', this.navbar)
-    // this.onClick(this.status);
+    console.log("[navigation bar]", this.navbar);
+    $(".navbox").attr(
+      "style",
+      "width: " + 100 / this.navbar.length + "% !important"
+    );
   },
   props: ["navbar"],
   data() {
@@ -50,11 +54,13 @@ export default {
   outline: none;
   display: flex;
   justify-content: center;
-  margin: 40px 5px;
-  padding: 14px 90px;
+  align-items: center;
+  font-size: 16px;
+  height: 60px;
+  font-weight: 500;
   color: $white;
   text-decoration: none;
-  border: 2px;
+  border: 1px solid $white;
   white-space: nowrap;
   float: left;
 }
@@ -65,51 +71,28 @@ export default {
   color: $black;
   border: double 2px transparent;
   background-image: linear-gradient($white, $white),
-    linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
+    linear-gradient(264.22deg, $purple 0%, $secondary 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
-@media only screen and (max-width: 1200px) {
-  .navbox {
-    width: 20%;
-  }
-}
-@media only screen and (max-width: 992px) {
-  .navbox {
-    padding: 14px 60px;
-    margin: 40px 1.5px;
-  }
-}
+
 @media only screen and (max-width: 767px) {
-  .card {
-    text-align: center;
-    height: 400px !important;
+  .navbox {
+    font-size: 65% !important;
+    height: 50px !important;
   }
 }
-@media only screen and (max-width: 426px) {
+
+@media only screen and (max-width: 500px) {
   .navbox {
-    white-space: unset;
-    padding: 0 48px;
-    padding-top: 10px;
-    padding-bottom: 5x;
-    max-height: 60px;
-    margin: 0 1px;
-  }
-  button {
-    font-size: 14px;
+    font-size: 50% !important;
+    height: 40px !important;
   }
 }
-@media only screen and (max-width: 376px) {
+
+@media only screen and (max-width: 350px) {
   .navbox {
-    white-space: unset;
-    padding: 0 35px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    max-height: 60px;
-    margin: 0 1px;
-  }
-  button {
-    font-size: 10px;
+    font-size: 40% !important;
   }
 }
 </style>
