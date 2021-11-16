@@ -30,11 +30,11 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+// .bar {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+// }
 .banner {
   height: 35vh;
   width: 100%;

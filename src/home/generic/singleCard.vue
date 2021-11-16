@@ -53,8 +53,8 @@ export default {
 @import "~assets/style/colors.scss";
 .row {
   display: inline-block;
-  margin: 1% 2%;
-  width: 21%;
+  margin: 1% 0.9%;
+  width: 23%;
 }
 .p1 {
   color: $green;
