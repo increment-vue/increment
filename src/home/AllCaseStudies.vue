@@ -28,7 +28,7 @@
 </style>
 <script>
 import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
-import Cases from "src/home/generic/case-studies-card.vue";
+import Cases from "src/home/generic/caseCard.vue";
 import {
   faCalendarDay,
   faRobot,

@@ -17,7 +17,7 @@ import $ from "jquery";
 export default {
   components: {},
   mounted() {
-    console.log("[navigation bar]", this.navbar);
+    console.log("[navigation bar]", this.navbar)
     $(".navbox").attr(
       "style",
       "width: " + 100 / this.navbar.length + "% !important"
@@ -26,7 +26,7 @@ export default {
   props: ["navbar"],
   data() {
     return {
-      status: "all",
+      status: this.navbar[0],
       activeCount: 0,
       data: this.navbar,
     };
