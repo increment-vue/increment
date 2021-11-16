@@ -16,11 +16,11 @@
         convenience and retrenchment.
       </p>
       <NavBar :navbar="navbar" @status="retrieve" />
-      <Techs v-once v-if="setStatus==='web_development'" :height="'550'" :data="selectedTechs" />
-      <Techs v-once v-if="setStatus==='mobile_development'" :height="'550'" :data="selectedTechs" />
-      <Techs v-once v-if="setStatus==='ui_ux_designs'" :height="'550'" :data="selectedTechs" />
-      <Techs v-once v-if="setStatus==='system_administrator'" :height="'550'" :data="selectedTechs" />
-      <Techs v-once v-if="setStatus==='lower_level_programming'" :height="'550'" :data="selectedTechs" />
+      <Techs v-once v-if="setStatus === 'web_development'" :height="'450'" :data="selectedTechs"/>
+      <Techs v-once v-if="setStatus === 'mobile_development'" :height="'450'" :data="selectedTechs"/>
+      <Techs v-once v-if="setStatus === 'ui_ux_designs'" :height="'450'" :data="selectedTechs"/>
+      <Techs v-once v-if="setStatus === 'system_administrator'" :height="'450'" :data="selectedTechs"/>
+      <Techs v-once v-if="setStatus === 'lower_level_programming'" :height="'450'" :data="selectedTechs"/>
     </div>
   </div>
 </template>
@@ -440,8 +440,18 @@ export default {
     };
   },
   mounted() {
-    this.retrieve("web_development")
     window.scrollTo(0, 0);
+    this.technologies.forEach((element) => {
+      if (element.status === this.setStatus) {
+        this.selectedTechs.push({
+          title: element.title,
+          description: element.description,
+          src: element.src,
+          withButton: false,
+          status: element.status,
+        });
+      }
+    });
   },
   methods: {
     retrieve(status) {
