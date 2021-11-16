@@ -8,7 +8,7 @@
         the client's needs
       </p>
       <!-- generic case studies cards -->
-      <Cards :cases="cases" />
+      <Cases :cases="cases" />
       <roundBtn
         :text="'View More'"
         :changeIcon="'fa fa-angle-double-right'"
@@ -99,7 +99,7 @@ h2 {
 <script>
 import ROUTER from "src/router";
 import roundBtn from "src/home/generic/roundBtn.vue";
-import Cards from "src/home/generic/case-studies-card.vue";
+import Cases from "src/home/generic/caseCard.vue";
 import COLORS from "src/assets/style/colors.js";
 import {
   faCalendarDay,
@@ -109,7 +109,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
-    Cards,
+    Cases,
     roundBtn,
   },
   data() {

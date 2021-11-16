@@ -1,5 +1,5 @@
 <template>
-  <div class="databox">
+  <div class="pagination">
     <button
       v-on:click="onClick(data[index].status)"
       @click="activeCount = index"
@@ -13,13 +13,20 @@
   </div>
 </template>
 <script>
+import $ from "jquery";
 export default {
   components: {},
-  mounted() {},
+  mounted() {
+    console.log("[navigation bar]", this.navbar)
+    $(".navbox").attr(
+      "style",
+      "width: " + 100 / this.navbar.length + "% !important"
+    );
+  },
   props: ["navbar"],
   data() {
     return {
-      status: "all",
+      status: this.navbar[0],
       activeCount: 0,
       data: this.navbar,
     };
@@ -35,25 +42,28 @@ export default {
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.databox {
-  // transform: scaleX(85%);
-  width: auto;
-  white-space: nowrap;
+.pagination {
+  max-width: 100%;
+  text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
 }
 .navbox {
   background: linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
   border-radius: 10px;
   outline: none;
-  display: inline-block;
   justify-content: center;
-  margin: 40px 5px;
-  width: 100%;
-  padding: 14px 0;
+  align-items: center;
+  font-size: 16px;
+  height: 60px;
+  font-weight: 500;
   color: $white;
   text-decoration: none;
-  border: 2px;
+  border: 1px solid $white;
+  white-space: nowrap;
+  float: left;
 }
 .active {
   position: relative;
@@ -62,35 +72,29 @@ export default {
   color: $black;
   border: double 2px transparent;
   background-image: linear-gradient($white, $white),
-    linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
+    linear-gradient(264.22deg, $purple 0%, $secondary 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
-@media only screen and (max-width: 992px) {
-  .navbox {
-    padding: 14px 0;
-    margin: 40px 2px;
-  }
-}
+
 @media only screen and (max-width: 767px) {
-  .button {
-    font-size: 13px;
+  .navbox {
+    font-size: 65% !important;
+    height: 50px !important;
   }
   
 }
-@media only screen and (max-width: 426px) {
-  button {
-    font-size: 11px;
+
+@media only screen and (max-width: 500px) {
+  .navbox {
+    font-size: 50% !important;
+    height: 40px !important;
   }
 }
-@media only screen and (max-width: 376px) {
-  button {
-    font-size: 9px;
-  }
-}
-@media only screen and (max-width: 321px) {
-  button {
-    font-size: 8px;
+
+@media only screen and (max-width: 350px) {
+  .navbox {
+    font-size: 40% !important;
   }
 }
 </style>
