@@ -54,7 +54,6 @@ export default {
   background: linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
   border-radius: 10px;
   outline: none;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
@@ -83,6 +82,7 @@ export default {
     font-size: 65% !important;
     height: 50px !important;
   }
+  
 }
 
 @media only screen and (max-width: 500px) {
