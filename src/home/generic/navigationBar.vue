@@ -1,5 +1,5 @@
 <template>
-  <div class="databox">
+  <div class="pagination">
     <button
       v-on:click="onClick(data[index].status)"
       @click="activeCount = index"
@@ -42,11 +42,13 @@ export default {
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.databox {
+.pagination {
   max-width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
 }
 .navbox {
   background: linear-gradient(264.22deg, #00b89f 0%, #8f00b5 100%);
