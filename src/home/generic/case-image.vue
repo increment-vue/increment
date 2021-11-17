@@ -46,7 +46,7 @@
   height: 100px;
   padding: 20px;
   margin-top: -100px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   position: absolute;
   bottom: 0;
 }

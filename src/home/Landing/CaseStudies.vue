@@ -6,13 +6,9 @@
         With over 5 years of experience, Increment Technologies Inc. provides
         innovative productsand services from various categories in accordance to
         the client's needs
-        <!-- <img
-          src="../../assets/gif/case-study-top.gif"
-          class="gif-image top-image"
-        /> -->
       </p>
       <!-- generic case studies cards -->
-      <Cards :cases="cases" />
+      <Cases :cases="cases" />
       <roundBtn
         :text="'View More'"
         :changeIcon="'fa fa-angle-double-right'"
@@ -38,7 +34,6 @@
       <img
         src="../../assets/gif/case-study-bottom.gif"
         class="gif-image"
-        style="float: left"
       />
     </div>
   </div>
@@ -47,27 +42,26 @@
 @import "~assets/style/colors.scss";
 .body {
   background-color: $white !important;
-  max-width: 100% !important;
+  width: 100% !important;
   float: left !important;
 }
 
-.section-container {
-  width: 90% !important;
-  margin-left: 5% !important;
-  margin-right: 5% !important;
-  min-height: 100vh !important;
-  padding-top: 20vh;
-  padding-bottom: 20vh;
-  text-align: center;
+.holder {
+  margin-top: 7vh !important;
 }
 
+.section-container {
+  width: 80% !important;
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  min-height: 100vh !important;
+  padding-top: 10vh; //20vh
+  padding-bottom: 5vh; //20vh
+  text-align: center;
+}
 h2 {
   color: $primary;
 }
-// .top-image {
-//   float: right;
-//   margin-top: -45vh;
-// }
 
 .card:hover {
   border: double 5px transparent;
@@ -81,69 +75,31 @@ h2 {
     color: $secondary;
   }
 }
-
 .gif-image {
-  z-index: 20;
-  position: relative;
   width: 20%;
   height: auto !important;
+  margin-bottom: 10vh;
+  float: left;
 }
-// @media only screen and (max-width: 1200px) {
-//   .card {
-//     width: 40%;
-//     height: 500px;
-//     margin: 5%;
-//   }
-//   button.btn {
-//     float: unset;
-//     position: relative;
-//     left: -390px;
-//   }
-// }
-// @media screen and (max-width: 992px) {
-//   .card {
-//     float: unset;
-//     margin-top: 20px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     // width: 50%;
-//     height: auto !important;
-//   }
-//   button.btn {
-//     float: unset !important;
-//     position: relative;
-//     left: -90px;
-//   }
-//   .bottom-image {
-//     margin-left: 10px;
-//   }
-// }
-// @media screen and (max-width: 768px) {
-//   button.btn {
-//     left: -70px !important;
-//   }
-// }
-// @media screen and (max-width: 425px) {
-//   .card {
-//     width: 70%;
-//   }
-//   button.btn {
-//     left: -40px !important;
-//   }
-// }
-// @media screen and (max-width: 375px) {
-//   .card {
-//     width: 80%;
-//   }
-//   button.btn {
-//     left: -20px !important;
-//   }
-// }
+
+@media screen and (max-width: 1024px) {
+  button.btn {
+    align-self: center;
+    float: unset !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .gif-image{
+    display: none !important;
+  }
+  
+}
 </style>
 <script>
 import ROUTER from "src/router";
 import roundBtn from "src/home/generic/roundBtn.vue";
-import Cards from "src/home/generic/case-studies-card.vue";
+import Cases from "src/home/generic/caseCard.vue";
 import COLORS from "src/assets/style/colors.js";
 import {
   faCalendarDay,
@@ -153,7 +109,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
-    Cards,
+    Cases,
     roundBtn,
   },
   data() {
