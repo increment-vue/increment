@@ -549,11 +549,33 @@ img {
     background-color: $secondary;
     margin-top: 4.5rem;
   }
+  .menuBars{
+    color: #00B89F!important;
+  }
+  .fa-bars{
+    border: solid 1px #00B89F!important;
+    margin-bottom: 10px;
+  }
+  .navbar-brand{
+    padding-bottom: 0px;
+    padding-top: 20px;
+  }
 }
 
 @media screen and (max-width: 1110px) {
   .headerElement{
     width: auto;
+  }
+  .menuBars{
+    color: #00B89F!important;
+  }
+  .fa-bars{
+    border: solid 1px #00B89F!important;
+    margin-bottom: 10px;
+  }
+  .navbar-brand{
+    padding-bottom: 0px;
+    padding-top: 20px;
   }
 }
 
