@@ -31,7 +31,7 @@
               
             </span>
             <div class="collapse navbar-collapse" >
-              <form class="form-inline my-2 my-lg-0 ml-auto">
+              <form class="form-inline my-2 my-lg-0 ml-auto myForm">
                 <ul class="navbar-nav">
                   <li class="nav-item header-right"
                   v-for="(item, index) in menu" :key="index"
@@ -166,7 +166,7 @@
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
                 <span class="formatter"></span>
-                <span>
+                <span class="dropDownIcon">
                   <font-awesome-icon :icon="isToggled1 ? angleUp : angleDown" size="lg" />
                 </span>
               </div>
@@ -224,7 +224,7 @@
                   <b class="increment-purple">{{ item.title }}</b>
                 </a>
                 <span class="formatter"></span>
-                <span>
+                <span class="dropDownIcon">
                   <font-awesome-icon :icon="isToggled2 ? angleUp : angleDown" size="lg" />
                 </span>
               </div>
@@ -255,6 +255,7 @@
                 </div>
                 <div v-else-if="item.title !== 'Send Request'">
                   <a
+                   class="nav-link"
                     :href="item.redirect"
                     @click="outsideLanding ? redirectAndScroll('/', item.redirect) : headerScrollTo(item.redirect)"
                     role="button"
@@ -277,6 +278,9 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.brand{
+  margin-left: 3%;
+}
 .menuIcon{
   float: right;
 }
@@ -442,7 +446,8 @@ img {
     color: white;
     padding-top:6%
   }
-@media screen and (min-width: 992px){
+  
+@media screen and (min-width: 1265px){
     #navbarSupportedContent{
     display: none;
   }
@@ -452,10 +457,146 @@ img {
 
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1264px) {
+  .dropDownIcon{
+    padding-top: 7px;
+    margin-left: 20px;
+  }
+  .myForm{
+    display: none;
+  }
     .navbar-expand .navbar-collapse {
       display: flex !important;
     } 
+  .headerElement{
+    width: 100%;
+  }
+  // Color elements inversed to their original to take into account mobile view
+  .bg-transparent{
+    background-color: white!important;;
+  }
+  .bg-gradient{
+    background-color: white !important;
+    background-image: none!important;
+    // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  }
+  .increment-white{
+    color: $primary;
+  }
+  .my-space {
+    width: 70%;
+    height: 40%;
+  }
+  .navbar-menu-toggler-md { //icon
+    width: 100%;
+    text-align: right;
+    float: right;
+    display: block;
+    margin-top: -3.18rem;
+    margin-right: 100px;
+    padding: auto;
+  }
+  .navbar-nav {
+    margin-top: 1%;
+    background-color: none;
+    padding: 1%;
+    float: left;
+  }
+  .header-section { //white space
+    float: left;
+    width: 100%;
+    margin-top: -5px;
+  }
+  .nav-item {
+    background-color: none;
+    padding: 1%;
+    margin-left: 4%;
+  }
+  .li{
+    background-color: none;
+
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    text-align: left;
+    border: none;
+    background-color: #f8f9fa;
+  }
+
+  .who-menu { //entire menu of who-we-are 
+    background-color: none;
+    margin-left: -70%;
+    margin-top: 10%;
+  }
+  .serve-menu {
+    margin-left: 0%;
+    margin-left: -70%;
+    margin-top: 10%;
+  }
+  .my-row{
+    display: block;
+  }
+
+  .dropdown-toggle-split{
+    color: $secondary;
+    padding-right: 50%;
+  }
+
+  .header-separator{
+    width: 100%; 
+    height: 1px; 
+    position: absolute;
+    background-color: $secondary;
+    margin-top: 4.5rem;
+  }
+  .menuBars{
+    color: #00B89F!important;
+  }
+  .fa-bars{
+    border: solid 1px #00B89F!important;
+    margin-bottom: 10px;
+  }
+  .navbar-brand{
+    padding-bottom: 0px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .headerElement{
+    width: auto;
+  }
+  .menuBars{
+    color: #00B89F!important;
+  }
+  .fa-bars{
+    border: solid 1px #00B89F!important;
+    margin-bottom: 10px;
+  }
+  .navbar-brand{
+    padding-bottom: 0px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menuBars{
+    color: #00B89F!important;
+  }
+  .fa-bars{
+    border: solid 1px #00B89F!important;
+    margin-bottom: 10px;
+  }
+  .navbar-brand{
+    padding-bottom: 0px;
+    padding-top: 20px;
+  }
+  .brand{
+    margin-left: 5%;
+  }
+  .navbar-expand .navbar-collapse {
+    display: flex !important;
+  } 
   .headerElement{
     width: 100%;
   }
