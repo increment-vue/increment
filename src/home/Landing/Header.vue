@@ -398,10 +398,10 @@ img {
   cursor: pointer;
 }
 .fa-bars {
-  border: solid 1px $primary;
+  border: solid 2px $green;
   font-size: 20px !important;
   padding: 8px 10px 8px 10px !important;
-  color: $primary !important;
+  color: $green !important;
 }
 .button:hover {
   background-color: #9acd32;
