@@ -1,7 +1,7 @@
 <template>
   <div class="body">
-    <LandingBanner></LandingBanner>
-    <LandingWhoWeAre></LandingWhoWeAre>
+    <LandingBanner/>
+    <LandingWhoWeAre/>
     <LandingOurServices />
     <LandingHowWeWork />
     <LandingOurProjects />

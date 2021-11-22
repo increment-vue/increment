@@ -4,7 +4,7 @@ export default{
     {
       path: '/',
       name: 'Home',
-      component: resolve => require(['src/home/Landing.vue'], resolve),
+      component: resolve => require(['src/home/Home.vue'], resolve),
     },
     {
       path: '/case-studies',

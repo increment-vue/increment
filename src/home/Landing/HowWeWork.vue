@@ -5,13 +5,13 @@
     </div>
     <h2>HOW WE WORK</h2>
     <div class="row component-header text-center">
-      <div class="col-sm">
+      <div style="width: 50%; float: left; text-align: left">
         <img
           class="gif-image2"
           :src="require('assets/gif/how-we-work-1.gif')"
         />
       </div>
-      <div class="col-sm">
+      <div style="width: 50%; float: right; text-align: right">
         <img
           class="gif-image2"
           :src="require('assets/gif/how-we-work-3.gif')"
@@ -52,9 +52,10 @@
       </div>
     </div>
     <div class="row component-footer">
-      <div v-for="(item, index) in gifFooter" :key="index">
-        <img class="gif-imageFooter" :src="item" />
-      </div>
+      <img class="gif-imageFooter" :src="require('assets/gif/how-we-work-4.gif')" />
+      <img class="gif-imageFooter" :src="require('assets/gif/how-we-work-5.gif')" />
+      <img class="gif-imageFooter" :src="require('assets/gif/how-we-work-6.gif')" />
+      <img class="gif-imageFooter" :src="require('assets/gif/how-we-work-7.gif')" />
     </div>
   </div>
 </template>
@@ -63,6 +64,7 @@
 @import "~assets/style/colors.scss";
 @import "~assets/style/theme.css";
 .first-column {
+  text-align: left;
   width: 30%;
   float: left;
 }
@@ -70,6 +72,7 @@
 .second-column {
   width: 70%;
   float: left;
+  text-align: left;
 }
 
 .app-quick-guide {
@@ -82,7 +85,7 @@
 h2 {
   text-align: center;
   color: $primary;
-  margin-top: 50px !important;
+  margin-top: 60px !important;
 }
 
 .details-holder {
@@ -150,43 +153,49 @@ h2 {
   margin-bottom: 50px;
   color: $secondary;
 }
-.second-column {
-  text-align: left;
-}
+
 .gif-image2 {
   height: 250px;
-  width: 350px;
+  width: 380px;
   top: 18px;
 }
 .gif-imageFooter {
-  margin-right: 80px;
   height: 250px;
-  width: 350px;
-  top: 18px;
+  width: 25%;
+  margin-top: 100px;
 }
 .component-header {
-  margin-top: -220px;
+  margin-top: -200px;
 }
 .component-footer {
-  margin: 50px 0 0 80px;
-  justify-content: center;
+  width: 100%;
 }
-@media only screen and (max-width: 992px) {
-  .line1 {
-    width: 50%;
-    margin-right: 25% !important;
-    margin-left: 25% !important;
-    height: 2px;
-    background: $secondary;
+
+@media only screen and (max-width: 1300px) {
+  .first-column {
+    width: 40% !important;
   }
-  .details-holder {
-    width: 100%;
-    margin: -80px 0 10px 0;
+
+  .second-column {
+    width: 60% !important;
   }
-  .item-holder,
-  .item-holder-click {
-    width: 100%;
-    // margin-top: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .gif-image2 {
+    height: 180px !important;
+    width: 280px !important;
+    margin-top: 50px !important;
+  }
+
+  .gif-imageFooter {
+    height: 180px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  h2 {
+    margin-top: 0px !important;
   }
   .second-column,
   .first-column {
@@ -197,39 +206,25 @@ h2 {
     margin-right: 5% !important;
     margin-bottom: 1% !important;
   }
+  .line1 {
+    width: 50%;
+    margin-right: 25% !important;
+    margin-left: 25% !important;
+    height: 2px;
+    background: $secondary;
+  }
+  .details-holder {
+    width: 100%;
+  }
+  .item-holder,
+  .item-holder-click {
+    width: 100%;
+  }
   .component-header {
-    display: none;
+    display: none !important;
   }
   .component-footer {
-    display: none;
-    margin: 0 50px -0 50px;
-  }
-}
-@media only screen and (max-width: 1500px) {
-  .component-header {
-    display: none;
-  }
-  .component-footer {
-    display: none;
-    margin: 0 50px -0 50px;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .component-header {
-    display: none;
-  }
-  .component-footer {
-    display: none;
-    margin: 0 50px -0 50px;
-  }
-}
-@media only screen and (max-width: 450px) {
-  .component-header {
-    display: none;
-  }
-  .component-footer {
-    display: none;
-    margin: 0 50px -0 50px;
+    display: none !important;
   }
 }
 </style>
@@ -318,13 +313,7 @@ export default {
           flag: false,
         },
       ],
-      actives: [],
-      gifFooter: [
-        require("assets/gif/how-we-work-4.gif"),
-        require("assets/gif/how-we-work-5.gif"),
-        require("assets/gif/how-we-work-6.gif"),
-        require("assets/gif/how-we-work-7.gif"),
-      ],
+      actives: []
     };
   },
   methods: {

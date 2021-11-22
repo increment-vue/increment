@@ -146,6 +146,9 @@ hr {
 }
 
 @media only screen and (max-width: 992px) {
+  .banner {
+    margin-bottom: 0vh !important;
+  }
   .div-gif1,
   .div-gif2 {
     display: none !important;
