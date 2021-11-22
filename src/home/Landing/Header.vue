@@ -458,6 +458,9 @@ img {
 }
 
 @media screen and (max-width: 1264px) {
+  .navbar-brand{
+    margin-left: 3%;
+  }
   .dropDownIcon{
     padding-top: 7px;
     margin-left: 20px;
