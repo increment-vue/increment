@@ -124,11 +124,11 @@ img {
 
 @media only screen and (max-width: 644px) {
   .card {
-    width: 80% !important;
+    width: 90% !important;
     margin: unset !important;
     margin-top: 5% !important;
-    margin-left: 10% !important;
-    margin-right: 10% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
   }
 
   .row {

@@ -36,6 +36,10 @@
 .holder {
   margin-bottom: 15vh !important;
 }
+
+.card {
+  height: 450px !important;
+}
 </style>
 <script>
 import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
