@@ -9,7 +9,7 @@
     ></Curve>
     <div class="cw-banner" id="our-services">
       <h2>OUR SERVICES</h2>
-      <p>What we offer are innovative solutions</p>
+      <p>Our company provides a wide range of services to our clients. Being a relatively small firm, we are able to offer customized, high-quality service to our clients.</p>
       <div class="row">
         <span class="card" v-for="(item, index) in services" :key="index">
           <center>
@@ -157,17 +157,17 @@ export default {
         {
           title: "Design",
           class: faPalette,
-          desc: "We use latest editing tools like adobe photoshop, and illustrator for our designing. We also cater making landing page videos using adobe after effects, premier, resolve and more. We keep updating our tools for us to deliver best quality designs to our clients.",
+          desc: "We use latest editing tools like Adobe Photoshop, and Illustrator for our designing. We also cater making landing page videos using Adobe after effects, premier, resolve and more. We keep updating our tools for us to deliver best quality designs to our clients.",
         },
         {
           title: "Mobile",
           class: faMobileAlt,
-          desc: "The development framework react-native and quasar-vuejs are capable to deploy applications for android and ios platforms. We build using its native programming framework once our customer demands it. Our developers are always working in advanced for us to give best solutions.",
+          desc: "The development framework react-native and quasar-vuejs are capable to deploy applications for android and ios platforms. We build using its native programming framework once our customer demands it. Our developers are always working in advanced for us to give the best solutions.",
         },
         {
           title: "Web",
           class: faDesktop,
-          desc: "Our developers are contantly upgrading its capabilities to provide best and suitable solutions for your needs. Our disease to create beatiful and best websites. We make website or api integration a lot easier. We are not comfortable to stay where we are for our development as we try to innovate.",
+          desc: "Our developers are constantly upgrading their capabilities to provide best and suitable solutions for your needs. Our desire is to create intuitive and best websites. We make website or api integration a lot easier. We are not comfortable to stay where we are for our development as we try to innovate.",
         },
         {
           title: "Hosting",
