@@ -28,7 +28,7 @@ export default {
 @import "~assets/style/colors.scss";
 @import "~assets/style/theme.css";
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family:'Open Sans', sans-serif;
   color: $black;
 }
 

@@ -402,10 +402,10 @@ img {
   cursor: pointer;
 }
 .fa-bars {
-  border: solid 2px $green;
+  border: solid 2px $primary;
   font-size: 20px !important;
   padding: 8px 10px 8px 10px !important;
-  color: $green !important;
+  color: $primary !important;
 }
 .button:hover {
   background-color: #9acd32;
