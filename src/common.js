@@ -14,7 +14,7 @@ export default {
   APP_COPYRIGHT: 'INCREMENT TECHNOLOGIES 2022. All Rights Reserved. ',
   APP_DEVELOPER: 'Increment Technologies',
   APP_DEVELOPER_URL: 'https://incrementtechnologies.com',
-  APP_PHONE_NUMBER: '+63-032-436-1622',
+  APP_PHONE_NUMBER: '(032) 436-1622',
   address: 'Unit 1201, Meridian Bldg. Golam Drive, Pope John Paull II Ave., Mabolo, Cebu City, Cebu, Philippines',
   api: 'https://mezzohotel.com/img/',
   host: 'https://mezzohotel.com/',
