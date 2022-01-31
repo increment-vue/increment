@@ -112,6 +112,7 @@ img {
   width: auto;
   cursor: pointer;
   margin-right: 2%;
+  margin-bottom: 5px !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -123,17 +124,17 @@ img {
   }
 
   .img-holder,
-  .ad.content-holder {
+  .content-holder {
     width: 100% !important;
     margin: unset;
     padding: unset;
+    text-align: center !important;
   }
   .app-icons {
-    display: flex;
-    justify-content: space-between;
     width: 90%;
     margin: unset;
     margin-left: 5%;
+    margin-bottom: 5% !important;
   }
 
   .app-icons img {
@@ -141,6 +142,7 @@ img {
     width: auto;
     cursor: pointer;
     margin-left: 0%;
+    margin-bottom: 5px !important;
   }
 }
 </style>
