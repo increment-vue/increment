@@ -11,7 +11,7 @@
         <br>
         <p>
           We, at Increment Technologies Inc., are very excited to announce our
-          newest product - PayHiram. PayHiram the first ever decentralized
+          newest product - PayHiram. It is the first ever decentralized
           financial technology mobile application in the Philippines that offers
           door to door transactions.
         </p>
