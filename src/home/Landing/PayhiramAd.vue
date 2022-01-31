@@ -1,18 +1,31 @@
 <template>
-  <div class="banner" id="who-we-are">
-    <div class="section-container">
-      <h3>
-        Send and receive money in a new and convenient way without the hassle...
-      </h3>
-      <h2><b>DO MORE WITH PAYHIRAM!</b></h2>
-      <img :src="require('assets/img/ph-banner.png')" />
-      <span>
-        A peer to peer financial processing application which allow you to send
-        money and receives multiple options in terms of charges from different
-        partners in the selected location. <br /><br />We provide the following
-        services: money transfer, cash transfer or pera padala, local and
-        international remittance, withdrawals, payments and more.
-        <br /><br />Download the App and Register Today!
+  <div class="body">
+    <div class="ad-container">
+      <div class="img-holder">
+        <img :src="require('assets/img/adPH2.png')" />
+      </div>
+      <div class="content-holder">
+        <h2>
+          <b>PayHiram</b>
+        </h2>
+        <br>
+        <p>
+          We, at Increment Technologies Inc., are very excited to announce our
+          newest product - PayHiram. It is the first ever decentralized
+          financial technology mobile application in the Philippines that offers
+          door to door transactions.
+        </p>
+        <br />
+        <p>
+          As part of Increment’s goal as an innovator, PayHiram aims to provide
+          its prospective clients and partners with accessible ways of financial
+          transfers, having wider cash outlets and delivery options. It offers
+          four financial transfers: Pera Padala, Cashin, Withdrawals, and Accept
+          Payments. With PayHiram, Users have the liberty to choose which
+          partner’s proposal to accept while partners can earn up to 80% of the
+          transaction fees charged to the users. <br /><br />Download the App
+          and Register Today!
+        </p>
         <div class="app-icons" style="margin-top: 25px">
           <img
             class="app-icon"
@@ -40,49 +53,58 @@
             "
           />
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
-.banner {
+.body {
+  color: white !important;
   width: 100%;
+  min-height: 60vh;
+  overflow-y: hidden;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
   float: left;
-  background-color: $white;
-  margin-bottom: 15vh !important;
-  margin-top: 5vh !important;
-  text-align: center;
+  transform: skewY(-11deg);
+  background-image: linear-gradient(
+    90deg,
+    $gradientPrimary,
+    $gradientSecondary
+  );
 }
-
-.section-container {
-  margin-right: 10%;
-  margin-left: 10%;
+.ad-container {
   width: 80%;
+  float: left;
+  min-height: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow-y: hidden;
+  transform: skewY(11deg);
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
-h2 {
-  text-align: center;
-  color: $primary;
-  margin-bottom: 70px;
+.img-holder {
+  width: 55%;
+  float: left;
 }
 
-p {
-  text-align: justify;
+h3 {
+  color: white !important;
 }
 
 img {
-  width: 60%;
-  float: left;
+  width: 100%;
   height: auto;
 }
 
-span {
-  width: 40%;
-  padding-top: 10%;
-  padding-left: 5%;
-  text-align: left;
+.content-holder {
+  width: 45%;
   float: left;
+  padding-left: 3%;
+  text-align: justify;
 }
 
 .app-icons img {
@@ -91,15 +113,40 @@ span {
   cursor: pointer;
   margin-right: 2%;
 }
+
+@media only screen and (max-width: 992px) {
+  .ad-container {
+    text-align: center !important;
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-bottom: 5% !important;
+  }
+
+  .img-holder,
+  .ad.content-holder {
+    width: 100% !important;
+    margin: unset;
+    padding: unset;
+  }
+  .app-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: unset;
+    margin-left: 5%;
+  }
+
+  .app-icons img {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    margin-left: 0%;
+  }
+}
 </style>
+
 <script>
-import COLORS from "src/assets/style/colors.js";
 export default {
-  data() {
-    return {
-      colors: COLORS,
-    };
-  },
   methods: {
     externalLink(url) {
       window.open(url, "_blank");

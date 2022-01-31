@@ -12,7 +12,7 @@
             <h3>INTRODUCTION</h3>
             <hr />
             <p>
-              Founded in 2017, Increment Technologies set itself out to be a
+              Founded in 2017, Increment Technologies Inc. set itself out to be a
               leading Website and Mobile Development firm in Cebu. We develop
               high-quality digital projects, from landing pages to full-blown
               e-commerce.

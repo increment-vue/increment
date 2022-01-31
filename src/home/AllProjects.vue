@@ -76,16 +76,18 @@ export default {
           status: "completed",
         },
         {
-          title: "AgriCord",
+          // AgriCord
+          title: "A******d",
           location: "Australia",
           description: "Mobile Development",
           src: require("assets/img/logo.png"),
           link: "http://traceag.com.au/#/",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
-          title: "AgriSend",
+          // AgriSend
+          title: "A******d",
           location: "Australia",
           description: "Mobile Development",
           src: require("assets/img/logo.png"),
@@ -292,12 +294,13 @@ export default {
           status: "ongoing",
         },
         {
-          title: "Trackr",
+          // Tracker
+          title: "T****r",
           location: "Australia",
           description: "Web Development",
           src: require("assets/img/logo.png"),
           link: "http://traceag.com.au/#/",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
