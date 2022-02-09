@@ -12,11 +12,12 @@
         maintain. The following shows the projects that our company have
         handled:
       </p>
-      <NavBar :navbar="navbar" @status="retrieve" />
-      <Projects v-once v-if="setStatus === 'all'" :height="'360'" :data="projects" />
-      <Projects v-once v-if="setStatus === 'ongoing'" :height="'360'" :data="selectedProjects" />
+      <Projects :height="'360'" :data="projects" />
+      <!-- <NavBar :navbar="navbar" @status="retrieve" /> -->
+      <!-- <Projects v-once v-if="setStatus === 'all'" :height="'360'" :data="projects" /> -->
+      <!-- <Projects v-once v-if="setStatus === 'ongoing'" :height="'360'" :data="selectedProjects" />
       <Projects v-once v-if="setStatus === 'completed'" :height="'360'" :data="selectedProjects" />
-      <Projects v-once v-if="setStatus === 'quickfix'" :height="'360'" :data="selectedProjects" />
+      <Projects v-once v-if="setStatus === 'quickfix'" :height="'360'" :data="selectedProjects" /> -->
     </div>
   </div>
 </template>
@@ -36,12 +37,11 @@
 <script>
 import BreadCrumbs from "src/home/generic/breadCrumbs.vue";
 import Projects from "src/home/generic/whiteCard.vue";
-import NavBar from "src/home/generic/navigationBar.vue";
+// import NavBar from "src/home/generic/navigationBar.vue";
 export default {
   components: {
     BreadCrumbs,
     Projects,
-    NavBar,
   },
   data() {
     return {

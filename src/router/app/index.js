@@ -7,6 +7,21 @@ export default{
       component: resolve => require(['src/home/Home.vue'], resolve),
     },
     {
+      path: '/careers',
+      name: 'Careers',
+      component: resolve => require(['src/home/Careers.vue'], resolve),
+    },
+    {
+      path: '/team',
+      name: 'Our Team',
+      component: resolve => require(['src/home/OurTeam.vue'], resolve),
+    },
+    {
+      path: '/stories',
+      name: 'Our Stories',
+      component: resolve => require(['src/home/Stories.vue'], resolve),
+    },
+    {
       path: '/case-studies',
       name: 'Case Studies',
       component: resolve => require(['src/home/AllCaseStudies.vue'], resolve),

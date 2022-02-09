@@ -50,32 +50,34 @@ export default {
   }],
   footer2_contents: [{
     name: 'INFORMATION',
-    title: 'Who We Are',
+    title: 'Stories',
     icon: null,
-    url: '/#who-we-are',
+    url: '/stories',
   },
   {
-    title: 'Our Services',
+    title: 'Careers',
     icon: null,
-    url: '/#our-services',
+    url: '/careers',
   },
   {
-    title: 'How We Work',
+    title: 'Our Team',
     icon: null,
-    url: '/#how-we-work',
+    url: '/team',
+  },
+  {
+    title: 'Technolgies',
+    icon: null,
+    url: '/technologies',
   },
   {
     title: 'Our Projects',
     icon: null,
     url: '/our-projects',
-  }, {
-    title: 'Case Studies',
-    url: '/#case-studies',
   },
   {
-    title: 'Technologies',
+    title: 'Case Studies',
     icon: null,
-    url: '/#technologies',
+    url: '/stories',
   },
   {
     title: 'Send Request',
