@@ -326,9 +326,9 @@
   padding-bottom: 0px;
 }
 .bg-gradient{
-  background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
+  background-image: linear-gradient(228.21deg, rgba(143, 0, 181,1) -0.03%, rgba(0, 184, 159, 1) 100%);
   padding-bottom: 0px;
-  opacity: 2;
+  // opacity: 2;
 }
 .navbar-menu-toggler-md {
   text-align: right;
@@ -767,7 +767,7 @@ export default {
   },
   watch: {
     '$route' (to) {
-      if(to.path.includes('send-request') || to.path.includes('technologies') || to.path.includes('our-projects') || to.path.includes('case-studies')){
+      if(to.path.includes('send-request') || to.path.includes('technologies') || to.path.includes('our-projects') || to.path.includes('team') || to.path.includes('careers') || to.path.includes('case-studies') || to.path.includes('stories')){
         this.outsideLanding = true
       }else{
         this.outsideLanding = false
