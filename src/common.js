@@ -65,7 +65,7 @@ export default {
     url: '/team',
   },
   {
-    title: 'Technolgies',
+    title: 'Technologies',
     icon: null,
     url: '/technologies',
   },
@@ -77,7 +77,7 @@ export default {
   {
     title: 'Case Studies',
     icon: null,
-    url: '/stories',
+    url: '/case-studies',
   },
   {
     title: 'Send Request',

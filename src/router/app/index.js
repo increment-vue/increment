@@ -1,5 +1,5 @@
 
-export default{
+export default {
   routes: [
     {
       path: '/',
@@ -9,7 +9,7 @@ export default{
     {
       path: '/careers',
       name: 'Careers',
-      component: resolve => require(['src/home/Careers.vue'], resolve),
+      component: resolve => require(['src/home/careers/index.vue'], resolve),
     },
     {
       path: '/team',
@@ -19,7 +19,12 @@ export default{
     {
       path: '/stories',
       name: 'Our Stories',
-      component: resolve => require(['src/home/Stories.vue'], resolve),
+      component: resolve => require(['src/home/stories/index.vue'], resolve),
+    },
+    {
+      path: '/stories/page/:title',
+      name: 'StoryContent',
+      component: resolve => require(['src/home/stories/content.vue'], resolve),
     },
     {
       path: '/case-studies',
@@ -39,7 +44,7 @@ export default{
     {
       path: '/send-request',
       name: 'Send Request',
-      component: resolve => require(['src/home/SendRequest.vue'], resolve), 
+      component: resolve => require(['src/home/SendRequest.vue'], resolve),
     },
     {
       path: '/case-studies/booking-bot',

@@ -218,12 +218,6 @@ export default {
             "Business Development Officer & PayHiram: Chief Operating Officer",
         },
         {
-          src: require("assets/img/team/Kathleen.jpg"),
-          name: "KATHLEEN",
-          surname: "TAN",
-          position: "Chief Marketing Officer",
-        },
-        {
           src: require("assets/img/team/Flordeles.jpg"),
           name: "FLORDELES",
           surname: "GACANG",
@@ -307,30 +301,6 @@ export default {
           src: require("assets/img/team/Ron.jpg"),
           name: "RON DAVE FREDRICK",
           surname: "TALLEDO",
-          position: "Software Developer (Intern)",
-        },
-        {
-          src: require("assets/img/team/Eugene.jpg"),
-          name: "RON EUGENE",
-          surname: "RAZON",
-          position: "Software Developer (Intern)",
-        },
-        {
-          src: require("assets/img/team/Joash.jpg"),
-          name: "JOASH MIGUEL",
-          surname: "DANDAN",
-          position: "Software Developer (Intern)",
-        },
-        {
-          src: require("assets/img/team/Anthony.jpg"),
-          name: "ANTHONY",
-          surname: "SOLDEVILLA",
-          position: "Software Developer (Intern)",
-        },
-        {
-          src: require("assets/img/team/Charles.jpg"),
-          name: "CHARLES WILLIAM",
-          surname: "CATINGUB",
           position: "Software Developer (Intern)",
         },
       ],
