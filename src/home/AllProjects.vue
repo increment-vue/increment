@@ -18,6 +18,7 @@
       <!-- <Projects v-once v-if="setStatus === 'ongoing'" :height="'360'" :data="selectedProjects" />
       <Projects v-once v-if="setStatus === 'completed'" :height="'360'" :data="selectedProjects" />
       <Projects v-once v-if="setStatus === 'quickfix'" :height="'360'" :data="selectedProjects" /> -->
+      <p class="note">Note: Project name with asterisk (*) are very private client or company whose project is confidential.</p>
     </div>
   </div>
 </template>
@@ -31,7 +32,12 @@
 }
 
 .holder {
+  margin-bottom: 5vh !important;
+}
+
+.note {
   margin-bottom: 15vh !important;
+  font-style: italic;
 }
 </style>
 <script>
@@ -168,6 +174,15 @@ export default {
           status: "ongoing",
         },
         {
+          title: "Good Terms - AI",
+          location: "United States",
+          description: "Web Development",
+          src: require("assets/img/project - goodterms.png"),
+          link: "https://goodterms.ai/",
+          withButton: true,
+          status: "ongoing",
+        },
+        {
           title: "Investa Garden",
           location: "United States",
           description: "Web Development",
@@ -175,6 +190,15 @@ export default {
           link: "https://investagarden.com/",
           withButton: true,
           status: "completed",
+        },
+        {
+          title: "KeyHelpa",
+          location: "Australia",
+          description: "Web Development",
+          src: require("assets/img/project - keyhelpa.png"),
+          link: "#",
+          withButton: true,
+          status: "ongoing",
         },
         {
           title: "Kicktronics",
@@ -192,6 +216,15 @@ export default {
           src: require("assets/img/project - liquichain.png"),
           link: "#",
           withButton: false,
+          status: "quickfix",
+        },
+        {
+          title: "MadazMoney",
+          location: "United States",
+          description: "Web Development",
+          src: require("assets/img/project - madaz.png"),
+          link: "https://www.madazmoney.com/",
+          withButton: true,
           status: "quickfix",
         },
         {
@@ -302,6 +335,15 @@ export default {
           link: "http://traceag.com.au/#/",
           withButton: false,
           status: "ongoing",
+        },
+        {
+          title: "Weiss Real Estate",
+          location: "Australia",
+          description: "Web Development",
+          src: require("assets/img/project - weiss.png"),
+          link: "https://weissrealestate.com.au/",
+          withButton: true,
+          status: "completed",
         },
         {
           title: "Zeta Mariani",
