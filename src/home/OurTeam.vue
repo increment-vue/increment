@@ -211,29 +211,10 @@ export default {
           position: "Finance Officer",
         },
         {
-          src: require("assets/img/team/kristine.jpg"),
-          name: "KRISTINE EZABELLE",
-          surname: "LASTIMOSA",
-          position:
-            "Business Development Officer & PayHiram: Chief Operating Officer",
-        },
-        {
           src: require("assets/img/team/Flordeles.jpg"),
           name: "FLORDELES",
           surname: "GACANG",
-          position: "Sales Assistant",
-        },
-        {
-          src: require("assets/img/team/Angelica.jpg"),
-          name: "MARIA ANGELICA",
-          surname: "ZARAGOZA",
-          position: "Social Media Moderator/ Designer",
-        },
-        {
-          src: require("assets/img/team/Beatriz.jpg"),
-          name: "CARLA BEATRIZ",
-          surname: "VENTURA",
-          position: "Graphic Designer",
+          position: "Marketing Officer",
         },
         {
           src: require("assets/img/team/Gade.jpg"),
@@ -245,13 +226,19 @@ export default {
           src: require("assets/img/team/Kriza.jpg"),
           name: "KRIZA DANE",
           surname: "CANALES",
-          position: "Sales Representative",
+          position: "Sales Agent",
         },
         {
           src: require("assets/img/team/Christian.jpg"),
           name: "CHRISTIAN",
           surname: "SEACHON",
-          position: "Sales Representative",
+          position: "Admin Staff",
+        },
+        {
+          src: require("assets/img/team/dale.jpg"),
+          name: "ZENITH RAY DALE",
+          surname: "CANALES",
+          position: "Admin Staff",
         },
       ],
       developers: [
@@ -283,25 +270,13 @@ export default {
           src: require("assets/img/team/Ivy.jpg"),
           name: "IVY JOY",
           surname: "DEVILLERES",
-          position: "QUALITY ASSURANCE MANAGER",
+          position: "Quality Assurance Manager",
         },
         {
           src: require("assets/img/team/Kyle.jpg"),
           name: "KYLE MATTHEW LAURANCE",
           surname: "BURCE",
           position: "Software Developer",
-        },
-        {
-          src: require("assets/img/team/Paul.jpg"),
-          name: "PAUL JOSIAH",
-          surname: "TAMALA",
-          position: "Software Developer (Intern)",
-        },
-        {
-          src: require("assets/img/team/Ron.jpg"),
-          name: "RON DAVE FREDRICK",
-          surname: "TALLEDO",
-          position: "Software Developer (Intern)",
         },
       ],
     };
