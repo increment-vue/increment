@@ -2,6 +2,16 @@ export default {
     blogs: [
       {
         type: "external",
+        title: "FREE MOVIE TICKET PROMO: DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS",
+        featured_image: "referral-promo.jpg",
+        date: "May 8,202",
+        author: "PayHiram PH",
+        introduction: "Excited to watch the new and awaited Doctor Strange in the Multiverse of Madness? Join and Win a Free Movie Ticket with PayHiram.PH Referrals!",
+        content: "https://payhiram.ph/stories/page/FREE_MOVIE_TICKET_PROMO:_DOCTOR_STRANGE_IN_THE_MULTIVERSE_OF_MADNESS"
+      }
+      ,
+      {
+        type: "external",
         title: "WE ARE ONE OF THE TOP 12 OF ARISE PLUS YE! BOOST ACCELERATOR!",
         featured_image: "arise.jpg",
         date: "March 4,2022",
