@@ -89,6 +89,13 @@ export default {
           src: require("assets/img/project - payhiram.png"),
           link: "https://payhiram.ph/",
         },
+        {
+          title: "Jiph",
+          location: "Philippines",
+          description: "Website and Mobile Development",
+          src: require("assets/img/JiphLogo.png"),
+          link: "https://jiph.co/",
+        },
       ],
     };
   },
