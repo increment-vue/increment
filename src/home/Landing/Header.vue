@@ -48,7 +48,7 @@
                         href="/#who-we-are"
                         @click="outsideLanding ? redirectAndScroll('/', '#who-we-are') : headerScrollTo('#who-we-are')"
                       >
-                        <b class="increment-white">{{ item.title }}</b>
+                        <b class="increment-white hover-effect">{{ item.title }}</b>
                       </a>
                       <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                         <span class="sr-only" >Toggle Dropdown</span>
@@ -89,7 +89,7 @@
                         type="button"
                         @click="outsideLanding ? redirectAndScroll('/', '#our-services') : headerScrollTo('#our-services')"
                       >
-                        <b class="increment-white">{{ item.title }}</b>
+                        <b class="increment-white hover-effect">{{ item.title }}</b>
                       </a>
                       <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                         <span class="sr-only" >Toggle Dropdown</span>
@@ -117,7 +117,7 @@
                     <div v-else-if="item.type === 'regular'">
                       <div v-if="item.title === 'Send Request'">
                         <a class="nav-link" href="/send-request">
-                          <b class="increment-white">{{ item.title }}</b>
+                          <b class="increment-white hover-effect">{{ item.title }}</b>
                         </a>
                       </div>
                       <div v-else-if="item.title !== 'Send Request'">
@@ -126,7 +126,7 @@
                           
                           @click="outsideLanding ? redirectAndScroll('/', item.redirect) : headerScrollTo(item.redirect)"
                         >
-                          <b class="increment-white">{{ item.title }}</b>
+                          <b class="increment-white hover-effect">{{ item.title }}</b>
                         </a>
                       </div>
                     </div>
@@ -355,6 +355,30 @@
 .increment-white{
   color: white
 }
+
+.hover-effect{
+  display: inline-block;
+  position: relative;
+}
+
+.hover-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-effect:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 .increment-limegreen-light {
   color: $secondary;

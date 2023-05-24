@@ -4,6 +4,7 @@
     <LandingWhoWeAre/>
     <LandingOurServices />
     <LandingAd/>
+    <LandingJiphAd/>
     <LandingHowWeWork />
     <LandingOurProjects />
     <LandingCaseStudies />
@@ -20,6 +21,7 @@
 <script>
 import LandingBanner from "src/home/Landing/Banner.vue";
 import LandingAd from "src/home/Landing/PayhiramAd.vue";
+import LandingJiphAd from "src/home/Landing/JiphAd.vue";
 import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
 import LandingOurServices from "src/home/Landing/Services.vue";
 import LandingHowWeWork from "src/home/Landing/HowWeWork.vue";
@@ -32,6 +34,7 @@ export default {
   components: {
     LandingBanner,
     LandingAd,
+    LandingJiphAd,
     LandingWhoWeAre,
     LandingOurServices,
     LandingHowWeWork,
