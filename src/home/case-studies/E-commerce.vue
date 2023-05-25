@@ -19,7 +19,7 @@
         for the qualifications of your website, wherein Increment can definitely
         deliver.
       </p>
-      <CaseImage :price="'2000'" :bg="'ecommerce.jpg'" />
+      <CaseImage :price="'5,000'" :bg="'ecommerce.jpg'" />
       <p class="offer">What we can offer</p>
       <p>
         <b>Promote your page.</b> Put your product in front of your customers,

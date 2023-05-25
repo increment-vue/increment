@@ -25,7 +25,7 @@
         or booking your service with the convenience of just a tap is definitely
         everything that you could ask for!
       </p>
-      <CaseImage :price="'3000'" :bg="'bookingsNappointments.jpg'" />
+      <CaseImage :price="'5,000'" :bg="'bookingsNappointments.jpg'" />
       <p class="offer">What we can offer</p>
       <p>
         Other than customer convenience and reduced staff workload, you might be

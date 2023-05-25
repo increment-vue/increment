@@ -9,7 +9,7 @@
         such as getting easier access to enrollment, with hassle-free
         transactions.
       </p>
-      <CaseImage :price="'7000'" :bg="'enrollment.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'enrollment.jpg'" />
       <p>
         Increment Technologies Inc., offers an enrollment system to schools
         exclusively for the organization’s enrollment transactions. Where

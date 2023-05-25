@@ -10,7 +10,7 @@
         accurate purchase records, barcode identification, reports and sales
         history, sales forecast, and more.
       </p>
-      <CaseImage :price="'7000'" :bg="'inventory.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'inventory.jpg'" />
       <p>
         Increment Technologies, create opportunities to achieve efficiency in
         your processes. Through Inventory Management, we can help you organize

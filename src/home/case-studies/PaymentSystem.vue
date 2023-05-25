@@ -9,7 +9,7 @@
         wherein this is considered as an essential investment to meet your
         long-term goals.
       </p>
-      <CaseImage :price="'7000'" :bg="'payment.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'payment.jpg'" />
       <p>
         Increment Technologies can help you create opportunities in your payment
         system by ensuring your payment transactions are secured and are based

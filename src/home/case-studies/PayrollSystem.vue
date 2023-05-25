@@ -10,7 +10,7 @@
         organization, making sure that it has the accurate computation of the
         working hours.
       </p>
-      <CaseImage :price="'7000'" :bg="'payroll.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'payroll.jpg'" />
       <p>
         Increment Technologies can and will achieve this system that accurately
         computes the salaries of the employees, can handle multi company

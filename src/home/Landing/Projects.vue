@@ -19,7 +19,7 @@
               <p class="p2">{{ item.location }}</p>
               <p class="p3">{{ item.description }}</p>
             </div>
-            <a :href="item.link" target="_blank"
+            <a v-if="item.withButton? true: false" :href="item.link" target="_blank"
               ><button class="button1">Visit</button></a>
           </center>
         </span>
@@ -67,6 +67,7 @@ export default {
           description: "Website and Mobile Development",
           src: require("assets/img/project - runway.png"),
           link: "http://runwayexpress.co.uk/#/",
+          withButton: false
         },
         {
           title: "Mezzo Hotel",
@@ -74,6 +75,7 @@ export default {
           description: "Website Development",
           src: require("assets/img/project - mezzo.png"),
           link: "https://mezzohotel.com/",
+          withButton: true
         },
         {
           title: "Meat The Sea",
@@ -81,6 +83,7 @@ export default {
           description: "Website Development",
           src: require("assets/img/project - meetthesea.png"),
           link: "https://www.meatthesea.com/",
+          withButton: true
         },
         {
           title: "PayHiram",
@@ -88,6 +91,7 @@ export default {
           description: "Website and Mobile Development",
           src: require("assets/img/project - payhiram.png"),
           link: "https://payhiram.ph/",
+          withButton: false
         },
         {
           title: "Jiph",
@@ -95,6 +99,7 @@ export default {
           description: "Website and Mobile Development",
           src: require("assets/img/JiphLogo.png"),
           link: "https://jiph.co/",
+          withButton: false
         },
       ],
     };

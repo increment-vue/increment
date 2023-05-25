@@ -13,7 +13,7 @@
         manual procedures, along with increased inventory and asset visibility,
         and most especially it enables the elimination of human error.
       </p>
-      <CaseImage :price="'7000'" :bg="'rfid.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'rfid.jpg'" />
       <p>
         Increment Technologies can take your business into a higher level of
         management. We can definitely develop and create a RFID system

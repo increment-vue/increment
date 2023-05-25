@@ -11,7 +11,7 @@
         applied in schools for teaching the mother tongue based multilingual
         education.
       </p>
-      <CaseImage :price="'5000'" :bg="'translation.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'translation.jpg'" />
       <p>
         Increment Technologies is not new to this kind of software, we have
         built Talk Fluent Spanish, a spanish learning system that allows users
