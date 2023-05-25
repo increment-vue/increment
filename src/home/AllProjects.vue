@@ -116,7 +116,7 @@ export default {
           description: "Web and Mobile Development",
           src: require("assets/img/project - birdsEye.png"),
           link: "https://birds-eye.org/",
-          withButton: true,
+          withButton: false,
           status: "completed",
         },
         {
@@ -125,7 +125,7 @@ export default {
           description: "Mobile Development",
           src: require("assets/img/project - converge.png"),
           link: "https://play.google.com/store/apps/details?id=com.convergeict.android",
-          withButton: true,
+          withButton: false,
           status: "quickfix",
         },
         {
@@ -143,7 +143,7 @@ export default {
           description: "Web Development",
           src: require("assets/img/project - dbsn.png"),
           link: "http://dbsngroup.com/",
-          withButton: true,
+          withButton: false,
           status: "completed",
         },
         {
@@ -170,7 +170,7 @@ export default {
           description: "Web and Mobile Development",
           src: require("assets/img/project - glad tithings.png"),
           link: "#",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
@@ -179,7 +179,7 @@ export default {
           description: "Web Development",
           src: require("assets/img/project - goodterms.png"),
           link: "https://goodterms.ai/",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
@@ -197,7 +197,7 @@ export default {
           description: "Web Development",
           src: require("assets/img/project - keyhelpa.png"),
           link: "#",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
@@ -260,7 +260,7 @@ export default {
           description: "Web Development",
           src: require("assets/img/project - mezzo.png"),
           link: "#",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
@@ -278,7 +278,7 @@ export default {
           description: "Web and Mobile Development",
           src: require("assets/img/project - payhiram.png"),
           link: "https://payhiram.ph/",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
@@ -287,7 +287,7 @@ export default {
           description: "Web Development",
           src: require("assets/img/project - pivot.jpg"),
           link: "https://pivotsms.co/",
-          withButton: true,
+          withButton: false,
           status: "ongoing",
         },
         {
@@ -305,7 +305,7 @@ export default {
           description: "Web and Mobile Development",
           src: require("assets/img/project - runway.png"),
           link: "http://runwayexpress.co.uk/#/",
-          withButton: true,
+          withButton: false,
           status: "completed",
         },
         {
@@ -351,7 +351,7 @@ export default {
           description: "Web Development",
           src: require("assets/img/project - zetamariani.png"),
           link: "http://zetamariani.com/",
-          withButton: true,
+          withButton: false,
           status: "completed",
         },
         {
