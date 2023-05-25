@@ -296,7 +296,7 @@ export default {
           description: "Web Development",
           src: require("assets/img/project - popoutposter.png"),
           link: "https://popoutposter.com/",
-          withButton: true,
+          withButton: false,
           status: "completed",
         },
         {
