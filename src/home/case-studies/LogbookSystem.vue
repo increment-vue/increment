@@ -14,7 +14,7 @@
         thinking, why not handle it in one sitting, with just having a
         centralized software where you can manage all the monitoring at once.
       </p>
-      <CaseImage :price="'5000'" :bg="'logbook.jpg'" />
+      <CaseImage :price="'10,000'" :bg="'logbook.jpg'" />
       <p>
         Increment Technologies, aims to give opportunities to business owners
         towards increasing their efficiency and productivity while minimizing

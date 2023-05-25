@@ -12,7 +12,7 @@
         workforce; since start-up business needs to be taken care and monitored
         in order for it to expand.
       </p>
-      <CaseImage :price="'7000'" :bg="'employee.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'employee.jpg'" />
       <p>
         Increment Technologies, exclusively develops a software for Employee
         Management that would benefit the company in terms of the following:

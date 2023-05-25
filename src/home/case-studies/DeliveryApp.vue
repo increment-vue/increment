@@ -18,7 +18,7 @@
         mobile applications would help promote safety and convenience to your
         customers and create hassle-free transactions.
       </p>
-      <CaseImage :price="'7000'" :bg="'delivery_app.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'delivery_app.jpg'" />
       <p class="offer">What we can offer</p>
       <p>
         <b>Scalable grocery delivery platform.</b> Take control of your customer

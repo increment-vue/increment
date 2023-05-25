@@ -9,7 +9,7 @@
         company’s products or services are. One of the solutions to easily
         execute and build your company profile is through a website.
       </p>
-      <CaseImage :price="'700'" :bg="'company_profiling.jpg'" />
+      <CaseImage :price="'1,000'" :bg="'company_profiling.jpg'" />
       <p>
         Increment Technologies Inc., masters the field of building websites for
         a company allowing it to integrate and suggest navigation as well as the

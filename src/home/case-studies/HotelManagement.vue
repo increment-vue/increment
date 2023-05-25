@@ -25,7 +25,7 @@
         account management down to financial management making it a hassle-free
         system.
       </p>
-      <CaseImage :price="'7000'" :bg="'hotel.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'hotel.jpg'" />
       <p>
         The right hotel management system will definitely put you in control of
         your business whether it may be for your small boutique hotel, bed and

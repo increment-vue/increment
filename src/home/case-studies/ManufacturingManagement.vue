@@ -10,7 +10,7 @@
         day-to-day business activities such as accounting, procurement, project
         management, risk management and compliance, and supply chain operations.
       </p>
-      <CaseImage :price="'7000'" :bg="'manufacture.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'manufacture.jpg'" />
       <p>
         Increment Technologies can help create opportunities for your business
         when it comes to cost reduction, streamlining processes, increase in

@@ -26,7 +26,7 @@
           transaction fees charged to the users. <br /><br />Download the App
           and Register Today!
         </p>
-        <div class="app-icons" style="margin-top: 25px">
+        <!-- <div class="app-icons" style="margin-top: 25px">
           <img
             class="app-icon"
             :src="require('assets/img/playstoreblack.png')"
@@ -52,7 +52,7 @@
               externalLink('https://appgallery.huawei.com/app/C104819261')
             "
           />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

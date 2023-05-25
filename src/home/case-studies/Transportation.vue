@@ -10,7 +10,7 @@
         coordinate work vehicles to improve efficiency, reduce costs, and
         provide compliance with government’s standards and regulations.
       </p>
-      <CaseImage :price="'7000'" :bg="'transportation.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'transportation.jpg'" />
       <p>
         Increment Technologies can offer a variety of services, such as RFID
         system, ticketing system, payment, inventory, store passenger

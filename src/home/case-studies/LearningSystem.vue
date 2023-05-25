@@ -9,7 +9,7 @@
         opportunities to students, learning without being physically present in
         school and still enjoying a high-quality education they deserve.
       </p>
-      <CaseImage :price="'5000'" :bg="'learning.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'learning.jpg'" />
       <p>
         Increment Technologies can help make these opportunities possible by
         building a software exclusively for your organization. A software where

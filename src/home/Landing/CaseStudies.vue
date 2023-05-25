@@ -121,7 +121,7 @@ export default {
           title: "Bookings and Appointments",
           description:
             "An online booking system is a software which allows a potential customer to book and pay for an activity or service directly through a website. That means from ...",
-          price: "$3,000",
+          price: "$5,000",
           links: "case-studies/bookings-and-appointments",
         },
         {
@@ -137,7 +137,7 @@ export default {
           title: "Company Profiling",
           description:
             "Company profiling is the very first step towards building your brand and presence to your target market. It allows a quick look into a company, allowing varied ...",
-          price: "$700",
+          price: "$1,000",
           links: "case-studies/company-profiling",
         },
         {
@@ -145,7 +145,7 @@ export default {
           title: "Delivery App",
           description:
             "A delivery application has features and functionalities such as account management, product management, payment method, location, and other plugin inte...",
-          price: "$7,000",
+          price: "$15,000",
           links: "case-studies/delivery-app",
         },
       ],

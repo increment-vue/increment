@@ -2,11 +2,9 @@
   <div class="body" id="banner">
     <div class="meridian"></div>
     <div class="banner-content">
-      <h1>WE WANT YOU TO SUCCEED</h1>
+      <h1>OUR EXPERTISE & TECHNOLOGY. YOUR BUSINESS’ SUCCESS</h1>
       <h4>
-        We create beautiful and secured websites, and mobile applications. Just
-        relax and we will give solutions to your needs. Got something awesome
-        for us to work on?
+        Take your business to the next level with our expert web and mobile development services, as well as IT department outsourcing  to help you stay ahead of the competition.
       </h4>
       <roundBtn
         :text="'Contact Us'"

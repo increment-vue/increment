@@ -14,7 +14,7 @@
         estate software can help you plugin rent and income data to come up with
         approximate property valuation.
       </p>
-      <CaseImage :price="'7000'" :bg="'real_estate.jpg'" />
+      <CaseImage :price="'15,000'" :bg="'real_estate.jpg'" />
       <p>
         Increment Technologies can help you not just in company profiling but as
         well as organizing the inflow of information within your website, such

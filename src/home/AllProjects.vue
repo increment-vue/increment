@@ -354,6 +354,15 @@ export default {
           withButton: true,
           status: "completed",
         },
+        {
+          title: "Jiph",
+          location: "Philippines",
+          description: "Web Development",
+          src: require("assets/img/JiphLogo.png"),
+          link: "http://jiph.co/",
+          withButton: false,
+          status: "completed",
+        },
       ],
     };
   },
