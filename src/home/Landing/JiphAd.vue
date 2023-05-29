@@ -7,21 +7,13 @@
           </h2>
           <br>
           <p>
-            We, at Increment Technologies Inc., are very excited to announce our
-            newest product - PayHiram. It is the first ever decentralized
-            financial technology mobile application in the Philippines that offers
-            door to door transactions.
+            Jiph is a cutting-edge mobile remittance platform that aims to transform the way Filipinos send money from the US to the Philippines. By leveraging technology, Jiph provides an innovative and cost-effective solution, revolutionizing the traditional remittance experience.
           </p>
-          <br />
           <p>
-            As part of Increment’s goal as an innovator, PayHiram aims to provide
-            its prospective clients and partners with accessible ways of financial
-            transfers, having wider cash outlets and delivery options. It offers
-            four financial transfers: Pera Padala, Cashin, Withdrawals, and Accept
-            Payments. With PayHiram, Users have the liberty to choose which
-            partner’s proposal to accept while partners can earn up to 80% of the
-            transaction fees charged to the users. <br /><br />Download the App
-            and Register Today!
+            Say goodbye to high remittance fees and complicated processes. With Jiph, Filipinos can enjoy a faster, more affordable, and incredibly convenient alternative to conventional remittance channels. Our platform streamlines the entire process, ensuring that your hard-earned money reaches your loved ones in the Philippines swiftly and securely.
+          </p>
+          <p>
+            Experience the future of remittance with Jiph and discover a truly promising solution to the challenges faced by Filipinos when it comes to sending money back home. Join us in revolutionizing the remittance landscape in the Filipino market.
           </p>
           <!-- <div class="app-icons" style="margin-top: 25px">
             <img

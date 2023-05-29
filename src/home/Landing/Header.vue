@@ -7,13 +7,13 @@
           <span class="brand col-6 "  >
             <a class="navbar-brand" v-on:click="redirect('/')">
               <img class="increment-logo"
-                src="../../assets/img/logo.png"
+                src="../../assets/img/new_logos/logo_long_transparent.png"
               />
-              <label class="headerName" @click="redirect('/')">
+              <!-- <label class="headerName" @click="redirect('/')">
                 <b :class="this.scrollPosition > 500 || this.outsideLanding ? 'increment-white':'increment-purple'">INCREMENT</b>
                 <br />
                 <b :class="this.scrollPosition > 500 || this.outsideLanding ? 'increment-white':'increment-purple'">TECHNOLOGIES INC.</b>
-              </label>
+              </label> -->
             </a>
           </span>
         
@@ -315,7 +315,7 @@
   color: #00B89F;
 }
 .increment-logo{
-  margin-bottom: 5px; margin-right: 5px; margin-top: -10%
+  margin-bottom: 5px; margin-right: 5px; margin-top: 0px
 }
 .bg-white{
   background-color: white;
@@ -393,7 +393,7 @@
   color: $primary;
 }
 .brand {
-  margin-top: 0.5%;
+  // margin-top: 0.5%;
 }
 .brand:hover{
   cursor: pointer;
@@ -419,7 +419,7 @@ label {
 
 img {
   width: auto;
-  height: 44px;
+  height: 65px;
   margin-top: 4px;
 }
 .fa-bars:hover {
@@ -483,7 +483,7 @@ img {
 
 @media screen and (max-width: 1264px) {
   .navbar-brand{
-    margin-left: 3%;
+    // margin-left: 3%;
   }
   .dropDownIcon{
     padding-top: 7px;
@@ -619,7 +619,7 @@ img {
     padding-top: 20px;
   }
   .brand{
-    margin-left: 5%;
+    // margin-left: 5%;
   }
   .navbar-expand .navbar-collapse {
     display: flex !important;

@@ -7,12 +7,12 @@
     ></Curve>
     <div class="container-handler">
       <a class="navbar-brand">
-        <img class="logo" src="../../assets/img/logo.png" />
-        <label class="site-name">
+        <img class="logo" src="../../assets/img/new_logos/logo_long_black_transparent_v2.png" />
+        <!-- <label class="site-name">
           <b class="increment-white"> &nbsp;INCREMENT</b>
           <br />
           <b class="increment-white">&nbsp; TECHNOLOGIES INC.</b>
-        </label>
+        </label> -->
         <br />
         <h4 class="mt-3 mb-4">{{ common.APP_TAGLINE }}</h4>
       </a>
@@ -162,8 +162,8 @@
   cursor: pointer;
 }
 .logo {
-  width: 53px;
-  height: 48px;
+  width: auto;
+  height: 65px;
   margin-top: -12%;
   padding-right: 2px;
 }

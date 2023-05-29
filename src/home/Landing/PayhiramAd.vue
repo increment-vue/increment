@@ -15,7 +15,6 @@
           financial technology mobile application in the Philippines that offers
           door to door transactions.
         </p>
-        <br />
         <p>
           As part of Increment’s goal as an innovator, PayHiram aims to provide
           its prospective clients and partners with accessible ways of financial
