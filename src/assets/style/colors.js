@@ -10,5 +10,6 @@ export default {
     success: '#00E68A',
     gradientPrimary: '#00B89F',
     gradientSecondary: '#8F00B5',
-    black: 'black'
+    black: 'black',
+    incrementPurple: '#5e17eb'
 }

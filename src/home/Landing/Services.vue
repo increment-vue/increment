@@ -1,7 +1,7 @@
 <template>
   <div >
     <Curve
-      :color="colors.gradientPrimary"
+      :color="colors.incrementPurple"
       :use="true"
       :stylecss="{
         backgroundColor: colors.white,
@@ -21,7 +21,7 @@
       </div>
     </div>
     <Curve
-      :color="colors.gradientSecondary"
+      :color="colors.incrementPurple"
       :use="false"
       :stylecss="{
         backgroundColor: colors.white,

@@ -35,7 +35,7 @@
   width: 40%;
   height: 100vh;
   float: left;
-  background-image: url("../../assets/img/Banner-Meridian.png");
+  background-image: url("../../assets/img/meridian_v3.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -94,11 +94,7 @@ h4 {
     width: 100% !important;
     text-align: center !important;
     padding-top: 35vh !important;
-    background-image: linear-gradient(
-        228.21deg,
-        rgba(143, 0, 181, 0.9) -0.03%,
-        rgba(0, 184, 159, 0.93) 100%
-      ),
+    background-image: -webkit-linear-gradient(225deg, hsla(260, 84%, 51%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%),
       url("../../assets/img/gif-banner.gif"),
       url("../../assets/img/Increment_office.jpeg");
     background-size: cover, 50vh, cover;
