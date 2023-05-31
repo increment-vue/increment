@@ -217,7 +217,7 @@ export default {
   data() {
     return {
       common: COMMON,
-      curveStyle: ColorsJS.secondary,
+      curveStyle: ColorsJS.incrementPurple,
     };
   },
   methods: {

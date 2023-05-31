@@ -1,7 +1,7 @@
 <template>
   <div class="body" id="banner">
-    <div class="meridian"></div>
-    <div class="banner-content">
+    <!-- <div class="meridian"></div> -->
+    <div  iv class="banner-content">
       <h1>OUR EXPERTISE & TECHNOLOGY. YOUR BUSINESS’ SUCCESS</h1>
       <h4>
         Take your business to the next level with our expert web and mobile development services, as well as IT department outsourcing  to help you stay ahead of the competition.
@@ -43,15 +43,17 @@
 }
 
 .banner-content {
-  width: 60%;
+  width: 100%;
   height: 100vh;
-  float: left;
+  // float: left;
+  text-align: center;
   padding-left: 5%;
   padding-right: 5%;
+  background-color: #5e17eb;
   background-image: linear-gradient(
       228.21deg,
-      rgba(143, 0, 181, 0.9) -0.03%,
-      rgba(0, 184, 159, 0.93) 100%
+      #5e17eb,
+      rgba(94,23,235, 0.5) 100%
     ),
     url("../../assets/img/gif-banner.gif"),
     url("../../assets/img/Increment_office.jpeg");
@@ -75,11 +77,12 @@
 
 h1 {
   color: $white;
+  font-size: 5vh!important;
 }
 
 h4 {
   color: $white;
-  padding-right: 20%;
+  // padding-right: 20%;
   padding-top: 2vh;
   padding-bottom: 3vh;
 }
@@ -94,9 +97,6 @@ h4 {
     width: 100% !important;
     text-align: center !important;
     padding-top: 35vh !important;
-    background-image: -webkit-linear-gradient(225deg, hsla(260, 84%, 51%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%),
-      url("../../assets/img/gif-banner.gif"),
-      url("../../assets/img/Increment_office.jpeg");
     background-size: cover, 50vh, cover;
     background-position: center, center top, center;
     background-repeat: no-repeat, no-repeat, no-repeat;

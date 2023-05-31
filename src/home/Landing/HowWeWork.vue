@@ -94,12 +94,7 @@ h2 {
   margin: 10px;
 }
 .item-holder {
-  background: linear-gradient(
-    95.51deg,
-    $gradientPrimary 0%,
-    $gradientTertiary 51.04%,
-    $gradientSecondary 100%
-  );
+  background-color: #5e17eb;
   text-align: center;
   min-height: 220px;
   width: 40%;
@@ -107,12 +102,7 @@ h2 {
 }
 .item-holder:hover {
   cursor: pointer;
-  background: linear-gradient(
-    -20deg,
-    $gradientPrimary 0%,
-    $gradientSecondary 100%,
-    $gradientTertiary 51.04%
-  );
+  background-color: #ccc;
 }
 .line1 {
   width: 50%;

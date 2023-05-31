@@ -29,11 +29,12 @@
 .banner {
   float: left;
   width: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(143, 0, 181, 0.99) 0%,
-    $secondary 100%
-  );
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(143, 0, 181, 0.99) 0%,
+  //   $secondary 100%
+  // );
+  background-color: #5e17eb;
   padding: 80px 0 80px 0;
 }
 .title {

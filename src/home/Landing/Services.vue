@@ -1,7 +1,7 @@
 <template>
   <div >
     <Curve
-      :color="colors.gradientPrimary"
+      :color="colors.incrementPurple"
       :use="true"
       :stylecss="{
         backgroundColor: colors.white,
@@ -21,7 +21,7 @@
       </div>
     </div>
     <Curve
-      :color="colors.gradientSecondary"
+      :color="colors.incrementPurple"
       :use="false"
       :stylecss="{
         backgroundColor: colors.white,
@@ -39,11 +39,7 @@
   width: 100%;
   padding-left: 10% !important;
   padding-right: 10% !important;
-  background: linear-gradient(
-    180deg,
-    $gradientPrimary 0%,
-    $gradientSecondary 100%
-  );
+  background-color: #5e17eb;
   margin-top: -14.5%;
   padding: 50px 0 50px 0;
   text-align: center !important;
