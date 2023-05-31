@@ -160,8 +160,7 @@ export default {
 .cw-banner {
   width: 100%;
   float: left;
-  background: linear-gradient(180deg, #8F00B5 0%, #00B89F 100%);
-  min-height: 50vh;
+  background-color: #5e17eb;  min-height: 50vh;
 }
 .container {
   padding-top: 15vh;

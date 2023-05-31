@@ -7,7 +7,7 @@
           <span class="brand col-6 "  >
             <a class="navbar-brand" v-on:click="redirect('/')">
               <img class="increment-logo"
-                src="../../assets/img/new_logos/logo_long_transparent.png"
+                src="../../assets/img/new_logos/increment_long_white_transparent.png"
               />
               <!-- <label class="headerName" @click="redirect('/')">
                 <b :class="this.scrollPosition > 500 || this.outsideLanding ? 'increment-white':'increment-purple'">INCREMENT</b>

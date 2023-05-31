@@ -61,11 +61,7 @@
     margin-bottom: 20vh;
     float: left;
     transform: skewY(-11deg);
-    background-image: linear-gradient(
-      90deg,
-      $gradientPrimary,
-      $gradientSecondary
-    );
+    background-color: #5e17eb;
   }
   .ad-container {
     width: 80%;

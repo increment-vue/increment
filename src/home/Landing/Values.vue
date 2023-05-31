@@ -26,11 +26,12 @@
   float: left;
   width: 100%;
   padding: 50px 0 50px 0;
-  background: linear-gradient(
-    180deg,
-    $gradientPrimary 0%,
-    $gradientSecondary 100%
-  );
+  // background: linear-gradient(
+  //   180deg,
+  //   $gradientPrimary 0%,
+  //   $gradientSecondary 100%
+  // );
+  background-color: #5e17eb;
 }
 
 .row {

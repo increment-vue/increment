@@ -59,7 +59,7 @@
 }
 
 .font-awesome-icon {
-  color: $purple;
+  color:#5e17eb;;
   font-size: 100px;
   margin: 50px;
 }
