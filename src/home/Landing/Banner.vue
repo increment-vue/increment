@@ -1,11 +1,13 @@
 <template>
   <div class="body" id="banner">
     <!-- <div class="meridian"></div> -->
-    <div  iv class="banner-content">
-      <h1>OUR EXPERTISE & TECHNOLOGY. YOUR BUSINESS’ SUCCESS</h1>
-      <h4>
-        Take your business to the next level with our expert web and mobile development services, as well as IT department outsourcing  to help you stay ahead of the competition.
-      </h4>
+    <div class="banner-content">
+      <div class="banner-text">
+        <h1>An IT Department Outsourcing and A Software Development Company</h1>
+        <h4>
+          Take your business to the next level with our expert web and mobile development services, as well as IT department outsourcing  to help you stay ahead of the competition.
+        </h4>
+      </div>
       <roundBtn
         :text="'Contact Us'"
         :changeIcon="'fa fa-angle-double-right'"
@@ -14,8 +16,8 @@
         :route="'https://calendly.com/incrementtech2020/services-offered'"
         :styles="{
           backgroundColor: colors.white,
-          color: colors.green,
-          borderColor: colors.green,
+          color: colors.incrementPurple,
+          borderColor: colors.white,
         }"
         :hoverStyles="{
           backgroundColor: colors.success,
@@ -41,26 +43,29 @@
   background-size: cover;
   position: relative;
 }
-
+.banner-text{
+  width: 100%;
+  padding: 0% 15% 0% 15%;
+}
 .banner-content {
   width: 100%;
   height: 100vh;
   // float: left;
   text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
+  // padding-left: 5%;
+  // padding-right: 5%;
   background-color: #5e17eb;
-  background-image: linear-gradient(
-      228.21deg,
-      #5e17eb,
-      rgba(94,23,235, 0.5) 100%
-    ),
-    url("../../assets/img/gif-banner.gif"),
-    url("../../assets/img/Increment_office.jpeg");
+  // background-image: linear-gradient(
+  //     228.21deg,
+  //     #5e17eb,
+  //     rgba(94,23,235, 0.5) 100%
+  //   ),
+    // url("../../assets/img/gif-banner.gif"),
+    // url("../../assets/img/Increment_office.jpeg");
   background-size: cover, 60vh, cover;
   background-position: center, right, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  padding-top: 45vh;
+  padding-top: 35vh;
   padding-bottom: 30vh;
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="banner" id="who-we-are">
     <div class="section-container">
-      <h2>WHO WE ARE</h2>
+      <h2 class="incrementPurple">WHO WE ARE</h2>
       <div style="text-align: left">
         <!-- first component -->
         <div class="row">
@@ -9,43 +9,26 @@
             <img :src="require('assets/gif/who-we-are-top.gif')" />
           </div>
           <div class="content1">
-            <h3>INTRODUCTION</h3>
+            <h3 class="incrementPurple">INTRODUCTION</h3>
             <hr />
             <p>
-              Founded in 2017, Increment Technologies Inc. set itself out to be a
-              leading Website and Mobile Development firm in Cebu. We develop
-              high-quality digital projects, from landing pages to full-blown
-              e-commerce.
-            </p>
-            <p>
-              In pursuit of quality, we strategically develop every project to
-              set out distinctiveness in every client’s needs. Our clients are
-              mostly from outside the country, but since we saw that there's a
-              huge potential from the domestic market, we are now providing
-              locals with our services and increasing our visibility.
+              Welcome to Increment Technologies Inc., a distinguished digital solutions provider that specializes in website and mobile development, along with IT department outsourcing services. With our expertise and commitment to excellence, we deliver innovative solutions tailored to meet the unique needs of our clients. Whether you're looking to enhance your online presence, streamline operations, or outsource your IT department, we are here to empower your business and drive your success in the ever-evolving digital landscape.
             </p>
           </div>
         </div>
         <!-- second component -->
         <div class="row">
           <div class="content2">
-            <h3>OUR VISION</h3>
+            <h3 class="incrementPurple">OUR VISION</h3>
             <hr />
             <p>
-              Increment Technologies visions to help businesses succeed with
-              their goals by providing innovative ideas and best tools that
-              exceeds standards. We strive to create opportunities for
-              businesses to excel in their industries.
+              Our vision at Increment Technologies Inc. is to be the leading digital solutions provider, specializing in website and mobile development, as well as IT department outsourcing services. We are committed to enabling businesses to perform better by harnessing the power of technology. With our expertise and innovative solutions, we aim to empower our clients, streamline their operations, and drive their success in today's digital era.
             </p>
             <br />
-            <h3>OUR MISSION</h3>
+            <h3 class="incrementPurple">OUR MISSION</h3>
             <hr />
             <p>
-              Our mission is to create high quality and secured websites,
-              website applications, and mobile applications from small to
-              corporate level businesses. Our goal is to develop sustainable
-              strategies aligning to the modern array of services. We take pride
-              in creating solutions to your needs.
+              Our mission at Increment Technologies Inc. is to provide exceptional IT department outsourcing and software development solutions that enhance businesses' day-to-day operations. Through our innovative and tailored approach, we aim to build and create solutions that promote efficiency, productivity, and growth. With a focus on delivering quality results and making a positive impact on society, we strive to be the trusted partner that empowers businesses and contributes to a better future.
             </p>
           </div>
           <div class="div-gif2">
@@ -76,7 +59,9 @@
   margin-left: 10%;
   width: 80%;
 }
-
+.incrementPurple{
+  color: $incrementPurple
+}
 h2 {
   text-align: center;
   color: $primary;
@@ -126,7 +111,7 @@ p {
 }
 
 hr {
-  background-color: $secondary !important;
+  background-color: $gray !important;
   width: 15%;
   height: 1px;
   margin: 0;
