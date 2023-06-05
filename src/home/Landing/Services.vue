@@ -57,7 +57,7 @@
 .font-awesome-icon {
   margin-top: 30px;
   margin-bottom: 30px;
-  color: $secondary;
+  color: $incrementPurple;
   font-size: 80px;
 }
 
@@ -141,7 +141,8 @@ import {
   faMobileAlt,
   faDesktop,
   faGlobe,
-  faArchive
+  faNetworkWired,
+  faCogs
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
@@ -167,12 +168,12 @@ export default {
         },
         {
           title: "API Development",
-          class: faArchive,
+          class: faNetworkWired,
           desc: "We offer API development services where we create customized APIs based on our clients' existing systems. By developing APIs tailored to their specific needs, we enhance compatibility, adaptability, and scalability within their overall technology infrastructure.",
         },
         {
           title: "Software Maintenance",
-          class: faGlobe,
+          class: faCogs,
           desc: "Increment Technologies Inc. also offers software maintenance to ensure continued functionality, security, and performance of their clients' software applications. This includes bug fixing, troubleshooting, performance optimization, security updates, and compatibility enhancements.",
         },
         {

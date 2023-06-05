@@ -141,7 +141,7 @@ h2 {
   letter-spacing: 0em;
   margin-top: 25px;
   margin-bottom: 50px;
-  color: $secondary;
+  color: $incrementPurple;
 }
 
 .gif-image2 {
