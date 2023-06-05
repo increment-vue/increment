@@ -57,7 +57,7 @@
 .font-awesome-icon {
   margin-top: 30px;
   margin-bottom: 30px;
-  color: $secondary;
+  color: $incrementPurple;
   font-size: 80px;
 }
 
@@ -139,8 +139,13 @@ import ColorsJS from "src/assets/style/colors.js";
 import {
   faPalette,
   faMobileAlt,
-  faDesktop,
+  faCode,
   faGlobe,
+  faNetworkWired,
+  faCogs,
+  faLaptop,
+  faUsers,
+  faFax
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
@@ -151,19 +156,44 @@ export default {
       colors: ColorsJS,
       services: [
         {
-          title: "Design",
+          title: "IT Services",
+          class: faLaptop,
+          desc: "Streamline your business operations with our comprehensive IT department outsourcing solutions, tailored to your needs. From tech support to IT management, we have flexible options to suit your requirements. Additionally, our affordable IT consultancy services provide expert guidance on technology strategy, empowering you to stay ahead in the digital landscape.",
+        },
+        {
+          title: "IT Department Outsourcing",
+          class: faUsers,
+          desc: "Our comprehensive IT services include IT Department Outsourcing, where we manage your technology needs and help you achieve your core business objectives. Starting from just Php 15,000, our flexible outsourcing solutions offer options such as tech support, IT manager level, and IT executive level.",
+        },
+        {
+          title: "IT Consultancy",
+          class: faFax,
+          desc: "Get valuable technology guidance and support with our affordable IT consultancy services for only Php 5,000. Our experts will help you create a strong technology strategy and navigate the process of digital transformation. Stay ahead in the digital landscape and unleash the full potential of your business with our reliable IT consultancy solutions.",
+        },
+        {
+          title: "Designs",
           class: faPalette,
           desc: "We use latest editing tools like Adobe Photoshop, and Illustrator for our designing. We also cater making landing page videos using Adobe after effects, premier, resolve and more. We keep updating our tools for us to deliver best quality designs to our clients.",
         },
         {
-          title: "Mobile",
+          title: "Web Development",
+          class: faCode,
+          desc: "Our developers are constantly upgrading their capabilities to provide best and suitable solutions for your needs. Our desire is to create intuitive and best websites. We make website or api integration a lot easier. We are not comfortable to stay where we are for our development as we try to innovate.",
+        },
+        {
+          title: "Mobile Development",
           class: faMobileAlt,
           desc: "The development framework react-native and quasar-vuejs are capable to deploy applications for android and ios platforms. We build using its native programming framework once our customer demands it. Our developers are always working in advanced for us to give the best solutions.",
         },
         {
-          title: "Web",
-          class: faDesktop,
-          desc: "Our developers are constantly upgrading their capabilities to provide best and suitable solutions for your needs. Our desire is to create intuitive and best websites. We make website or api integration a lot easier. We are not comfortable to stay where we are for our development as we try to innovate.",
+          title: "API Development",
+          class: faNetworkWired,
+          desc: "We offer API development services where we create customized APIs based on our clients' existing systems. By developing APIs tailored to their specific needs, we enhance compatibility, adaptability, and scalability within their overall technology infrastructure.",
+        },
+        {
+          title: "Software Maintenance",
+          class: faCogs,
+          desc: "Increment Technologies Inc. also offers software maintenance to ensure continued functionality, security, and performance of their clients' software applications. This includes bug fixing, troubleshooting, performance optimization, security updates, and compatibility enhancements.",
         },
         {
           title: "Hosting",
