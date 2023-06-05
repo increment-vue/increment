@@ -141,7 +141,7 @@ import {
   faMobileAlt,
   faDesktop,
   faGlobe,
-  faQuidditch
+  faArchive
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
@@ -167,7 +167,7 @@ export default {
         },
         {
           title: "API Development",
-          class: faQuidditch,
+          class: faArchive,
           desc: "We offer API development services where we create customized APIs based on our clients' existing systems. By developing APIs tailored to their specific needs, we enhance compatibility, adaptability, and scalability within their overall technology infrastructure.",
         },
         {
