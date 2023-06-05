@@ -139,10 +139,13 @@ import ColorsJS from "src/assets/style/colors.js";
 import {
   faPalette,
   faMobileAlt,
-  faDesktop,
+  faCode,
   faGlobe,
   faNetworkWired,
-  faCogs
+  faCogs,
+  faLaptop,
+  faUsers,
+  faFax
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
@@ -153,12 +156,28 @@ export default {
       colors: ColorsJS,
       services: [
         {
+          title: "IT Services",
+          class: faLaptop,
+          desc: "Streamline your business operations with our comprehensive IT department outsourcing solutions, tailored to your needs. From tech support to IT management, we have flexible options to suit your requirements. Additionally, our affordable IT consultancy services provide expert guidance on technology strategy, empowering you to stay ahead in the digital landscape.",
+        },
+        {
+          title: "IT Department Outsourcing",
+          class: faUsers,
+          desc: "Our comprehensive IT services include IT Department Outsourcing, where we manage your technology needs and help you achieve your core business objectives. Starting from just Php 15,000, our flexible outsourcing solutions offer options such as tech support, IT manager level, and IT executive level.",
+        },
+        {
+          title: "IT Consultancy",
+          class: faFax,
+          desc: "Get valuable technology guidance and support with our affordable IT consultancy services for only Php 5,000. Our experts will help you create a strong technology strategy and navigate the process of digital transformation. Stay ahead in the digital landscape and unleash the full potential of your business with our reliable IT consultancy solutions.",
+        },
+        {
           title: "Designs",
           class: faPalette,
           desc: "We use latest editing tools like Adobe Photoshop, and Illustrator for our designing. We also cater making landing page videos using Adobe after effects, premier, resolve and more. We keep updating our tools for us to deliver best quality designs to our clients.",
-        },{
+        },
+        {
           title: "Web Development",
-          class: faDesktop,
+          class: faCode,
           desc: "Our developers are constantly upgrading their capabilities to provide best and suitable solutions for your needs. Our desire is to create intuitive and best websites. We make website or api integration a lot easier. We are not comfortable to stay where we are for our development as we try to innovate.",
         },
         {

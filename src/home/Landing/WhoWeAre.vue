@@ -22,13 +22,14 @@
             <h3 class="incrementPurple">OUR VISION</h3>
             <hr />
             <p>
-              Our vision at Increment Technologies Inc. is to be the leading digital solutions provider, specializing in website and mobile development, as well as IT department outsourcing services. We are committed to enabling businesses to perform better by harnessing the power of technology. With our expertise and innovative solutions, we aim to empower our clients, streamline their operations, and drive their success in today's digital era.
+              Enabling Businesses Perform Better through Technology
             </p>
             <br />
             <h3 class="incrementPurple">OUR MISSION</h3>
             <hr />
             <p>
-              Our mission at Increment Technologies Inc. is to provide exceptional IT department outsourcing and software development solutions that enhance businesses' day-to-day operations. Through our innovative and tailored approach, we aim to build and create solutions that promote efficiency, productivity, and growth. With a focus on delivering quality results and making a positive impact on society, we strive to be the trusted partner that empowers businesses and contributes to a better future.
+              We provide IT Department Outsourcing & Software Development that enhance Businesses day to day operation.
+              We build & create innovate solutions that promote a better society.
             </p>
           </div>
           <div class="div-gif2">

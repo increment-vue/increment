@@ -44,7 +44,7 @@
           </div> -->
         </div>
         <div class="img-holder">
-          <img :src="require('assets/img/adPH2.png')" />
+          <img :src="require('assets/img/Jiph_Ad.png')" />
         </div>
         
       </div>
