@@ -1,7 +1,7 @@
 <template>
   <div class="cw-banner" id="our-projects">
     <div class="container">
-      <h2><b>OUR PROJECTS</b></h2>
+      <h2><b>Our Projects</b></h2>
       <p style="color: white">For the past years and until now, Increment Technologies Inc. has been serving clients around the world</p>
       <div class="row">
         <span

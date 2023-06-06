@@ -2,7 +2,7 @@
   <div>
     <div class="banner" id="testimonials">
       <div class="container">
-        <h2>WHAT THEY SAY ABOUT US!</h2>
+        <h2>What They Say About Us</h2>
         <p>Our clients satisfactions expresses their testimonies</p>
         <div class="row no-gutters">
           <span class="col-sm" v-for="(item, index) in list" :key="index">

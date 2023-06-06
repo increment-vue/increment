@@ -1,14 +1,14 @@
 <template>
   <div >
-    <Curve
+    <!-- <Curve
       :color="colors.incrementPurple"
       :use="true"
       :stylecss="{
         backgroundColor: colors.white,
       }"
-    ></Curve>
+    ></Curve> -->
     <div class="cw-banner" id="our-services">
-      <h2>OUR SERVICES</h2>
+      <h2>Our Services</h2>
       <p>Our company provides a wide range of services to our clients. Being a relatively small firm, we are able to offer customized, high-quality service to our clients.</p>
       <div class="row">
         <span class="card" v-for="(item, index) in services" :key="index">
@@ -20,13 +20,13 @@
         </span>
       </div>
     </div>
-    <Curve
+    <!-- <Curve
       :color="colors.incrementPurple"
       :use="false"
       :stylecss="{
         backgroundColor: colors.white,
       }"
-    ></Curve>
+    ></Curve> -->
   </div>
 </template>
 
@@ -39,11 +39,11 @@
   width: 100%;
   padding-left: 10% !important;
   padding-right: 10% !important;
-  background-color: #5e17eb;
-  margin-top: -14.5%;
+  background-color: #fff;
+  // margin-top: -14.5%;
   padding: 50px 0 50px 0;
   text-align: center !important;
-  color: $white;
+  color: black;
 }
 
 .card {
@@ -52,6 +52,7 @@
   margin: 1.5%;
   padding: 20px;
   border-radius: 15px;
+  background-color: $gray;
 }
 
 .font-awesome-icon {
@@ -134,7 +135,7 @@ img {
 
 </style>
 <script>
-import Curve from "src/home/generic/svgCurve.vue";
+// import Curve from "src/home/generic/svgCurve.vue";
 import ColorsJS from "src/assets/style/colors.js";
 import {
   faPalette,
@@ -143,23 +144,23 @@ import {
   faGlobe,
   faNetworkWired,
   faCogs,
-  faLaptop,
+  // faLaptop,
   faUsers,
   faFax
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
-    Curve,
+    // Curve,
   },
   data() {
     return {
       colors: ColorsJS,
       services: [
-        {
-          title: "IT Services",
-          class: faLaptop,
-          desc: "Streamline your business operations with our comprehensive IT department outsourcing solutions, tailored to your needs. From tech support to IT management, we have flexible options to suit your requirements. Additionally, our affordable IT consultancy services provide expert guidance on technology strategy, empowering you to stay ahead in the digital landscape.",
-        },
+        // {
+        //   title: "IT Services",
+        //   class: faLaptop,
+        //   desc: "Streamline your business operations with our comprehensive IT department outsourcing solutions, tailored to your needs. From tech support to IT management, we have flexible options to suit your requirements. Additionally, our affordable IT consultancy services provide expert guidance on technology strategy, empowering you to stay ahead in the digital landscape.",
+        // },
         {
           title: "IT Department Outsourcing",
           class: faUsers,

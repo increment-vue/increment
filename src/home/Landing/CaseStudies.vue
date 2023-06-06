@@ -1,7 +1,7 @@
 <template>
   <div class="body" id="case-studies">
     <div class="section-container">
-      <h2>CASE STUDIES</h2>
+      <h2>Case Studies</h2>
       <p>
         With over 5 years of experience, Increment Technologies Inc. provides
         innovative productsand services from various categories in accordance to

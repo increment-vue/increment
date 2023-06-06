@@ -1,7 +1,7 @@
 <template>
   <div class="body" id="technologies">
     <div class="section-container">
-      <h2>TECHNOLOGIES</h2>
+      <h2>Technologies</h2>
       <p>
         Innovating your business and integrating it with these technologies will
         create opportunities for the organization to grow.

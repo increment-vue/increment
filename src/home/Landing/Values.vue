@@ -1,7 +1,7 @@
 <template>
   <div class="cw-banner" id="our-values">
     <div class="container">
-      <h2>OUR VALUES</h2>
+      <h2>Our Values</h2>
       <p>What we at Increment Technologies Inc. believe and stand for</p>
       <div class="row">
         <span class="card-holder" v-for="(item, index) in values" :key="index">

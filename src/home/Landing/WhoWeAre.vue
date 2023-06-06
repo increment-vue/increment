@@ -1,7 +1,7 @@
 <template>
   <div class="banner" id="who-we-are">
     <div class="section-container">
-      <h2 class="incrementPurple">WHO WE ARE</h2>
+      <h2 class="incrementPurple">Who We Are</h2>
       <div style="text-align: left">
         <!-- first component -->
         <div class="row">
@@ -9,7 +9,7 @@
             <img :src="require('assets/gif/who-we-are-top.gif')" />
           </div>
           <div class="content1">
-            <h3 class="incrementPurple">INTRODUCTION</h3>
+            <h3 class="incrementPurple">Introduction</h3>
             <hr />
             <p>
               Welcome to Increment Technologies Inc., a distinguished digital solutions provider that specializes in website and mobile development, along with IT department outsourcing services. With our expertise and commitment to excellence, we deliver innovative solutions tailored to meet the unique needs of our clients. Whether you're looking to enhance your online presence, streamline operations, or outsource your IT department, we are here to empower your business and drive your success in the ever-evolving digital landscape.
@@ -19,13 +19,13 @@
         <!-- second component -->
         <div class="row">
           <div class="content2">
-            <h3 class="incrementPurple">OUR VISION</h3>
+            <h3 class="incrementPurple">Our Vision</h3>
             <hr />
             <p>
               Enabling Businesses Perform Better through Technology
             </p>
             <br />
-            <h3 class="incrementPurple">OUR MISSION</h3>
+            <h3 class="incrementPurple">Our Mission</h3>
             <hr />
             <p>
               We provide IT Department Outsourcing & Software Development that enhance Businesses day to day operation.

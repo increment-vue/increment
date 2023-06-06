@@ -3,7 +3,7 @@
     <div class="component-header text-center">
       <img class="gif-image2" :src="require('assets/gif/how-we-work-2.gif')" />
     </div>
-    <h2>HOW WE WORK</h2>
+    <h2>How We Work</h2>
     <div class="row component-header text-center">
       <div style="width: 50%; float: left; text-align: left">
         <img
