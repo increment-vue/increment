@@ -163,7 +163,7 @@
                   aria-controls="navbarSupportedContent"
                   aria-label="Toggle navigation"
                 >
-                  <b class="increment-purple">{{ item.title }}</b>
+                  <b class="white">{{ item.title }}</b>
                 </a>
                 <span class="formatter"></span>
                 <span class="dropDownIcon">
@@ -183,7 +183,7 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                     >
-                      <b class="increment-purple">Our Values</b>
+                      <b class="white">Our Values</b>
                     </a>
                   </span>
                   <span class="col">
@@ -197,7 +197,7 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                     >
-                      <b class="increment-purple">What They Say About Us</b>
+                      <b class="white">What They Say About Us</b>
                     </a>
                   </span>
                 </div>
@@ -221,7 +221,7 @@
                   aria-controls="navbarSupportedContent"
                   aria-label="Toggle navigation"
                 >
-                  <b class="increment-purple">{{ item.title }}</b>
+                  <b class="white">{{ item.title }}</b>
                 </a>
                 <span class="formatter"></span>
                 <span class="dropDownIcon">
@@ -241,7 +241,7 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                     >
-                      <b class="increment-purple">How We Work</b>
+                      <b class="white">How We Work</b>
                     </a>
                   </span>
                 </div>
@@ -250,7 +250,7 @@
               <div v-if="item.type === 'regular'">
                 <div v-if="item.title === 'Send Request'">
                   <a data-target=".show.hide" class="nav-link" href="/send-request">
-                    <b class="increment-purple">{{ item.title }}</b>
+                    <b class="white">{{ item.title }}</b>
                   </a>
                 </div>
                 <div v-else-if="item.title !== 'Send Request'">
@@ -265,7 +265,7 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                   >
-                    <b class="increment-purple">{{ item.title }}</b>
+                    <b class="white">{{ item.title }}</b>
                   </a>
                 </div>
               </div>
@@ -278,6 +278,9 @@
 
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.white{
+  color: white;
+}
 .brand{
   margin-left: 3%;
 }
@@ -312,7 +315,7 @@
 }
 .menuBars{
   // color:linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
-  color: #00B89F;
+  color: white;
 }
 .increment-logo{
   margin-bottom: 5px; margin-right: 5px; margin-top: 0px
@@ -489,6 +492,7 @@ img {
   .dropDownIcon{
     padding-top: 7px;
     margin-left: 20px;
+    color: white
   }
   .myForm{
     display: none;
@@ -501,11 +505,11 @@ img {
   }
   // Color elements inversed to their original to take into account mobile view
   .bg-transparent{
-    background-color: white!important;;
+    background-color: $incrementPurple;
   }
   .bg-gradient{
-    background-color: white !important;
-    background-image: none!important;
+    background-color: $incrementPurple;
+    background-image: none;
     // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   }
   .increment-white{
@@ -578,10 +582,10 @@ img {
     margin-top: 4.5rem;
   }
   .menuBars{
-    color: #00B89F!important;
+    color: white!important;
   }
   .fa-bars{
-    border: solid 1px #00B89F!important;
+    border: solid 1px white!important;
     margin-bottom: 10px;
   }
   .navbar-brand{
@@ -595,10 +599,10 @@ img {
     width: auto;
   }
   .menuBars{
-    color: #00B89F!important;
+    color: white!important;
   }
   .fa-bars{
-    border: solid 1px #00B89F!important;
+    border: solid 1px white!important;
     margin-bottom: 10px;
   }
   .navbar-brand{
@@ -609,10 +613,10 @@ img {
 
 @media screen and (max-width: 991px) {
   .menuBars{
-    color: #00B89F!important;
+    color: white!important;
   }
   .fa-bars{
-    border: solid 1px #00B89F!important;
+    border: solid 1px white!important;
     margin-bottom: 10px;
   }
   .navbar-brand{
@@ -633,8 +637,8 @@ img {
     background-color: white!important;;
   }
   .bg-gradient{
-    background-color: white !important;
-    background-image: none!important;
+    // background-color: white !important;
+    // background-image: none!important;
     // background-image: linear-gradient(228.21deg, rgba(143, 0, 181, 0.90) -0.03%, rgba(0, 184, 159, 0.93) 100%);
   }
   .increment-white{
@@ -718,7 +722,7 @@ img {
     margin-top: -3.18rem;
   }
   .navbar-nav {
-    background-color: none;
+    background-color: $incrementPurple!important;
     float: left;
   }
   .dropdown:hover .dropdown-menu {

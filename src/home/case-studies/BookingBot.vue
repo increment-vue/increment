@@ -10,7 +10,7 @@
         they are one of the most powerful marketing tools for start-up
         businesses.
       </p>
-      <CaseImage :price="'1000'" :bg="'booking_bot.jpg'"/>
+      <CaseImage :price="'1,000'" :bg="'booking_bot.jpg'"/>
       <p>
         Start-up businesses always create facebook pages for updates on their
         services and products, that’s why Increment Technologies develop an
