@@ -16,7 +16,7 @@
 }
 
 button:hover{
-  background-color: $success !important;
+  background-color: $gray !important;
 }
 
 i {

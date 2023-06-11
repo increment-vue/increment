@@ -1,7 +1,8 @@
 <template>
   <div class="container my-container">
-      <div class="navbar navbar-expand-lg fixed-top row " id="headerColor" 
-      :class="this.scrollPosition > 500 || this.outsideLanding ? 'bg-gradient':'bg-transparent'">
+      <div class="navbar navbar-expand-lg bg-gradient fixed-top row " id="headerColor" >
+      <!-- :class="this.scrollPosition > 500 || this.outsideLanding ? 'bg-gradient':'bg-transparent'"> -->
+
         <!-- Desktop View Navbar -->
         <div class="header-section" >
           <span class="brand col-6 "  >

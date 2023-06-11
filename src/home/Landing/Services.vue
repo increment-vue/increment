@@ -10,7 +10,7 @@
     <div class="cw-banner" id="our-services">
       <h2>Our Services</h2>
       <p>Our company provides a wide range of services to our clients. Being a relatively small firm, we are able to offer customized, high-quality service to our clients.</p>
-      <div class="row">
+      <!-- <div class="row">
         <span class="card" v-for="(item, index) in services" :key="index">
           <center>
             <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
@@ -18,6 +18,76 @@
           <b><p class="subtitle">{{ item.title }}</p></b>
           <span style="font-size: 13px; color: black">{{ item.desc }}</span>
         </span>
+      </div> -->
+      <!-- IT Outsourcing -->
+      <div class="serviceContainer">
+        <div class="imageContainer">
+          <img class="imageSize" :src="require('assets/img/Jiph_Ad.png')" />
+        </div>
+        <div class="textContainer">
+          <div class="title">
+            <h3>I.T Outsourcing</h3>
+          </div>
+          <div class="description">
+            <p>In the provided code, $user is an instance of the User model, and it has a relationship defined with the name hasAccountType. By default, when you eager load a relationship using with(), Laravel will include the loaded relationship as a property on the model object. In this case, the hasAccountType relationship is included as a property on the $user object.</p>
+        </div>
+      <div class="indent">
+        <roundBtn
+        :text="'View more'"
+        :changeIcon="'fa fa-angle-double-right'"
+        :icon ="'fa fa-angle-right'"
+        :target="'_blank'"
+        :route="'#'"
+        :styles="{
+          backgroundColor: colors.white,
+          color: colors.incrementPurple,
+          borderColor: colors.white,
+          borderColor: colors.gray,
+        }"
+        :hoverStyles="{
+          backgroundColor: colors.success,
+          color: colors.white,
+          borderColor: colors.white,
+          cursor: 'pointer'
+        }"
+      />
+      </div>
+        
+      </div>
+      </div>
+      <!-- Software Development -->
+     <div class="serviceContainer">
+        
+        <div class="textContainer">
+          <div class="title">
+            <h3>Software Development</h3>
+          </div>
+          <div class="description">
+            <p>In the provided code, $user is an instance of the User model, and it has a relationship defined with the name hasAccountType. By default, when you eager load a relationship using with(), Laravel will include the loaded relationship as a property on the model object. In this case, the hasAccountType relationship is included as a property on the $user object.</p>
+        </div>
+        <roundBtn
+        :text="'View more'"
+        :changeIcon="'fa fa-angle-double-right'"
+        :icon ="'fa fa-angle-right'"
+        :target="'_blank'"
+        :route="'#'"
+        :styles="{
+          backgroundColor: colors.white,
+          color: colors.incrementPurple,
+          borderColor: colors.white,
+          borderColor: colors.gray,
+        }"
+        :hoverStyles="{
+          backgroundColor: colors.gray,
+          color: colors.white,
+          borderColor: colors.white,
+          cursor: 'pointer'
+        }"
+      />
+      </div>
+      <div class="imageContainer">
+          <img class="imageSize" :src="require('assets/img/Jiph_Ad.png')" />
+        </div>
       </div>
     </div>
     <!-- <Curve
@@ -32,6 +102,27 @@
 
   <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.indent{
+  margin-left: 75%;
+}
+.title{
+  margin: 5% 0% 5% 0%;
+}
+.imageSize{
+  height: 350px;
+  width: 500px;
+}
+.textContainer{
+  width: 50%;
+  text-align: justify;
+}
+.imageContainer{
+  width: 50%;
+}
+.serviceContainer{
+  display: flex;
+  justify-content: center;
+}
 .cw-banner {
   padding-bottom: 15vh !important;
   padding-top: 15vh !important;
@@ -136,6 +227,7 @@ img {
 </style>
 <script>
 // import Curve from "src/home/generic/svgCurve.vue";
+import roundBtn from "src/home/generic/roundBtn"
 import ColorsJS from "src/assets/style/colors.js";
 import {
   faPalette,
@@ -151,6 +243,7 @@ import {
 export default {
   components: {
     // Curve,
+    roundBtn
   },
   data() {
     return {
