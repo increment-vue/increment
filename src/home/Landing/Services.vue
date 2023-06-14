@@ -26,7 +26,7 @@
         </div>
         <div class="textContainer">
           <div class="title">
-            <h3>I.T Outsourcing</h3>
+            <h3>I.T Department Outsourcing</h3>
           </div>
           <div class="description">
             <p>In the provided code, $user is an instance of the User model, and it has a relationship defined with the name hasAccountType. By default, when you eager load a relationship using with(), Laravel will include the loaded relationship as a property on the model object. In this case, the hasAccountType relationship is included as a property on the $user object.</p>
