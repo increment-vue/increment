@@ -24,7 +24,7 @@
         }"
         :hoverStyles="{
           float: 'right',
-          marginBottom: '150px',
+          marginBottom: '150px',  
           marginTop: '20px',
           backgroundColor: colors.white + '!important',
           color: colors.purple,

@@ -37,7 +37,7 @@
         :changeIcon="'fa fa-angle-double-right'"
         :icon ="'fa fa-angle-right'"
         :target="'_blank'"
-        :route="'#'"
+        :route="'/services/outsourcing'"
         :styles="{
           backgroundColor: colors.white,
           color: colors.incrementPurple,
@@ -70,7 +70,7 @@
         :changeIcon="'fa fa-angle-double-right'"
         :icon ="'fa fa-angle-right'"
         :target="'_blank'"
-        :route="'#'"
+        :route="'/services/software-development'"
         :styles="{
           backgroundColor: colors.white,
           color: colors.incrementPurple,

@@ -135,6 +135,16 @@ export default {
       path: '/case-studies/transportation-system',
       name: 'Transportation System',
       component: resolve => require(['src/home/case-studies/Transportation.vue'], resolve),
+    },
+    {
+      path: '/services/outsourcing',
+      name: 'IT Outsourcing',
+      component: resolve=>require(['src/home/Landing/Services/ITDO/index.vue'], resolve),
+    },
+    {
+      path: '/services/software-development',
+      name: 'Software Developement',
+      component: resolve=>require(['src/home/Landing/Services/Software/index.vue'], resolve),
     }
   ]
 }

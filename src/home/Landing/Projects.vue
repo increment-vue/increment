@@ -44,7 +44,7 @@
       />
 
     </div>
-    <div class="whitebox"></div>
+    <!-- <div class="whitebox"></div> -->
   </div>
 </template>
 
