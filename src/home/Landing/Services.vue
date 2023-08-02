@@ -1,16 +1,16 @@
 <template>
   <div >
-    <Curve
+    <!-- <Curve
       :color="colors.incrementPurple"
       :use="true"
       :stylecss="{
         backgroundColor: colors.white,
       }"
-    ></Curve>
+    ></Curve> -->
     <div class="cw-banner" id="our-services">
-      <h2>OUR SERVICES</h2>
+      <h2>Our Services</h2>
       <p>Our company provides a wide range of services to our clients. Being a relatively small firm, we are able to offer customized, high-quality service to our clients.</p>
-      <div class="row">
+      <!-- <div class="row">
         <span class="card" v-for="(item, index) in services" :key="index">
           <center>
             <font-awesome-icon :icon="item.class" class="font-awesome-icon" />
@@ -18,20 +18,111 @@
           <b><p class="subtitle">{{ item.title }}</p></b>
           <span style="font-size: 13px; color: black">{{ item.desc }}</span>
         </span>
+      </div> -->
+      <!-- IT Outsourcing -->
+      <div class="serviceContainer">
+        <div class="imageContainer">
+          <img class="imageSize" :src="require('assets/img/Jiph_Ad.png')" />
+        </div>
+        <div class="textContainer">
+          <div class="title">
+            <h3>I.T Department Outsourcing</h3>
+          </div>
+          <div class="description">
+            <p>In the provided code, $user is an instance of the User model, and it has a relationship defined with the name hasAccountType. By default, when you eager load a relationship using with(), Laravel will include the loaded relationship as a property on the model object. In this case, the hasAccountType relationship is included as a property on the $user object.</p>
+        </div>
+      <div class="indent">
+        <roundBtn
+        :text="'View more'"
+        :changeIcon="'fa fa-angle-double-right'"
+        :icon ="'fa fa-angle-right'"
+        :target="'_blank'"
+        :route="'/services/outsourcing'"
+        :styles="{
+          backgroundColor: colors.white,
+          color: colors.incrementPurple,
+          borderColor: colors.white,
+          borderColor: colors.gray,
+        }"
+        :hoverStyles="{
+          backgroundColor: colors.success,
+          color: colors.white,
+          borderColor: colors.white,
+          cursor: 'pointer'
+        }"
+      />
+      </div>
+        
+      </div>
+      </div>
+      <!-- Software Development -->
+     <div class="serviceContainer">
+        
+        <div class="textContainer">
+          <div class="title">
+            <h3>Software Development</h3>
+          </div>
+          <div class="description">
+            <p>In the provided code, $user is an instance of the User model, and it has a relationship defined with the name hasAccountType. By default, when you eager load a relationship using with(), Laravel will include the loaded relationship as a property on the model object. In this case, the hasAccountType relationship is included as a property on the $user object.</p>
+        </div>
+        <roundBtn
+        :text="'View more'"
+        :changeIcon="'fa fa-angle-double-right'"
+        :icon ="'fa fa-angle-right'"
+        :target="'_blank'"
+        :route="'/services/software-development'"
+        :styles="{
+          backgroundColor: colors.white,
+          color: colors.incrementPurple,
+          borderColor: colors.white,
+          borderColor: colors.gray,
+        }"
+        :hoverStyles="{
+          backgroundColor: colors.gray,
+          color: colors.white,
+          borderColor: colors.white,
+          cursor: 'pointer'
+        }"
+      />
+      </div>
+      <div class="imageContainer">
+          <img class="imageSize" :src="require('assets/img/Jiph_Ad.png')" />
+        </div>
       </div>
     </div>
-    <Curve
+    <!-- <Curve
       :color="colors.incrementPurple"
       :use="false"
       :stylecss="{
         backgroundColor: colors.white,
       }"
-    ></Curve>
+    ></Curve> -->
   </div>
 </template>
 
   <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.indent{
+  margin-left: 75%;
+}
+.title{
+  margin: 5% 0% 5% 0%;
+}
+.imageSize{
+  height: 350px;
+  width: 500px;
+}
+.textContainer{
+  width: 50%;
+  text-align: justify;
+}
+.imageContainer{
+  width: 50%;
+}
+.serviceContainer{
+  display: flex;
+  justify-content: center;
+}
 .cw-banner {
   padding-bottom: 15vh !important;
   padding-top: 15vh !important;
@@ -39,11 +130,11 @@
   width: 100%;
   padding-left: 10% !important;
   padding-right: 10% !important;
-  background-color: #5e17eb;
-  margin-top: -14.5%;
+  background-color: #fff;
+  // margin-top: -14.5%;
   padding: 50px 0 50px 0;
   text-align: center !important;
-  color: $white;
+  color: black;
 }
 
 .card {
@@ -52,6 +143,7 @@
   margin: 1.5%;
   padding: 20px;
   border-radius: 15px;
+  background-color: $gray;
 }
 
 .font-awesome-icon {
@@ -134,7 +226,8 @@ img {
 
 </style>
 <script>
-import Curve from "src/home/generic/svgCurve.vue";
+// import Curve from "src/home/generic/svgCurve.vue";
+import roundBtn from "src/home/generic/roundBtn"
 import ColorsJS from "src/assets/style/colors.js";
 import {
   faPalette,
@@ -143,23 +236,24 @@ import {
   faGlobe,
   faNetworkWired,
   faCogs,
-  faLaptop,
+  // faLaptop,
   faUsers,
   faFax
 } from "@fortawesome/free-solid-svg-icons";
 export default {
   components: {
-    Curve,
+    // Curve,
+    roundBtn
   },
   data() {
     return {
       colors: ColorsJS,
       services: [
-        {
-          title: "IT Services",
-          class: faLaptop,
-          desc: "Streamline your business operations with our comprehensive IT department outsourcing solutions, tailored to your needs. From tech support to IT management, we have flexible options to suit your requirements. Additionally, our affordable IT consultancy services provide expert guidance on technology strategy, empowering you to stay ahead in the digital landscape.",
-        },
+        // {
+        //   title: "IT Services",
+        //   class: faLaptop,
+        //   desc: "Streamline your business operations with our comprehensive IT department outsourcing solutions, tailored to your needs. From tech support to IT management, we have flexible options to suit your requirements. Additionally, our affordable IT consultancy services provide expert guidance on technology strategy, empowering you to stay ahead in the digital landscape.",
+        // },
         {
           title: "IT Department Outsourcing",
           class: faUsers,

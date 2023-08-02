@@ -7,7 +7,7 @@
     <LandingJiphAd/>
     <LandingHowWeWork />
     <LandingOurProjects />
-    <LandingCaseStudies />
+    <!-- <LandingCaseStudies /> -->
     <LandingOurValues />
     <LandingTechnologies />
     <LandingWhatTheySayAboutUs />
@@ -26,7 +26,7 @@ import LandingWhoWeAre from "src/home/Landing/WhoWeAre.vue";
 import LandingOurServices from "src/home/Landing/Services.vue";
 import LandingHowWeWork from "src/home/Landing/HowWeWork.vue";
 import LandingOurProjects from "src/home/Landing/Projects.vue";
-import LandingCaseStudies from "src/home/Landing/CaseStudies.vue";
+// import LandingCaseStudies from "src/home/Landing/CaseStudies.vue";
 import LandingOurValues from "src/home/Landing/Values.vue";
 import LandingTechnologies from "src/home/Landing/Technologies.vue";
 import LandingWhatTheySayAboutUs from "src/home/Landing/Testimonials.vue";
@@ -39,7 +39,7 @@ export default {
     LandingOurServices,
     LandingHowWeWork,
     LandingOurProjects,
-    LandingCaseStudies,
+    // LandingCaseStudies,
     LandingOurValues,
     LandingTechnologies,
     LandingWhatTheySayAboutUs,

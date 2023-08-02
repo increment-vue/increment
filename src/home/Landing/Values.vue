@@ -1,8 +1,8 @@
 <template>
   <div class="cw-banner" id="our-values">
     <div class="container">
-      <h2>OUR VALUES</h2>
-      <p>What we at Increment Technologies Inc. believe and stand for</p>
+      <h2 class="title">Our Values</h2>
+      <p class="title">What we at Increment Technologies Inc. believe and stand for</p>
       <div class="row">
         <span class="card-holder" v-for="(item, index) in values" :key="index">
           <div
@@ -21,6 +21,9 @@
 </template>
 <style scoped lang="scss">
 @import "~assets/style/colors.scss";
+.title{
+  color: black;
+}
 .cw-banner {
   text-align: center;
   float: left;
@@ -31,7 +34,7 @@
   //   $gradientPrimary 0%,
   //   $gradientSecondary 100%
   // );
-  background-color: #5e17eb;
+  background-color: white;
 }
 
 .row {
@@ -52,7 +55,7 @@
 
 .single-card,
 .single-cardUp {
-  background: $white;
+  background: $gray;
   padding: 30px;
   margin: 30px;
   height: 180px;
@@ -67,7 +70,7 @@
 }
 .paragraph {
   font-size: 25px;
-  color: #028170;
+  color: $incrementPurple;
   text-align: center;
 }
 @media only screen and (max-width: 992px) {

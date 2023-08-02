@@ -1,0 +1,116 @@
+<template>
+    <div class="body" id="banner">
+      <div class="banner-content">
+        <div class="banner-text">
+          <h1>An IT Department Outsourcing and A Software Development Company</h1>
+          <h4>
+            Take your business to the next level with our expert web and mobile development services, as well as IT department outsourcing  to help you stay ahead of the competition.
+          </h4>
+        </div>
+        <roundBtn
+          :text="'Contact Us'"
+          :changeIcon="'fa fa-angle-double-right'"
+          :icon ="'fa fa-angle-right'"
+          :target="'_blank'"
+          :route="'https://calendly.com/incrementtech2020/services-offered'"
+          :styles="{
+            backgroundColor: colors.white,
+            color: colors.incrementPurple,
+            borderColor: colors.white,
+          }"
+          :hoverStyles="{
+            backgroundColor: colors.success,
+            color: colors.white,
+            borderColor: colors.white,
+            cursor: 'pointer'
+          }"
+        />
+      </div>
+      <div class="white-box"></div>
+    </div>
+  </template>
+  <style scoped lang="scss">
+  @import "~assets/style/colors.scss";
+  .banner-text{
+    width: 100%;
+    padding: 0% 15% 0% 15%;
+  }
+  .banner-content {
+    width: 100%;
+    height: 100vh;
+    // float: left;
+    text-align: center;
+    // padding-left: 5%;
+    // padding-right: 5%;
+    background-color: #5e17eb;
+    // background-image: linear-gradient(
+    //     228.21deg,
+    //     #5e17eb,
+    //     rgba(94,23,235, 0.5) 100%
+    //   ),
+      // url("../../assets/img/gif-banner.gif"),
+      // url("../../assets/img/Increment_office.jpeg");
+    background-size: cover, 60vh, cover;
+    background-position: center, right, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    padding-top: 35vh;
+    padding-bottom: 30vh;
+  }
+  
+  .white-box {
+    display: block;
+    background-color: $white;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    top: 93vh;
+    height: 7vh;
+    width: 90%;
+  }
+  
+  h1 {
+    color: $white;
+    font-size: 5vh!important;
+  }
+  
+  h4 {
+    color: $white;
+    // padding-right: 20%;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .meridian,
+    .white-box {
+      display: none !important;
+    }
+  
+    .banner-content {
+      width: 100% !important;
+      text-align: center !important;
+      padding-top: 35vh !important;
+      background-size: cover, 50vh, cover;
+      background-position: center, center top, center;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+    }
+  
+    h4 {
+      padding-right: 0% !important;
+    }
+  }
+  </style>
+  <script>
+  import roundBtn from "src/home/generic/roundBtn.vue";
+  import COLORS from "src/assets/style/colors.js";
+  export default {
+    components: {
+      roundBtn,
+    },
+    data() {
+      return {
+        colors: COLORS,
+      };
+    },
+  };
+  </script>
